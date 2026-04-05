@@ -40,7 +40,8 @@
     "stores": "Mağazalar",
     "addonTypes": "Eklenti Türleri",
     "addons": "Eklentiler",
-    "orderSources": "Sipariş Kaynakları"
+    "orderSources": "Sipariş Kaynakları",
+    "orderTypes": "Sipariş Türleri"
   },
   "common": {
     "adminSaas": "Admin SaaS",
@@ -1007,5 +1008,25 @@
     "fetchError": "Sipariş kaynakları yüklenemedi",
     "saveError": "Sipariş kaynağı kaydedilemedi",
     "deleteError": "Sipariş kaynağı silinemedi"
+  },
+  "orderTypes": {
+    "title": "Sipariş Türleri",
+    "add": "Sipariş Türü Ekle",
+    "edit": "Sipariş Türü Düzenle",
+    "code": "Kod",
+    "name": "Ad",
+    "icon": "İkon",
+    "sortOrder": "Sıralama",
+    "translations": "Çeviriler",
+    "translationName": "Ad",
+    "empty": "Sipariş türü bulunamadı",
+    "codeRequired": "Kod gereklidir",
+    "confirmDelete": "Bu sipariş türünü silmek istediğinizden emin misiniz?",
+    "created": "Sipariş türü oluşturuldu",
+    "updated": "Sipariş türü güncellendi",
+    "deleted": "Sipariş türü silindi",
+    "fetchError": "Sipariş türleri yüklenemedi",
+    "saveError": "Sipariş türü kaydedilemedi",
+    "deleteError": "Sipariş türü silinemedi"
   }
 }

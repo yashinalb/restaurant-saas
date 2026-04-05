@@ -91,7 +91,7 @@ Create full CRUD for master_order_sources + master_order_source_translations.
 Pre-seeded: in_store, online, kiosk, phone, third_party.
 ```
 
-### [ ] 6. Master Order Types
+### [x] 6. Master Order Types
 
 Tables: `master_order_types` + `master_order_type_translations`
 

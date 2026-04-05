@@ -24,6 +24,7 @@ import {
   UtensilsCrossed,
   Package,
   ShoppingBag,
+  ClipboardList,
   LucideIcon
 } from 'lucide-react';
 
@@ -123,6 +124,7 @@ export default function DashboardLayout() {
         { name: t('navigation.addonTypes', 'Addon Types'), to: '/addon-types', icon: UtensilsCrossed, show: true },
         { name: t('navigation.addons', 'Addons'), to: '/addons', icon: Package, show: true },
         { name: t('navigation.orderSources', 'Order Sources'), to: '/order-sources', icon: ShoppingBag, show: true },
+        { name: t('navigation.orderTypes', 'Order Types'), to: '/order-types', icon: ClipboardList, show: true },
       ]
     },
     {

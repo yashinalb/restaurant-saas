@@ -40,7 +40,8 @@
     "stores": "Stores",
     "addonTypes": "Addon Types",
     "addons": "Addons",
-    "orderSources": "Order Sources"
+    "orderSources": "Order Sources",
+    "orderTypes": "Order Types"
   },
   "common": {
     "adminSaas": "Admin SaaS",
@@ -1007,5 +1008,25 @@
     "fetchError": "Failed to load order sources",
     "saveError": "Failed to save order source",
     "deleteError": "Failed to delete order source"
+  },
+  "orderTypes": {
+    "title": "Order Types",
+    "add": "Add Order Type",
+    "edit": "Edit Order Type",
+    "code": "Code",
+    "name": "Name",
+    "icon": "Icon",
+    "sortOrder": "Sort Order",
+    "translations": "Translations",
+    "translationName": "Name",
+    "empty": "No order types found",
+    "codeRequired": "Code is required",
+    "confirmDelete": "Are you sure you want to delete this order type?",
+    "created": "Order type created successfully",
+    "updated": "Order type updated successfully",
+    "deleted": "Order type deleted successfully",
+    "fetchError": "Failed to load order types",
+    "saveError": "Failed to save order type",
+    "deleteError": "Failed to delete order type"
   }
 }
