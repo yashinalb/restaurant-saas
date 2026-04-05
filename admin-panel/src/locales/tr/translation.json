@@ -41,7 +41,8 @@
     "addonTypes": "Eklenti Türleri",
     "addons": "Eklentiler",
     "orderSources": "Sipariş Kaynakları",
-    "orderTypes": "Sipariş Türleri"
+    "orderTypes": "Sipariş Türleri",
+    "orderDestinations": "Sipariş Hedefleri"
   },
   "common": {
     "adminSaas": "Admin SaaS",
@@ -1028,5 +1029,25 @@
     "fetchError": "Sipariş türleri yüklenemedi",
     "saveError": "Sipariş türü kaydedilemedi",
     "deleteError": "Sipariş türü silinemedi"
+  },
+  "orderDestinations": {
+    "title": "Sipariş Hedefleri",
+    "add": "Sipariş Hedefi Ekle",
+    "edit": "Sipariş Hedefi Düzenle",
+    "code": "Kod",
+    "name": "Ad",
+    "icon": "İkon",
+    "sortOrder": "Sıralama",
+    "translations": "Çeviriler",
+    "translationName": "Ad",
+    "empty": "Sipariş hedefi bulunamadı",
+    "codeRequired": "Kod gereklidir",
+    "confirmDelete": "Bu sipariş hedefini silmek istediğinizden emin misiniz?",
+    "created": "Sipariş hedefi oluşturuldu",
+    "updated": "Sipariş hedefi güncellendi",
+    "deleted": "Sipariş hedefi silindi",
+    "fetchError": "Sipariş hedefleri yüklenemedi",
+    "saveError": "Sipariş hedefi kaydedilemedi",
+    "deleteError": "Sipariş hedefi silinemedi"
   }
 }

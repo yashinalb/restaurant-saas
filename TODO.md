@@ -101,7 +101,7 @@ Create full CRUD for master_order_types + master_order_type_translations.
 Pre-seeded: dine_in, takeaway, delivery, drive_through.
 ```
 
-### [ ] 7. Master Order Destinations
+### [x] 7. Master Order Destinations
 
 Tables: `master_order_destinations` + `master_order_destination_translations`
 
