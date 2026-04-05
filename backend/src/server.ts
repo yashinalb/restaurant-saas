@@ -22,6 +22,7 @@ import navigationMenuRoutes from './routes/navigationMenu.routes';
 import adminUserRoutes from './routes/adminUser.routes';
 import rolePermissionRoutes from './routes/rolePermission.routes';
 import tenantAdminUserRoutes from './routes/tenantAdminUser.routes';
+import storeRoutes from './routes/store.routes';
 
 // Get __dirname equivalent in ES modules
 const __filename = fileURLToPath(import.meta.url);
@@ -136,7 +137,8 @@ app.use('/api/admin', rolePermissionRoutes);
 // Tenant routes (tenant-specific, permission-based)
 app.use('/api/tenant', permissionRoutes);
 app.use('/api/tenant', tenantLanguageRoutes);
-app.use('/api/tenant', tenantAdminUserRoutes); // ✅ ADD THIS
+app.use('/api/tenant', tenantAdminUserRoutes);
+app.use('/api/tenant', storeRoutes);
 
 
 

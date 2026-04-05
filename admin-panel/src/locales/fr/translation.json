@@ -33,8 +33,10 @@
       "superAdmin": "Super Admin",
       "system": "Gestion du système",
       "tenants": "Gestion des locataires",
-      "team": "Équipe"
-    }
+      "team": "Équipe",
+      "restaurant": "Restaurant"
+    },
+    "stores": "Magasins"
   },
   "common": {
     "adminSaas": "Admin SaaS",
@@ -840,6 +842,69 @@
       "saveFailed": "Échec de l'enregistrement du type de locataire",
       "confirmDelete": "Êtes-vous sûr de vouloir supprimer ce type de locataire ?",
       "deleteFailed": "Échec de la suppression du type de locataire"
+    }
+  },
+  "stores": {
+    "title": "Stores",
+    "subtitle": "Manage your restaurant locations",
+    "add": "Add Store",
+    "edit": "Edit Store",
+    "loading": "Loading stores...",
+    "empty": "No stores yet. Add your first restaurant location.",
+    "table": {
+      "name": "Name",
+      "location": "Location",
+      "contact": "Contact",
+      "features": "Features",
+      "status": "Status",
+      "actions": "Actions"
+    },
+    "status": {
+      "active": "Active",
+      "inactive": "Inactive"
+    },
+    "actions": {
+      "edit": "Edit",
+      "delete": "Delete"
+    },
+    "confirm": {
+      "delete": "Are you sure you want to delete this store?"
+    },
+    "toast": {
+      "loadFailed": "Failed to load stores",
+      "created": "Store created successfully",
+      "updated": "Store updated successfully",
+      "deleted": "Store deleted successfully",
+      "deleteFailed": "Failed to delete store",
+      "saveFailed": "Failed to save store",
+      "nameRequired": "Name and slug are required"
+    },
+    "form": {
+      "basicInfo": "Basic Information",
+      "name": "Name",
+      "slug": "Slug",
+      "code": "Code",
+      "timezone": "Timezone",
+      "location": "Location",
+      "address": "Address",
+      "city": "City",
+      "postalCode": "Postal Code",
+      "phone": "Phone",
+      "email": "Email",
+      "restaurantSettings": "Restaurant Settings",
+      "tableCount": "Table Count",
+      "taxRate": "Default Tax Rate %",
+      "serviceCharge": "Service Charge %",
+      "printers": "Printer Configuration",
+      "kitchenPrinter": "Kitchen Printer IP",
+      "barPrinter": "Bar Printer IP",
+      "receiptPrinter": "Receipt Printer IP",
+      "features": "Features",
+      "kdsEnabled": "Kitchen Display (KDS)",
+      "kioskEnabled": "Kiosk Ordering",
+      "onlineEnabled": "Online Ordering",
+      "qrEnabled": "QR Ordering",
+      "isActive": "Active"
     }
   }
 }

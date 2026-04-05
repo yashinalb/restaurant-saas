@@ -37,7 +37,7 @@ Legend: [x] = backend + frontend done | [ ] = needs to be built
 
 ## PRIORITY 1: Stores & Settings (Migration 004)
 
-### [ ] 1. Stores
+### [ x ] 1. Stores
 
 Tables: `stores`
 

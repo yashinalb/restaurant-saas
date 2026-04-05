@@ -127,6 +127,14 @@ export default function DashboardLayout() {
   // Tenant Navigation Groups
   const tenantGroups: NavGroup[] = selectedTenant ? [
     {
+      id: 'restaurant',
+      name: t('navigation.groups.restaurant', 'Restaurant'),
+      icon: Store,
+      items: [
+        { name: t('navigation.stores', 'Stores'), to: '/tenant/stores', icon: Store, show: hasPermission('stores.view') },
+      ].filter(item => item.show)
+    },
+    {
       id: 'team',
       name: t('navigation.groups.team', 'Team'),
       icon: Users,

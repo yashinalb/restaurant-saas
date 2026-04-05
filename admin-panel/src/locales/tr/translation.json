@@ -33,8 +33,10 @@
       "superAdmin": "Süper Yönetici",
       "system": "Sistem Yönetimi",
       "tenants": "Kiracı Yönetimi",
-      "team": "Ekip"
-    }
+      "team": "Ekip",
+      "restaurant": "Restoran"
+    },
+    "stores": "Mağazalar"
   },
   "common": {
     "adminSaas": "Admin SaaS",
@@ -840,6 +842,69 @@
       "saveFailed": "Kiracı türü kaydedilemedi",
       "confirmDelete": "Bu kiracı türünü silmek istediğinizden emin misiniz?",
       "deleteFailed": "Kiracı türü silinemedi"
+    }
+  },
+  "stores": {
+    "title": "Mağazalar",
+    "subtitle": "Restoran lokasyonlarınızı yönetin",
+    "add": "Mağaza Ekle",
+    "edit": "Mağaza Düzenle",
+    "loading": "Mağazalar yükleniyor...",
+    "empty": "Henüz mağaza yok.",
+    "table": {
+      "name": "Ad",
+      "location": "Konum",
+      "contact": "İletişim",
+      "features": "Özellikler",
+      "status": "Durum",
+      "actions": "İşlemler"
+    },
+    "status": {
+      "active": "Aktif",
+      "inactive": "Pasif"
+    },
+    "actions": {
+      "edit": "Düzenle",
+      "delete": "Sil"
+    },
+    "confirm": {
+      "delete": "Bu mağazayı silmek istediğinizden emin misiniz?"
+    },
+    "toast": {
+      "loadFailed": "Mağazalar yüklenemedi",
+      "created": "Mağaza başarıyla oluşturuldu",
+      "updated": "Mağaza başarıyla güncellendi",
+      "deleted": "Mağaza başarıyla silindi",
+      "deleteFailed": "Mağaza silinemedi",
+      "saveFailed": "Mağaza kaydedilemedi",
+      "nameRequired": "Ad ve slug gereklidir"
+    },
+    "form": {
+      "basicInfo": "Temel Bilgiler",
+      "name": "Ad",
+      "slug": "Slug",
+      "code": "Kod",
+      "timezone": "Saat Dilimi",
+      "location": "Konum",
+      "address": "Adres",
+      "city": "Şehir",
+      "postalCode": "Posta Kodu",
+      "phone": "Telefon",
+      "email": "E-posta",
+      "restaurantSettings": "Restoran Ayarları",
+      "tableCount": "Masa Sayısı",
+      "taxRate": "Varsayılan KDV Oranı %",
+      "serviceCharge": "Servis Ücreti %",
+      "printers": "Yazıcı Yapılandırması",
+      "kitchenPrinter": "Mutfak Yazıcı IP",
+      "barPrinter": "Bar Yazıcı IP",
+      "receiptPrinter": "Fiş Yazıcı IP",
+      "features": "Özellikler",
+      "kdsEnabled": "Mutfak Ekranı (KDS)",
+      "kioskEnabled": "Kiosk Sipariş",
+      "onlineEnabled": "Online Sipariş",
+      "qrEnabled": "QR Sipariş",
+      "isActive": "Aktif"
     }
   }
 }
