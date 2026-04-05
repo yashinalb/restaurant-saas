@@ -1,0 +1,845 @@
+{
+  "auth": {
+    "signIn": "Se connecter",
+    "email": "E-mail",
+    "password": "Mot de passe",
+    "forgotPassword": "Mot de passe oublié ?",
+    "loggingIn": "Connexion en cours...",
+    "logout": "Déconnexion",
+    "loginSuccess": "Connexion réussie !",
+    "loginFailed": "Échec de la connexion",
+    "welcomeBack": "Bienvenue à nouveau",
+    "loginDescription": "Connectez-vous pour gérer vos locataires, utilisateurs et plus encore depuis votre tableau de bord centralisé.",
+    "feature1": "Gestion multi-locataire",
+    "feature2": "Contrôle d'accès basé sur les rôles",
+    "feature3": "Gestion des abonnements et de la facturation",
+    "emailPlaceholder": "vous@exemple.com",
+    "enterCredentials": "Entrez vos identifiants pour accéder à votre compte",
+    "hidePassword": "Masquer le mot de passe",
+    "showPassword": "Afficher le mot de passe",
+    "securedBy": "Sécurisé par"
+  },
+  "navigation": {
+    "dashboard": "Tableau de bord",
+    "adminUsers": "Administrateurs",
+    "languages": "Langues",
+    "currencies": "Devises",
+    "tenantTypes": "Types de locataires",
+    "subscriptionPlans": "Plans d'abonnement",
+    "tenants": "Locataires",
+    "teamMembers": "Membres de l'équipe",
+    "settings": "Paramètres",
+    "groups": {
+      "superAdmin": "Super Admin",
+      "system": "Gestion du système",
+      "tenants": "Gestion des locataires",
+      "team": "Équipe"
+    }
+  },
+  "common": {
+    "adminSaas": "Admin SaaS",
+    "adminPanel": "Panneau d'administration",
+    "currentTenant": "Locataire actuel",
+    "superAdmin": "Super Admin",
+    "admin": "Admin",
+    "loading": "Chargement...",
+    "default": "Par défaut",
+    "expandSidebar": "Développer la barre latérale",
+    "collapseSidebar": "Réduire la barre latérale"
+  },
+  "teamMembers": {
+    "title": "Membres de l'équipe",
+    "subtitle": "Gérer les utilisateurs et les invitations pour votre équipe",
+    "inviteUser": "Inviter un utilisateur",
+    "loading": "Chargement des utilisateurs...",
+    "pendingInvitations": "Invitations en attente",
+    "activeUsers": "Utilisateurs actifs",
+    "role": "Rôle",
+    "invitedBy": "Invité par",
+    "expires": "Expire",
+    "table": {
+      "user": "Utilisateur",
+      "role": "Rôle",
+      "status": "Statut",
+      "lastLogin": "Dernière connexion",
+      "actions": "Actions"
+    },
+    "status": {
+      "active": "Actif",
+      "inactive": "Inactif"
+    },
+    "empty": {
+      "noUsersYet": "Aucun utilisateur pour le moment"
+    },
+    "actions": {
+      "view": "Voir",
+      "remove": "Supprimer",
+      "cancelInvitation": "Annuler l'invitation",
+      "saving": "Enregistrement...",
+      "saveChanges": "Enregistrer les modifications",
+      "cancel": "Annuler"
+    },
+    "confirm": {
+      "cancelInvitation": "Êtes-vous sûr de vouloir annuler cette invitation ?",
+      "removeUser": "Êtes-vous sûr de vouloir supprimer {{userName}} ?"
+    },
+    "toast": {
+      "loadFailed": "Échec du chargement des utilisateurs",
+      "cancelFailed": "Échec de l'annulation de l'invitation",
+      "cancelSuccess": "Invitation annulée",
+      "removeFailed": "Échec de la suppression de l'utilisateur",
+      "removeSuccess": "Utilisateur supprimé avec succès",
+      "updateSuccess": "Utilisateur mis à jour avec succès",
+      "updateFailed": "Échec de la mise à jour de l'utilisateur"
+    },
+    "detail": {
+      "loading": "Chargement de l'utilisateur...",
+      "backToUsers": "Retour aux utilisateurs",
+      "editUser": "Modifier l'utilisateur",
+      "sections": {
+        "basicInfo": "Informations de base",
+        "roleAccess": "Rôle et accès",
+        "activity": "Activité"
+      },
+      "fields": {
+        "firstName": "Prénom",
+        "lastName": "Nom",
+        "email": "E-mail",
+        "preferredLanguage": "Langue préférée",
+        "default": "Par défaut",
+        "role": "Rôle",
+        "status": "Statut"
+      },
+      "activity": {
+        "lastLogin": "Dernière connexion",
+        "joined": "Rejoint"
+      }
+    },
+    "lastLogin": {
+      "never": "Jamais"
+    }
+  },
+  "invite": {
+    "backToUsers": "Retour aux utilisateurs",
+    "title": "Inviter un utilisateur",
+    "subtitle": "Envoyez une invitation pour rejoindre votre équipe. Ils recevront un e-mail avec des instructions pour configurer leur compte.",
+    "fields": {
+      "email": "Adresse e-mail *",
+      "role": "Rôle *",
+      "firstNameOptional": "Prénom (Optionnel)",
+      "lastNameOptional": "Nom (Optionnel)"
+    },
+    "placeholders": {
+      "email": "utilisateur@exemple.com",
+      "firstName": "Jean",
+      "lastName": "Dupont"
+    },
+    "note": "Note : L'utilisateur recevra un e-mail avec un lien pour accepter l'invitation et définir son mot de passe. L'invitation expirera dans 7 jours.",
+    "actions": {
+      "sending": "Envoi en cours...",
+      "send": "Envoyer l'invitation",
+      "cancel": "Annuler"
+    },
+    "toast": {
+      "loadRolesFailed": "Échec du chargement des rôles",
+      "success": "Invitation envoyée avec succès !",
+      "failed": "Échec de l'envoi de l'invitation"
+    }
+  },
+  "accept": {
+    "title": "Accepter l'invitation",
+    "subtitle": "Complétez la configuration de votre compte",
+    "fields": {
+      "firstName": "Prénom *",
+      "lastName": "Nom *",
+      "password": "Mot de passe *",
+      "confirmPassword": "Confirmer le mot de passe *"
+    },
+    "placeholders": {
+      "password": "Minimum 8 caractères",
+      "confirmPassword": "Ressaisir le mot de passe"
+    },
+    "requirements": {
+      "title": "Exigences du mot de passe :",
+      "items": {
+        "min": "Au moins 8 caractères",
+        "strong": "Utilisez un mot de passe fort et unique"
+      }
+    },
+    "actions": {
+      "creating": "Création du compte...",
+      "create": "Créer un compte"
+    },
+    "footer": {
+      "alreadyHaveAccount": "Vous avez déjà un compte ?",
+      "signIn": "Se connecter"
+    },
+    "toast": {
+      "invalidLink": "Lien d'invitation invalide",
+      "passwordMin": "Le mot de passe doit contenir au moins 8 caractères",
+      "passwordMismatch": "Les mots de passe ne correspondent pas",
+      "success": "Compte créé avec succès ! Veuillez vous connecter.",
+      "failed": "Échec de l'acceptation de l'invitation"
+    }
+  },
+  "modals": {
+    "common": {
+      "cancel": "Annuler",
+      "saving": "Enregistrement...",
+      "saveChanges": "Enregistrer les modifications",
+      "loading": "Chargement...",
+      "sortOrder": "Ordre de tri",
+      "tenant": "Locataire",
+      "product": "Produit",
+      "plan": "Plan",
+      "category": "Catégorie"
+    },
+    "manageCurrencies": {
+      "title": "Gérer les devises",
+      "loadingCurrencies": "Chargement des devises...",
+      "selectDescription": "Sélectionnez les devises pour ce locataire et définissez-en une par défaut",
+      "default": "Par défaut",
+      "setAsDefault": "Définir par défaut",
+      "active": "Actif",
+      "inactive": "Inactif",
+      "selectedCount": "{{count}} sur {{total}} devises sélectionnées",
+      "loadFailed": "Échec du chargement des devises",
+      "selectAtLeastOne": "Veuillez sélectionner au moins une devise",
+      "setOneAsDefault": "Veuillez définir une devise par défaut",
+      "updateSuccess": "Devises mises à jour avec succès !",
+      "updateFailed": "Échec de la mise à jour des devises"
+    },
+    "manageLanguages": {
+      "title": "Gérer les langues",
+      "loadingLanguages": "Chargement des langues...",
+      "selectDescription": "Sélectionnez les langues pour ce locataire et définissez-en une par défaut",
+      "default": "Par défaut",
+      "setAsDefault": "Définir par défaut",
+      "active": "Actif",
+      "inactive": "Inactif",
+      "selectedCount": "{{count}} sur {{total}} langues sélectionnées",
+      "loadFailed": "Échec du chargement des langues",
+      "selectAtLeastOne": "Veuillez sélectionner au moins une langue",
+      "setOneAsDefault": "Veuillez définir une langue par défaut",
+      "updateSuccess": "Langues mises à jour avec succès !",
+      "updateFailed": "Échec de la mise à jour des langues"
+    },
+    "manageTenantTypes": {
+      "title": "Gérer les types de locataires",
+      "loadingTenantTypes": "Chargement des types de locataires...",
+      "selectedCount": "{{count}} type(s) de locataire sélectionné(s)",
+      "selectDescription": "Sélectionnez les types d'entreprises qui doivent avoir accès à cette catégorie",
+      "defaultCategory": "Catégorie par défaut",
+      "showByDefault": "Afficher par défaut pour les nouveaux locataires",
+      "noTenantTypes": "Aucun type de locataire disponible",
+      "loadFailed": "Échec du chargement des types de locataires",
+      "updateSuccess": "Liens des types de locataires mis à jour avec succès !",
+      "updateFailed": "Échec de la mise à jour des liens des types de locataires"
+    },
+    "manageProductTenantTypes": {
+      "title": "Gérer les types de locataires",
+      "loadingTenantTypes": "Chargement des types de locataires...",
+      "selectDescription": "Sélectionnez les types d'entreprises (types de locataires) qui doivent avoir accès à ce produit",
+      "featuredProduct": "Produit en vedette",
+      "selectedCount": "{{count}} sur {{total}} types de locataires sélectionnés",
+      "loadFailed": "Échec du chargement des types de locataires",
+      "updateSuccess": "Types de locataires mis à jour avec succès !",
+      "updateFailed": "Échec de la mise à jour des types de locataires"
+    },
+    "managePlanTenantTypes": {
+      "title": "Gérer les types de locataires",
+      "loadingTenantTypes": "Chargement des types de locataires...",
+      "selectDescription": "Sélectionnez les types d'entreprises pouvant s'abonner à ce plan et définissez des tarifs personnalisés",
+      "recommended": "Recommandé",
+      "customPrice": "Prix personnalisé",
+      "leaveEmpty": "Laisser vide pour utiliser le prix de base",
+      "basePrice": "Prix de base",
+      "contactForPricing": "Contactez-nous pour les tarifs",
+      "selectedCount": "{{count}} sur {{total}} types de locataires sélectionnés",
+      "loadFailed": "Échec du chargement des types de locataires",
+      "updateSuccess": "Types de locataires mis à jour avec succès !",
+      "updateFailed": "Échec de la mise à jour des types de locataires"
+    }
+  },
+  "tenants": {
+    "list": {
+      "title": "Locataires",
+      "subtitle": "Gérer tous les comptes locataires",
+      "addTenant": "Ajouter un Locataire",
+      "searchPlaceholder": "Rechercher des locataires par nom, slug, domaine ou type...",
+      "stats": {
+        "total": "Total des Locataires",
+        "active": "Actifs",
+        "onTrial": "En Essai",
+        "inactive": "Inactifs"
+      },
+      "loadingTenants": "Chargement des locataires...",
+      "noTenants": "Aucun locataire pour le moment",
+      "noTenantsSearch": "Aucun locataire trouvé",
+      "addFirst": "Ajoutez votre premier locataire",
+      "tableHeaders": {
+        "tenant": "Locataire",
+        "type": "Type",
+        "subscription": "Abonnement",
+        "languages": "Langues",
+        "currencies": "Devises",
+        "status": "Statut",
+        "created": "Créé",
+        "actions": "Actions"
+      },
+      "noPlan": "Sans Plan",
+      "viewDetails": "Voir les Détails",
+      "edit": "Modifier",
+      "delete": "Supprimer",
+      "confirmDelete": "Supprimer le locataire \"{{name}}\" ? Toutes les données associées seront supprimées. Cette action est irréversible.",
+      "loadFailed": "Échec du chargement des locataires",
+      "deleteSuccess": "Locataire supprimé avec succès !",
+      "deleteFailed": "Échec de la suppression du locataire"
+    },
+    "status": {
+      "trial": "Essai",
+      "expired": "Expiré",
+      "inactive": "Inactif",
+      "active": "Actif"
+    },
+    "detail": {
+      "backToTenants": "Retour aux Locataires",
+      "editTenant": "Modifier le Locataire",
+      "cancel": "Annuler",
+      "saving": "Enregistrement...",
+      "saveChanges": "Enregistrer les Modifications",
+      "tabs": {
+        "overview": "Aperçu",
+        "subscription": "Abonnement",
+        "languages": "Langues",
+        "currencies": "Devises",
+        "stores": "Magasins",
+        "settings": "Paramètres"
+      },
+      "overview": {
+        "title": "Informations de Base",
+        "tenantName": "Nom du Locataire *",
+        "slug": "Slug *",
+        "domain": "Domaine",
+        "subdomain": "Sous-domaine",
+        "tenantType": "Type de Locataire",
+        "selectType": "Sélectionner le type...",
+        "contactEmail": "Email de Contact",
+        "contactPhone": "Téléphone de Contact",
+        "logoUrl": "URL du Logo",
+        "primaryColor": "Couleur Primaire",
+        "secondaryColor": "Couleur Secondaire",
+        "active": "Actif",
+        "placeholders": {
+          "domain": "example.com",
+          "subdomain": "monmagasin"
+        }
+      },
+      "subscription": {
+        "title": "Détails de l'Abonnement",
+        "plan": "Plan d'Abonnement",
+        "noPlan": "Sans Plan",
+        "noplan": "Sans plan",
+        "trialEndsAt": "Fin de la Période d'Essai",
+        "subscriptionEndsAt": "Fin de l'Abonnement"
+      },
+      "languages": {
+        "title": "Langues",
+        "manage": "Gérer les Langues",
+        "default": "Par Défaut",
+        "active": "Active",
+        "inactive": "Inactive",
+        "noLanguages": "Aucune langue configurée",
+        "addLanguages": "Ajouter des Langues"
+      },
+      "currencies": {
+        "title": "Devises",
+        "manage": "Gérer les Devises",
+        "default": "Par Défaut",
+        "active": "Active",
+        "inactive": "Inactive",
+        "noCurrencies": "Aucune devise configurée",
+        "addCurrencies": "Ajouter des Devises"
+      },
+      "settings": {
+        "title": "Paramètres Avancés",
+        "comingSoon": "Les paramètres avancés et la configuration JSON seront disponibles dans la prochaine mise à jour."
+      },
+      "loadFailed": "Échec du chargement des détails du locataire",
+      "updateSuccess": "Locataire mis à jour avec succès !",
+      "updateFailed": "Échec de la mise à jour du locataire"
+    },
+    "create": {
+      "backToTenants": "Retour aux Locataires",
+      "title": "Créer un Nouveau Locataire",
+      "subtitle": "Configurer un nouveau compte locataire",
+      "basicInfo": "Informations de Base",
+      "tenantName": "Nom du Locataire *",
+      "slug": "Slug *",
+      "domain": "Domaine",
+      "subdomain": "Sous-domaine",
+      "tenantType": "Type de Locataire",
+      "selectType": "Sélectionner le type...",
+      "subscriptionPlan": "Plan d'Abonnement",
+      "noPlan": "Sans plan",
+      "contactInfo": "Informations de Contact",
+      "contactEmail": "Email de Contact",
+      "contactPhone": "Téléphone de Contact",
+      "branding": "Image de Marque",
+      "logoUrl": "URL du Logo",
+      "faviconUrl": "URL du Favicon",
+      "primaryColor": "Couleur Primaire",
+      "secondaryColor": "Couleur Secondaire",
+      "localization": "Localisation",
+      "defaultLanguage": "Langue par Défaut",
+      "selectLanguage": "Sélectionner la langue...",
+      "defaultCurrency": "Devise par Défaut",
+      "selectCurrency": "Sélectionner la devise...",
+      "trialSubscription": "Essai & Abonnement",
+      "trialEndsAt": "Fin de la Période d'Essai",
+      "subscriptionEndsAt": "Fin de l'Abonnement",
+      "activeLabel": "Actif (le locataire peut accéder à la plateforme)",
+      "cancel": "Annuler",
+      "creating": "Création...",
+      "createTenant": "Créer le Locataire",
+      "placeholders": {
+        "tenantName": "Ma Boutique",
+        "slug": "ma-boutique",
+        "domain": "example.com",
+        "subdomain": "monmagasin",
+        "contactEmail": "contact@example.com",
+        "contactPhone": "+331234567890",
+        "logoUrl": "https://example.com/logo.png",
+        "faviconUrl": "https://example.com/favicon.ico"
+      },
+      "loadFormFailed": "Échec du chargement des données du formulaire",
+      "nameSlugRequired": "Le nom et le slug sont obligatoires",
+      "createSuccess": "Locataire créé avec succès !",
+      "createFailed": "Échec de la création du locataire"
+    }
+  },
+  "adminUsers": {
+    "list": {
+      "title": "Utilisateurs administrateurs",
+      "subtitle": "Gérer les administrateurs de plateforme et leur accès",
+      "addUser": "Ajouter un utilisateur administrateur",
+      "loadingUsers": "Chargement des utilisateurs...",
+      "noUsers": "Aucun utilisateur administrateur pour le moment",
+      "createFirst": "Créez votre premier utilisateur administrateur",
+      "tableHeaders": {
+        "user": "Utilisateur",
+        "email": "E-mail",
+        "roleType": "Type de rôle",
+        "tenantAccess": "Accès locataire",
+        "lastLogin": "Dernière connexion",
+        "status": "Statut",
+        "actions": "Actions"
+      },
+      "tenants": "locataires",
+      "never": "Jamais",
+      "active": "Actif",
+      "inactive": "Inactif",
+      "superAdmin": "Super Admin",
+      "admin": "Admin",
+      "edit": "Modifier",
+      "delete": "Supprimer",
+      "confirmDelete": "Supprimer l'utilisateur \"{{name}}\" ? Ceci ne peut pas être annulé.",
+      "loadFailed": "Échec du chargement des utilisateurs administrateurs",
+      "deleteSuccess": "Utilisateur supprimé avec succès !",
+      "deleteFailed": "Échec de la suppression de l'utilisateur"
+    },
+    "detail": {
+      "backToUsers": "Retour aux utilisateurs administrateurs",
+      "editUser": "Modifier l'utilisateur",
+      "userInformation": "Informations utilisateur",
+      "tenantAccess": "Accès locataire",
+      "grantAccess": "Accorder l'accès",
+      "status": "Statut",
+      "roleType": "Type de rôle",
+      "lastLogin": "Dernière connexion",
+      "created": "Créé",
+      "never": "Jamais",
+      "active": "Actif",
+      "inactive": "Inactif",
+      "superAdmin": "Super Admin",
+      "admin": "Admin",
+      "superAdminAccess": "Le Super Admin a accès à tous les locataires",
+      "role": "Rôle",
+      "revokeAccess": "Révoquer l'accès",
+      "noAccess": "Aucun accès locataire accordé",
+      "grantAccessLink": "Accorder l'accès à un locataire",
+      "grantAccessModal": {
+        "title": "Accorder l'accès locataire",
+        "tenant": "Locataire *",
+        "role": "Rôle *",
+        "selectTenant": "Sélectionner un locataire...",
+        "selectRole": "Sélectionner un rôle...",
+        "cancel": "Annuler",
+        "grant": "Accorder l'accès"
+      },
+      "loadFailed": "Échec du chargement de l'utilisateur",
+      "loadDataFailed": "Échec du chargement des données",
+      "selectBothRequired": "Veuillez sélectionner un locataire et un rôle",
+      "grantSuccess": "Accès accordé avec succès !",
+      "grantFailed": "Échec de l'octroi de l'accès",
+      "confirmRevoke": "Révoquer l'accès à \"{{tenantName}}\" ?",
+      "revokeSuccess": "Accès révoqué avec succès !",
+      "revokeFailed": "Échec de la révocation de l'accès"
+    },
+    "form": {
+      "backToUsers": "Retour aux utilisateurs administrateurs",
+      "editTitle": "Modifier l'utilisateur administrateur",
+      "createTitle": "Créer un utilisateur administrateur",
+      "email": "E-mail *",
+      "password": "Mot de passe",
+      "passwordRequired": "Mot de passe *",
+      "firstName": "Prénom",
+      "lastName": "Nom",
+      "avatarUrl": "URL d'avatar",
+      "superAdmin": "Super Admin",
+      "superAdminDesc": "Accès complet à toutes les fonctionnalités de la plateforme et tous les locataires",
+      "active": "Actif",
+      "inactiveDesc": "Les utilisateurs inactifs ne peuvent pas se connecter",
+      "placeholders": {
+        "email": "utilisateur@exemple.com",
+        "passwordKeepCurrent": "Laisser vide pour conserver l'actuel",
+        "passwordMinChars": "Minimum 8 caractères",
+        "firstName": "Jean",
+        "lastName": "Dupont",
+        "avatarUrl": "https://exemple.com/avatar.jpg"
+      },
+      "passwordHint": "Laisser vide pour conserver le mot de passe actuel",
+      "cancel": "Annuler",
+      "saving": "Enregistrement...",
+      "updateUser": "Mettre à jour l'utilisateur",
+      "createUser": "Créer l'utilisateur",
+      "loadFailed": "Échec du chargement de l'utilisateur",
+      "emailRequired": "L'e-mail est obligatoire",
+      "passwordRequiredNew": "Le mot de passe est obligatoire pour les nouveaux utilisateurs",
+      "passwordMinLength": "Le mot de passe doit contenir au moins 8 caractères",
+      "updateSuccess": "Utilisateur mis à jour avec succès !",
+      "createSuccess": "Utilisateur créé avec succès !",
+      "saveFailed": "Échec de l'enregistrement de l'utilisateur"
+    }
+  },
+  "currencies": {
+    "title": "Devises",
+    "subtitle": "Gérer les devises prises en charge et les taux de change",
+    "addCurrency": "Ajouter une devise",
+    "loading": "Chargement des devises...",
+    "noCurrencies": "Aucune devise pour le moment",
+    "addFirst": "Ajoutez votre première devise",
+    "tableHeaders": {
+      "code": "Code",
+      "name": "Nom",
+      "symbol": "Symbole",
+      "exchangeRate": "Taux de change",
+      "tenants": "Locataires",
+      "status": "Statut",
+      "actions": "Actions"
+    },
+    "status": {
+      "active": "Actif",
+      "inactive": "Inactif"
+    },
+    "edit": "Modifier",
+    "delete": "Supprimer",
+    "confirmDelete": "Supprimer \"{{name}}\" ({{code}}) ? Cette action ne peut pas être annulée.",
+    "createModal": {
+      "title": "Ajouter une devise",
+      "currencyCode": "Code de devise *",
+      "name": "Nom *",
+      "symbol": "Symbole *",
+      "exchangeRate": "Taux de change (par rapport à la devise de base)",
+      "active": "Actif",
+      "cancel": "Annuler",
+      "create": "Créer la devise",
+      "placeholders": {
+        "code": "USD, EUR, TRY",
+        "name": "Dollar américain, Euro, Livre turque",
+        "symbol": "$, €, ₺",
+        "exchangeRate": "1.000000"
+      }
+    },
+    "editModal": {
+      "title": "Modifier la devise",
+      "currencyCode": "Code de devise",
+      "name": "Nom",
+      "symbol": "Symbole",
+      "exchangeRate": "Taux de change",
+      "active": "Actif",
+      "cancel": "Annuler",
+      "update": "Mettre à jour la devise"
+    },
+    "toast": {
+      "loadFailed": "Échec du chargement des devises",
+      "requiredFields": "Veuillez remplir tous les champs obligatoires",
+      "createSuccess": "Devise créée avec succès !",
+      "createFailed": "Échec de la création de la devise",
+      "updateSuccess": "Devise mise à jour avec succès !",
+      "updateFailed": "Échec de la mise à jour de la devise",
+      "deleteSuccess": "Devise supprimée avec succès !",
+      "deleteFailed": "Échec de la suppression de la devise"
+    }
+  },
+  "languages": {
+    "title": "Langues",
+    "subtitle": "Gérer les langues prises en charge pour votre plateforme",
+    "addLanguage": "Ajouter une langue",
+    "loading": "Chargement des langues...",
+    "noLanguages": "Aucune langue pour le moment",
+    "addFirst": "Ajoutez votre première langue",
+    "tableHeaders": {
+      "order": "Ordre",
+      "code": "Code",
+      "name": "Nom",
+      "nativeName": "Nom natif",
+      "direction": "Direction",
+      "tenants": "Locataires",
+      "status": "Statut",
+      "actions": "Actions"
+    },
+    "direction": {
+      "rtl": "RTL",
+      "ltr": "LTR"
+    },
+    "status": {
+      "active": "Actif",
+      "inactive": "Inactif"
+    },
+    "edit": "Modifier",
+    "delete": "Supprimer",
+    "confirmDelete": "Supprimer \"{{name}}\" ? Cette action ne peut pas être annulée.",
+    "createModal": {
+      "title": "Ajouter une langue",
+      "languageCode": "Code de langue *",
+      "nameEnglish": "Nom (anglais) *",
+      "nativeName": "Nom natif *",
+      "rtl": "De droite à gauche (RTL)",
+      "active": "Actif",
+      "cancel": "Annuler",
+      "create": "Créer la langue",
+      "placeholders": {
+        "code": "en, tr, el",
+        "name": "English, Turkish, Greek",
+        "nativeName": "English, Türkçe, Ελληνικά"
+      }
+    },
+    "editModal": {
+      "title": "Modifier la langue",
+      "languageCode": "Code de langue",
+      "nameEnglish": "Nom (anglais)",
+      "nativeName": "Nom natif",
+      "rtl": "De droite à gauche (RTL)",
+      "active": "Actif",
+      "cancel": "Annuler",
+      "update": "Mettre à jour la langue"
+    },
+    "toast": {
+      "loadFailed": "Échec du chargement des langues",
+      "requiredFields": "Veuillez remplir tous les champs obligatoires",
+      "createSuccess": "Langue créée avec succès !",
+      "createFailed": "Échec de la création de la langue",
+      "updateSuccess": "Langue mise à jour avec succès !",
+      "updateFailed": "Échec de la mise à jour de la langue",
+      "deleteSuccess": "Langue supprimée avec succès !",
+      "deleteFailed": "Échec de la suppression de la langue"
+    }
+  },
+  "dashboard": {
+    "title": "Tableau de bord",
+    "welcomeBack": "Bon retour, {{name}} !",
+    "currentTenant": "Locataire actuel",
+    "tenantFields": {
+      "name": "Nom",
+      "slug": "Slug",
+      "yourRole": "Votre rôle"
+    },
+    "stats": {
+      "totalProducts": "Total des produits",
+      "activeCampaigns": "Campagnes actives",
+      "categories": "Catégories",
+      "productViews": "Vues de produits",
+      "comingSoon": "Bientôt disponible",
+      "fromSeedData": "À partir des données de référence"
+    }
+  },
+  "forgotPassword": {
+    "title": "Mot de passe oublié ?",
+    "subtitle": "Entrez votre adresse e-mail et nous vous enverrons un lien pour réinitialiser votre mot de passe.",
+    "backToLogin": "Retour à la connexion",
+    "emailLabel": "Adresse e-mail",
+    "emailPlaceholder": "admin@admin-saas.com",
+    "sending": "Envoi en cours...",
+    "sendResetLink": "Envoyer le lien de réinitialisation",
+    "submitted": {
+      "title": "Vérifiez votre e-mail",
+      "message": "Si un compte existe avec {{email}}, vous recevrez un lien de réinitialisation de mot de passe sous peu.",
+      "checkSpam": "Vous n'avez pas reçu d'e-mail ? Vérifiez votre dossier spam ou réessayez.",
+      "backToLogin": "Retour à la connexion",
+      "tryAnother": "Essayer un autre e-mail"
+    },
+    "toast": {
+      "emailRequired": "Veuillez entrer votre adresse e-mail",
+      "sendFailed": "Échec de l'envoi de l'e-mail de réinitialisation"
+    },
+    "demoAccounts": {
+      "title": "Comptes de démonstration :",
+      "superAdmin": "Super Admin : admin@admin-saas.com / SuperAdmin123!",
+      "tenantOwner": "Propriétaire locataire : owner@demo-tenant.com / DemoOwner123!"
+    }
+  },
+  "resetPassword": {
+    "title": "Réinitialiser le mot de passe",
+    "subtitle": "Entrez votre nouveau mot de passe ci-dessous.",
+    "newPassword": "Nouveau mot de passe",
+    "confirmNewPassword": "Confirmer le nouveau mot de passe",
+    "minChars": "Minimum 8 caractères",
+    "resetting": "Réinitialisation...",
+    "resetPasswordBtn": "Réinitialiser le mot de passe",
+    "success": {
+      "title": "Mot de passe réinitialisé !",
+      "message": "Votre mot de passe a été réinitialisé avec succès. Vous pouvez maintenant vous connecter avec votre nouveau mot de passe.",
+      "goToLogin": "Aller à la connexion"
+    },
+    "toast": {
+      "invalidLink": "Lien de réinitialisation invalide",
+      "passwordMinLength": "Le mot de passe doit contenir au moins 8 caractères",
+      "passwordMismatch": "Les mots de passe ne correspondent pas",
+      "success": "Mot de passe réinitialisé avec succès !",
+      "invalidToken": "Ce lien de réinitialisation a expiré ou est invalide",
+      "failed": "Échec de la réinitialisation du mot de passe"
+    }
+  },
+  "subscriptionPlans": {
+    "title": "Plans d'abonnement",
+    "subtitle": "Gérer les niveaux de tarification et les fonctionnalités",
+    "addPlan": "Ajouter un plan",
+    "loading": "Chargement des plans...",
+    "noPlans": "Aucun plan d'abonnement pour le moment",
+    "addFirst": "Ajoutez votre premier plan",
+    "tableHeaders": {
+      "plan": "Plan",
+      "price": "Prix",
+      "limits": "Limites",
+      "tenantTypes": "Types de locataires",
+      "activeTenants": "Locataires actifs",
+      "status": "Statut",
+      "actions": "Actions"
+    },
+    "contactUs": "Contactez-nous",
+    "per": "par {{period}}",
+    "customPricing": "Tarification personnalisée",
+    "limits": {
+      "products": "Produits",
+      "stores": "Magasins",
+      "campaigns": "Campagnes"
+    },
+    "manageTenantTypes": "Gérer les types de locataires",
+    "types": "{{count}} types",
+    "status": {
+      "active": "Actif",
+      "inactive": "Inactif"
+    },
+    "edit": "Modifier",
+    "delete": "Supprimer",
+    "confirmDelete": "Supprimer \"{{name}}\" ? Cette action est irréversible.",
+    "createModal": {
+      "title": "Ajouter un plan d'abonnement",
+      "planName": "Nom du plan *",
+      "slug": "Slug *",
+      "description": "Description",
+      "price": "Prix",
+      "priceHint": "Laissez à 0 ou vide pour une tarification \"Contactez-nous\"",
+      "currency": "Devise",
+      "billingPeriod": "Période de facturation *",
+      "maxProducts": "Produits maximum",
+      "maxStores": "Magasins maximum",
+      "maxCampaigns": "Campagnes maximum",
+      "sortOrder": "Ordre de tri",
+      "features": "Fonctionnalités",
+      "addFeature": "Ajouter une fonctionnalité...",
+      "add": "Ajouter",
+      "active": "Actif",
+      "cancel": "Annuler",
+      "create": "Créer le plan",
+      "placeholders": {
+        "name": "Basique, Pro, Entreprise...",
+        "slug": "plan-basique",
+        "description": "Parfait pour les petites entreprises...",
+        "price": "Laisser vide pour tarification sur demande",
+        "unlimited": "Laisser vide pour illimité"
+      },
+      "billingPeriods": {
+        "monthly": "Mensuel",
+        "yearly": "Annuel",
+        "quarterly": "Trimestriel"
+      }
+    },
+    "editModal": {
+      "title": "Modifier le plan d'abonnement",
+      "update": "Mettre à jour le plan"
+    },
+    "toast": {
+      "loadFailed": "Échec du chargement des plans d'abonnement",
+      "requiredFields": "Le nom, le slug et la période de facturation sont obligatoires",
+      "createSuccess": "Plan d'abonnement créé avec succès !",
+      "createFailed": "Échec de la création du plan d'abonnement",
+      "updateSuccess": "Plan d'abonnement mis à jour avec succès !",
+      "updateFailed": "Échec de la mise à jour du plan d'abonnement",
+      "deleteSuccess": "Plan d'abonnement supprimé avec succès !",
+      "deleteFailed": "Échec de la suppression du plan d'abonnement"
+    }
+  },
+  "tenantTypes": {
+    "title": "Types de locataires",
+    "addTenantType": "Ajouter un type de locataire",
+    "loading": "Chargement...",
+    "noTenantTypes": "Aucun type de locataire trouvé. Créez-en un pour commencer.",
+    "noTranslation": "Aucune traduction",
+    "noIcon": "Aucune icône",
+    "tenants": "{{count}} locataires",
+    "tableHeaders": {
+      "sort": "Tri",
+      "code": "Code",
+      "name": "Nom",
+      "icon": "Icône",
+      "tenants": "Locataires",
+      "status": "Statut",
+      "actions": "Actions"
+    },
+    "status": {
+      "active": "Actif",
+      "inactive": "Inactif"
+    },
+    "edit": "Modifier",
+    "delete": "Supprimer",
+    "modal": {
+      "createTitle": "Créer un type de locataire",
+      "editTitle": "Modifier le type de locataire",
+      "code": "Code (identifiant unique) *",
+      "iconUrl": "URL de l'icône",
+      "sortOrder": "Ordre de tri",
+      "status": "Statut",
+      "translations": "Traductions *",
+      "name": "Nom",
+      "description": "Description",
+      "cancel": "Annuler",
+      "create": "Créer",
+      "update": "Mettre à jour",
+      "placeholders": {
+        "code": "ex. : supermarche, pharmacie, animalerie",
+        "iconUrl": "https://...",
+        "nameIn": "Nom en {{language}}",
+        "descriptionIn": "Description en {{language}}"
+      }
+    },
+    "toast": {
+      "loadFailed": "Échec du chargement des données",
+      "translationRequired": "Veuillez fournir au moins une traduction",
+      "saveFailed": "Échec de l'enregistrement du type de locataire",
+      "confirmDelete": "Êtes-vous sûr de vouloir supprimer ce type de locataire ?",
+      "deleteFailed": "Échec de la suppression du type de locataire"
+    }
+  }
+}

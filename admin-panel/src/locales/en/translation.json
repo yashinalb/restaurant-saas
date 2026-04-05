@@ -1,0 +1,845 @@
+{
+  "auth": {
+    "signIn": "Sign In",
+    "email": "Email",
+    "emailPlaceholder": "you@example.com",
+    "password": "Password",
+    "forgotPassword": "Forgot password?",
+    "loggingIn": "Signing in...",
+    "logout": "Logout",
+    "loginSuccess": "Login successful!",
+    "loginFailed": "Login failed",
+    "welcomeBack": "Welcome back",
+    "loginDescription": "Sign in to manage your tenants, users, and more from your centralized dashboard.",
+    "enterCredentials": "Enter your credentials to access your account",
+    "hidePassword": "Hide password",
+    "showPassword": "Show password",
+    "securedBy": "Secured by",
+    "feature1": "Multi-tenant management",
+    "feature2": "Role-based access control",
+    "feature3": "Subscription & billing management"
+  },
+  "navigation": {
+    "dashboard": "Dashboard 1",
+    "adminUsers": "Admins",
+    "languages": "Languages",
+    "currencies": "Currencies",
+    "tenantTypes": "Tenant Types",
+    "subscriptionPlans": "Subscription Plans",
+    "tenants": "Tenants",
+    "teamMembers": "Team Members",
+    "settings": "Settings",
+    "groups": {
+      "superAdmin": "Super Admin",
+      "system": "System Management",
+      "tenants": "Tenant Management",
+      "team": "Team"
+    }
+  },
+  "common": {
+    "adminSaas": "Admin SaaS",
+    "adminPanel": "Admin Panel",
+    "currentTenant": "Current Tenant",
+    "superAdmin": "Super Admin",
+    "admin": "Admin",
+    "loading": "Loading...",
+    "default": "Default",
+    "expandSidebar": "Expand sidebar",
+    "collapseSidebar": "Collapse sidebar"
+  },
+  "teamMembers": {
+    "title": "Team Members",
+    "subtitle": "Manage users and invitations for your team",
+    "inviteUser": "Invite User",
+    "loading": "Loading users...",
+    "pendingInvitations": "Pending Invitations",
+    "activeUsers": "Active Users",
+    "role": "Role",
+    "invitedBy": "Invited by",
+    "expires": "Expires",
+    "table": {
+      "user": "User",
+      "role": "Role",
+      "status": "Status",
+      "lastLogin": "Last Login",
+      "actions": "Actions"
+    },
+    "status": {
+      "active": "Active",
+      "inactive": "Inactive"
+    },
+    "empty": {
+      "noUsersYet": "No users yet"
+    },
+    "actions": {
+      "view": "View",
+      "remove": "Remove",
+      "cancelInvitation": "Cancel Invitation",
+      "saving": "Saving...",
+      "saveChanges": "Save Changes",
+      "cancel": "Cancel"
+    },
+    "confirm": {
+      "cancelInvitation": "Are you sure you want to cancel this invitation?",
+      "removeUser": "Are you sure you want to remove {{userName}}?"
+    },
+    "toast": {
+      "loadFailed": "Failed to load users",
+      "cancelFailed": "Failed to cancel invitation",
+      "cancelSuccess": "Invitation cancelled",
+      "removeFailed": "Failed to remove user",
+      "removeSuccess": "User removed successfully",
+      "updateSuccess": "User updated successfully",
+      "updateFailed": "Failed to update user"
+    },
+    "detail": {
+      "loading": "Loading user...",
+      "backToUsers": "Back to Users",
+      "editUser": "Edit User",
+      "sections": {
+        "basicInfo": "Basic Information",
+        "roleAccess": "Role & Access",
+        "activity": "Activity"
+      },
+      "fields": {
+        "firstName": "First Name",
+        "lastName": "Last Name",
+        "email": "Email",
+        "preferredLanguage": "Preferred Language",
+        "default": "Default",
+        "role": "Role",
+        "status": "Status"
+      },
+      "activity": {
+        "lastLogin": "Last Login",
+        "joined": "Joined"
+      }
+    },
+    "lastLogin": {
+      "never": "Never"
+    }
+  },
+  "invite": {
+    "backToUsers": "Back to Users",
+    "title": "Invite User",
+    "subtitle": "Send an invitation to join your team. They'll receive an email with instructions to set up their account.",
+    "fields": {
+      "email": "Email Address *",
+      "role": "Role *",
+      "firstNameOptional": "First Name (Optional)",
+      "lastNameOptional": "Last Name (Optional)"
+    },
+    "placeholders": {
+      "email": "user@example.com",
+      "firstName": "John",
+      "lastName": "Doe"
+    },
+    "note": "Note: The user will receive an email with a link to accept the invitation and set their password. The invitation will expire in 7 days.",
+    "actions": {
+      "sending": "Sending...",
+      "send": "Send Invitation",
+      "cancel": "Cancel"
+    },
+    "toast": {
+      "loadRolesFailed": "Failed to load roles",
+      "success": "Invitation sent successfully!",
+      "failed": "Failed to send invitation"
+    }
+  },
+  "accept": {
+    "title": "Accept Invitation",
+    "subtitle": "Complete your account setup",
+    "fields": {
+      "firstName": "First Name *",
+      "lastName": "Last Name *",
+      "password": "Password *",
+      "confirmPassword": "Confirm Password *"
+    },
+    "placeholders": {
+      "password": "Minimum 8 characters",
+      "confirmPassword": "Re-enter password"
+    },
+    "requirements": {
+      "title": "Password Requirements:",
+      "items": {
+        "min": "At least 8 characters long",
+        "strong": "Use a strong, unique password"
+      }
+    },
+    "actions": {
+      "creating": "Creating Account...",
+      "create": "Create Account"
+    },
+    "footer": {
+      "alreadyHaveAccount": "Already have an account?",
+      "signIn": "Sign in"
+    },
+    "toast": {
+      "invalidLink": "Invalid invitation link",
+      "passwordMin": "Password must be at least 8 characters",
+      "passwordMismatch": "Passwords do not match",
+      "success": "Account created successfully! Please log in.",
+      "failed": "Failed to accept invitation"
+    }
+  },
+  "modals": {
+    "common": {
+      "cancel": "Cancel",
+      "saving": "Saving...",
+      "saveChanges": "Save Changes",
+      "loading": "Loading...",
+      "sortOrder": "Sort Order",
+      "tenant": "Tenant",
+      "product": "Product",
+      "plan": "Plan",
+      "category": "Category"
+    },
+    "manageCurrencies": {
+      "title": "Manage Currencies",
+      "loadingCurrencies": "Loading currencies...",
+      "selectDescription": "Select currencies for this tenant and set one as default",
+      "default": "Default",
+      "setAsDefault": "Set as Default",
+      "active": "Active",
+      "inactive": "Inactive",
+      "selectedCount": "{{count}} of {{total}} currencies selected",
+      "loadFailed": "Failed to load currencies",
+      "selectAtLeastOne": "Please select at least one currency",
+      "setOneAsDefault": "Please set one currency as default",
+      "updateSuccess": "Currencies updated successfully!",
+      "updateFailed": "Failed to update currencies"
+    },
+    "manageLanguages": {
+      "title": "Manage Languages",
+      "loadingLanguages": "Loading languages...",
+      "selectDescription": "Select languages for this tenant and set one as default",
+      "default": "Default",
+      "setAsDefault": "Set as Default",
+      "active": "Active",
+      "inactive": "Inactive",
+      "selectedCount": "{{count}} of {{total}} languages selected",
+      "loadFailed": "Failed to load languages",
+      "selectAtLeastOne": "Please select at least one language",
+      "setOneAsDefault": "Please set one language as default",
+      "updateSuccess": "Languages updated successfully!",
+      "updateFailed": "Failed to update languages"
+    },
+    "manageTenantTypes": {
+      "title": "Manage Tenant Types",
+      "loadingTenantTypes": "Loading tenant types...",
+      "selectedCount": "{{count}} tenant type(s) selected",
+      "selectDescription": "Select which business types should have access to this category",
+      "defaultCategory": "Default Category",
+      "showByDefault": "Show by default for new tenants",
+      "noTenantTypes": "No tenant types available",
+      "loadFailed": "Failed to load tenant types",
+      "updateSuccess": "Tenant type links updated successfully!",
+      "updateFailed": "Failed to update tenant type links"
+    },
+    "manageProductTenantTypes": {
+      "title": "Manage Tenant Types",
+      "loadingTenantTypes": "Loading tenant types...",
+      "selectDescription": "Select which business types (tenant types) should have access to this product",
+      "featuredProduct": "Featured Product",
+      "selectedCount": "{{count}} of {{total}} tenant types selected",
+      "loadFailed": "Failed to load tenant types",
+      "updateSuccess": "Tenant types updated successfully!",
+      "updateFailed": "Failed to update tenant types"
+    },
+    "managePlanTenantTypes": {
+      "title": "Manage Tenant Types",
+      "loadingTenantTypes": "Loading tenant types...",
+      "selectDescription": "Select which business types can subscribe to this plan and set custom pricing",
+      "recommended": "Recommended",
+      "customPrice": "Custom Price",
+      "leaveEmpty": "Leave empty to use base price",
+      "basePrice": "Base Price",
+      "contactForPricing": "Contact for pricing",
+      "selectedCount": "{{count}} of {{total}} tenant types selected",
+      "loadFailed": "Failed to load tenant types",
+      "updateSuccess": "Tenant types updated successfully!",
+      "updateFailed": "Failed to update tenant types"
+    }
+  },
+  "tenants": {
+    "list": {
+      "title": "Tenants",
+      "subtitle": "Manage all tenant accounts",
+      "addTenant": "Add Tenant",
+      "searchPlaceholder": "Search tenants by name, slug, domain, or type...",
+      "stats": {
+        "total": "Total Tenants",
+        "active": "Active",
+        "onTrial": "On Trial",
+        "inactive": "Inactive"
+      },
+      "loadingTenants": "Loading tenants...",
+      "noTenants": "No tenants yet",
+      "noTenantsSearch": "No tenants found matching your search",
+      "addFirst": "Add your first tenant",
+      "tableHeaders": {
+        "tenant": "Tenant",
+        "type": "Type",
+        "subscription": "Subscription",
+        "languages": "Languages",
+        "currencies": "Currencies",
+        "status": "Status",
+        "created": "Created",
+        "actions": "Actions"
+      },
+      "noPlan": "No Plan",
+      "viewDetails": "View Details",
+      "edit": "Edit",
+      "delete": "Delete",
+      "confirmDelete": "Delete tenant \"{{name}}\"? This will delete all associated data and cannot be undone.",
+      "loadFailed": "Failed to load tenants",
+      "deleteSuccess": "Tenant deleted successfully!",
+      "deleteFailed": "Failed to delete tenant"
+    },
+    "status": {
+      "trial": "Trial",
+      "expired": "Expired",
+      "inactive": "Inactive",
+      "active": "Active"
+    },
+    "detail": {
+      "backToTenants": "Back to Tenants",
+      "editTenant": "Edit Tenant",
+      "cancel": "Cancel",
+      "saving": "Saving...",
+      "saveChanges": "Save Changes",
+      "tabs": {
+        "overview": "Overview",
+        "subscription": "Subscription",
+        "languages": "Languages",
+        "currencies": "Currencies",
+        "stores": "Stores",
+        "settings": "Settings"
+      },
+      "overview": {
+        "title": "Basic Information",
+        "tenantName": "Tenant Name *",
+        "slug": "Slug *",
+        "domain": "Domain",
+        "subdomain": "Subdomain",
+        "tenantType": "Tenant Type",
+        "selectType": "Select type...",
+        "contactEmail": "Contact Email",
+        "contactPhone": "Contact Phone",
+        "logoUrl": "Logo URL",
+        "primaryColor": "Primary Color",
+        "secondaryColor": "Secondary Color",
+        "active": "Active",
+        "placeholders": {
+          "domain": "example.com",
+          "subdomain": "mystore"
+        }
+      },
+      "subscription": {
+        "title": "Subscription Details",
+        "plan": "Subscription Plan",
+        "noPlan": "No Plan",
+        "noplan": "No plan",
+        "trialEndsAt": "Trial Ends At",
+        "subscriptionEndsAt": "Subscription Ends At"
+      },
+      "languages": {
+        "title": "Languages",
+        "manage": "Manage Languages",
+        "default": "Default",
+        "active": "Active",
+        "inactive": "Inactive",
+        "noLanguages": "No languages configured",
+        "addLanguages": "Add Languages"
+      },
+      "currencies": {
+        "title": "Currencies",
+        "manage": "Manage Currencies",
+        "default": "Default",
+        "active": "Active",
+        "inactive": "Inactive",
+        "noCurrencies": "No currencies configured",
+        "addCurrencies": "Add Currencies"
+      },
+      "settings": {
+        "title": "Advanced Settings",
+        "comingSoon": "Advanced settings and JSON configuration will be available in the next update."
+      },
+      "loadFailed": "Failed to load tenant details",
+      "updateSuccess": "Tenant updated successfully!",
+      "updateFailed": "Failed to update tenant"
+    },
+    "create": {
+      "backToTenants": "Back to Tenants",
+      "title": "Create New Tenant",
+      "subtitle": "Set up a new tenant account",
+      "basicInfo": "Basic Information",
+      "tenantName": "Tenant Name *",
+      "slug": "Slug *",
+      "domain": "Domain",
+      "subdomain": "Subdomain",
+      "tenantType": "Tenant Type",
+      "selectType": "Select type...",
+      "subscriptionPlan": "Subscription Plan",
+      "noPlan": "No plan",
+      "contactInfo": "Contact Information",
+      "contactEmail": "Contact Email",
+      "contactPhone": "Contact Phone",
+      "branding": "Branding",
+      "logoUrl": "Logo URL",
+      "faviconUrl": "Favicon URL",
+      "primaryColor": "Primary Color",
+      "secondaryColor": "Secondary Color",
+      "localization": "Localization",
+      "defaultLanguage": "Default Language",
+      "selectLanguage": "Select language...",
+      "defaultCurrency": "Default Currency",
+      "selectCurrency": "Select currency...",
+      "trialSubscription": "Trial & Subscription",
+      "trialEndsAt": "Trial Ends At",
+      "subscriptionEndsAt": "Subscription Ends At",
+      "activeLabel": "Active (tenant can access the platform)",
+      "cancel": "Cancel",
+      "creating": "Creating...",
+      "createTenant": "Create Tenant",
+      "placeholders": {
+        "tenantName": "My Store",
+        "slug": "my-store",
+        "domain": "example.com",
+        "subdomain": "mystore",
+        "contactEmail": "contact@example.com",
+        "contactPhone": "+1234567890",
+        "logoUrl": "https://example.com/logo.png",
+        "faviconUrl": "https://example.com/favicon.ico"
+      },
+      "loadFormFailed": "Failed to load form data",
+      "nameSlugRequired": "Name and slug are required",
+      "createSuccess": "Tenant created successfully!",
+      "createFailed": "Failed to create tenant"
+    }
+  },
+  "adminUsers": {
+    "list": {
+      "title": "Admin Users",
+      "subtitle": "Manage platform administrators and their access",
+      "addUser": "Add Admin User",
+      "loadingUsers": "Loading users...",
+      "noUsers": "No admin users yet",
+      "createFirst": "Create your first admin user",
+      "tableHeaders": {
+        "user": "User",
+        "email": "Email",
+        "roleType": "Role Type",
+        "tenantAccess": "Tenant Access",
+        "lastLogin": "Last Login",
+        "status": "Status",
+        "actions": "Actions"
+      },
+      "tenants": "tenants",
+      "never": "Never",
+      "active": "Active",
+      "inactive": "Inactive",
+      "superAdmin": "Super Admin",
+      "admin": "Admin",
+      "edit": "Edit",
+      "delete": "Delete",
+      "confirmDelete": "Delete user \"{{name}}\"? This cannot be undone.",
+      "loadFailed": "Failed to load admin users",
+      "deleteSuccess": "User deleted successfully!",
+      "deleteFailed": "Failed to delete user"
+    },
+    "detail": {
+      "backToUsers": "Back to Admin Users",
+      "editUser": "Edit User",
+      "userInformation": "User Information",
+      "tenantAccess": "Tenant Access",
+      "grantAccess": "Grant Access",
+      "status": "Status",
+      "roleType": "Role Type",
+      "lastLogin": "Last Login",
+      "created": "Created",
+      "never": "Never",
+      "active": "Active",
+      "inactive": "Inactive",
+      "superAdmin": "Super Admin",
+      "admin": "Admin",
+      "superAdminAccess": "Super Admin has access to all tenants",
+      "role": "Role",
+      "revokeAccess": "Revoke Access",
+      "noAccess": "No tenant access granted",
+      "grantAccessLink": "Grant access to a tenant",
+      "grantAccessModal": {
+        "title": "Grant Tenant Access",
+        "tenant": "Tenant *",
+        "role": "Role *",
+        "selectTenant": "Select tenant...",
+        "selectRole": "Select role...",
+        "cancel": "Cancel",
+        "grant": "Grant Access"
+      },
+      "loadFailed": "Failed to load user",
+      "loadDataFailed": "Failed to load data",
+      "selectBothRequired": "Please select tenant and role",
+      "grantSuccess": "Access granted successfully!",
+      "grantFailed": "Failed to grant access",
+      "confirmRevoke": "Revoke access to \"{{tenantName}}\"?",
+      "revokeSuccess": "Access revoked successfully!",
+      "revokeFailed": "Failed to revoke access"
+    },
+    "form": {
+      "backToUsers": "Back to Admin Users",
+      "editTitle": "Edit Admin User",
+      "createTitle": "Create Admin User",
+      "email": "Email *",
+      "password": "Password",
+      "passwordRequired": "Password *",
+      "firstName": "First Name",
+      "lastName": "Last Name",
+      "avatarUrl": "Avatar URL",
+      "superAdmin": "Super Admin",
+      "superAdminDesc": "Full access to all platform features and all tenants",
+      "active": "Active",
+      "inactiveDesc": "Inactive users cannot log in",
+      "placeholders": {
+        "email": "user@example.com",
+        "passwordKeepCurrent": "Leave blank to keep current",
+        "passwordMinChars": "Minimum 8 characters",
+        "firstName": "John",
+        "lastName": "Doe",
+        "avatarUrl": "https://example.com/avatar.jpg"
+      },
+      "passwordHint": "Leave blank to keep current password",
+      "cancel": "Cancel",
+      "saving": "Saving...",
+      "updateUser": "Update User",
+      "createUser": "Create User",
+      "loadFailed": "Failed to load user",
+      "emailRequired": "Email is required",
+      "passwordRequiredNew": "Password is required for new users",
+      "passwordMinLength": "Password must be at least 8 characters",
+      "updateSuccess": "User updated successfully!",
+      "createSuccess": "User created successfully!",
+      "saveFailed": "Failed to save user"
+    }
+  },
+  "currencies": {
+    "title": "Currencies",
+    "subtitle": "Manage supported currencies and exchange rates",
+    "addCurrency": "Add Currency",
+    "loading": "Loading currencies...",
+    "noCurrencies": "No currencies yet",
+    "addFirst": "Add your first currency",
+    "tableHeaders": {
+      "code": "Code",
+      "name": "Name",
+      "symbol": "Symbol",
+      "exchangeRate": "Exchange Rate",
+      "tenants": "Tenants",
+      "status": "Status",
+      "actions": "Actions"
+    },
+    "status": {
+      "active": "Active",
+      "inactive": "Inactive"
+    },
+    "edit": "Edit",
+    "delete": "Delete",
+    "confirmDelete": "Delete \"{{name}}\" ({{code}})? This cannot be undone.",
+    "createModal": {
+      "title": "Add Currency",
+      "currencyCode": "Currency Code *",
+      "name": "Name *",
+      "symbol": "Symbol *",
+      "exchangeRate": "Exchange Rate (to base currency)",
+      "active": "Active",
+      "cancel": "Cancel",
+      "create": "Create Currency",
+      "placeholders": {
+        "code": "USD, EUR, TRY",
+        "name": "US Dollar, Euro, Turkish Lira",
+        "symbol": "$, €, ₺",
+        "exchangeRate": "1.000000"
+      }
+    },
+    "editModal": {
+      "title": "Edit Currency",
+      "currencyCode": "Currency Code",
+      "name": "Name",
+      "symbol": "Symbol",
+      "exchangeRate": "Exchange Rate",
+      "active": "Active",
+      "cancel": "Cancel",
+      "update": "Update Currency"
+    },
+    "toast": {
+      "loadFailed": "Failed to load currencies",
+      "requiredFields": "Please fill all required fields",
+      "createSuccess": "Currency created successfully!",
+      "createFailed": "Failed to create currency",
+      "updateSuccess": "Currency updated successfully!",
+      "updateFailed": "Failed to update currency",
+      "deleteSuccess": "Currency deleted successfully!",
+      "deleteFailed": "Failed to delete currency"
+    }
+  },
+  "languages": {
+    "title": "Languages",
+    "subtitle": "Manage supported languages for your platform",
+    "addLanguage": "Add Language",
+    "loading": "Loading languages...",
+    "noLanguages": "No languages yet",
+    "addFirst": "Add your first language",
+    "tableHeaders": {
+      "order": "Order",
+      "code": "Code",
+      "name": "Name",
+      "nativeName": "Native Name",
+      "direction": "Direction",
+      "tenants": "Tenants",
+      "status": "Status",
+      "actions": "Actions"
+    },
+    "direction": {
+      "rtl": "RTL",
+      "ltr": "LTR"
+    },
+    "status": {
+      "active": "Active",
+      "inactive": "Inactive"
+    },
+    "edit": "Edit",
+    "delete": "Delete",
+    "confirmDelete": "Delete \"{{name}}\"? This cannot be undone.",
+    "createModal": {
+      "title": "Add Language",
+      "languageCode": "Language Code *",
+      "nameEnglish": "Name (English) *",
+      "nativeName": "Native Name *",
+      "rtl": "Right-to-Left (RTL)",
+      "active": "Active",
+      "cancel": "Cancel",
+      "create": "Create Language",
+      "placeholders": {
+        "code": "en, tr, el",
+        "name": "English, Turkish, Greek",
+        "nativeName": "English, Türkçe, Ελληνικά"
+      }
+    },
+    "editModal": {
+      "title": "Edit Language",
+      "languageCode": "Language Code",
+      "nameEnglish": "Name (English)",
+      "nativeName": "Native Name",
+      "rtl": "Right-to-Left (RTL)",
+      "active": "Active",
+      "cancel": "Cancel",
+      "update": "Update Language"
+    },
+    "toast": {
+      "loadFailed": "Failed to load languages",
+      "requiredFields": "Please fill all required fields",
+      "createSuccess": "Language created successfully!",
+      "createFailed": "Failed to create language",
+      "updateSuccess": "Language updated successfully!",
+      "updateFailed": "Failed to update language",
+      "deleteSuccess": "Language deleted successfully!",
+      "deleteFailed": "Failed to delete language"
+    }
+  },
+  "dashboard": {
+    "title": "Dashboard",
+    "welcomeBack": "Welcome back, {{name}}!",
+    "currentTenant": "Current Tenant",
+    "tenantFields": {
+      "name": "Name",
+      "slug": "Slug",
+      "yourRole": "Your Role"
+    },
+    "stats": {
+      "totalProducts": "Total Products",
+      "activeCampaigns": "Active Campaigns",
+      "categories": "Categories",
+      "productViews": "Product Views",
+      "comingSoon": "Coming soon",
+      "fromSeedData": "From seed data"
+    }
+  },
+  "forgotPassword": {
+    "title": "Forgot Password?",
+    "subtitle": "Enter your email address and we'll send you a link to reset your password.",
+    "backToLogin": "Back to Login",
+    "emailLabel": "Email Address",
+    "emailPlaceholder": "admin@admin-saas.com",
+    "sending": "Sending...",
+    "sendResetLink": "Send Reset Link",
+    "submitted": {
+      "title": "Check Your Email",
+      "message": "If an account exists with {{email}}, you will receive a password reset link shortly.",
+      "checkSpam": "Didn't receive an email? Check your spam folder or try again.",
+      "backToLogin": "Back to Login",
+      "tryAnother": "Try Another Email"
+    },
+    "toast": {
+      "emailRequired": "Please enter your email address",
+      "sendFailed": "Failed to send reset email"
+    },
+    "demoAccounts": {
+      "title": "Demo Accounts:",
+      "superAdmin": "Super Admin: admin@admin-saas.com / SuperAdmin123!",
+      "tenantOwner": "Tenant Owner: owner@demo-tenant.com / DemoOwner123!"
+    }
+  },
+  "resetPassword": {
+    "title": "Reset Password",
+    "subtitle": "Enter your new password below.",
+    "newPassword": "New Password",
+    "confirmNewPassword": "Confirm New Password",
+    "minChars": "Minimum 8 characters",
+    "resetting": "Resetting...",
+    "resetPasswordBtn": "Reset Password",
+    "success": {
+      "title": "Password Reset!",
+      "message": "Your password has been reset successfully. You can now log in with your new password.",
+      "goToLogin": "Go to Login"
+    },
+    "toast": {
+      "invalidLink": "Invalid reset link",
+      "passwordMinLength": "Password must be at least 8 characters long",
+      "passwordMismatch": "Passwords do not match",
+      "success": "Password reset successfully!",
+      "invalidToken": "This reset link has expired or is invalid",
+      "failed": "Failed to reset password"
+    }
+  },
+  "subscriptionPlans": {
+    "title": "Subscription Plans",
+    "subtitle": "Manage pricing tiers and features",
+    "addPlan": "Add Plan",
+    "loading": "Loading plans...",
+    "noPlans": "No subscription plans yet",
+    "addFirst": "Add your first plan",
+    "tableHeaders": {
+      "plan": "Plan",
+      "price": "Price",
+      "limits": "Limits",
+      "tenantTypes": "Tenant Types",
+      "activeTenants": "Active Tenants",
+      "status": "Status",
+      "actions": "Actions"
+    },
+    "contactUs": "Contact Us",
+    "per": "per {{period}}",
+    "customPricing": "Custom pricing",
+    "limits": {
+      "products": "Products",
+      "stores": "Stores",
+      "campaigns": "Campaigns"
+    },
+    "manageTenantTypes": "Manage tenant types",
+    "types": "{{count}} types",
+    "status": {
+      "active": "Active",
+      "inactive": "Inactive"
+    },
+    "edit": "Edit",
+    "delete": "Delete",
+    "confirmDelete": "Delete \"{{name}}\"? This cannot be undone.",
+    "createModal": {
+      "title": "Add Subscription Plan",
+      "planName": "Plan Name *",
+      "slug": "Slug *",
+      "description": "Description",
+      "price": "Price",
+      "priceHint": "Leave at 0 or empty for \"Contact Us\" pricing",
+      "currency": "Currency",
+      "billingPeriod": "Billing Period *",
+      "maxProducts": "Max Products",
+      "maxStores": "Max Stores",
+      "maxCampaigns": "Max Campaigns",
+      "sortOrder": "Sort Order",
+      "features": "Features",
+      "addFeature": "Add a feature...",
+      "add": "Add",
+      "active": "Active",
+      "cancel": "Cancel",
+      "create": "Create Plan",
+      "placeholders": {
+        "name": "Basic, Pro, Enterprise...",
+        "slug": "basic-plan",
+        "description": "Perfect for small businesses...",
+        "price": "Leave empty for contact pricing",
+        "unlimited": "Leave empty for unlimited"
+      },
+      "billingPeriods": {
+        "monthly": "Monthly",
+        "yearly": "Yearly",
+        "quarterly": "Quarterly"
+      }
+    },
+    "editModal": {
+      "title": "Edit Subscription Plan",
+      "update": "Update Plan"
+    },
+    "toast": {
+      "loadFailed": "Failed to load subscription plans",
+      "requiredFields": "Name, slug, and billing period are required",
+      "createSuccess": "Subscription plan created successfully!",
+      "createFailed": "Failed to create subscription plan",
+      "updateSuccess": "Subscription plan updated successfully!",
+      "updateFailed": "Failed to update subscription plan",
+      "deleteSuccess": "Subscription plan deleted successfully!",
+      "deleteFailed": "Failed to delete subscription plan"
+    }
+  },
+  "tenantTypes": {
+    "title": "Tenant Types",
+    "addTenantType": "Add Tenant Type",
+    "loading": "Loading...",
+    "noTenantTypes": "No tenant types found. Create one to get started.",
+    "noTranslation": "No translation",
+    "noIcon": "No icon",
+    "tenants": "{{count}} tenants",
+    "tableHeaders": {
+      "sort": "Sort",
+      "code": "Code",
+      "name": "Name",
+      "icon": "Icon",
+      "tenants": "Tenants",
+      "status": "Status",
+      "actions": "Actions"
+    },
+    "status": {
+      "active": "Active",
+      "inactive": "Inactive"
+    },
+    "edit": "Edit",
+    "delete": "Delete",
+    "modal": {
+      "createTitle": "Create Tenant Type",
+      "editTitle": "Edit Tenant Type",
+      "code": "Code (unique identifier) *",
+      "iconUrl": "Icon URL",
+      "sortOrder": "Sort Order",
+      "status": "Status",
+      "translations": "Translations *",
+      "name": "Name",
+      "description": "Description",
+      "cancel": "Cancel",
+      "create": "Create",
+      "update": "Update",
+      "placeholders": {
+        "code": "e.g., retail, healthcare, education",
+        "iconUrl": "https://...",
+        "nameIn": "Name in {{language}}",
+        "descriptionIn": "Description in {{language}}"
+      }
+    },
+    "toast": {
+      "loadFailed": "Failed to load data",
+      "translationRequired": "Please provide at least one translation",
+      "saveFailed": "Failed to save tenant type",
+      "confirmDelete": "Are you sure you want to delete this tenant type?",
+      "deleteFailed": "Failed to delete tenant type"
+    }
+  }
+}

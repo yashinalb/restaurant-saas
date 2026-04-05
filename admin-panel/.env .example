@@ -1,0 +1,2 @@
+# frontend admin panel environment variables
+VITE_API_URL=http://localhost:3003

@@ -1,0 +1,845 @@
+{
+  "auth": {
+    "signIn": "Giriş Yap",
+    "email": "E-posta",
+    "password": "Şifre",
+    "forgotPassword": "Şifremi unuttum?",
+    "loggingIn": "Giriş yapılıyor...",
+    "logout": "Çıkış Yap",
+    "loginSuccess": "Giriş başarılı!",
+    "loginFailed": "Giriş başarısız",
+    "welcomeBack": "Tekrar hoş geldiniz",
+    "loginDescription": "Kiracılarınızı, kullanıcılarınızı ve daha fazlasını merkezi panonuzdan yönetmek için giriş yapın.",
+    "feature1": "Çoklu kiracı yönetimi",
+    "feature2": "Rol tabanlı erişim kontrolü",
+    "feature3": "Abonelik ve faturalandırma yönetimi",
+    "emailPlaceholder": "siz@ornek.com",
+    "enterCredentials": "Hesabınıza erişmek için kimlik bilgilerinizi girin",
+    "hidePassword": "Şifreyi gizle",
+    "showPassword": "Şifreyi göster",
+    "securedBy": "Güvenlik sağlayıcısı"
+  },
+  "navigation": {
+    "dashboard": "Panel",
+    "adminUsers": "Yöneticiler",
+    "languages": "Diller",
+    "currencies": "Para Birimleri",
+    "tenantTypes": "Kiracı Türleri",
+    "subscriptionPlans": "Abonelik Planları",
+    "tenants": "Kiracılar",
+    "teamMembers": "Ekip Üyeleri",
+    "settings": "Ayarlar",
+    "groups": {
+      "superAdmin": "Süper Yönetici",
+      "system": "Sistem Yönetimi",
+      "tenants": "Kiracı Yönetimi",
+      "team": "Ekip"
+    }
+  },
+  "common": {
+    "adminSaas": "Admin SaaS",
+    "adminPanel": "Yönetim Paneli",
+    "currentTenant": "Mevcut Kiracı",
+    "superAdmin": "Süper Yönetici",
+    "admin": "Yönetici",
+    "loading": "Yükleniyor...",
+    "default": "Varsayılan",
+    "expandSidebar": "Kenar çubuğunu genişlet",
+    "collapseSidebar": "Kenar çubuğunu daralt"
+  },
+  "teamMembers": {
+    "title": "Ekip Üyeleri",
+    "subtitle": "Ekibiniz için kullanıcıları ve davetleri yönetin",
+    "inviteUser": "Kullanıcı Davet Et",
+    "loading": "Kullanıcılar yükleniyor...",
+    "pendingInvitations": "Bekleyen Davetler",
+    "activeUsers": "Aktif Kullanıcılar",
+    "role": "Rol",
+    "invitedBy": "Davet eden",
+    "expires": "Bitiş",
+    "table": {
+      "user": "Kullanıcı",
+      "role": "Rol",
+      "status": "Durum",
+      "lastLogin": "Son Giriş",
+      "actions": "İşlemler"
+    },
+    "status": {
+      "active": "Aktif",
+      "inactive": "Pasif"
+    },
+    "empty": {
+      "noUsersYet": "Henüz kullanıcı yok"
+    },
+    "actions": {
+      "view": "Görüntüle",
+      "remove": "Kaldır",
+      "cancelInvitation": "Daveti İptal Et",
+      "saving": "Kaydediliyor...",
+      "saveChanges": "Değişiklikleri Kaydet",
+      "cancel": "İptal"
+    },
+    "confirm": {
+      "cancelInvitation": "Bu daveti iptal etmek istediğinizden emin misiniz?",
+      "removeUser": "{{userName}} kullanıcısını kaldırmak istediğinize emin misiniz?"
+    },
+    "toast": {
+      "loadFailed": "Kullanıcılar yüklenemedi",
+      "cancelFailed": "Davet iptal edilemedi",
+      "cancelSuccess": "Davet iptal edildi",
+      "removeFailed": "Kullanıcı kaldırılamadı",
+      "removeSuccess": "Kullanıcı başarıyla kaldırıldı",
+      "updateSuccess": "Kullanıcı başarıyla güncellendi",
+      "updateFailed": "Kullanıcı güncellenemedi"
+    },
+    "detail": {
+      "loading": "Kullanıcı yükleniyor...",
+      "backToUsers": "Kullanıcılara Dön",
+      "editUser": "Kullanıcıyı Düzenle",
+      "sections": {
+        "basicInfo": "Temel Bilgiler",
+        "roleAccess": "Rol ve Erişim",
+        "activity": "Aktivite"
+      },
+      "fields": {
+        "firstName": "Ad",
+        "lastName": "Soyad",
+        "email": "E-posta",
+        "preferredLanguage": "Tercih Edilen Dil",
+        "default": "Varsayılan",
+        "role": "Rol",
+        "status": "Durum"
+      },
+      "activity": {
+        "lastLogin": "Son Giriş",
+        "joined": "Katıldı"
+      }
+    },
+    "lastLogin": {
+      "never": "Hiç"
+    }
+  },
+  "invite": {
+    "backToUsers": "Kullanıcılara Dön",
+    "title": "Kullanıcı Davet Et",
+    "subtitle": "Ekibinize katılması için bir davet gönderin. Hesabını kurması için talimatları içeren bir e-posta alacak.",
+    "fields": {
+      "email": "E-posta Adresi *",
+      "role": "Rol *",
+      "firstNameOptional": "Ad (Opsiyonel)",
+      "lastNameOptional": "Soyad (Opsiyonel)"
+    },
+    "placeholders": {
+      "email": "kullanici@ornek.com",
+      "firstName": "Ahmet",
+      "lastName": "Yılmaz"
+    },
+    "note": "Not: Kullanıcı, daveti kabul edip şifresini belirlemesi için bir bağlantı içeren e-posta alacak. Davet 7 gün içinde sona erer.",
+    "actions": {
+      "sending": "Gönderiliyor...",
+      "send": "Daveti Gönder",
+      "cancel": "İptal"
+    },
+    "toast": {
+      "loadRolesFailed": "Roller yüklenemedi",
+      "success": "Davet başarıyla gönderildi!",
+      "failed": "Davet gönderilemedi"
+    }
+  },
+  "accept": {
+    "title": "Daveti Kabul Et",
+    "subtitle": "Hesap kurulumunuzu tamamlayın",
+    "fields": {
+      "firstName": "Ad *",
+      "lastName": "Soyad *",
+      "password": "Şifre *",
+      "confirmPassword": "Şifreyi Onayla *"
+    },
+    "placeholders": {
+      "password": "En az 8 karakter",
+      "confirmPassword": "Şifreyi tekrar girin"
+    },
+    "requirements": {
+      "title": "Şifre Gereksinimleri:",
+      "items": {
+        "min": "En az 8 karakter uzunluğunda",
+        "strong": "Güçlü ve benzersiz bir şifre kullanın"
+      }
+    },
+    "actions": {
+      "creating": "Hesap oluşturuluyor...",
+      "create": "Hesap Oluştur"
+    },
+    "footer": {
+      "alreadyHaveAccount": "Zaten hesabınız var mı?",
+      "signIn": "Giriş yap"
+    },
+    "toast": {
+      "invalidLink": "Geçersiz davet bağlantısı",
+      "passwordMin": "Şifre en az 8 karakter olmalıdır",
+      "passwordMismatch": "Şifreler eşleşmiyor",
+      "success": "Hesap başarıyla oluşturuldu! Lütfen giriş yapın.",
+      "failed": "Davet kabul edilemedi"
+    }
+  },
+  "modals": {
+    "common": {
+      "cancel": "İptal",
+      "saving": "Kaydediliyor...",
+      "saveChanges": "Değişiklikleri Kaydet",
+      "loading": "Yükleniyor...",
+      "sortOrder": "Sıralama",
+      "tenant": "Kiracı",
+      "product": "Ürün",
+      "plan": "Plan",
+      "category": "Kategori"
+    },
+    "manageCurrencies": {
+      "title": "Para Birimlerini Yönet",
+      "loadingCurrencies": "Para birimleri yükleniyor...",
+      "selectDescription": "Bu kiracı için para birimlerini seçin ve birini varsayılan olarak ayarlayın",
+      "default": "Varsayılan",
+      "setAsDefault": "Varsayılan Olarak Ayarla",
+      "active": "Aktif",
+      "inactive": "Pasif",
+      "selectedCount": "{{count}} / {{total}} para birimi seçildi",
+      "loadFailed": "Para birimleri yüklenemedi",
+      "selectAtLeastOne": "Lütfen en az bir para birimi seçin",
+      "setOneAsDefault": "Lütfen bir para birimini varsayılan olarak ayarlayın",
+      "updateSuccess": "Para birimleri başarıyla güncellendi!",
+      "updateFailed": "Para birimleri güncellenemedi"
+    },
+    "manageLanguages": {
+      "title": "Dilleri Yönet",
+      "loadingLanguages": "Diller yükleniyor...",
+      "selectDescription": "Bu kiracı için dilleri seçin ve birini varsayılan olarak ayarlayın",
+      "default": "Varsayılan",
+      "setAsDefault": "Varsayılan Olarak Ayarla",
+      "active": "Aktif",
+      "inactive": "Pasif",
+      "selectedCount": "{{count}} / {{total}} dil seçildi",
+      "loadFailed": "Diller yüklenemedi",
+      "selectAtLeastOne": "Lütfen en az bir dil seçin",
+      "setOneAsDefault": "Lütfen bir dili varsayılan olarak ayarlayın",
+      "updateSuccess": "Diller başarıyla güncellendi!",
+      "updateFailed": "Diller güncellenemedi"
+    },
+    "manageTenantTypes": {
+      "title": "Kiracı Tiplerini Yönet",
+      "loadingTenantTypes": "Kiracı tipleri yükleniyor...",
+      "selectedCount": "{{count}} kiracı tipi seçildi",
+      "selectDescription": "Bu kategoriye hangi işletme tiplerinin erişebileceğini seçin",
+      "defaultCategory": "Varsayılan Kategori",
+      "showByDefault": "Yeni kiracılar için varsayılan olarak göster",
+      "noTenantTypes": "Kiracı tipi bulunamadı",
+      "loadFailed": "Kiracı tipleri yüklenemedi",
+      "updateSuccess": "Kiracı tipi bağlantıları başarıyla güncellendi!",
+      "updateFailed": "Kiracı tipi bağlantıları güncellenemedi"
+    },
+    "manageProductTenantTypes": {
+      "title": "Kiracı Tiplerini Yönet",
+      "loadingTenantTypes": "Kiracı tipleri yükleniyor...",
+      "selectDescription": "Bu ürüne hangi işletme tiplerinin (kiracı tipleri) erişebileceğini seçin",
+      "featuredProduct": "Öne Çıkan Ürün",
+      "selectedCount": "{{count}} / {{total}} kiracı tipi seçildi",
+      "loadFailed": "Kiracı tipleri yüklenemedi",
+      "updateSuccess": "Kiracı tipleri başarıyla güncellendi!",
+      "updateFailed": "Kiracı tipleri güncellenemedi"
+    },
+    "managePlanTenantTypes": {
+      "title": "Kiracı Tiplerini Yönet",
+      "loadingTenantTypes": "Kiracı tipleri yükleniyor...",
+      "selectDescription": "Bu plana hangi işletme tiplerinin abone olabileceğini seçin ve özel fiyatlandırma ayarlayın",
+      "recommended": "Önerilen",
+      "customPrice": "Özel Fiyat",
+      "leaveEmpty": "Temel fiyatı kullanmak için boş bırakın",
+      "basePrice": "Temel Fiyat",
+      "contactForPricing": "Fiyat için iletişime geçin",
+      "selectedCount": "{{count}} / {{total}} kiracı tipi seçildi",
+      "loadFailed": "Kiracı tipleri yüklenemedi",
+      "updateSuccess": "Kiracı tipleri başarıyla güncellendi!",
+      "updateFailed": "Kiracı tipleri güncellenemedi"
+    }
+  },
+  "tenants": {
+    "list": {
+      "title": "Kiracılar",
+      "subtitle": "Tüm kiracı hesaplarını yönetin",
+      "addTenant": "Kiracı Ekle",
+      "searchPlaceholder": "İsim, slug, alan adı veya türe göre kiracı ara...",
+      "stats": {
+        "total": "Toplam Kiracılar",
+        "active": "Aktif",
+        "onTrial": "Deneme Süresi",
+        "inactive": "Pasif"
+      },
+      "loadingTenants": "Kiracılar yükleniyor...",
+      "noTenants": "Henüz kiracı yok",
+      "noTenantsSearch": "Aramanızla eşleşen kiracı bulunamadı",
+      "addFirst": "İlk kiracınızı ekleyin",
+      "tableHeaders": {
+        "tenant": "Kiracı",
+        "type": "Tür",
+        "subscription": "Abonelik",
+        "languages": "Diller",
+        "currencies": "Para Birimleri",
+        "status": "Durum",
+        "created": "Oluşturulma",
+        "actions": "İşlemler"
+      },
+      "noPlan": "Plan Yok",
+      "viewDetails": "Detayları Gör",
+      "edit": "Düzenle",
+      "delete": "Sil",
+      "confirmDelete": "\"{{name}}\" kiracısı silinsin mi? Tüm ilişkili veriler silinecek ve bu işlem geri alınamaz.",
+      "loadFailed": "Kiracılar yüklenemedi",
+      "deleteSuccess": "Kiracı başarıyla silindi!",
+      "deleteFailed": "Kiracı silinemedi"
+    },
+    "status": {
+      "trial": "Deneme",
+      "expired": "Süresi Doldu",
+      "inactive": "Pasif",
+      "active": "Aktif"
+    },
+    "detail": {
+      "backToTenants": "Kiracılara Dön",
+      "editTenant": "Kiracıyı Düzenle",
+      "cancel": "İptal",
+      "saving": "Kaydediliyor...",
+      "saveChanges": "Değişiklikleri Kaydet",
+      "tabs": {
+        "overview": "Genel Bakış",
+        "subscription": "Abonelik",
+        "languages": "Diller",
+        "currencies": "Para Birimleri",
+        "stores": "Mağazalar",
+        "settings": "Ayarlar"
+      },
+      "overview": {
+        "title": "Temel Bilgiler",
+        "tenantName": "Kiracı Adı *",
+        "slug": "Slug *",
+        "domain": "Alan Adı",
+        "subdomain": "Alt Alan Adı",
+        "tenantType": "Kiracı Türü",
+        "selectType": "Tür seçin...",
+        "contactEmail": "İletişim E-postası",
+        "contactPhone": "İletişim Telefonu",
+        "logoUrl": "Logo URL",
+        "primaryColor": "Ana Renk",
+        "secondaryColor": "İkincil Renk",
+        "active": "Aktif",
+        "placeholders": {
+          "domain": "example.com",
+          "subdomain": "magazam"
+        }
+      },
+      "subscription": {
+        "title": "Abonelik Detayları",
+        "plan": "Abonelik Planı",
+        "noPlan": "Plan Yok",
+        "noplan": "Plan yok",
+        "trialEndsAt": "Deneme Bitiş Tarihi",
+        "subscriptionEndsAt": "Abonelik Bitiş Tarihi"
+      },
+      "languages": {
+        "title": "Diller",
+        "manage": "Dilleri Yönet",
+        "default": "Varsayılan",
+        "active": "Aktif",
+        "inactive": "Pasif",
+        "noLanguages": "Dil yapılandırılmamış",
+        "addLanguages": "Dil Ekle"
+      },
+      "currencies": {
+        "title": "Para Birimleri",
+        "manage": "Para Birimlerini Yönet",
+        "default": "Varsayılan",
+        "active": "Aktif",
+        "inactive": "Pasif",
+        "noCurrencies": "Para birimi yapılandırılmamış",
+        "addCurrencies": "Para Birimi Ekle"
+      },
+      "settings": {
+        "title": "Gelişmiş Ayarlar",
+        "comingSoon": "Gelişmiş ayarlar ve JSON yapılandırması bir sonraki güncellemede kullanılabilir olacak."
+      },
+      "loadFailed": "Kiracı detayları yüklenemedi",
+      "updateSuccess": "Kiracı başarıyla güncellendi!",
+      "updateFailed": "Kiracı güncellenemedi"
+    },
+    "create": {
+      "backToTenants": "Kiracılara Dön",
+      "title": "Yeni Kiracı Oluştur",
+      "subtitle": "Yeni bir kiracı hesabı oluşturun",
+      "basicInfo": "Temel Bilgiler",
+      "tenantName": "Kiracı Adı *",
+      "slug": "Slug *",
+      "domain": "Alan Adı",
+      "subdomain": "Alt Alan Adı",
+      "tenantType": "Kiracı Türü",
+      "selectType": "Tür seçin...",
+      "subscriptionPlan": "Abonelik Planı",
+      "noPlan": "Plan yok",
+      "contactInfo": "İletişim Bilgileri",
+      "contactEmail": "İletişim E-postası",
+      "contactPhone": "İletişim Telefonu",
+      "branding": "Marka",
+      "logoUrl": "Logo URL",
+      "faviconUrl": "Favicon URL",
+      "primaryColor": "Ana Renk",
+      "secondaryColor": "İkincil Renk",
+      "localization": "Yerelleştirme",
+      "defaultLanguage": "Varsayılan Dil",
+      "selectLanguage": "Dil seçin...",
+      "defaultCurrency": "Varsayılan Para Birimi",
+      "selectCurrency": "Para birimi seçin...",
+      "trialSubscription": "Deneme ve Abonelik",
+      "trialEndsAt": "Deneme Bitiş Tarihi",
+      "subscriptionEndsAt": "Abonelik Bitiş Tarihi",
+      "activeLabel": "Aktif (kiracı platforma erişebilir)",
+      "cancel": "İptal",
+      "creating": "Oluşturuluyor...",
+      "createTenant": "Kiracı Oluştur",
+      "placeholders": {
+        "tenantName": "Mağazam",
+        "slug": "magazam",
+        "domain": "example.com",
+        "subdomain": "magazam",
+        "contactEmail": "iletisim@example.com",
+        "contactPhone": "+901234567890",
+        "logoUrl": "https://example.com/logo.png",
+        "faviconUrl": "https://example.com/favicon.ico"
+      },
+      "loadFormFailed": "Form verileri yüklenemedi",
+      "nameSlugRequired": "Ad ve slug gereklidir",
+      "createSuccess": "Kiracı başarıyla oluşturuldu!",
+      "createFailed": "Kiracı oluşturulamadı"
+    }
+  },
+  "adminUsers": {
+    "list": {
+      "title": "Yönetici Kullanıcılar",
+      "subtitle": "Platform yöneticilerini ve erişimlerini yönetin",
+      "addUser": "Yönetici Kullanıcı Ekle",
+      "loadingUsers": "Kullanıcılar yükleniyor...",
+      "noUsers": "Henüz yönetici kullanıcı yok",
+      "createFirst": "İlk yönetici kullanıcınızı oluşturun",
+      "tableHeaders": {
+        "user": "Kullanıcı",
+        "email": "E-posta",
+        "roleType": "Rol Tipi",
+        "tenantAccess": "Kiracı Erişimi",
+        "lastLogin": "Son Giriş",
+        "status": "Durum",
+        "actions": "İşlemler"
+      },
+      "tenants": "kiracı",
+      "never": "Hiçbir zaman",
+      "active": "Aktif",
+      "inactive": "Pasif",
+      "superAdmin": "Süper Yönetici",
+      "admin": "Yönetici",
+      "edit": "Düzenle",
+      "delete": "Sil",
+      "confirmDelete": "\"{{name}}\" kullanıcısı silinsin mi? Bu işlem geri alınamaz.",
+      "loadFailed": "Yönetici kullanıcılar yüklenemedi",
+      "deleteSuccess": "Kullanıcı başarıyla silindi!",
+      "deleteFailed": "Kullanıcı silinemedi"
+    },
+    "detail": {
+      "backToUsers": "Yönetici Kullanıcılara Dön",
+      "editUser": "Kullanıcıyı Düzenle",
+      "userInformation": "Kullanıcı Bilgileri",
+      "tenantAccess": "Kiracı Erişimi",
+      "grantAccess": "Erişim Ver",
+      "status": "Durum",
+      "roleType": "Rol Tipi",
+      "lastLogin": "Son Giriş",
+      "created": "Oluşturuldu",
+      "never": "Hiçbir zaman",
+      "active": "Aktif",
+      "inactive": "Pasif",
+      "superAdmin": "Süper Yönetici",
+      "admin": "Yönetici",
+      "superAdminAccess": "Süper Yönetici tüm kiracılara erişebilir",
+      "role": "Rol",
+      "revokeAccess": "Erişimi İptal Et",
+      "noAccess": "Kiracı erişimi verilmedi",
+      "grantAccessLink": "Bir kiracıya erişim ver",
+      "grantAccessModal": {
+        "title": "Kiracı Erişimi Ver",
+        "tenant": "Kiracı *",
+        "role": "Rol *",
+        "selectTenant": "Kiracı seçin...",
+        "selectRole": "Rol seçin...",
+        "cancel": "İptal",
+        "grant": "Erişim Ver"
+      },
+      "loadFailed": "Kullanıcı yüklenemedi",
+      "loadDataFailed": "Veriler yüklenemedi",
+      "selectBothRequired": "Lütfen kiracı ve rol seçin",
+      "grantSuccess": "Erişim başarıyla verildi!",
+      "grantFailed": "Erişim verilemedi",
+      "confirmRevoke": "\"{{tenantName}}\" erişimi iptal edilsin mi?",
+      "revokeSuccess": "Erişim başarıyla iptal edildi!",
+      "revokeFailed": "Erişim iptal edilemedi"
+    },
+    "form": {
+      "backToUsers": "Yönetici Kullanıcılara Dön",
+      "editTitle": "Yönetici Kullanıcıyı Düzenle",
+      "createTitle": "Yönetici Kullanıcı Oluştur",
+      "email": "E-posta *",
+      "password": "Şifre",
+      "passwordRequired": "Şifre *",
+      "firstName": "Ad",
+      "lastName": "Soyad",
+      "avatarUrl": "Avatar URL",
+      "superAdmin": "Süper Yönetici",
+      "superAdminDesc": "Tüm platform özelliklerine ve tüm kiracılara tam erişim",
+      "active": "Aktif",
+      "inactiveDesc": "Pasif kullanıcılar giriş yapamaz",
+      "placeholders": {
+        "email": "kullanici@ornek.com",
+        "passwordKeepCurrent": "Mevcut şifreyi korumak için boş bırakın",
+        "passwordMinChars": "Minimum 8 karakter",
+        "firstName": "Ahmet",
+        "lastName": "Yılmaz",
+        "avatarUrl": "https://ornek.com/avatar.jpg"
+      },
+      "passwordHint": "Mevcut şifreyi korumak için boş bırakın",
+      "cancel": "İptal",
+      "saving": "Kaydediliyor...",
+      "updateUser": "Kullanıcıyı Güncelle",
+      "createUser": "Kullanıcı Oluştur",
+      "loadFailed": "Kullanıcı yüklenemedi",
+      "emailRequired": "E-posta gereklidir",
+      "passwordRequiredNew": "Yeni kullanıcılar için şifre gereklidir",
+      "passwordMinLength": "Şifre en az 8 karakter olmalıdır",
+      "updateSuccess": "Kullanıcı başarıyla güncellendi!",
+      "createSuccess": "Kullanıcı başarıyla oluşturuldu!",
+      "saveFailed": "Kullanıcı kaydedilemedi"
+    }
+  },
+  "currencies": {
+    "title": "Para Birimleri",
+    "subtitle": "Desteklenen para birimlerini ve döviz kurlarını yönetin",
+    "addCurrency": "Para Birimi Ekle",
+    "loading": "Para birimleri yükleniyor...",
+    "noCurrencies": "Henüz para birimi yok",
+    "addFirst": "İlk para biriminizi ekleyin",
+    "tableHeaders": {
+      "code": "Kod",
+      "name": "İsim",
+      "symbol": "Sembol",
+      "exchangeRate": "Döviz Kuru",
+      "tenants": "Kiracılar",
+      "status": "Durum",
+      "actions": "İşlemler"
+    },
+    "status": {
+      "active": "Aktif",
+      "inactive": "Pasif"
+    },
+    "edit": "Düzenle",
+    "delete": "Sil",
+    "confirmDelete": "\"{{name}}\" ({{code}}) silinsin mi? Bu işlem geri alınamaz.",
+    "createModal": {
+      "title": "Para Birimi Ekle",
+      "currencyCode": "Para Birimi Kodu *",
+      "name": "İsim *",
+      "symbol": "Sembol *",
+      "exchangeRate": "Döviz Kuru (temel para birimine göre)",
+      "active": "Aktif",
+      "cancel": "İptal",
+      "create": "Para Birimi Oluştur",
+      "placeholders": {
+        "code": "USD, EUR, TRY",
+        "name": "ABD Doları, Euro, Türk Lirası",
+        "symbol": "$, €, ₺",
+        "exchangeRate": "1.000000"
+      }
+    },
+    "editModal": {
+      "title": "Para Birimini Düzenle",
+      "currencyCode": "Para Birimi Kodu",
+      "name": "İsim",
+      "symbol": "Sembol",
+      "exchangeRate": "Döviz Kuru",
+      "active": "Aktif",
+      "cancel": "İptal",
+      "update": "Para Birimini Güncelle"
+    },
+    "toast": {
+      "loadFailed": "Para birimleri yüklenemedi",
+      "requiredFields": "Lütfen tüm gerekli alanları doldurun",
+      "createSuccess": "Para birimi başarıyla oluşturuldu!",
+      "createFailed": "Para birimi oluşturulamadı",
+      "updateSuccess": "Para birimi başarıyla güncellendi!",
+      "updateFailed": "Para birimi güncellenemedi",
+      "deleteSuccess": "Para birimi başarıyla silindi!",
+      "deleteFailed": "Para birimi silinemedi"
+    }
+  },
+  "languages": {
+    "title": "Diller",
+    "subtitle": "Platformunuz için desteklenen dilleri yönetin",
+    "addLanguage": "Dil Ekle",
+    "loading": "Diller yükleniyor...",
+    "noLanguages": "Henüz dil yok",
+    "addFirst": "İlk dilinizi ekleyin",
+    "tableHeaders": {
+      "order": "Sıra",
+      "code": "Kod",
+      "name": "İsim",
+      "nativeName": "Yerel İsim",
+      "direction": "Yön",
+      "tenants": "Kiracılar",
+      "status": "Durum",
+      "actions": "İşlemler"
+    },
+    "direction": {
+      "rtl": "Sağdan Sola",
+      "ltr": "Soldan Sağa"
+    },
+    "status": {
+      "active": "Aktif",
+      "inactive": "Pasif"
+    },
+    "edit": "Düzenle",
+    "delete": "Sil",
+    "confirmDelete": "\"{{name}}\" silinsin mi? Bu işlem geri alınamaz.",
+    "createModal": {
+      "title": "Dil Ekle",
+      "languageCode": "Dil Kodu *",
+      "nameEnglish": "İsim (İngilizce) *",
+      "nativeName": "Yerel İsim *",
+      "rtl": "Sağdan Sola (RTL)",
+      "active": "Aktif",
+      "cancel": "İptal",
+      "create": "Dil Oluştur",
+      "placeholders": {
+        "code": "en, tr, el",
+        "name": "English, Turkish, Greek",
+        "nativeName": "English, Türkçe, Ελληνικά"
+      }
+    },
+    "editModal": {
+      "title": "Dili Düzenle",
+      "languageCode": "Dil Kodu",
+      "nameEnglish": "İsim (İngilizce)",
+      "nativeName": "Yerel İsim",
+      "rtl": "Sağdan Sola (RTL)",
+      "active": "Aktif",
+      "cancel": "İptal",
+      "update": "Dili Güncelle"
+    },
+    "toast": {
+      "loadFailed": "Diller yüklenemedi",
+      "requiredFields": "Lütfen tüm gerekli alanları doldurun",
+      "createSuccess": "Dil başarıyla oluşturuldu!",
+      "createFailed": "Dil oluşturulamadı",
+      "updateSuccess": "Dil başarıyla güncellendi!",
+      "updateFailed": "Dil güncellenemedi",
+      "deleteSuccess": "Dil başarıyla silindi!",
+      "deleteFailed": "Dil silinemedi"
+    }
+  },
+  "dashboard": {
+    "title": "Panel",
+    "welcomeBack": "Tekrar hoş geldiniz, {{name}}!",
+    "currentTenant": "Mevcut Kiracı",
+    "tenantFields": {
+      "name": "İsim",
+      "slug": "Slug",
+      "yourRole": "Rolünüz"
+    },
+    "stats": {
+      "totalProducts": "Toplam Ürünler",
+      "activeCampaigns": "Aktif Kampanyalar",
+      "categories": "Kategoriler",
+      "productViews": "Ürün Görüntülenmeleri",
+      "comingSoon": "Yakında",
+      "fromSeedData": "Tohum verisinden"
+    }
+  },
+  "forgotPassword": {
+    "title": "Şifrenizi mi unuttunuz?",
+    "subtitle": "E-posta adresinizi girin, size şifrenizi sıfırlamak için bir bağlantı gönderelim.",
+    "backToLogin": "Giriş Sayfasına Dön",
+    "emailLabel": "E-posta Adresi",
+    "emailPlaceholder": "admin@admin-saas.com",
+    "sending": "Gönderiliyor...",
+    "sendResetLink": "Sıfırlama Bağlantısı Gönder",
+    "submitted": {
+      "title": "E-postanızı Kontrol Edin",
+      "message": "{{email}} adresine kayıtlı bir hesap varsa, kısa süre içinde bir şifre sıfırlama bağlantısı alacaksınız.",
+      "checkSpam": "E-posta almadınız mı? Spam klasörünüzü kontrol edin veya tekrar deneyin.",
+      "backToLogin": "Giriş Sayfasına Dön",
+      "tryAnother": "Başka Bir E-posta Deneyin"
+    },
+    "toast": {
+      "emailRequired": "Lütfen e-posta adresinizi girin",
+      "sendFailed": "Sıfırlama e-postası gönderilemedi"
+    },
+    "demoAccounts": {
+      "title": "Demo Hesapları:",
+      "superAdmin": "Süper Yönetici: admin@admin-saas.com / SuperAdmin123!",
+      "tenantOwner": "Kiracı Sahibi: owner@demo-tenant.com / DemoOwner123!"
+    }
+  },
+  "resetPassword": {
+    "title": "Şifre Sıfırla",
+    "subtitle": "Aşağıya yeni şifrenizi girin.",
+    "newPassword": "Yeni Şifre",
+    "confirmNewPassword": "Yeni Şifreyi Onayla",
+    "minChars": "En az 8 karakter",
+    "resetting": "Sıfırlanıyor...",
+    "resetPasswordBtn": "Şifre Sıfırla",
+    "success": {
+      "title": "Şifre Sıfırlandı!",
+      "message": "Şifreniz başarıyla sıfırlandı. Artık yeni şifrenizle giriş yapabilirsiniz.",
+      "goToLogin": "Giriş Sayfasına Git"
+    },
+    "toast": {
+      "invalidLink": "Geçersiz sıfırlama bağlantısı",
+      "passwordMinLength": "Şifre en az 8 karakter uzunluğunda olmalıdır",
+      "passwordMismatch": "Şifreler eşleşmiyor",
+      "success": "Şifre başarıyla sıfırlandı!",
+      "invalidToken": "Bu sıfırlama bağlantısının süresi dolmuş veya geçersiz",
+      "failed": "Şifre sıfırlanamadı"
+    }
+  },
+  "subscriptionPlans": {
+    "title": "Abonelik Planları",
+    "subtitle": "Fiyatlandırma katmanlarını ve özellikleri yönetin",
+    "addPlan": "Plan Ekle",
+    "loading": "Planlar yükleniyor...",
+    "noPlans": "Henüz abonelik planı yok",
+    "addFirst": "İlk planınızı ekleyin",
+    "tableHeaders": {
+      "plan": "Plan",
+      "price": "Fiyat",
+      "limits": "Limitler",
+      "tenantTypes": "Kiracı Türleri",
+      "activeTenants": "Aktif Kiracılar",
+      "status": "Durum",
+      "actions": "İşlemler"
+    },
+    "contactUs": "Bize Ulaşın",
+    "per": "/ {{period}}",
+    "customPricing": "Özel fiyatlandırma",
+    "limits": {
+      "products": "Ürünler",
+      "stores": "Mağazalar",
+      "campaigns": "Kampanyalar"
+    },
+    "manageTenantTypes": "Kiracı türlerini yönet",
+    "types": "{{count}} tür",
+    "status": {
+      "active": "Aktif",
+      "inactive": "Pasif"
+    },
+    "edit": "Düzenle",
+    "delete": "Sil",
+    "confirmDelete": "\"{{name}}\" silinsin mi? Bu işlem geri alınamaz.",
+    "createModal": {
+      "title": "Abonelik Planı Ekle",
+      "planName": "Plan Adı *",
+      "slug": "Slug *",
+      "description": "Açıklama",
+      "price": "Fiyat",
+      "priceHint": "\"Bize Ulaşın\" fiyatlandırması için 0 bırakın veya boş bırakın",
+      "currency": "Para Birimi",
+      "billingPeriod": "Faturalandırma Dönemi *",
+      "maxProducts": "Maksimum Ürün",
+      "maxStores": "Maksimum Mağaza",
+      "maxCampaigns": "Maksimum Kampanya",
+      "sortOrder": "Sıralama",
+      "features": "Özellikler",
+      "addFeature": "Özellik ekleyin...",
+      "add": "Ekle",
+      "active": "Aktif",
+      "cancel": "İptal",
+      "create": "Plan Oluştur",
+      "placeholders": {
+        "name": "Temel, Pro, Kurumsal...",
+        "slug": "temel-plan",
+        "description": "Küçük işletmeler için ideal...",
+        "price": "İletişim fiyatlandırması için boş bırakın",
+        "unlimited": "Sınırsız için boş bırakın"
+      },
+      "billingPeriods": {
+        "monthly": "Aylık",
+        "yearly": "Yıllık",
+        "quarterly": "Üç Aylık"
+      }
+    },
+    "editModal": {
+      "title": "Abonelik Planını Düzenle",
+      "update": "Planı Güncelle"
+    },
+    "toast": {
+      "loadFailed": "Abonelik planları yüklenemedi",
+      "requiredFields": "Ad, slug ve faturalandırma dönemi gereklidir",
+      "createSuccess": "Abonelik planı başarıyla oluşturuldu!",
+      "createFailed": "Abonelik planı oluşturulamadı",
+      "updateSuccess": "Abonelik planı başarıyla güncellendi!",
+      "updateFailed": "Abonelik planı güncellenemedi",
+      "deleteSuccess": "Abonelik planı başarıyla silindi!",
+      "deleteFailed": "Abonelik planı silinemedi"
+    }
+  },
+  "tenantTypes": {
+    "title": "Kiracı Türleri",
+    "addTenantType": "Kiracı Türü Ekle",
+    "loading": "Yükleniyor...",
+    "noTenantTypes": "Kiracı türü bulunamadı. Başlamak için bir tane oluşturun.",
+    "noTranslation": "Çeviri yok",
+    "noIcon": "Simge yok",
+    "tenants": "{{count}} kiracı",
+    "tableHeaders": {
+      "sort": "Sırala",
+      "code": "Kod",
+      "name": "İsim",
+      "icon": "Simge",
+      "tenants": "Kiracılar",
+      "status": "Durum",
+      "actions": "İşlemler"
+    },
+    "status": {
+      "active": "Aktif",
+      "inactive": "Pasif"
+    },
+    "edit": "Düzenle",
+    "delete": "Sil",
+    "modal": {
+      "createTitle": "Kiracı Türü Oluştur",
+      "editTitle": "Kiracı Türünü Düzenle",
+      "code": "Kod (benzersiz tanımlayıcı) *",
+      "iconUrl": "Simge URL",
+      "sortOrder": "Sıralama",
+      "status": "Durum",
+      "translations": "Çeviriler *",
+      "name": "İsim",
+      "description": "Açıklama",
+      "cancel": "İptal",
+      "create": "Oluştur",
+      "update": "Güncelle",
+      "placeholders": {
+        "code": "ör. süpermarket, eczane, evcil-hayvan-mağazası",
+        "iconUrl": "https://...",
+        "nameIn": "{{language}} dilinde isim",
+        "descriptionIn": "{{language}} dilinde açıklama"
+      }
+    },
+    "toast": {
+      "loadFailed": "Veriler yüklenemedi",
+      "translationRequired": "Lütfen en az bir çeviri sağlayın",
+      "saveFailed": "Kiracı türü kaydedilemedi",
+      "confirmDelete": "Bu kiracı türünü silmek istediğinizden emin misiniz?",
+      "deleteFailed": "Kiracı türü silinemedi"
+    }
+  }
+}

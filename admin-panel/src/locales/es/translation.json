@@ -1,0 +1,845 @@
+{
+  "auth": {
+    "signIn": "Iniciar sesión",
+    "email": "Correo electrónico",
+    "password": "Contraseña",
+    "forgotPassword": "¿Olvidaste tu contraseña?",
+    "loggingIn": "Iniciando sesión...",
+    "logout": "Cerrar sesión",
+    "loginSuccess": "¡Inicio de sesión exitoso!",
+    "loginFailed": "Error al iniciar sesión",
+    "welcomeBack": "Bienvenido de nuevo",
+    "loginDescription": "Inicie sesión para administrar sus inquilinos, usuarios y más desde su panel de control centralizado.",
+    "feature1": "Gestión multi-inquilino",
+    "feature2": "Control de acceso basado en roles",
+    "feature3": "Gestión de suscripciones y facturación",
+    "emailPlaceholder": "tu@ejemplo.com",
+    "enterCredentials": "Ingrese sus credenciales para acceder a su cuenta",
+    "hidePassword": "Ocultar contraseña",
+    "showPassword": "Mostrar contraseña",
+    "securedBy": "Protegido por"
+  },
+  "navigation": {
+    "dashboard": "Panel de control",
+    "adminUsers": "Administradores",
+    "languages": "Idiomas",
+    "currencies": "Monedas",
+    "tenantTypes": "Tipos de inquilinos",
+    "subscriptionPlans": "Planes de suscripción",
+    "tenants": "Inquilinos",
+    "teamMembers": "Miembros del equipo",
+    "settings": "Configuración",
+    "groups": {
+      "superAdmin": "Super Admin",
+      "system": "Gestión del sistema",
+      "tenants": "Gestión de inquilinos",
+      "team": "Equipo"
+    }
+  },
+  "common": {
+    "adminSaas": "Admin SaaS",
+    "adminPanel": "Panel de administración",
+    "currentTenant": "Inquilino actual",
+    "superAdmin": "Super Admin",
+    "admin": "Admin",
+    "loading": "Cargando...",
+    "default": "Predeterminado",
+    "expandSidebar": "Expandir barra lateral",
+    "collapseSidebar": "Contraer barra lateral"
+  },
+  "teamMembers": {
+    "title": "Miembros del equipo",
+    "subtitle": "Gestionar usuarios e invitaciones para su equipo",
+    "inviteUser": "Invitar usuario",
+    "loading": "Cargando usuarios...",
+    "pendingInvitations": "Invitaciones pendientes",
+    "activeUsers": "Usuarios activos",
+    "role": "Rol",
+    "invitedBy": "Invitado por",
+    "expires": "Caduca",
+    "table": {
+      "user": "Usuario",
+      "role": "Rol",
+      "status": "Estado",
+      "lastLogin": "Último acceso",
+      "actions": "Acciones"
+    },
+    "status": {
+      "active": "Activo",
+      "inactive": "Inactivo"
+    },
+    "empty": {
+      "noUsersYet": "Aún no hay usuarios"
+    },
+    "actions": {
+      "view": "Ver",
+      "remove": "Eliminar",
+      "cancelInvitation": "Cancelar invitación",
+      "saving": "Guardando...",
+      "saveChanges": "Guardar cambios",
+      "cancel": "Cancelar"
+    },
+    "confirm": {
+      "cancelInvitation": "¿Está seguro de que desea cancelar esta invitación?",
+      "removeUser": "¿Está seguro de que desea eliminar a {{userName}}?"
+    },
+    "toast": {
+      "loadFailed": "Error al cargar usuarios",
+      "cancelFailed": "Error al cancelar la invitación",
+      "cancelSuccess": "Invitación cancelada",
+      "removeFailed": "Error al eliminar usuario",
+      "removeSuccess": "Usuario eliminado correctamente",
+      "updateSuccess": "Usuario actualizado correctamente",
+      "updateFailed": "Error al actualizar usuario"
+    },
+    "detail": {
+      "loading": "Cargando usuario...",
+      "backToUsers": "Volver a usuarios",
+      "editUser": "Editar usuario",
+      "sections": {
+        "basicInfo": "Información básica",
+        "roleAccess": "Rol y acceso",
+        "activity": "Actividad"
+      },
+      "fields": {
+        "firstName": "Nombre",
+        "lastName": "Apellido",
+        "email": "Correo electrónico",
+        "preferredLanguage": "Idioma preferido",
+        "default": "Predeterminado",
+        "role": "Rol",
+        "status": "Estado"
+      },
+      "activity": {
+        "lastLogin": "Último acceso",
+        "joined": "Registrado"
+      }
+    },
+    "lastLogin": {
+      "never": "Nunca"
+    }
+  },
+  "invite": {
+    "backToUsers": "Volver a usuarios",
+    "title": "Invitar usuario",
+    "subtitle": "Envíe una invitación para unirse a su equipo. Recibirán un correo electrónico con instrucciones para configurar su cuenta.",
+    "fields": {
+      "email": "Dirección de correo electrónico *",
+      "role": "Rol *",
+      "firstNameOptional": "Nombre (Opcional)",
+      "lastNameOptional": "Apellido (Opcional)"
+    },
+    "placeholders": {
+      "email": "usuario@ejemplo.com",
+      "firstName": "Juan",
+      "lastName": "Pérez"
+    },
+    "note": "Nota: El usuario recibirá un correo electrónico con un enlace para aceptar la invitación y establecer su contraseña. La invitación caducará en 7 días.",
+    "actions": {
+      "sending": "Enviando...",
+      "send": "Enviar invitación",
+      "cancel": "Cancelar"
+    },
+    "toast": {
+      "loadRolesFailed": "Error al cargar roles",
+      "success": "¡Invitación enviada correctamente!",
+      "failed": "Error al enviar la invitación"
+    }
+  },
+  "accept": {
+    "title": "Aceptar invitación",
+    "subtitle": "Complete la configuración de su cuenta",
+    "fields": {
+      "firstName": "Nombre *",
+      "lastName": "Apellido *",
+      "password": "Contraseña *",
+      "confirmPassword": "Confirmar contraseña *"
+    },
+    "placeholders": {
+      "password": "Mínimo 8 caracteres",
+      "confirmPassword": "Vuelva a ingresar la contraseña"
+    },
+    "requirements": {
+      "title": "Requisitos de contraseña:",
+      "items": {
+        "min": "Al menos 8 caracteres de longitud",
+        "strong": "Use una contraseña fuerte y única"
+      }
+    },
+    "actions": {
+      "creating": "Creando cuenta...",
+      "create": "Crear cuenta"
+    },
+    "footer": {
+      "alreadyHaveAccount": "¿Ya tienes una cuenta?",
+      "signIn": "Iniciar sesión"
+    },
+    "toast": {
+      "invalidLink": "Enlace de invitación inválido",
+      "passwordMin": "La contraseña debe tener al menos 8 caracteres",
+      "passwordMismatch": "Las contraseñas no coinciden",
+      "success": "¡Cuenta creada correctamente! Por favor, inicie sesión.",
+      "failed": "Error al aceptar la invitación"
+    }
+  },
+  "modals": {
+    "common": {
+      "cancel": "Cancelar",
+      "saving": "Guardando...",
+      "saveChanges": "Guardar cambios",
+      "loading": "Cargando...",
+      "sortOrder": "Orden de clasificación",
+      "tenant": "Inquilino",
+      "product": "Producto",
+      "plan": "Plan",
+      "category": "Categoría"
+    },
+    "manageCurrencies": {
+      "title": "Gestionar monedas",
+      "loadingCurrencies": "Cargando monedas...",
+      "selectDescription": "Seleccione las monedas para este inquilino y establezca una como predeterminada",
+      "default": "Predeterminado",
+      "setAsDefault": "Establecer como predeterminado",
+      "active": "Activo",
+      "inactive": "Inactivo",
+      "selectedCount": "{{count}} de {{total}} monedas seleccionadas",
+      "loadFailed": "Error al cargar monedas",
+      "selectAtLeastOne": "Por favor seleccione al menos una moneda",
+      "setOneAsDefault": "Por favor establezca una moneda como predeterminada",
+      "updateSuccess": "¡Monedas actualizadas correctamente!",
+      "updateFailed": "Error al actualizar monedas"
+    },
+    "manageLanguages": {
+      "title": "Gestionar idiomas",
+      "loadingLanguages": "Cargando idiomas...",
+      "selectDescription": "Seleccione los idiomas para este inquilino y establezca uno como predeterminado",
+      "default": "Predeterminado",
+      "setAsDefault": "Establecer como predeterminado",
+      "active": "Activo",
+      "inactive": "Inactivo",
+      "selectedCount": "{{count}} de {{total}} idiomas seleccionados",
+      "loadFailed": "Error al cargar idiomas",
+      "selectAtLeastOne": "Por favor seleccione al menos un idioma",
+      "setOneAsDefault": "Por favor establezca un idioma como predeterminado",
+      "updateSuccess": "¡Idiomas actualizados correctamente!",
+      "updateFailed": "Error al actualizar idiomas"
+    },
+    "manageTenantTypes": {
+      "title": "Gestionar tipos de inquilinos",
+      "loadingTenantTypes": "Cargando tipos de inquilinos...",
+      "selectedCount": "{{count}} tipo(s) de inquilino seleccionado(s)",
+      "selectDescription": "Seleccione qué tipos de negocios deben tener acceso a esta categoría",
+      "defaultCategory": "Categoría predeterminada",
+      "showByDefault": "Mostrar por defecto para nuevos inquilinos",
+      "noTenantTypes": "No hay tipos de inquilinos disponibles",
+      "loadFailed": "Error al cargar tipos de inquilinos",
+      "updateSuccess": "¡Vínculos de tipos de inquilinos actualizados correctamente!",
+      "updateFailed": "Error al actualizar vínculos de tipos de inquilinos"
+    },
+    "manageProductTenantTypes": {
+      "title": "Gestionar tipos de inquilinos",
+      "loadingTenantTypes": "Cargando tipos de inquilinos...",
+      "selectDescription": "Seleccione qué tipos de negocios (tipos de inquilinos) deben tener acceso a este producto",
+      "featuredProduct": "Producto destacado",
+      "selectedCount": "{{count}} de {{total}} tipos de inquilinos seleccionados",
+      "loadFailed": "Error al cargar tipos de inquilinos",
+      "updateSuccess": "¡Tipos de inquilinos actualizados correctamente!",
+      "updateFailed": "Error al actualizar tipos de inquilinos"
+    },
+    "managePlanTenantTypes": {
+      "title": "Gestionar tipos de inquilinos",
+      "loadingTenantTypes": "Cargando tipos de inquilinos...",
+      "selectDescription": "Seleccione qué tipos de negocios pueden suscribirse a este plan y establezca precios personalizados",
+      "recommended": "Recomendado",
+      "customPrice": "Precio personalizado",
+      "leaveEmpty": "Dejar vacío para usar el precio base",
+      "basePrice": "Precio base",
+      "contactForPricing": "Contactar para precios",
+      "selectedCount": "{{count}} de {{total}} tipos de inquilinos seleccionados",
+      "loadFailed": "Error al cargar tipos de inquilinos",
+      "updateSuccess": "¡Tipos de inquilinos actualizados correctamente!",
+      "updateFailed": "Error al actualizar tipos de inquilinos"
+    }
+  },
+  "tenants": {
+    "list": {
+      "title": "Inquilinos",
+      "subtitle": "Gestionar todas las cuentas de inquilinos",
+      "addTenant": "Añadir Inquilino",
+      "searchPlaceholder": "Buscar inquilinos por nombre, slug, dominio o tipo...",
+      "stats": {
+        "total": "Total de Inquilinos",
+        "active": "Activos",
+        "onTrial": "En Prueba",
+        "inactive": "Inactivos"
+      },
+      "loadingTenants": "Cargando inquilinos...",
+      "noTenants": "Aún no hay inquilinos",
+      "noTenantsSearch": "No se encontraron inquilinos",
+      "addFirst": "Añada su primer inquilino",
+      "tableHeaders": {
+        "tenant": "Inquilino",
+        "type": "Tipo",
+        "subscription": "Suscripción",
+        "languages": "Idiomas",
+        "currencies": "Monedas",
+        "status": "Estado",
+        "created": "Creado",
+        "actions": "Acciones"
+      },
+      "noPlan": "Sin Plan",
+      "viewDetails": "Ver Detalles",
+      "edit": "Editar",
+      "delete": "Eliminar",
+      "confirmDelete": "¿Eliminar inquilino \"{{name}}\"? Se eliminarán todos los datos asociados. Esta acción no se puede deshacer.",
+      "loadFailed": "Error al cargar inquilinos",
+      "deleteSuccess": "¡Inquilino eliminado con éxito!",
+      "deleteFailed": "Error al eliminar inquilino"
+    },
+    "status": {
+      "trial": "Prueba",
+      "expired": "Expirado",
+      "inactive": "Inactivo",
+      "active": "Activo"
+    },
+    "detail": {
+      "backToTenants": "Volver a Inquilinos",
+      "editTenant": "Editar Inquilino",
+      "cancel": "Cancelar",
+      "saving": "Guardando...",
+      "saveChanges": "Guardar Cambios",
+      "tabs": {
+        "overview": "Resumen",
+        "subscription": "Suscripción",
+        "languages": "Idiomas",
+        "currencies": "Monedas",
+        "stores": "Tiendas",
+        "settings": "Configuración"
+      },
+      "overview": {
+        "title": "Información Básica",
+        "tenantName": "Nombre del Inquilino *",
+        "slug": "Slug *",
+        "domain": "Dominio",
+        "subdomain": "Subdominio",
+        "tenantType": "Tipo de Inquilino",
+        "selectType": "Seleccionar tipo...",
+        "contactEmail": "Email de Contacto",
+        "contactPhone": "Teléfono de Contacto",
+        "logoUrl": "URL del Logo",
+        "primaryColor": "Color Primario",
+        "secondaryColor": "Color Secundario",
+        "active": "Activo",
+        "placeholders": {
+          "domain": "example.com",
+          "subdomain": "mitienda"
+        }
+      },
+      "subscription": {
+        "title": "Detalles de Suscripción",
+        "plan": "Plan de Suscripción",
+        "noPlan": "Sin Plan",
+        "noplan": "Sin plan",
+        "trialEndsAt": "Fin del Período de Prueba",
+        "subscriptionEndsAt": "Fin de Suscripción"
+      },
+      "languages": {
+        "title": "Idiomas",
+        "manage": "Gestionar Idiomas",
+        "default": "Predeterminado",
+        "active": "Activo",
+        "inactive": "Inactivo",
+        "noLanguages": "No hay idiomas configurados",
+        "addLanguages": "Añadir Idiomas"
+      },
+      "currencies": {
+        "title": "Monedas",
+        "manage": "Gestionar Monedas",
+        "default": "Predeterminada",
+        "active": "Activa",
+        "inactive": "Inactiva",
+        "noCurrencies": "No hay monedas configuradas",
+        "addCurrencies": "Añadir Monedas"
+      },
+      "settings": {
+        "title": "Configuración Avanzada",
+        "comingSoon": "La configuración avanzada y la configuración JSON estarán disponibles en la próxima actualización."
+      },
+      "loadFailed": "Error al cargar detalles del inquilino",
+      "updateSuccess": "¡Inquilino actualizado con éxito!",
+      "updateFailed": "Error al actualizar inquilino"
+    },
+    "create": {
+      "backToTenants": "Volver a Inquilinos",
+      "title": "Crear Nuevo Inquilino",
+      "subtitle": "Configurar una nueva cuenta de inquilino",
+      "basicInfo": "Información Básica",
+      "tenantName": "Nombre del Inquilino *",
+      "slug": "Slug *",
+      "domain": "Dominio",
+      "subdomain": "Subdominio",
+      "tenantType": "Tipo de Inquilino",
+      "selectType": "Seleccionar tipo...",
+      "subscriptionPlan": "Plan de Suscripción",
+      "noPlan": "Sin plan",
+      "contactInfo": "Información de Contacto",
+      "contactEmail": "Email de Contacto",
+      "contactPhone": "Teléfono de Contacto",
+      "branding": "Marca",
+      "logoUrl": "URL del Logo",
+      "faviconUrl": "URL del Favicon",
+      "primaryColor": "Color Primario",
+      "secondaryColor": "Color Secundario",
+      "localization": "Localización",
+      "defaultLanguage": "Idioma Predeterminado",
+      "selectLanguage": "Seleccionar idioma...",
+      "defaultCurrency": "Moneda Predeterminada",
+      "selectCurrency": "Seleccionar moneda...",
+      "trialSubscription": "Prueba y Suscripción",
+      "trialEndsAt": "Fin del Período de Prueba",
+      "subscriptionEndsAt": "Fin de Suscripción",
+      "activeLabel": "Activo (el inquilino puede acceder a la plataforma)",
+      "cancel": "Cancelar",
+      "creating": "Creando...",
+      "createTenant": "Crear Inquilino",
+      "placeholders": {
+        "tenantName": "Mi Tienda",
+        "slug": "mi-tienda",
+        "domain": "example.com",
+        "subdomain": "mitienda",
+        "contactEmail": "contacto@example.com",
+        "contactPhone": "+341234567890",
+        "logoUrl": "https://example.com/logo.png",
+        "faviconUrl": "https://example.com/favicon.ico"
+      },
+      "loadFormFailed": "Error al cargar datos del formulario",
+      "nameSlugRequired": "El nombre y el slug son obligatorios",
+      "createSuccess": "¡Inquilino creado con éxito!",
+      "createFailed": "Error al crear inquilino"
+    }
+  },
+  "adminUsers": {
+    "list": {
+      "title": "Usuarios administradores",
+      "subtitle": "Gestionar administradores de plataforma y su acceso",
+      "addUser": "Agregar usuario administrador",
+      "loadingUsers": "Cargando usuarios...",
+      "noUsers": "Aún no hay usuarios administradores",
+      "createFirst": "Cree su primer usuario administrador",
+      "tableHeaders": {
+        "user": "Usuario",
+        "email": "Correo electrónico",
+        "roleType": "Tipo de rol",
+        "tenantAccess": "Acceso inquilino",
+        "lastLogin": "Último acceso",
+        "status": "Estado",
+        "actions": "Acciones"
+      },
+      "tenants": "inquilinos",
+      "never": "Nunca",
+      "active": "Activo",
+      "inactive": "Inactivo",
+      "superAdmin": "Super Admin",
+      "admin": "Admin",
+      "edit": "Editar",
+      "delete": "Eliminar",
+      "confirmDelete": "¿Eliminar usuario \"{{name}}\"? Esto no se puede deshacer.",
+      "loadFailed": "Error al cargar usuarios administradores",
+      "deleteSuccess": "¡Usuario eliminado correctamente!",
+      "deleteFailed": "Error al eliminar usuario"
+    },
+    "detail": {
+      "backToUsers": "Volver a usuarios administradores",
+      "editUser": "Editar usuario",
+      "userInformation": "Información del usuario",
+      "tenantAccess": "Acceso inquilino",
+      "grantAccess": "Otorgar acceso",
+      "status": "Estado",
+      "roleType": "Tipo de rol",
+      "lastLogin": "Último acceso",
+      "created": "Creado",
+      "never": "Nunca",
+      "active": "Activo",
+      "inactive": "Inactivo",
+      "superAdmin": "Super Admin",
+      "admin": "Admin",
+      "superAdminAccess": "Super Admin tiene acceso a todos los inquilinos",
+      "role": "Rol",
+      "revokeAccess": "Revocar acceso",
+      "noAccess": "No se otorgó acceso de inquilino",
+      "grantAccessLink": "Otorgar acceso a un inquilino",
+      "grantAccessModal": {
+        "title": "Otorgar acceso de inquilino",
+        "tenant": "Inquilino *",
+        "role": "Rol *",
+        "selectTenant": "Seleccionar inquilino...",
+        "selectRole": "Seleccionar rol...",
+        "cancel": "Cancelar",
+        "grant": "Otorgar acceso"
+      },
+      "loadFailed": "Error al cargar usuario",
+      "loadDataFailed": "Error al cargar datos",
+      "selectBothRequired": "Por favor seleccione inquilino y rol",
+      "grantSuccess": "¡Acceso otorgado correctamente!",
+      "grantFailed": "Error al otorgar acceso",
+      "confirmRevoke": "¿Revocar acceso a \"{{tenantName}}\"?",
+      "revokeSuccess": "¡Acceso revocado correctamente!",
+      "revokeFailed": "Error al revocar acceso"
+    },
+    "form": {
+      "backToUsers": "Volver a usuarios administradores",
+      "editTitle": "Editar usuario administrador",
+      "createTitle": "Crear usuario administrador",
+      "email": "Correo electrónico *",
+      "password": "Contraseña",
+      "passwordRequired": "Contraseña *",
+      "firstName": "Nombre",
+      "lastName": "Apellido",
+      "avatarUrl": "URL de avatar",
+      "superAdmin": "Super Admin",
+      "superAdminDesc": "Acceso completo a todas las funciones de la plataforma y todos los inquilinos",
+      "active": "Activo",
+      "inactiveDesc": "Los usuarios inactivos no pueden iniciar sesión",
+      "placeholders": {
+        "email": "usuario@ejemplo.com",
+        "passwordKeepCurrent": "Dejar en blanco para mantener actual",
+        "passwordMinChars": "Mínimo 8 caracteres",
+        "firstName": "Juan",
+        "lastName": "Pérez",
+        "avatarUrl": "https://ejemplo.com/avatar.jpg"
+      },
+      "passwordHint": "Dejar en blanco para mantener contraseña actual",
+      "cancel": "Cancelar",
+      "saving": "Guardando...",
+      "updateUser": "Actualizar usuario",
+      "createUser": "Crear usuario",
+      "loadFailed": "Error al cargar usuario",
+      "emailRequired": "El correo electrónico es obligatorio",
+      "passwordRequiredNew": "La contraseña es obligatoria para nuevos usuarios",
+      "passwordMinLength": "La contraseña debe tener al menos 8 caracteres",
+      "updateSuccess": "¡Usuario actualizado correctamente!",
+      "createSuccess": "¡Usuario creado correctamente!",
+      "saveFailed": "Error al guardar usuario"
+    }
+  },
+  "currencies": {
+    "title": "Monedas",
+    "subtitle": "Gestionar monedas admitidas y tasas de cambio",
+    "addCurrency": "Agregar moneda",
+    "loading": "Cargando monedas...",
+    "noCurrencies": "Aún no hay monedas",
+    "addFirst": "Agregue su primera moneda",
+    "tableHeaders": {
+      "code": "Código",
+      "name": "Nombre",
+      "symbol": "Símbolo",
+      "exchangeRate": "Tasa de cambio",
+      "tenants": "Inquilinos",
+      "status": "Estado",
+      "actions": "Acciones"
+    },
+    "status": {
+      "active": "Activa",
+      "inactive": "Inactiva"
+    },
+    "edit": "Editar",
+    "delete": "Eliminar",
+    "confirmDelete": "¿Eliminar \"{{name}}\" ({{code}})? Esto no se puede deshacer.",
+    "createModal": {
+      "title": "Agregar moneda",
+      "currencyCode": "Código de moneda *",
+      "name": "Nombre *",
+      "symbol": "Símbolo *",
+      "exchangeRate": "Tasa de cambio (respecto a moneda base)",
+      "active": "Activa",
+      "cancel": "Cancelar",
+      "create": "Crear moneda",
+      "placeholders": {
+        "code": "USD, EUR, TRY",
+        "name": "US Dollar, Euro, Turkish Lira",
+        "symbol": "$, €, ₺",
+        "exchangeRate": "1.000000"
+      }
+    },
+    "editModal": {
+      "title": "Editar moneda",
+      "currencyCode": "Código de moneda",
+      "name": "Nombre",
+      "symbol": "Símbolo",
+      "exchangeRate": "Tasa de cambio",
+      "active": "Activa",
+      "cancel": "Cancelar",
+      "update": "Actualizar moneda"
+    },
+    "toast": {
+      "loadFailed": "Error al cargar monedas",
+      "requiredFields": "Por favor complete todos los campos requeridos",
+      "createSuccess": "¡Moneda creada correctamente!",
+      "createFailed": "Error al crear moneda",
+      "updateSuccess": "¡Moneda actualizada correctamente!",
+      "updateFailed": "Error al actualizar moneda",
+      "deleteSuccess": "¡Moneda eliminada correctamente!",
+      "deleteFailed": "Error al eliminar moneda"
+    }
+  },
+  "languages": {
+    "title": "Idiomas",
+    "subtitle": "Gestionar idiomas admitidos para su plataforma",
+    "addLanguage": "Agregar idioma",
+    "loading": "Cargando idiomas...",
+    "noLanguages": "Aún no hay idiomas",
+    "addFirst": "Agregue su primer idioma",
+    "tableHeaders": {
+      "order": "Orden",
+      "code": "Código",
+      "name": "Nombre",
+      "nativeName": "Nombre nativo",
+      "direction": "Dirección",
+      "tenants": "Inquilinos",
+      "status": "Estado",
+      "actions": "Acciones"
+    },
+    "direction": {
+      "rtl": "RTL",
+      "ltr": "LTR"
+    },
+    "status": {
+      "active": "Activo",
+      "inactive": "Inactivo"
+    },
+    "edit": "Editar",
+    "delete": "Eliminar",
+    "confirmDelete": "¿Eliminar \"{{name}}\"? Esto no se puede deshacer.",
+    "createModal": {
+      "title": "Agregar idioma",
+      "languageCode": "Código de idioma *",
+      "nameEnglish": "Nombre (inglés) *",
+      "nativeName": "Nombre nativo *",
+      "rtl": "De derecha a izquierda (RTL)",
+      "active": "Activo",
+      "cancel": "Cancelar",
+      "create": "Crear idioma",
+      "placeholders": {
+        "code": "en, tr, el",
+        "name": "English, Turkish, Greek",
+        "nativeName": "English, Türkçe, Ελληνικά"
+      }
+    },
+    "editModal": {
+      "title": "Editar idioma",
+      "languageCode": "Código de idioma",
+      "nameEnglish": "Nombre (inglés)",
+      "nativeName": "Nombre nativo",
+      "rtl": "De derecha a izquierda (RTL)",
+      "active": "Activo",
+      "cancel": "Cancelar",
+      "update": "Actualizar idioma"
+    },
+    "toast": {
+      "loadFailed": "Error al cargar idiomas",
+      "requiredFields": "Por favor complete todos los campos requeridos",
+      "createSuccess": "¡Idioma creado correctamente!",
+      "createFailed": "Error al crear idioma",
+      "updateSuccess": "¡Idioma actualizado correctamente!",
+      "updateFailed": "Error al actualizar idioma",
+      "deleteSuccess": "¡Idioma eliminado correctamente!",
+      "deleteFailed": "Error al eliminar idioma"
+    }
+  },
+  "dashboard": {
+    "title": "Panel de control",
+    "welcomeBack": "¡Bienvenido de nuevo, {{name}}!",
+    "currentTenant": "Inquilino actual",
+    "tenantFields": {
+      "name": "Nombre",
+      "slug": "Slug",
+      "yourRole": "Tu rol"
+    },
+    "stats": {
+      "totalProducts": "Total de productos",
+      "activeCampaigns": "Campañas activas",
+      "categories": "Categorías",
+      "productViews": "Vistas de productos",
+      "comingSoon": "Próximamente",
+      "fromSeedData": "De datos iniciales"
+    }
+  },
+  "forgotPassword": {
+    "title": "¿Olvidaste tu contraseña?",
+    "subtitle": "Ingrese su dirección de correo electrónico y le enviaremos un enlace para restablecer su contraseña.",
+    "backToLogin": "Volver a iniciar sesión",
+    "emailLabel": "Dirección de correo electrónico",
+    "emailPlaceholder": "admin@admin-saas.com",
+    "sending": "Enviando...",
+    "sendResetLink": "Enviar enlace de restablecimiento",
+    "submitted": {
+      "title": "Revise su correo electrónico",
+      "message": "Si existe una cuenta con {{email}}, recibirá un enlace para restablecer su contraseña en breve.",
+      "checkSpam": "¿No recibió un correo electrónico? Revise su carpeta de spam o intente nuevamente.",
+      "backToLogin": "Volver a iniciar sesión",
+      "tryAnother": "Probar con otro correo electrónico"
+    },
+    "toast": {
+      "emailRequired": "Por favor ingrese su dirección de correo electrónico",
+      "sendFailed": "Error al enviar correo de restablecimiento"
+    },
+    "demoAccounts": {
+      "title": "Cuentas de demostración:",
+      "superAdmin": "Super Admin: admin@admin-saas.com / SuperAdmin123!",
+      "tenantOwner": "Propietario de inquilino: owner@demo-tenant.com / DemoOwner123!"
+    }
+  },
+  "resetPassword": {
+    "title": "Restablecer contraseña",
+    "subtitle": "Ingrese su nueva contraseña a continuación.",
+    "newPassword": "Nueva contraseña",
+    "confirmNewPassword": "Confirmar nueva contraseña",
+    "minChars": "Mínimo 8 caracteres",
+    "resetting": "Restableciendo...",
+    "resetPasswordBtn": "Restablecer contraseña",
+    "success": {
+      "title": "¡Contraseña restablecida!",
+      "message": "Su contraseña ha sido restablecida correctamente. Ahora puede iniciar sesión con su nueva contraseña.",
+      "goToLogin": "Ir a iniciar sesión"
+    },
+    "toast": {
+      "invalidLink": "Enlace de restablecimiento inválido",
+      "passwordMinLength": "La contraseña debe tener al menos 8 caracteres",
+      "passwordMismatch": "Las contraseñas no coinciden",
+      "success": "¡Contraseña restablecida correctamente!",
+      "invalidToken": "Este enlace de restablecimiento ha expirado o es inválido",
+      "failed": "Error al restablecer la contraseña"
+    }
+  },
+  "subscriptionPlans": {
+    "title": "Planes de suscripción",
+    "subtitle": "Gestionar niveles de precios y características",
+    "addPlan": "Agregar plan",
+    "loading": "Cargando planes...",
+    "noPlans": "Aún no hay planes de suscripción",
+    "addFirst": "Agregue su primer plan",
+    "tableHeaders": {
+      "plan": "Plan",
+      "price": "Precio",
+      "limits": "Límites",
+      "tenantTypes": "Tipos de inquilinos",
+      "activeTenants": "Inquilinos activos",
+      "status": "Estado",
+      "actions": "Acciones"
+    },
+    "contactUs": "Contáctenos",
+    "per": "por {{period}}",
+    "customPricing": "Precio personalizado",
+    "limits": {
+      "products": "Productos",
+      "stores": "Tiendas",
+      "campaigns": "Campañas"
+    },
+    "manageTenantTypes": "Gestionar tipos de inquilinos",
+    "types": "{{count}} tipos",
+    "status": {
+      "active": "Activo",
+      "inactive": "Inactivo"
+    },
+    "edit": "Editar",
+    "delete": "Eliminar",
+    "confirmDelete": "¿Eliminar \"{{name}}\"? Esto no se puede deshacer.",
+    "createModal": {
+      "title": "Agregar plan de suscripción",
+      "planName": "Nombre del plan *",
+      "slug": "Slug *",
+      "description": "Descripción",
+      "price": "Precio",
+      "priceHint": "Deje en 0 o vacío para precio \"Contáctenos\"",
+      "currency": "Moneda",
+      "billingPeriod": "Período de facturación *",
+      "maxProducts": "Máximo de productos",
+      "maxStores": "Máximo de tiendas",
+      "maxCampaigns": "Máximo de campañas",
+      "sortOrder": "Orden de clasificación",
+      "features": "Características",
+      "addFeature": "Agregar una característica...",
+      "add": "Agregar",
+      "active": "Activo",
+      "cancel": "Cancelar",
+      "create": "Crear plan",
+      "placeholders": {
+        "name": "Básico, Pro, Empresarial...",
+        "slug": "plan-basico",
+        "description": "Perfecto para pequeñas empresas...",
+        "price": "Dejar vacío para precio por contacto",
+        "unlimited": "Dejar vacío para ilimitado"
+      },
+      "billingPeriods": {
+        "monthly": "Mensual",
+        "yearly": "Anual",
+        "quarterly": "Trimestral"
+      }
+    },
+    "editModal": {
+      "title": "Editar plan de suscripción",
+      "update": "Actualizar plan"
+    },
+    "toast": {
+      "loadFailed": "Error al cargar planes de suscripción",
+      "requiredFields": "El nombre, slug y período de facturación son obligatorios",
+      "createSuccess": "¡Plan de suscripción creado correctamente!",
+      "createFailed": "Error al crear plan de suscripción",
+      "updateSuccess": "¡Plan de suscripción actualizado correctamente!",
+      "updateFailed": "Error al actualizar plan de suscripción",
+      "deleteSuccess": "¡Plan de suscripción eliminado correctamente!",
+      "deleteFailed": "Error al eliminar plan de suscripción"
+    }
+  },
+  "tenantTypes": {
+    "title": "Tipos de inquilinos",
+    "addTenantType": "Agregar tipo de inquilino",
+    "loading": "Cargando...",
+    "noTenantTypes": "No se encontraron tipos de inquilinos. Cree uno para comenzar.",
+    "noTranslation": "Sin traducción",
+    "noIcon": "Sin icono",
+    "tenants": "{{count}} inquilinos",
+    "tableHeaders": {
+      "sort": "Orden",
+      "code": "Código",
+      "name": "Nombre",
+      "icon": "Icono",
+      "tenants": "Inquilinos",
+      "status": "Estado",
+      "actions": "Acciones"
+    },
+    "status": {
+      "active": "Activo",
+      "inactive": "Inactivo"
+    },
+    "edit": "Editar",
+    "delete": "Eliminar",
+    "modal": {
+      "createTitle": "Crear tipo de inquilino",
+      "editTitle": "Editar tipo de inquilino",
+      "code": "Código (identificador único) *",
+      "iconUrl": "URL del icono",
+      "sortOrder": "Orden de clasificación",
+      "status": "Estado",
+      "translations": "Traducciones *",
+      "name": "Nombre",
+      "description": "Descripción",
+      "cancel": "Cancelar",
+      "create": "Crear",
+      "update": "Actualizar",
+      "placeholders": {
+        "code": "ej., supermercado, farmacia, tienda-mascotas",
+        "iconUrl": "https://...",
+        "nameIn": "Nombre en {{language}}",
+        "descriptionIn": "Descripción en {{language}}"
+      }
+    },
+    "toast": {
+      "loadFailed": "Error al cargar datos",
+      "translationRequired": "Por favor proporcione al menos una traducción",
+      "saveFailed": "Error al guardar tipo de inquilino",
+      "confirmDelete": "¿Está seguro de que desea eliminar este tipo de inquilino?",
+      "deleteFailed": "Error al eliminar tipo de inquilino"
+    }
+  }
+}

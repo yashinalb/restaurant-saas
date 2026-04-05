@@ -1,0 +1,845 @@
+{
+  "auth": {
+    "signIn": "Войти",
+    "email": "Email",
+    "password": "Пароль",
+    "forgotPassword": "Забыли пароль?",
+    "loggingIn": "Выполняется вход...",
+    "logout": "Выйти",
+    "loginSuccess": "Вход выполнен успешно!",
+    "loginFailed": "Ошибка входа",
+    "welcomeBack": "С возвращением",
+    "loginDescription": "Войдите для управления арендаторами, пользователями и многим другим из единой панели управления.",
+    "feature1": "Мультиарендное управление",
+    "feature2": "Ролевое управление доступом",
+    "feature3": "Управление подписками и счетами",
+    "emailPlaceholder": "you@example.com",
+    "enterCredentials": "Введите свои учётные данные для доступа к аккаунту",
+    "hidePassword": "Скрыть пароль",
+    "showPassword": "Показать пароль",
+    "securedBy": "Защищено"
+  },
+  "navigation": {
+    "dashboard": "Панель",
+    "adminUsers": "Администраторы",
+    "languages": "Языки",
+    "currencies": "Валюты",
+    "tenantTypes": "Типы арендаторов",
+    "subscriptionPlans": "Планы подписки",
+    "tenants": "Арендаторы",
+    "teamMembers": "Сотрудники",
+    "settings": "Настройки",
+    "groups": {
+      "superAdmin": "Суперадмин",
+      "system": "Управление системой",
+      "tenants": "Управление арендаторами",
+      "team": "Команда"
+    }
+  },
+  "common": {
+    "adminSaas": "Admin SaaS",
+    "adminPanel": "Панель администратора",
+    "currentTenant": "Текущий арендатор",
+    "superAdmin": "Суперадмин",
+    "admin": "Администратор",
+    "loading": "Загрузка...",
+    "default": "По умолчанию",
+    "expandSidebar": "Развернуть боковую панель",
+    "collapseSidebar": "Свернуть боковую панель"
+  },
+  "teamMembers": {
+    "title": "Сотрудники",
+    "subtitle": "Управляйте пользователями и приглашениями вашей команды",
+    "inviteUser": "Пригласить пользователя",
+    "loading": "Загрузка пользователей...",
+    "pendingInvitations": "Ожидающие приглашения",
+    "activeUsers": "Активные пользователи",
+    "role": "Роль",
+    "invitedBy": "Пригласил(а)",
+    "expires": "Истекает",
+    "table": {
+      "user": "Пользователь",
+      "role": "Роль",
+      "status": "Статус",
+      "lastLogin": "Последний вход",
+      "actions": "Действия"
+    },
+    "status": {
+      "active": "Активен",
+      "inactive": "Неактивен"
+    },
+    "empty": {
+      "noUsersYet": "Пока нет пользователей"
+    },
+    "actions": {
+      "view": "Просмотр",
+      "remove": "Удалить",
+      "cancelInvitation": "Отменить приглашение",
+      "saving": "Сохранение...",
+      "saveChanges": "Сохранить изменения",
+      "cancel": "Отмена"
+    },
+    "confirm": {
+      "cancelInvitation": "Вы уверены, что хотите отменить это приглашение?",
+      "removeUser": "Вы уверены, что хотите удалить {{userName}}?"
+    },
+    "toast": {
+      "loadFailed": "Не удалось загрузить пользователей",
+      "cancelFailed": "Не удалось отменить приглашение",
+      "cancelSuccess": "Приглашение отменено",
+      "removeFailed": "Не удалось удалить пользователя",
+      "removeSuccess": "Пользователь успешно удалён",
+      "updateSuccess": "Пользователь успешно обновлён",
+      "updateFailed": "Не удалось обновить пользователя"
+    },
+    "detail": {
+      "loading": "Загрузка пользователя...",
+      "backToUsers": "Назад к пользователям",
+      "editUser": "Редактировать пользователя",
+      "sections": {
+        "basicInfo": "Основная информация",
+        "roleAccess": "Роль и доступ",
+        "activity": "Активность"
+      },
+      "fields": {
+        "firstName": "Имя",
+        "lastName": "Фамилия",
+        "email": "Email",
+        "preferredLanguage": "Предпочитаемый язык",
+        "default": "По умолчанию",
+        "role": "Роль",
+        "status": "Статус"
+      },
+      "activity": {
+        "lastLogin": "Последний вход",
+        "joined": "Дата регистрации"
+      }
+    },
+    "lastLogin": {
+      "never": "Никогда"
+    }
+  },
+  "invite": {
+    "backToUsers": "Назад к пользователям",
+    "title": "Пригласить пользователя",
+    "subtitle": "Отправьте приглашение для присоединения к вашей команде. Пользователь получит письмо с инструкциями по настройке аккаунта.",
+    "fields": {
+      "email": "Email адрес *",
+      "role": "Роль *",
+      "firstNameOptional": "Имя (необязательно)",
+      "lastNameOptional": "Фамилия (необязательно)"
+    },
+    "placeholders": {
+      "email": "user@example.com",
+      "firstName": "Иван",
+      "lastName": "Иванов"
+    },
+    "note": "Примечание: Пользователь получит письмо со ссылкой для принятия приглашения и установки пароля. Приглашение истекает через 7 дней.",
+    "actions": {
+      "sending": "Отправка...",
+      "send": "Отправить приглашение",
+      "cancel": "Отмена"
+    },
+    "toast": {
+      "loadRolesFailed": "Не удалось загрузить роли",
+      "success": "Приглашение успешно отправлено!",
+      "failed": "Не удалось отправить приглашение"
+    }
+  },
+  "accept": {
+    "title": "Принять приглашение",
+    "subtitle": "Завершите настройку аккаунта",
+    "fields": {
+      "firstName": "Имя *",
+      "lastName": "Фамилия *",
+      "password": "Пароль *",
+      "confirmPassword": "Подтвердите пароль *"
+    },
+    "placeholders": {
+      "password": "Минимум 8 символов",
+      "confirmPassword": "Введите пароль ещё раз"
+    },
+    "requirements": {
+      "title": "Требования к паролю:",
+      "items": {
+        "min": "Не менее 8 символов",
+        "strong": "Используйте надёжный и уникальный пароль"
+      }
+    },
+    "actions": {
+      "creating": "Создание аккаунта...",
+      "create": "Создать аккаунт"
+    },
+    "footer": {
+      "alreadyHaveAccount": "Уже есть аккаунт?",
+      "signIn": "Войти"
+    },
+    "toast": {
+      "invalidLink": "Неверная ссылка приглашения",
+      "passwordMin": "Пароль должен быть не короче 8 символов",
+      "passwordMismatch": "Пароли не совпадают",
+      "success": "Аккаунт успешно создан! Пожалуйста, войдите.",
+      "failed": "Не удалось принять приглашение"
+    }
+  },
+  "modals": {
+    "common": {
+      "cancel": "Отмена",
+      "saving": "Сохранение...",
+      "saveChanges": "Сохранить изменения",
+      "loading": "Загрузка...",
+      "sortOrder": "Порядок сортировки",
+      "tenant": "Арендатор",
+      "product": "Продукт",
+      "plan": "План",
+      "category": "Категория"
+    },
+    "manageCurrencies": {
+      "title": "Управление валютами",
+      "loadingCurrencies": "Загрузка валют...",
+      "selectDescription": "Выберите валюты для этого арендатора и установите одну по умолчанию",
+      "default": "По умолчанию",
+      "setAsDefault": "Установить по умолчанию",
+      "active": "Активна",
+      "inactive": "Неактивна",
+      "selectedCount": "{{count}} из {{total}} валют выбрано",
+      "loadFailed": "Не удалось загрузить валюты",
+      "selectAtLeastOne": "Пожалуйста, выберите хотя бы одну валюту",
+      "setOneAsDefault": "Пожалуйста, установите одну валюту по умолчанию",
+      "updateSuccess": "Валюты успешно обновлены!",
+      "updateFailed": "Не удалось обновить валюты"
+    },
+    "manageLanguages": {
+      "title": "Управление языками",
+      "loadingLanguages": "Загрузка языков...",
+      "selectDescription": "Выберите языки для этого арендатора и установите один по умолчанию",
+      "default": "По умолчанию",
+      "setAsDefault": "Установить по умолчанию",
+      "active": "Активен",
+      "inactive": "Неактивен",
+      "selectedCount": "{{count}} из {{total}} языков выбрано",
+      "loadFailed": "Не удалось загрузить языки",
+      "selectAtLeastOne": "Пожалуйста, выберите хотя бы один язык",
+      "setOneAsDefault": "Пожалуйста, установите один язык по умолчанию",
+      "updateSuccess": "Языки успешно обновлены!",
+      "updateFailed": "Не удалось обновить языки"
+    },
+    "manageTenantTypes": {
+      "title": "Управление типами арендаторов",
+      "loadingTenantTypes": "Загрузка типов арендаторов...",
+      "selectedCount": "{{count}} типов арендаторов выбрано",
+      "selectDescription": "Выберите, какие типы бизнеса должны иметь доступ к этой категории",
+      "defaultCategory": "Категория по умолчанию",
+      "showByDefault": "Показывать по умолчанию для новых арендаторов",
+      "noTenantTypes": "Типы арендаторов отсутствуют",
+      "loadFailed": "Не удалось загрузить типы арендаторов",
+      "updateSuccess": "Связи типов арендаторов успешно обновлены!",
+      "updateFailed": "Не удалось обновить связи типов арендаторов"
+    },
+    "manageProductTenantTypes": {
+      "title": "Управление типами арендаторов",
+      "loadingTenantTypes": "Загрузка типов арендаторов...",
+      "selectDescription": "Выберите, какие типы бизнеса (типы арендаторов) должны иметь доступ к этому продукту",
+      "featuredProduct": "Рекомендуемый продукт",
+      "selectedCount": "{{count}} из {{total}} типов арендаторов выбрано",
+      "loadFailed": "Не удалось загрузить типы арендаторов",
+      "updateSuccess": "Типы арендаторов успешно обновлены!",
+      "updateFailed": "Не удалось обновить типы арендаторов"
+    },
+    "managePlanTenantTypes": {
+      "title": "Управление типами арендаторов",
+      "loadingTenantTypes": "Загрузка типов арендаторов...",
+      "selectDescription": "Выберите, какие типы бизнеса могут подписаться на этот план, и установите индивидуальную цену",
+      "recommended": "Рекомендуется",
+      "customPrice": "Индивидуальная цена",
+      "leaveEmpty": "Оставьте пустым, чтобы использовать базовую цену",
+      "basePrice": "Базовая цена",
+      "contactForPricing": "Свяжитесь для уточнения цены",
+      "selectedCount": "{{count}} из {{total}} типов арендаторов выбрано",
+      "loadFailed": "Не удалось загрузить типы арендаторов",
+      "updateSuccess": "Типы арендаторов успешно обновлены!",
+      "updateFailed": "Не удалось обновить типы арендаторов"
+    }
+  },
+  "tenants": {
+    "list": {
+      "title": "Арендаторы",
+      "subtitle": "Управление всеми учётными записями арендаторов",
+      "addTenant": "Добавить арендатора",
+      "searchPlaceholder": "Поиск по имени, slug, домену или типу...",
+      "stats": {
+        "total": "Всего арендаторов",
+        "active": "Активные",
+        "onTrial": "Пробный период",
+        "inactive": "Неактивные"
+      },
+      "loadingTenants": "Загрузка арендаторов...",
+      "noTenants": "Арендаторов пока нет",
+      "noTenantsSearch": "Арендаторы не найдены",
+      "addFirst": "Добавьте первого арендатора",
+      "tableHeaders": {
+        "tenant": "Арендатор",
+        "type": "Тип",
+        "subscription": "Подписка",
+        "languages": "Языки",
+        "currencies": "Валюты",
+        "status": "Статус",
+        "created": "Создан",
+        "actions": "Действия"
+      },
+      "noPlan": "Нет плана",
+      "viewDetails": "Подробнее",
+      "edit": "Редактировать",
+      "delete": "Удалить",
+      "confirmDelete": "Удалить арендатора \"{{name}}\"? Все связанные данные будут удалены. Это действие необратимо.",
+      "loadFailed": "Не удалось загрузить арендаторов",
+      "deleteSuccess": "Арендатор успешно удалён!",
+      "deleteFailed": "Не удалось удалить арендатора"
+    },
+    "status": {
+      "trial": "Пробный",
+      "expired": "Истёк",
+      "inactive": "Неактивный",
+      "active": "Активный"
+    },
+    "detail": {
+      "backToTenants": "Назад к арендаторам",
+      "editTenant": "Редактировать арендатора",
+      "cancel": "Отмена",
+      "saving": "Сохранение...",
+      "saveChanges": "Сохранить изменения",
+      "tabs": {
+        "overview": "Обзор",
+        "subscription": "Подписка",
+        "languages": "Языки",
+        "currencies": "Валюты",
+        "stores": "Магазины",
+        "settings": "Настройки"
+      },
+      "overview": {
+        "title": "Основная информация",
+        "tenantName": "Название арендатора *",
+        "slug": "Slug *",
+        "domain": "Домен",
+        "subdomain": "Поддомен",
+        "tenantType": "Тип арендатора",
+        "selectType": "Выберите тип...",
+        "contactEmail": "Контактный email",
+        "contactPhone": "Контактный телефон",
+        "logoUrl": "URL логотипа",
+        "primaryColor": "Основной цвет",
+        "secondaryColor": "Дополнительный цвет",
+        "active": "Активный",
+        "placeholders": {
+          "domain": "example.com",
+          "subdomain": "mystore"
+        }
+      },
+      "subscription": {
+        "title": "Детали подписки",
+        "plan": "План подписки",
+        "noPlan": "Нет плана",
+        "noplan": "Нет плана",
+        "trialEndsAt": "Окончание пробного периода",
+        "subscriptionEndsAt": "Окончание подписки"
+      },
+      "languages": {
+        "title": "Языки",
+        "manage": "Управление языками",
+        "default": "По умолчанию",
+        "active": "Активный",
+        "inactive": "Неактивный",
+        "noLanguages": "Языки не настроены",
+        "addLanguages": "Добавить языки"
+      },
+      "currencies": {
+        "title": "Валюты",
+        "manage": "Управление валютами",
+        "default": "По умолчанию",
+        "active": "Активная",
+        "inactive": "Неактивная",
+        "noCurrencies": "Валюты не настроены",
+        "addCurrencies": "Добавить валюты"
+      },
+      "settings": {
+        "title": "Расширенные настройки",
+        "comingSoon": "Расширенные настройки и JSON конфигурация будут доступны в следующем обновлении."
+      },
+      "loadFailed": "Не удалось загрузить данные арендатора",
+      "updateSuccess": "Арендатор успешно обновлён!",
+      "updateFailed": "Не удалось обновить арендатора"
+    },
+    "create": {
+      "backToTenants": "Назад к арендаторам",
+      "title": "Создать арендатора",
+      "subtitle": "Настройте новую учётную запись арендатора",
+      "basicInfo": "Основная информация",
+      "tenantName": "Название арендатора *",
+      "slug": "Slug *",
+      "domain": "Домен",
+      "subdomain": "Поддомен",
+      "tenantType": "Тип арендатора",
+      "selectType": "Выберите тип...",
+      "subscriptionPlan": "План подписки",
+      "noPlan": "Нет плана",
+      "contactInfo": "Контактная информация",
+      "contactEmail": "Контактный email",
+      "contactPhone": "Контактный телефон",
+      "branding": "Брендинг",
+      "logoUrl": "URL логотипа",
+      "faviconUrl": "URL фавикона",
+      "primaryColor": "Основной цвет",
+      "secondaryColor": "Дополнительный цвет",
+      "localization": "Локализация",
+      "defaultLanguage": "Язык по умолчанию",
+      "selectLanguage": "Выберите язык...",
+      "defaultCurrency": "Валюта по умолчанию",
+      "selectCurrency": "Выберите валюту...",
+      "trialSubscription": "Пробный период и подписка",
+      "trialEndsAt": "Окончание пробного периода",
+      "subscriptionEndsAt": "Окончание подписки",
+      "activeLabel": "Активный (арендатор может пользоваться платформой)",
+      "cancel": "Отмена",
+      "creating": "Создание...",
+      "createTenant": "Создать арендатора",
+      "placeholders": {
+        "tenantName": "Мой магазин",
+        "slug": "moy-magazin",
+        "domain": "example.com",
+        "subdomain": "mystore",
+        "contactEmail": "contact@example.com",
+        "contactPhone": "+71234567890",
+        "logoUrl": "https://example.com/logo.png",
+        "faviconUrl": "https://example.com/favicon.ico"
+      },
+      "loadFormFailed": "Не удалось загрузить данные формы",
+      "nameSlugRequired": "Название и slug обязательны",
+      "createSuccess": "Арендатор успешно создан!",
+      "createFailed": "Не удалось создать арендатора"
+    }
+  },
+  "adminUsers": {
+    "list": {
+      "title": "Администраторы",
+      "subtitle": "Управляйте администраторами платформы и их доступом",
+      "addUser": "Добавить администратора",
+      "loadingUsers": "Загрузка пользователей...",
+      "noUsers": "Пока нет администраторов",
+      "createFirst": "Создайте своего первого администратора",
+      "tableHeaders": {
+        "user": "Пользователь",
+        "email": "Email",
+        "roleType": "Тип роли",
+        "tenantAccess": "Доступ арендатора",
+        "lastLogin": "Последний вход",
+        "status": "Статус",
+        "actions": "Действия"
+      },
+      "tenants": "арендаторов",
+      "never": "Никогда",
+      "active": "Активен",
+      "inactive": "Неактивен",
+      "superAdmin": "Суперадмин",
+      "admin": "Администратор",
+      "edit": "Редактировать",
+      "delete": "Удалить",
+      "confirmDelete": "Удалить пользователя \"{{name}}\"? Это действие нельзя отменить.",
+      "loadFailed": "Не удалось загрузить администраторов",
+      "deleteSuccess": "Пользователь успешно удалён!",
+      "deleteFailed": "Не удалось удалить пользователя"
+    },
+    "detail": {
+      "backToUsers": "Назад к администраторам",
+      "editUser": "Редактировать пользователя",
+      "userInformation": "Информация о пользователе",
+      "tenantAccess": "Доступ арендатора",
+      "grantAccess": "Предоставить доступ",
+      "status": "Статус",
+      "roleType": "Тип роли",
+      "lastLogin": "Последний вход",
+      "created": "Создан",
+      "never": "Никогда",
+      "active": "Активен",
+      "inactive": "Неактивен",
+      "superAdmin": "Суперадмин",
+      "admin": "Администратор",
+      "superAdminAccess": "Суперадмин имеет доступ ко всем арендаторам",
+      "role": "Роль",
+      "revokeAccess": "Отозвать доступ",
+      "noAccess": "Доступ арендатора не предоставлен",
+      "grantAccessLink": "Предоставить доступ к арендатору",
+      "grantAccessModal": {
+        "title": "Предоставить доступ арендатора",
+        "tenant": "Арендатор *",
+        "role": "Роль *",
+        "selectTenant": "Выберите арендатора...",
+        "selectRole": "Выберите роль...",
+        "cancel": "Отмена",
+        "grant": "Предоставить доступ"
+      },
+      "loadFailed": "Не удалось загрузить пользователя",
+      "loadDataFailed": "Не удалось загрузить данные",
+      "selectBothRequired": "Пожалуйста, выберите арендатора и роль",
+      "grantSuccess": "Доступ успешно предоставлен!",
+      "grantFailed": "Не удалось предоставить доступ",
+      "confirmRevoke": "Отозвать доступ к \"{{tenantName}}\"?",
+      "revokeSuccess": "Доступ успешно отозван!",
+      "revokeFailed": "Не удалось отозвать доступ"
+    },
+    "form": {
+      "backToUsers": "Назад к администраторам",
+      "editTitle": "Редактировать администратора",
+      "createTitle": "Создать администратора",
+      "email": "Email *",
+      "password": "Пароль",
+      "passwordRequired": "Пароль *",
+      "firstName": "Имя",
+      "lastName": "Фамилия",
+      "avatarUrl": "URL аватара",
+      "superAdmin": "Суперадмин",
+      "superAdminDesc": "Полный доступ ко всем функциям платформы и всем арендаторам",
+      "active": "Активен",
+      "inactiveDesc": "Неактивные пользователи не могут войти",
+      "placeholders": {
+        "email": "user@example.com",
+        "passwordKeepCurrent": "Оставьте пустым, чтобы сохранить текущий",
+        "passwordMinChars": "Минимум 8 символов",
+        "firstName": "Иван",
+        "lastName": "Иванов",
+        "avatarUrl": "https://example.com/avatar.jpg"
+      },
+      "passwordHint": "Оставьте пустым, чтобы сохранить текущий пароль",
+      "cancel": "Отмена",
+      "saving": "Сохранение...",
+      "updateUser": "Обновить пользователя",
+      "createUser": "Создать пользователя",
+      "loadFailed": "Не удалось загрузить пользователя",
+      "emailRequired": "Email обязателен",
+      "passwordRequiredNew": "Пароль обязателен для новых пользователей",
+      "passwordMinLength": "Пароль должен быть не короче 8 символов",
+      "updateSuccess": "Пользователь успешно обновлён!",
+      "createSuccess": "Пользователь успешно создан!",
+      "saveFailed": "Не удалось сохранить пользователя"
+    }
+  },
+  "currencies": {
+    "title": "Валюты",
+    "subtitle": "Управление поддерживаемыми валютами и курсами обмена",
+    "addCurrency": "Добавить валюту",
+    "loading": "Загрузка валют...",
+    "noCurrencies": "Валют пока нет",
+    "addFirst": "Добавьте первую валюту",
+    "tableHeaders": {
+      "code": "Код",
+      "name": "Название",
+      "symbol": "Символ",
+      "exchangeRate": "Курс обмена",
+      "tenants": "Арендаторы",
+      "status": "Статус",
+      "actions": "Действия"
+    },
+    "status": {
+      "active": "Активна",
+      "inactive": "Неактивна"
+    },
+    "edit": "Редактировать",
+    "delete": "Удалить",
+    "confirmDelete": "Удалить \"{{name}}\" ({{code}})? Это действие нельзя отменить.",
+    "createModal": {
+      "title": "Добавить валюту",
+      "currencyCode": "Код валюты *",
+      "name": "Название *",
+      "symbol": "Символ *",
+      "exchangeRate": "Курс обмена (к базовой валюте)",
+      "active": "Активна",
+      "cancel": "Отмена",
+      "create": "Создать валюту",
+      "placeholders": {
+        "code": "USD, EUR, TRY",
+        "name": "US Dollar, Euro, Turkish Lira",
+        "symbol": "$, €, ₺",
+        "exchangeRate": "1.000000"
+      }
+    },
+    "editModal": {
+      "title": "Редактировать валюту",
+      "currencyCode": "Код валюты",
+      "name": "Название",
+      "symbol": "Символ",
+      "exchangeRate": "Курс обмена",
+      "active": "Активна",
+      "cancel": "Отмена",
+      "update": "Обновить валюту"
+    },
+    "toast": {
+      "loadFailed": "Не удалось загрузить валюты",
+      "requiredFields": "Пожалуйста, заполните все обязательные поля",
+      "createSuccess": "Валюта успешно создана!",
+      "createFailed": "Не удалось создать валюту",
+      "updateSuccess": "Валюта успешно обновлена!",
+      "updateFailed": "Не удалось обновить валюту",
+      "deleteSuccess": "Валюта успешно удалена!",
+      "deleteFailed": "Не удалось удалить валюту"
+    }
+  },
+  "languages": {
+    "title": "Языки",
+    "subtitle": "Управление поддерживаемыми языками для вашей платформы",
+    "addLanguage": "Добавить язык",
+    "loading": "Загрузка языков...",
+    "noLanguages": "Языков пока нет",
+    "addFirst": "Добавьте первый язык",
+    "tableHeaders": {
+      "order": "Порядок",
+      "code": "Код",
+      "name": "Название",
+      "nativeName": "Родное название",
+      "direction": "Направление",
+      "tenants": "Арендаторы",
+      "status": "Статус",
+      "actions": "Действия"
+    },
+    "direction": {
+      "rtl": "RTL",
+      "ltr": "LTR"
+    },
+    "status": {
+      "active": "Активен",
+      "inactive": "Неактивен"
+    },
+    "edit": "Редактировать",
+    "delete": "Удалить",
+    "confirmDelete": "Удалить \"{{name}}\"? Это действие нельзя отменить.",
+    "createModal": {
+      "title": "Добавить язык",
+      "languageCode": "Код языка *",
+      "nameEnglish": "Название (на английском) *",
+      "nativeName": "Родное название *",
+      "rtl": "Справа налево (RTL)",
+      "active": "Активен",
+      "cancel": "Отмена",
+      "create": "Создать язык",
+      "placeholders": {
+        "code": "en, tr, el",
+        "name": "English, Turkish, Greek",
+        "nativeName": "English, Türkçe, Ελληνικά"
+      }
+    },
+    "editModal": {
+      "title": "Редактировать язык",
+      "languageCode": "Код языка",
+      "nameEnglish": "Название (на английском)",
+      "nativeName": "Родное название",
+      "rtl": "Справа налево (RTL)",
+      "active": "Активен",
+      "cancel": "Отмена",
+      "update": "Обновить язык"
+    },
+    "toast": {
+      "loadFailed": "Не удалось загрузить языки",
+      "requiredFields": "Пожалуйста, заполните все обязательные поля",
+      "createSuccess": "Язык успешно создан!",
+      "createFailed": "Не удалось создать язык",
+      "updateSuccess": "Язык успешно обновлён!",
+      "updateFailed": "Не удалось обновить язык",
+      "deleteSuccess": "Язык успешно удалён!",
+      "deleteFailed": "Не удалось удалить язык"
+    }
+  },
+  "dashboard": {
+    "title": "Панель управления",
+    "welcomeBack": "С возвращением, {{name}}!",
+    "currentTenant": "Текущий арендатор",
+    "tenantFields": {
+      "name": "Название",
+      "slug": "Slug",
+      "yourRole": "Ваша роль"
+    },
+    "stats": {
+      "totalProducts": "Всего продуктов",
+      "activeCampaigns": "Активные кампании",
+      "categories": "Категории",
+      "productViews": "Просмотры продуктов",
+      "comingSoon": "Скоро",
+      "fromSeedData": "Из начальных данных"
+    }
+  },
+  "forgotPassword": {
+    "title": "Забыли пароль?",
+    "subtitle": "Введите ваш email адрес, и мы отправим вам ссылку для сброса пароля.",
+    "backToLogin": "Назад к входу",
+    "emailLabel": "Email адрес",
+    "emailPlaceholder": "admin@admin-saas.com",
+    "sending": "Отправка...",
+    "sendResetLink": "Отправить ссылку для сброса",
+    "submitted": {
+      "title": "Проверьте ваш email",
+      "message": "Если аккаунт с {{email}} существует, вы скоро получите ссылку для сброса пароля.",
+      "checkSpam": "Не получили письмо? Проверьте папку спам или попробуйте снова.",
+      "backToLogin": "Назад к входу",
+      "tryAnother": "Попробовать другой email"
+    },
+    "toast": {
+      "emailRequired": "Пожалуйста, введите ваш email адрес",
+      "sendFailed": "Не удалось отправить письмо для сброса пароля"
+    },
+    "demoAccounts": {
+      "title": "Демо аккаунты:",
+      "superAdmin": "Super Admin: admin@admin-saas.com / SuperAdmin123!",
+      "tenantOwner": "Tenant Owner: owner@demo-tenant.com / DemoOwner123!"
+    }
+  },
+  "resetPassword": {
+    "title": "Сброс пароля",
+    "subtitle": "Введите новый пароль ниже.",
+    "newPassword": "Новый пароль",
+    "confirmNewPassword": "Подтвердите новый пароль",
+    "minChars": "Минимум 8 символов",
+    "resetting": "Сброс...",
+    "resetPasswordBtn": "Сбросить пароль",
+    "success": {
+      "title": "Пароль сброшен!",
+      "message": "Ваш пароль был успешно сброшен. Теперь вы можете войти с новым паролем.",
+      "goToLogin": "Перейти к входу"
+    },
+    "toast": {
+      "invalidLink": "Недействительная ссылка для сброса",
+      "passwordMinLength": "Пароль должен быть не короче 8 символов",
+      "passwordMismatch": "Пароли не совпадают",
+      "success": "Пароль успешно сброшен!",
+      "invalidToken": "Эта ссылка для сброса истекла или недействительна",
+      "failed": "Не удалось сбросить пароль"
+    }
+  },
+  "subscriptionPlans": {
+    "title": "Планы подписки",
+    "subtitle": "Управление тарифами и функциями",
+    "addPlan": "Добавить план",
+    "loading": "Загрузка планов...",
+    "noPlans": "Планов подписки пока нет",
+    "addFirst": "Добавьте первый план",
+    "tableHeaders": {
+      "plan": "План",
+      "price": "Цена",
+      "limits": "Лимиты",
+      "tenantTypes": "Типы арендаторов",
+      "activeTenants": "Активные арендаторы",
+      "status": "Статус",
+      "actions": "Действия"
+    },
+    "contactUs": "Свяжитесь с нами",
+    "per": "за {{period}}",
+    "customPricing": "Индивидуальная цена",
+    "limits": {
+      "products": "Продукты",
+      "stores": "Магазины",
+      "campaigns": "Кампании"
+    },
+    "manageTenantTypes": "Управление типами арендаторов",
+    "types": "{{count}} типов",
+    "status": {
+      "active": "Активен",
+      "inactive": "Неактивен"
+    },
+    "edit": "Редактировать",
+    "delete": "Удалить",
+    "confirmDelete": "Удалить \"{{name}}\"? Это действие нельзя отменить.",
+    "createModal": {
+      "title": "Добавить план подписки",
+      "planName": "Название плана *",
+      "slug": "Slug *",
+      "description": "Описание",
+      "price": "Цена",
+      "priceHint": "Оставьте 0 или пустым для отображения «Свяжитесь с нами»",
+      "currency": "Валюта",
+      "billingPeriod": "Период оплаты *",
+      "maxProducts": "Макс. продуктов",
+      "maxStores": "Макс. магазинов",
+      "maxCampaigns": "Макс. кампаний",
+      "sortOrder": "Порядок сортировки",
+      "features": "Функции",
+      "addFeature": "Добавить функцию...",
+      "add": "Добавить",
+      "active": "Активен",
+      "cancel": "Отмена",
+      "create": "Создать план",
+      "placeholders": {
+        "name": "Базовый, Про, Корпоративный...",
+        "slug": "basic-plan",
+        "description": "Идеально для малого бизнеса...",
+        "price": "Оставьте пустым для связи по цене",
+        "unlimited": "Оставьте пустым для безлимита"
+      },
+      "billingPeriods": {
+        "monthly": "Ежемесячно",
+        "yearly": "Ежегодно",
+        "quarterly": "Ежеквартально"
+      }
+    },
+    "editModal": {
+      "title": "Редактировать план подписки",
+      "update": "Обновить план"
+    },
+    "toast": {
+      "loadFailed": "Не удалось загрузить планы подписки",
+      "requiredFields": "Название, slug и период оплаты обязательны",
+      "createSuccess": "План подписки успешно создан!",
+      "createFailed": "Не удалось создать план подписки",
+      "updateSuccess": "План подписки успешно обновлён!",
+      "updateFailed": "Не удалось обновить план подписки",
+      "deleteSuccess": "План подписки успешно удалён!",
+      "deleteFailed": "Не удалось удалить план подписки"
+    }
+  },
+  "tenantTypes": {
+    "title": "Типы арендаторов",
+    "addTenantType": "Добавить тип арендатора",
+    "loading": "Загрузка...",
+    "noTenantTypes": "Типы арендаторов не найдены. Создайте первый для начала работы.",
+    "noTranslation": "Нет перевода",
+    "noIcon": "Нет иконки",
+    "tenants": "{{count}} арендаторов",
+    "tableHeaders": {
+      "sort": "Сортировка",
+      "code": "Код",
+      "name": "Название",
+      "icon": "Иконка",
+      "tenants": "Арендаторы",
+      "status": "Статус",
+      "actions": "Действия"
+    },
+    "status": {
+      "active": "Активен",
+      "inactive": "Неактивен"
+    },
+    "edit": "Редактировать",
+    "delete": "Удалить",
+    "modal": {
+      "createTitle": "Создать тип арендатора",
+      "editTitle": "Редактировать тип арендатора",
+      "code": "Код (уникальный идентификатор) *",
+      "iconUrl": "URL иконки",
+      "sortOrder": "Порядок сортировки",
+      "status": "Статус",
+      "translations": "Переводы *",
+      "name": "Название",
+      "description": "Описание",
+      "cancel": "Отмена",
+      "create": "Создать",
+      "update": "Обновить",
+      "placeholders": {
+        "code": "например, retail, healthcare, education",
+        "iconUrl": "https://...",
+        "nameIn": "Название на {{language}}",
+        "descriptionIn": "Описание на {{language}}"
+      }
+    },
+    "toast": {
+      "loadFailed": "Не удалось загрузить данные",
+      "translationRequired": "Пожалуйста, укажите хотя бы один перевод",
+      "saveFailed": "Не удалось сохранить тип арендатора",
+      "confirmDelete": "Вы уверены, что хотите удалить этот тип арендатора?",
+      "deleteFailed": "Не удалось удалить тип арендатора"
+    }
+  }
+}
