@@ -906,5 +906,37 @@
       "qrEnabled": "QR Sipariş",
       "isActive": "Aktif"
     }
+  },
+  "tenantSettings": {
+    "title": "Ayarlar",
+    "subtitle": "Kiracı yapılandırma ayarlarını yönetin",
+    "add": "Ayar Ekle",
+    "edit": "Ayar Düzenle",
+    "loading": "Ayarlar yükleniyor...",
+    "empty": "Henüz ayar yapılandırılmadı.",
+    "table": {
+      "key": "Anahtar",
+      "value": "Değer",
+      "type": "Tür",
+      "updated": "Güncellendi",
+      "actions": "İşlemler"
+    },
+    "confirm": {
+      "delete": "Bu ayarı silmek istediğinizden emin misiniz?"
+    },
+    "toast": {
+      "loadFailed": "Ayarlar yüklenemedi",
+      "created": "Ayar oluşturuldu",
+      "updated": "Ayar güncellendi",
+      "deleted": "Ayar silindi",
+      "deleteFailed": "Ayar silinemedi",
+      "saveFailed": "Ayar kaydedilemedi",
+      "keyRequired": "Ayar anahtarı gereklidir"
+    },
+    "form": {
+      "key": "Ayar Anahtarı",
+      "value": "Değer",
+      "type": "Tür"
+    }
   }
 }

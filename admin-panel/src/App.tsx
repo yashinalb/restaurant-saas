@@ -23,6 +23,7 @@ import AcceptInvitationPage from './pages/TenantUsers/AcceptInvitationPage';
 import RolesPage from './pages/RolesPermissions/RolesPage';
 import PermissionsPage from './pages/RolesPermissions/PermissionsPage';
 import StoresPage from './pages/Stores/StoresPage';
+import TenantSettingsPage from './pages/Settings/TenantSettingsPage';
 
 
 function ProtectedRoute({ children }: { children: React.ReactNode }) {
@@ -67,6 +68,7 @@ function App() {
           <Route path="roles" element={<RolesPage />} />
           <Route path="permissions" element={<PermissionsPage />} />
           <Route path="tenant/stores" element={<StoresPage />} />
+          <Route path="tenant/settings" element={<TenantSettingsPage />} />
           <Route path="tenant/users" element={<TenantUsersPage />} />
           <Route path="tenant/users/invite" element={<TenantUserInvitePage />} />
           <Route path="tenant/users/:id" element={<TenantUserDetailPage />} />

@@ -37,7 +37,7 @@ Legend: [x] = backend + frontend done | [ ] = needs to be built
 
 ## PRIORITY 1: Stores & Settings (Migration 004)
 
-### [ x ] 1. Stores
+### [x] 1. Stores
 
 Tables: `stores`
 
@@ -47,7 +47,7 @@ Create full CRUD for stores.
 Tenant-scoped physical restaurant locations. Fields include name, slug, address, phone, timezone, opening_hours (JSON), printer IPs (kitchen, bar, receipt), feature flags (kds_enabled, kiosk_enabled, online_ordering_enabled, qr_ordering_enabled), tax/service charge rates.
 ```
 
-### [ ] 2. Tenant Settings
+### [x] 2. Tenant Settings
 
 Tables: `tenant_settings`
 

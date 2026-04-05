@@ -348,7 +348,7 @@ export default function DashboardLayout() {
         {hasPermission('settings.view') && (
           <div className="mt-auto pt-4 border-t border-slate-700/50">
             <NavLink
-              to="/settings"
+              to="/tenant/settings"
               className={({ isActive }) =>
                 `flex items-center gap-3 px-3 py-2.5 rounded-lg transition-all duration-200
                 ${isActive 
