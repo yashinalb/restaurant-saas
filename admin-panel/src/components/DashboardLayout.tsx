@@ -22,6 +22,7 @@ import {
   CreditCard,
   Key,
   UtensilsCrossed,
+  Package,
   LucideIcon
 } from 'lucide-react';
 
@@ -119,6 +120,7 @@ export default function DashboardLayout() {
       icon: UtensilsCrossed,
       items: [
         { name: t('navigation.addonTypes', 'Addon Types'), to: '/addon-types', icon: UtensilsCrossed, show: true },
+        { name: t('navigation.addons', 'Addons'), to: '/addons', icon: Package, show: true },
       ]
     },
     {

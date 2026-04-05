@@ -38,7 +38,8 @@
       "masterData": "Master Data"
     },
     "stores": "Магазины",
-    "addonTypes": "Addon Types"
+    "addonTypes": "Addon Types",
+    "addons": "Addons"
   },
   "common": {
     "adminSaas": "Admin SaaS",
@@ -961,5 +962,29 @@
     "fetchError": "Failed to load addon types",
     "saveError": "Failed to save addon type",
     "deleteError": "Failed to delete addon type"
+  },
+  "addons": {
+    "title": "Addons",
+    "add": "Add Addon",
+    "edit": "Edit Addon",
+    "code": "Code",
+    "name": "Name",
+    "addonType": "Addon Type",
+    "sortOrder": "Sort Order",
+    "translations": "Translations",
+    "translationName": "Name",
+    "translationDescription": "Description",
+    "selectType": "Select addon type...",
+    "allTypes": "All Addon Types",
+    "empty": "No addons found",
+    "codeRequired": "Code is required",
+    "typeRequired": "Addon type is required",
+    "confirmDelete": "Are you sure you want to delete this addon?",
+    "created": "Addon created successfully",
+    "updated": "Addon updated successfully",
+    "deleted": "Addon deleted successfully",
+    "fetchError": "Failed to load addons",
+    "saveError": "Failed to save addon",
+    "deleteError": "Failed to delete addon"
   }
 }

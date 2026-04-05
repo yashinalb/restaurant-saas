@@ -71,7 +71,7 @@ Create full CRUD for master_addon_types + master_addon_type_translations.
 Pre-seeded: portion, extra, sauce, topping, side, drink.
 ```
 
-### [] 4. Master Addons
+### [x] 4. Master Addons
 
 Tables: `master_addons` + `master_addon_translations`
 

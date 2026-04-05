@@ -38,7 +38,8 @@
       "masterData": "Ana Veriler"
     },
     "stores": "Mağazalar",
-    "addonTypes": "Eklenti Türleri"
+    "addonTypes": "Eklenti Türleri",
+    "addons": "Eklentiler"
   },
   "common": {
     "adminSaas": "Admin SaaS",
@@ -961,5 +962,29 @@
     "fetchError": "Eklenti türleri yüklenemedi",
     "saveError": "Eklenti türü kaydedilemedi",
     "deleteError": "Eklenti türü silinemedi"
+  },
+  "addons": {
+    "title": "Eklentiler",
+    "add": "Eklenti Ekle",
+    "edit": "Eklenti Düzenle",
+    "code": "Kod",
+    "name": "Ad",
+    "addonType": "Eklenti Türü",
+    "sortOrder": "Sıralama",
+    "translations": "Çeviriler",
+    "translationName": "Ad",
+    "translationDescription": "Açıklama",
+    "selectType": "Eklenti türü seçin...",
+    "allTypes": "Tüm Eklenti Türleri",
+    "empty": "Eklenti bulunamadı",
+    "codeRequired": "Kod gereklidir",
+    "typeRequired": "Eklenti türü gereklidir",
+    "confirmDelete": "Bu eklentiyi silmek istediğinizden emin misiniz?",
+    "created": "Eklenti oluşturuldu",
+    "updated": "Eklenti güncellendi",
+    "deleted": "Eklenti silindi",
+    "fetchError": "Eklentiler yüklenemedi",
+    "saveError": "Eklenti kaydedilemedi",
+    "deleteError": "Eklenti silinemedi"
   }
 }
