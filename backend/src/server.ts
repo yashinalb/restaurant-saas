@@ -26,6 +26,7 @@ import storeRoutes from './routes/store.routes';
 import tenantSettingRoutes from './routes/tenantSetting.routes';
 import addonTypeRoutes from './routes/addonType.routes';
 import addonRoutes from './routes/addon.routes';
+import orderSourceRoutes from './routes/orderSource.routes';
 
 // Get __dirname equivalent in ES modules
 const __filename = fileURLToPath(import.meta.url);
@@ -138,6 +139,7 @@ app.use('/api/admin', adminUserRoutes);
 app.use('/api/admin', rolePermissionRoutes);
 app.use('/api/admin', addonTypeRoutes);
 app.use('/api/admin', addonRoutes);
+app.use('/api/admin', orderSourceRoutes);
 
 // Tenant routes (tenant-specific, permission-based)
 app.use('/api/tenant', permissionRoutes);

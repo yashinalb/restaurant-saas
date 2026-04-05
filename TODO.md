@@ -81,7 +81,7 @@ Create full CRUD for master_addons + master_addon_translations.
 FK to master_addon_types. Pre-seeded: Small/Medium/Large portions, sauces (ketchup, BBQ, etc.), toppings, sides, drinks.
 ```
 
-### [ ] 5. Master Order Sources
+### [x] 5. Master Order Sources
 
 Tables: `master_order_sources` + `master_order_source_translations`
 

@@ -23,6 +23,7 @@ import {
   Key,
   UtensilsCrossed,
   Package,
+  ShoppingBag,
   LucideIcon
 } from 'lucide-react';
 
@@ -121,6 +122,7 @@ export default function DashboardLayout() {
       items: [
         { name: t('navigation.addonTypes', 'Addon Types'), to: '/addon-types', icon: UtensilsCrossed, show: true },
         { name: t('navigation.addons', 'Addons'), to: '/addons', icon: Package, show: true },
+        { name: t('navigation.orderSources', 'Order Sources'), to: '/order-sources', icon: ShoppingBag, show: true },
       ]
     },
     {

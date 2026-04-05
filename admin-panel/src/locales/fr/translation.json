@@ -39,7 +39,8 @@
     },
     "stores": "Magasins",
     "addonTypes": "Addon Types",
-    "addons": "Addons"
+    "addons": "Addons",
+    "orderSources": "Order Sources"
   },
   "common": {
     "adminSaas": "Admin SaaS",
@@ -986,5 +987,25 @@
     "fetchError": "Failed to load addons",
     "saveError": "Failed to save addon",
     "deleteError": "Failed to delete addon"
+  },
+  "orderSources": {
+    "title": "Order Sources",
+    "add": "Add Order Source",
+    "edit": "Edit Order Source",
+    "code": "Code",
+    "name": "Name",
+    "icon": "Icon",
+    "sortOrder": "Sort Order",
+    "translations": "Translations",
+    "translationName": "Name",
+    "empty": "No order sources found",
+    "codeRequired": "Code is required",
+    "confirmDelete": "Are you sure you want to delete this order source?",
+    "created": "Order source created successfully",
+    "updated": "Order source updated successfully",
+    "deleted": "Order source deleted successfully",
+    "fetchError": "Failed to load order sources",
+    "saveError": "Failed to save order source",
+    "deleteError": "Failed to delete order source"
   }
 }
