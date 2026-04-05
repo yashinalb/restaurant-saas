@@ -21,6 +21,7 @@ import {
   Building2,
   CreditCard,
   Key,
+  UtensilsCrossed,
   LucideIcon
 } from 'lucide-react';
 
@@ -110,6 +111,14 @@ export default function DashboardLayout() {
         { name: t('navigation.permissions', 'Permissions'), to: '/permissions', icon: Key, show: true },
         { name: t('navigation.languages'), to: '/languages', icon: Languages, show: true },
         { name: t('navigation.currencies'), to: '/currencies', icon: DollarSign, show: true },
+      ]
+    },
+    {
+      id: 'masterData',
+      name: t('navigation.groups.masterData', 'Master Data'),
+      icon: UtensilsCrossed,
+      items: [
+        { name: t('navigation.addonTypes', 'Addon Types'), to: '/addon-types', icon: UtensilsCrossed, show: true },
       ]
     },
     {

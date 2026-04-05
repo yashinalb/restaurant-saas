@@ -24,6 +24,7 @@ import RolesPage from './pages/RolesPermissions/RolesPage';
 import PermissionsPage from './pages/RolesPermissions/PermissionsPage';
 import StoresPage from './pages/Stores/StoresPage';
 import TenantSettingsPage from './pages/Settings/TenantSettingsPage';
+import AddonTypesPage from './pages/AddonTypesPage';
 
 
 function ProtectedRoute({ children }: { children: React.ReactNode }) {
@@ -65,6 +66,7 @@ function App() {
           <Route path="admin-users/new" element={<AdminUserFormPage />} />
           <Route path="admin-users/:id" element={<AdminUserDetailPage />} />
           <Route path="admin-users/:id/edit" element={<AdminUserFormPage />} />
+          <Route path="addon-types" element={<AddonTypesPage />} />
           <Route path="roles" element={<RolesPage />} />
           <Route path="permissions" element={<PermissionsPage />} />
           <Route path="tenant/stores" element={<StoresPage />} />

@@ -61,7 +61,7 @@ Key-value settings per tenant. setting_key, setting_value, setting_type (string|
 
 ## PRIORITY 2: Master Restaurant Lookups (Migration 005 + 014)
 
-### [ ] 3. Master Addon Types
+### [x] 3. Master Addon Types
 
 Tables: `master_addon_types` + `master_addon_type_translations`
 
@@ -71,7 +71,7 @@ Create full CRUD for master_addon_types + master_addon_type_translations.
 Pre-seeded: portion, extra, sauce, topping, side, drink.
 ```
 
-### [ ] 4. Master Addons
+### [] 4. Master Addons
 
 Tables: `master_addons` + `master_addon_translations`
 

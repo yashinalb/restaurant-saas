@@ -34,9 +34,11 @@
       "system": "Systemverwaltung",
       "tenants": "Mandantenverwaltung",
       "team": "Team",
-      "restaurant": "Restaurant"
+      "restaurant": "Restaurant",
+      "masterData": "Master Data"
     },
-    "stores": "Filialen"
+    "stores": "Filialen",
+    "addonTypes": "Addon Types"
   },
   "common": {
     "adminSaas": "Admin SaaS",
@@ -938,5 +940,26 @@
       "value": "Value",
       "type": "Type"
     }
+  },
+  "addonTypes": {
+    "title": "Addon Types",
+    "add": "Add Addon Type",
+    "edit": "Edit Addon Type",
+    "code": "Code",
+    "name": "Name",
+    "icon": "Icon",
+    "sortOrder": "Sort Order",
+    "translations": "Translations",
+    "translationName": "Name",
+    "translationDescription": "Description",
+    "empty": "No addon types found",
+    "codeRequired": "Code is required",
+    "confirmDelete": "Are you sure you want to delete this addon type?",
+    "created": "Addon type created successfully",
+    "updated": "Addon type updated successfully",
+    "deleted": "Addon type deleted successfully",
+    "fetchError": "Failed to load addon types",
+    "saveError": "Failed to save addon type",
+    "deleteError": "Failed to delete addon type"
   }
 }
