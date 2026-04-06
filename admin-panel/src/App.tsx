@@ -41,6 +41,7 @@ import TenantAddonTypesPage from './pages/TenantAddonTypesPage';
 import TenantAddonsPage from './pages/TenantAddonsPage';
 import TenantOrderDestinationsPage from './pages/TenantOrderDestinationsPage';
 import TenantMenuItemsPage from './pages/TenantMenuItemsPage';
+import TenantSeatingAreasPage from './pages/TenantSeatingAreasPage';
 
 
 function ProtectedRoute({ children }: { children: React.ReactNode }) {
@@ -101,6 +102,7 @@ function App() {
           <Route path="tenant/addons" element={<TenantAddonsPage />} />
           <Route path="tenant/order-destinations" element={<TenantOrderDestinationsPage />} />
           <Route path="tenant/menu-items" element={<TenantMenuItemsPage />} />
+          <Route path="tenant/seating-areas" element={<TenantSeatingAreasPage />} />
           <Route path="tenant/stores" element={<StoresPage />} />
           <Route path="tenant/settings" element={<TenantSettingsPage />} />
           <Route path="tenant/users" element={<TenantUsersPage />} />

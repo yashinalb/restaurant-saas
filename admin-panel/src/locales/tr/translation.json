@@ -54,7 +54,8 @@
     "tenantAddonTypes": "Eklenti Türleri",
     "tenantAddons": "Eklentiler",
     "tenantOrderDestinations": "Sipariş Hedefleri",
-    "tenantMenuItems": "Menü Öğeleri"
+    "tenantMenuItems": "Menü Öğeleri",
+    "tenantSeatingAreas": "Oturma Alanları"
   },
   "common": {
     "adminSaas": "Admin SaaS",
@@ -1393,5 +1394,25 @@
     "fetchError": "Menü öğeleri yüklenemedi",
     "saveError": "Menü öğesi kaydedilemedi",
     "deleteError": "Menü öğesi silinemedi"
+  },
+  "tenantSeatingAreas": {
+    "title": "Oturma Alanları",
+    "add": "Oturma Alanı Ekle",
+    "edit": "Oturma Alanını Düzenle",
+    "name": "Ad",
+    "store": "Mağaza",
+    "selectStore": "-- Mağaza Seçin --",
+    "sortOrder": "Sıralama",
+    "translations": "Çeviriler",
+    "translationName": "Ad",
+    "empty": "Oturma alanı bulunamadı",
+    "storeRequired": "Mağaza gereklidir",
+    "confirmDelete": "Bu oturma alanını silmek istediğinizden emin misiniz?",
+    "created": "Oturma alanı başarıyla oluşturuldu",
+    "updated": "Oturma alanı başarıyla güncellendi",
+    "deleted": "Oturma alanı başarıyla silindi",
+    "fetchError": "Oturma alanları yüklenemedi",
+    "saveError": "Oturma alanı kaydedilemedi",
+    "deleteError": "Oturma alanı silinemedi"
   }
 }

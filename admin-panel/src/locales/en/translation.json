@@ -54,7 +54,8 @@
     "tenantAddonTypes": "Addon Types",
     "tenantAddons": "Addons",
     "tenantOrderDestinations": "Order Destinations",
-    "tenantMenuItems": "Menu Items"
+    "tenantMenuItems": "Menu Items",
+    "tenantSeatingAreas": "Seating Areas"
   },
   "common": {
     "adminSaas": "Admin SaaS",
@@ -1393,5 +1394,25 @@
     "fetchError": "Failed to load menu items",
     "saveError": "Failed to save menu item",
     "deleteError": "Failed to delete menu item"
+  },
+  "tenantSeatingAreas": {
+    "title": "Seating Areas",
+    "add": "Add Seating Area",
+    "edit": "Edit Seating Area",
+    "name": "Name",
+    "store": "Store",
+    "selectStore": "-- Select Store --",
+    "sortOrder": "Sort Order",
+    "translations": "Translations",
+    "translationName": "Name",
+    "empty": "No seating areas found",
+    "storeRequired": "Store is required",
+    "confirmDelete": "Are you sure you want to delete this seating area?",
+    "created": "Seating area created successfully",
+    "updated": "Seating area updated successfully",
+    "deleted": "Seating area deleted successfully",
+    "fetchError": "Failed to load seating areas",
+    "saveError": "Failed to save seating area",
+    "deleteError": "Failed to delete seating area"
   }
 }

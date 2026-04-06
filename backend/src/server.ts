@@ -30,6 +30,7 @@ import tenantAddonTypeRoutes from './routes/tenantAddonType.routes';
 import tenantAddonRoutes from './routes/tenantAddon.routes';
 import tenantOrderDestinationRoutes from './routes/tenantOrderDestination.routes';
 import tenantMenuItemRoutes from './routes/tenantMenuItem.routes';
+import tenantSeatingAreaRoutes from './routes/tenantSeatingArea.routes';
 import addonTypeRoutes from './routes/addonType.routes';
 import addonRoutes from './routes/addon.routes';
 import orderSourceRoutes from './routes/orderSource.routes';
@@ -175,6 +176,7 @@ app.use('/api/tenant', tenantAddonTypeRoutes);
 app.use('/api/tenant', tenantAddonRoutes);
 app.use('/api/tenant', tenantOrderDestinationRoutes);
 app.use('/api/tenant', tenantMenuItemRoutes);
+app.use('/api/tenant', tenantSeatingAreaRoutes);
 
 
 

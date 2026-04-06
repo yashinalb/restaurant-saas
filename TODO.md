@@ -240,7 +240,7 @@ Also manages: tenant_menu_item_addons (which addons available), tenant_menu_item
 
 ## PRIORITY 4: Seating & Staff (Migration 008)
 
-### [ ] 20. Tenant Seating Areas
+### [x] 20. Tenant Seating Areas
 
 Tables: `tenant_seating_areas` + `tenant_seating_area_translations`
 

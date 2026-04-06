@@ -519,7 +519,11 @@ async function seedRestaurantLookups() {
       ('order_destinations.view', 'View Order Destinations', 'Can view order destinations', 'orders', 1),
       ('order_destinations.create', 'Create Order Destinations', 'Can create order destinations', 'orders', 1),
       ('order_destinations.edit', 'Edit Order Destinations', 'Can edit order destinations', 'orders', 1),
-      ('order_destinations.delete', 'Delete Order Destinations', 'Can delete order destinations', 'orders', 1)
+      ('order_destinations.delete', 'Delete Order Destinations', 'Can delete order destinations', 'orders', 1),
+      ('seating_areas.view', 'View Seating Areas', 'Can view seating areas', 'tables', 1),
+      ('seating_areas.create', 'Create Seating Areas', 'Can create seating areas', 'tables', 1),
+      ('seating_areas.edit', 'Edit Seating Areas', 'Can edit seating areas', 'tables', 1),
+      ('seating_areas.delete', 'Delete Seating Areas', 'Can delete seating areas', 'tables', 1)
     `);
     console.log('✅ Restaurant permissions seeded\n');
 

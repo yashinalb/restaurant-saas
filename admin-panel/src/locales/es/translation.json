@@ -54,7 +54,8 @@
     "tenantAddonTypes": "Tipos de Complementos",
     "tenantAddons": "Complementos",
     "tenantOrderDestinations": "Destinos de Pedido",
-    "tenantMenuItems": "Artículos del Menú"
+    "tenantMenuItems": "Artículos del Menú",
+    "tenantSeatingAreas": "Áreas de Asientos"
   },
   "common": {
     "adminSaas": "Admin SaaS",
@@ -1393,5 +1394,25 @@
     "fetchError": "Error al cargar artículos del menú",
     "saveError": "Error al guardar artículo del menú",
     "deleteError": "Error al eliminar artículo del menú"
+  },
+  "tenantSeatingAreas": {
+    "title": "Áreas de Asientos",
+    "add": "Agregar Área de Asientos",
+    "edit": "Editar Área de Asientos",
+    "name": "Nombre",
+    "store": "Tienda",
+    "selectStore": "-- Seleccionar Tienda --",
+    "sortOrder": "Orden",
+    "translations": "Traducciones",
+    "translationName": "Nombre",
+    "empty": "No se encontraron áreas de asientos",
+    "storeRequired": "La tienda es obligatoria",
+    "confirmDelete": "¿Está seguro de que desea eliminar esta área de asientos?",
+    "created": "Área de asientos creada exitosamente",
+    "updated": "Área de asientos actualizada exitosamente",
+    "deleted": "Área de asientos eliminada exitosamente",
+    "fetchError": "Error al cargar áreas de asientos",
+    "saveError": "Error al guardar área de asientos",
+    "deleteError": "Error al eliminar área de asientos"
   }
 }

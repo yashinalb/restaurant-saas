@@ -54,7 +54,8 @@
     "tenantAddonTypes": "Zusatztypen",
     "tenantAddons": "Zusätze",
     "tenantOrderDestinations": "Bestellziele",
-    "tenantMenuItems": "Menüpunkte"
+    "tenantMenuItems": "Menüpunkte",
+    "tenantSeatingAreas": "Sitzbereiche"
   },
   "common": {
     "adminSaas": "Admin SaaS",
@@ -1393,5 +1394,25 @@
     "fetchError": "Menüpunkte konnten nicht geladen werden",
     "saveError": "Menüpunkt konnte nicht gespeichert werden",
     "deleteError": "Menüpunkt konnte nicht gelöscht werden"
+  },
+  "tenantSeatingAreas": {
+    "title": "Sitzbereiche",
+    "add": "Sitzbereich hinzufügen",
+    "edit": "Sitzbereich bearbeiten",
+    "name": "Name",
+    "store": "Filiale",
+    "selectStore": "-- Filiale auswählen --",
+    "sortOrder": "Sortierreihenfolge",
+    "translations": "Übersetzungen",
+    "translationName": "Name",
+    "empty": "Keine Sitzbereiche gefunden",
+    "storeRequired": "Filiale ist erforderlich",
+    "confirmDelete": "Sind Sie sicher, dass Sie diesen Sitzbereich löschen möchten?",
+    "created": "Sitzbereich erfolgreich erstellt",
+    "updated": "Sitzbereich erfolgreich aktualisiert",
+    "deleted": "Sitzbereich erfolgreich gelöscht",
+    "fetchError": "Sitzbereiche konnten nicht geladen werden",
+    "saveError": "Sitzbereich konnte nicht gespeichert werden",
+    "deleteError": "Sitzbereich konnte nicht gelöscht werden"
   }
 }

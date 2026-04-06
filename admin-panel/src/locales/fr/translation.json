@@ -54,7 +54,8 @@
     "tenantAddonTypes": "Types de Suppléments",
     "tenantAddons": "Suppléments",
     "tenantOrderDestinations": "Destinations de Commande",
-    "tenantMenuItems": "Articles du Menu"
+    "tenantMenuItems": "Articles du Menu",
+    "tenantSeatingAreas": "Zones de Places"
   },
   "common": {
     "adminSaas": "Admin SaaS",
@@ -1393,5 +1394,25 @@
     "fetchError": "Échec du chargement des articles du menu",
     "saveError": "Échec de l'enregistrement de l'article du menu",
     "deleteError": "Échec de la suppression de l'article du menu"
+  },
+  "tenantSeatingAreas": {
+    "title": "Zones de Places",
+    "add": "Ajouter une Zone de Places",
+    "edit": "Modifier la Zone de Places",
+    "name": "Nom",
+    "store": "Magasin",
+    "selectStore": "-- Sélectionner un Magasin --",
+    "sortOrder": "Ordre de tri",
+    "translations": "Traductions",
+    "translationName": "Nom",
+    "empty": "Aucune zone de places trouvée",
+    "storeRequired": "Le magasin est obligatoire",
+    "confirmDelete": "Êtes-vous sûr de vouloir supprimer cette zone de places ?",
+    "created": "Zone de places créée avec succès",
+    "updated": "Zone de places mise à jour avec succès",
+    "deleted": "Zone de places supprimée avec succès",
+    "fetchError": "Échec du chargement des zones de places",
+    "saveError": "Échec de l'enregistrement de la zone de places",
+    "deleteError": "Échec de la suppression de la zone de places"
   }
 }
