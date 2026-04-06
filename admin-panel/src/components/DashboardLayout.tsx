@@ -161,6 +161,7 @@ export default function DashboardLayout() {
       icon: Store,
       items: [
         { name: t('navigation.stores', 'Stores'), to: '/tenant/stores', icon: Store, show: hasPermission('stores.view') },
+        { name: t('navigation.tenantMenuCategories', 'Menu Categories'), to: '/tenant/menu-categories', icon: LayoutList, show: hasPermission('menu_categories.view') },
       ].filter(item => item.show)
     },
     {

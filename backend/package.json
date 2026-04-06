@@ -13,7 +13,7 @@
     "seed:core": "tsx src/seeders/seed-core.ts",
     "seed:restaurant-lookups": "tsx src/seeders/seed-restaurant-lookups.ts",
     "seed:demo-tenants": "tsx src/seeders/seed-demo-tenants.ts",
-    "seed": "npm run seed:core && npm run seed:restaurant-lookups",
+    "seed": "npm run seed:core && npm run seed:restaurant-lookups && npm run seed:demo-tenants",
     "setup-db": "npm run migrate && npm run seed",
     "lint": "eslint src --ext .ts",
     "format": "prettier --write \"src/**/*.ts\""

@@ -35,6 +35,7 @@ import PaymentStatusesPage from './pages/PaymentStatusesPage';
 import IngredientsPage from './pages/IngredientsPage';
 import ExpenseCategoriesPage from './pages/ExpenseCategoriesPage';
 import MenuCategoriesPage from './pages/MenuCategoriesPage';
+import TenantMenuCategoriesPage from './pages/TenantMenuCategoriesPage';
 
 
 function ProtectedRoute({ children }: { children: React.ReactNode }) {
@@ -89,6 +90,7 @@ function App() {
           <Route path="menu-categories" element={<MenuCategoriesPage />} />
           <Route path="roles" element={<RolesPage />} />
           <Route path="permissions" element={<PermissionsPage />} />
+          <Route path="tenant/menu-categories" element={<TenantMenuCategoriesPage />} />
           <Route path="tenant/stores" element={<StoresPage />} />
           <Route path="tenant/settings" element={<TenantSettingsPage />} />
           <Route path="tenant/users" element={<TenantUsersPage />} />

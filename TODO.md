@@ -175,7 +175,7 @@ Has parent_id (self-referencing hierarchy), icon_url, image_url. Pre-seeded: 16 
 
 ## PRIORITY 3: Tenant Menu System (Migration 006 + 007)
 
-### [ ] 14. Tenant Menu Categories
+### [x] 14. Tenant Menu Categories
 
 Tables: `tenant_menu_categories` + `tenant_menu_category_translations` + `tenant_menu_category_images`
 
