@@ -45,7 +45,8 @@
     "orderDestinations": "Sipariş Hedefleri",
     "paymentTypes": "Ödeme Türleri",
     "orderItemStatuses": "Sipariş Kalemi Durumları",
-    "paymentStatuses": "Ödeme Durumları"
+    "paymentStatuses": "Ödeme Durumları",
+    "ingredients": "Malzemeler"
   },
   "common": {
     "adminSaas": "Admin SaaS",
@@ -1112,5 +1113,31 @@
     "fetchError": "Ödeme durumları yüklenemedi",
     "saveError": "Ödeme durumu kaydedilemedi",
     "deleteError": "Ödeme durumu silinemedi"
+  },
+  "ingredients": {
+    "title": "Malzemeler",
+    "add": "Malzeme Ekle",
+    "edit": "Malzeme Düzenle",
+    "code": "Kod",
+    "name": "Ad",
+    "allergenType": "Tür",
+    "type_allergen": "Alerjen",
+    "type_dietary": "Diyet",
+    "type_ingredient": "Malzeme",
+    "selectType": "-- Tür Seçin --",
+    "iconUrl": "İkon URL",
+    "sortOrder": "Sıralama",
+    "translations": "Çeviriler",
+    "translationName": "Ad",
+    "translationDescription": "Açıklama",
+    "empty": "Malzeme bulunamadı",
+    "codeRequired": "Kod gereklidir",
+    "confirmDelete": "Bu malzemeyi silmek istediğinizden emin misiniz?",
+    "created": "Malzeme oluşturuldu",
+    "updated": "Malzeme güncellendi",
+    "deleted": "Malzeme silindi",
+    "fetchError": "Malzemeler yüklenemedi",
+    "saveError": "Malzeme kaydedilemedi",
+    "deleteError": "Malzeme silinemedi"
   }
 }

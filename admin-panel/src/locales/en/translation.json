@@ -45,7 +45,8 @@
     "orderDestinations": "Order Destinations",
     "paymentTypes": "Payment Types",
     "orderItemStatuses": "Order Item Statuses",
-    "paymentStatuses": "Payment Statuses"
+    "paymentStatuses": "Payment Statuses",
+    "ingredients": "Ingredients"
   },
   "common": {
     "adminSaas": "Admin SaaS",
@@ -1112,5 +1113,31 @@
     "fetchError": "Failed to load payment statuses",
     "saveError": "Failed to save payment status",
     "deleteError": "Failed to delete payment status"
+  },
+  "ingredients": {
+    "title": "Ingredients",
+    "add": "Add Ingredient",
+    "edit": "Edit Ingredient",
+    "code": "Code",
+    "name": "Name",
+    "allergenType": "Type",
+    "type_allergen": "Allergen",
+    "type_dietary": "Dietary",
+    "type_ingredient": "Ingredient",
+    "selectType": "-- Select Type --",
+    "iconUrl": "Icon URL",
+    "sortOrder": "Sort Order",
+    "translations": "Translations",
+    "translationName": "Name",
+    "translationDescription": "Description",
+    "empty": "No ingredients found",
+    "codeRequired": "Code is required",
+    "confirmDelete": "Are you sure you want to delete this ingredient?",
+    "created": "Ingredient created successfully",
+    "updated": "Ingredient updated successfully",
+    "deleted": "Ingredient deleted successfully",
+    "fetchError": "Failed to load ingredients",
+    "saveError": "Failed to save ingredient",
+    "deleteError": "Failed to delete ingredient"
   }
 }

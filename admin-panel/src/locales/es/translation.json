@@ -45,7 +45,8 @@
     "orderDestinations": "Order Destinations",
     "paymentTypes": "Tipos de Pago",
     "orderItemStatuses": "Estados de Artículos",
-    "paymentStatuses": "Estados de Pago"
+    "paymentStatuses": "Estados de Pago",
+    "ingredients": "Ingredientes"
   },
   "common": {
     "adminSaas": "Admin SaaS",
@@ -1112,5 +1113,31 @@
     "fetchError": "Error al cargar estados de pago",
     "saveError": "Error al guardar estado de pago",
     "deleteError": "Error al eliminar estado de pago"
+  },
+  "ingredients": {
+    "title": "Ingredientes",
+    "add": "Agregar Ingrediente",
+    "edit": "Editar Ingrediente",
+    "code": "Código",
+    "name": "Nombre",
+    "allergenType": "Tipo",
+    "type_allergen": "Alérgeno",
+    "type_dietary": "Dietético",
+    "type_ingredient": "Ingrediente",
+    "selectType": "-- Seleccionar Tipo --",
+    "iconUrl": "URL del Icono",
+    "sortOrder": "Orden",
+    "translations": "Traducciones",
+    "translationName": "Nombre",
+    "translationDescription": "Descripción",
+    "empty": "No se encontraron ingredientes",
+    "codeRequired": "El código es obligatorio",
+    "confirmDelete": "¿Está seguro de que desea eliminar este ingrediente?",
+    "created": "Ingrediente creado exitosamente",
+    "updated": "Ingrediente actualizado exitosamente",
+    "deleted": "Ingrediente eliminado exitosamente",
+    "fetchError": "Error al cargar ingredientes",
+    "saveError": "Error al guardar ingrediente",
+    "deleteError": "Error al eliminar ingrediente"
   }
 }

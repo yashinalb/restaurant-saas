@@ -45,7 +45,8 @@
     "orderDestinations": "Order Destinations",
     "paymentTypes": "Zahlungsarten",
     "orderItemStatuses": "Bestellpositionsstatus",
-    "paymentStatuses": "Zahlungsstatus"
+    "paymentStatuses": "Zahlungsstatus",
+    "ingredients": "Zutaten"
   },
   "common": {
     "adminSaas": "Admin SaaS",
@@ -1112,5 +1113,31 @@
     "fetchError": "Zahlungsstatus konnten nicht geladen werden",
     "saveError": "Zahlungsstatus konnte nicht gespeichert werden",
     "deleteError": "Zahlungsstatus konnte nicht gelöscht werden"
+  },
+  "ingredients": {
+    "title": "Zutaten",
+    "add": "Zutat hinzufügen",
+    "edit": "Zutat bearbeiten",
+    "code": "Code",
+    "name": "Name",
+    "allergenType": "Typ",
+    "type_allergen": "Allergen",
+    "type_dietary": "Diätetisch",
+    "type_ingredient": "Zutat",
+    "selectType": "-- Typ auswählen --",
+    "iconUrl": "Symbol-URL",
+    "sortOrder": "Sortierung",
+    "translations": "Übersetzungen",
+    "translationName": "Name",
+    "translationDescription": "Beschreibung",
+    "empty": "Keine Zutaten gefunden",
+    "codeRequired": "Code ist erforderlich",
+    "confirmDelete": "Möchten Sie diese Zutat wirklich löschen?",
+    "created": "Zutat erfolgreich erstellt",
+    "updated": "Zutat erfolgreich aktualisiert",
+    "deleted": "Zutat erfolgreich gelöscht",
+    "fetchError": "Zutaten konnten nicht geladen werden",
+    "saveError": "Zutat konnte nicht gespeichert werden",
+    "deleteError": "Zutat konnte nicht gelöscht werden"
   }
 }

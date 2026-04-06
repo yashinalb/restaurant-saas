@@ -141,7 +141,7 @@ Create full CRUD for master_payment_statuses + master_payment_status_translation
 Has color field. Pre-seeded: unpaid, partially_paid, paid, refunded, void.
 ```
 
-### [ ] 11. Master Ingredients
+### [x] 11. Master Ingredients
 
 Tables: `master_ingredients` + `master_ingredient_translations`
 

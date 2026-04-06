@@ -45,7 +45,8 @@
     "orderDestinations": "Order Destinations",
     "paymentTypes": "Τύποι Πληρωμής",
     "orderItemStatuses": "Καταστάσεις Στοιχείων Παραγγελίας",
-    "paymentStatuses": "Καταστάσεις Πληρωμής"
+    "paymentStatuses": "Καταστάσεις Πληρωμής",
+    "ingredients": "Συστατικά"
   },
   "common": {
     "adminSaas": "Admin SaaS",
@@ -1112,5 +1113,31 @@
     "fetchError": "Αποτυχία φόρτωσης καταστάσεων πληρωμής",
     "saveError": "Αποτυχία αποθήκευσης κατάστασης πληρωμής",
     "deleteError": "Αποτυχία διαγραφής κατάστασης πληρωμής"
+  },
+  "ingredients": {
+    "title": "Συστατικά",
+    "add": "Προσθήκη Συστατικού",
+    "edit": "Επεξεργασία Συστατικού",
+    "code": "Κωδικός",
+    "name": "Όνομα",
+    "allergenType": "Τύπος",
+    "type_allergen": "Αλλεργιογόνο",
+    "type_dietary": "Διατροφικό",
+    "type_ingredient": "Συστατικό",
+    "selectType": "-- Επιλέξτε Τύπο --",
+    "iconUrl": "URL Εικονιδίου",
+    "sortOrder": "Σειρά",
+    "translations": "Μεταφράσεις",
+    "translationName": "Όνομα",
+    "translationDescription": "Περιγραφή",
+    "empty": "Δεν βρέθηκαν συστατικά",
+    "codeRequired": "Ο κωδικός είναι υποχρεωτικός",
+    "confirmDelete": "Είστε σίγουροι ότι θέλετε να διαγράψετε αυτό το συστατικό;",
+    "created": "Το συστατικό δημιουργήθηκε επιτυχώς",
+    "updated": "Το συστατικό ενημερώθηκε επιτυχώς",
+    "deleted": "Το συστατικό διαγράφηκε επιτυχώς",
+    "fetchError": "Αποτυχία φόρτωσης συστατικών",
+    "saveError": "Αποτυχία αποθήκευσης συστατικού",
+    "deleteError": "Αποτυχία διαγραφής συστατικού"
   }
 }

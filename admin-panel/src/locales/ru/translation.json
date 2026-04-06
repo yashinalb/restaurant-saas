@@ -45,7 +45,8 @@
     "orderDestinations": "Order Destinations",
     "paymentTypes": "Типы оплаты",
     "orderItemStatuses": "Статусы позиций заказа",
-    "paymentStatuses": "Статусы оплаты"
+    "paymentStatuses": "Статусы оплаты",
+    "ingredients": "Ингредиенты"
   },
   "common": {
     "adminSaas": "Admin SaaS",
@@ -1112,5 +1113,31 @@
     "fetchError": "Не удалось загрузить статусы оплаты",
     "saveError": "Не удалось сохранить статус оплаты",
     "deleteError": "Не удалось удалить статус оплаты"
+  },
+  "ingredients": {
+    "title": "Ингредиенты",
+    "add": "Добавить ингредиент",
+    "edit": "Редактировать ингредиент",
+    "code": "Код",
+    "name": "Название",
+    "allergenType": "Тип",
+    "type_allergen": "Аллерген",
+    "type_dietary": "Диетический",
+    "type_ingredient": "Ингредиент",
+    "selectType": "-- Выберите тип --",
+    "iconUrl": "URL иконки",
+    "sortOrder": "Порядок сортировки",
+    "translations": "Переводы",
+    "translationName": "Название",
+    "translationDescription": "Описание",
+    "empty": "Ингредиенты не найдены",
+    "codeRequired": "Код обязателен",
+    "confirmDelete": "Вы уверены, что хотите удалить этот ингредиент?",
+    "created": "Ингредиент успешно создан",
+    "updated": "Ингредиент успешно обновлён",
+    "deleted": "Ингредиент успешно удалён",
+    "fetchError": "Не удалось загрузить ингредиенты",
+    "saveError": "Не удалось сохранить ингредиент",
+    "deleteError": "Не удалось удалить ингредиент"
   }
 }

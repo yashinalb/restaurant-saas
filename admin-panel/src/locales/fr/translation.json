@@ -45,7 +45,8 @@
     "orderDestinations": "Order Destinations",
     "paymentTypes": "Types de Paiement",
     "orderItemStatuses": "Statuts des Articles",
-    "paymentStatuses": "Statuts de Paiement"
+    "paymentStatuses": "Statuts de Paiement",
+    "ingredients": "Ingrédients"
   },
   "common": {
     "adminSaas": "Admin SaaS",
@@ -1112,5 +1113,31 @@
     "fetchError": "Échec du chargement des statuts de paiement",
     "saveError": "Échec de l'enregistrement du statut de paiement",
     "deleteError": "Échec de la suppression du statut de paiement"
+  },
+  "ingredients": {
+    "title": "Ingrédients",
+    "add": "Ajouter un Ingrédient",
+    "edit": "Modifier l'Ingrédient",
+    "code": "Code",
+    "name": "Nom",
+    "allergenType": "Type",
+    "type_allergen": "Allergène",
+    "type_dietary": "Diététique",
+    "type_ingredient": "Ingrédient",
+    "selectType": "-- Sélectionner le Type --",
+    "iconUrl": "URL de l'Icône",
+    "sortOrder": "Ordre de tri",
+    "translations": "Traductions",
+    "translationName": "Nom",
+    "translationDescription": "Description",
+    "empty": "Aucun ingrédient trouvé",
+    "codeRequired": "Le code est obligatoire",
+    "confirmDelete": "Êtes-vous sûr de vouloir supprimer cet ingrédient ?",
+    "created": "Ingrédient créé avec succès",
+    "updated": "Ingrédient mis à jour avec succès",
+    "deleted": "Ingrédient supprimé avec succès",
+    "fetchError": "Échec du chargement des ingrédients",
+    "saveError": "Échec de l'enregistrement de l'ingrédient",
+    "deleteError": "Échec de la suppression de l'ingrédient"
   }
 }
