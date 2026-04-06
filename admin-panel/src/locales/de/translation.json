@@ -43,7 +43,8 @@
     "orderSources": "Order Sources",
     "orderTypes": "Order Types",
     "orderDestinations": "Order Destinations",
-    "paymentTypes": "Zahlungsarten"
+    "paymentTypes": "Zahlungsarten",
+    "orderItemStatuses": "Bestellpositionsstatus"
   },
   "common": {
     "adminSaas": "Admin SaaS",
@@ -1070,5 +1071,25 @@
     "fetchError": "Zahlungsarten konnten nicht geladen werden",
     "saveError": "Zahlungsart konnte nicht gespeichert werden",
     "deleteError": "Zahlungsart konnte nicht gelöscht werden"
+  },
+  "orderItemStatuses": {
+    "title": "Bestellpositionsstatus",
+    "add": "Status hinzufügen",
+    "edit": "Status bearbeiten",
+    "code": "Code",
+    "name": "Name",
+    "color": "Farbe",
+    "sortOrder": "Sortierung",
+    "translations": "Übersetzungen",
+    "translationName": "Name",
+    "empty": "Keine Bestellpositionsstatus gefunden",
+    "codeRequired": "Code ist erforderlich",
+    "confirmDelete": "Möchten Sie diesen Status wirklich löschen?",
+    "created": "Status erfolgreich erstellt",
+    "updated": "Status erfolgreich aktualisiert",
+    "deleted": "Status erfolgreich gelöscht",
+    "fetchError": "Status konnten nicht geladen werden",
+    "saveError": "Status konnte nicht gespeichert werden",
+    "deleteError": "Status konnte nicht gelöscht werden"
   }
 }

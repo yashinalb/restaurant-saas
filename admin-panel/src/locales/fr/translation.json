@@ -43,7 +43,8 @@
     "orderSources": "Order Sources",
     "orderTypes": "Order Types",
     "orderDestinations": "Order Destinations",
-    "paymentTypes": "Types de Paiement"
+    "paymentTypes": "Types de Paiement",
+    "orderItemStatuses": "Statuts des Articles"
   },
   "common": {
     "adminSaas": "Admin SaaS",
@@ -1070,5 +1071,25 @@
     "fetchError": "Échec du chargement des types de paiement",
     "saveError": "Échec de l'enregistrement du type de paiement",
     "deleteError": "Échec de la suppression du type de paiement"
+  },
+  "orderItemStatuses": {
+    "title": "Statuts des Articles de Commande",
+    "add": "Ajouter un Statut",
+    "edit": "Modifier le Statut",
+    "code": "Code",
+    "name": "Nom",
+    "color": "Couleur",
+    "sortOrder": "Ordre de tri",
+    "translations": "Traductions",
+    "translationName": "Nom",
+    "empty": "Aucun statut trouvé",
+    "codeRequired": "Le code est obligatoire",
+    "confirmDelete": "Êtes-vous sûr de vouloir supprimer ce statut ?",
+    "created": "Statut créé avec succès",
+    "updated": "Statut mis à jour avec succès",
+    "deleted": "Statut supprimé avec succès",
+    "fetchError": "Échec du chargement des statuts",
+    "saveError": "Échec de l'enregistrement du statut",
+    "deleteError": "Échec de la suppression du statut"
   }
 }

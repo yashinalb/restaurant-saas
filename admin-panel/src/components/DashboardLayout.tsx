@@ -27,6 +27,7 @@ import {
   ClipboardList,
   Navigation,
   Wallet,
+  CircleDot,
   LucideIcon
 } from 'lucide-react';
 
@@ -129,6 +130,7 @@ export default function DashboardLayout() {
         { name: t('navigation.orderTypes', 'Order Types'), to: '/order-types', icon: ClipboardList, show: true },
         { name: t('navigation.orderDestinations', 'Order Destinations'), to: '/order-destinations', icon: Navigation, show: true },
         { name: t('navigation.paymentTypes', 'Payment Types'), to: '/payment-types', icon: Wallet, show: true },
+        { name: t('navigation.orderItemStatuses', 'Order Item Statuses'), to: '/order-item-statuses', icon: CircleDot, show: true },
       ]
     },
     {

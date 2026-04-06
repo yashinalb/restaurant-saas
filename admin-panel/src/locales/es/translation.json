@@ -43,7 +43,8 @@
     "orderSources": "Order Sources",
     "orderTypes": "Order Types",
     "orderDestinations": "Order Destinations",
-    "paymentTypes": "Tipos de Pago"
+    "paymentTypes": "Tipos de Pago",
+    "orderItemStatuses": "Estados de Artículos"
   },
   "common": {
     "adminSaas": "Admin SaaS",
@@ -1070,5 +1071,25 @@
     "fetchError": "Error al cargar tipos de pago",
     "saveError": "Error al guardar tipo de pago",
     "deleteError": "Error al eliminar tipo de pago"
+  },
+  "orderItemStatuses": {
+    "title": "Estados de Artículos de Pedido",
+    "add": "Agregar Estado",
+    "edit": "Editar Estado",
+    "code": "Código",
+    "name": "Nombre",
+    "color": "Color",
+    "sortOrder": "Orden",
+    "translations": "Traducciones",
+    "translationName": "Nombre",
+    "empty": "No se encontraron estados de artículos",
+    "codeRequired": "El código es obligatorio",
+    "confirmDelete": "¿Está seguro de que desea eliminar este estado?",
+    "created": "Estado creado exitosamente",
+    "updated": "Estado actualizado exitosamente",
+    "deleted": "Estado eliminado exitosamente",
+    "fetchError": "Error al cargar estados",
+    "saveError": "Error al guardar estado",
+    "deleteError": "Error al eliminar estado"
   }
 }

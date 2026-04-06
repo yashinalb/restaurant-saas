@@ -43,7 +43,8 @@
     "orderSources": "Order Sources",
     "orderTypes": "Order Types",
     "orderDestinations": "Order Destinations",
-    "paymentTypes": "Типы оплаты"
+    "paymentTypes": "Типы оплаты",
+    "orderItemStatuses": "Статусы позиций заказа"
   },
   "common": {
     "adminSaas": "Admin SaaS",
@@ -1070,5 +1071,25 @@
     "fetchError": "Не удалось загрузить типы оплаты",
     "saveError": "Не удалось сохранить тип оплаты",
     "deleteError": "Не удалось удалить тип оплаты"
+  },
+  "orderItemStatuses": {
+    "title": "Статусы позиций заказа",
+    "add": "Добавить статус",
+    "edit": "Редактировать статус",
+    "code": "Код",
+    "name": "Название",
+    "color": "Цвет",
+    "sortOrder": "Порядок сортировки",
+    "translations": "Переводы",
+    "translationName": "Название",
+    "empty": "Статусы позиций заказа не найдены",
+    "codeRequired": "Код обязателен",
+    "confirmDelete": "Вы уверены, что хотите удалить этот статус?",
+    "created": "Статус успешно создан",
+    "updated": "Статус успешно обновлён",
+    "deleted": "Статус успешно удалён",
+    "fetchError": "Не удалось загрузить статусы",
+    "saveError": "Не удалось сохранить статус",
+    "deleteError": "Не удалось удалить статус"
   }
 }
