@@ -51,7 +51,8 @@
     "menuCategories": "Categorías de Menú",
     "tenantMenuCategories": "Categorías de Menú",
     "tenantIngredients": "Ingredientes",
-    "tenantAddonTypes": "Tipos de Complementos"
+    "tenantAddonTypes": "Tipos de Complementos",
+    "tenantAddons": "Complementos"
   },
   "common": {
     "adminSaas": "Admin SaaS",
@@ -1291,6 +1292,39 @@
     "importSelected": "Importar",
     "importedCount": "Importados exitosamente",
     "noMasterAvailable": "No hay disponibles",
+    "selected": "seleccionados"
+  },
+  "tenantAddons": {
+    "title": "Complementos",
+    "add": "Agregar Complemento",
+    "edit": "Editar Complemento",
+    "name": "Nombre",
+    "addonType": "Tipo de Complemento",
+    "selectType": "-- Seleccionar Tipo --",
+    "price": "Precio",
+    "prices": "Precios",
+    "sortOrder": "Orden",
+    "translations": "Traducciones",
+    "translationName": "Nombre",
+    "translationDescription": "Descripción",
+    "empty": "No se encontraron complementos",
+    "addonTypeRequired": "El tipo de complemento es obligatorio",
+    "confirmDelete": "¿Está seguro de que desea eliminar este complemento?",
+    "created": "Complemento creado exitosamente",
+    "updated": "Complemento actualizado exitosamente",
+    "deleted": "Complemento eliminado exitosamente",
+    "fetchError": "Error al cargar complementos",
+    "saveError": "Error al guardar complemento",
+    "deleteError": "Error al eliminar complemento",
+    "importFromMaster": "Importar desde Master",
+    "importTitle": "Importar Complementos desde Master",
+    "importSubtitle": "Seleccione complementos para importar. Los tipos de complementos correspondientes deben importarse primero.",
+    "selectAll": "Seleccionar Todo",
+    "deselectAll": "Deseleccionar Todo",
+    "alreadyImported": "Importado",
+    "importSelected": "Importar Seleccionados",
+    "importedCount": "Complementos importados exitosamente",
+    "noMasterAvailable": "No hay complementos maestros disponibles",
     "selected": "seleccionados"
   }
 }

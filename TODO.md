@@ -205,7 +205,7 @@ Create full CRUD for tenant_addon_types + tenant_addon_type_translations.
 Has import-from-master pattern (master_addon_type_id FK).
 ```
 
-### [ ] 17. Tenant Addons
+### [x] 17. Tenant Addons
 
 Tables: `tenant_addons` + `tenant_addon_translations` + `tenant_addon_prices`
 

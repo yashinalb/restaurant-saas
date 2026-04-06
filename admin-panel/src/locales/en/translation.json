@@ -51,7 +51,8 @@
     "menuCategories": "Menu Categories",
     "tenantMenuCategories": "Menu Categories",
     "tenantIngredients": "Ingredients",
-    "tenantAddonTypes": "Addon Types"
+    "tenantAddonTypes": "Addon Types",
+    "tenantAddons": "Addons"
   },
   "common": {
     "adminSaas": "Admin SaaS",
@@ -1291,6 +1292,39 @@
     "importSelected": "Import Selected",
     "importedCount": "Addon types imported successfully",
     "noMasterAvailable": "No master addon types available",
+    "selected": "selected"
+  },
+  "tenantAddons": {
+    "title": "Addons",
+    "add": "Add Addon",
+    "edit": "Edit Addon",
+    "name": "Name",
+    "addonType": "Addon Type",
+    "selectType": "-- Select Type --",
+    "price": "Price",
+    "prices": "Prices",
+    "sortOrder": "Sort Order",
+    "translations": "Translations",
+    "translationName": "Name",
+    "translationDescription": "Description",
+    "empty": "No addons found",
+    "addonTypeRequired": "Addon type is required",
+    "confirmDelete": "Are you sure you want to delete this addon?",
+    "created": "Addon created successfully",
+    "updated": "Addon updated successfully",
+    "deleted": "Addon deleted successfully",
+    "fetchError": "Failed to load addons",
+    "saveError": "Failed to save addon",
+    "deleteError": "Failed to delete addon",
+    "importFromMaster": "Import from Master",
+    "importTitle": "Import from Master Addons",
+    "importSubtitle": "Select addons to import. Matching addon types must be imported first.",
+    "selectAll": "Select All",
+    "deselectAll": "Deselect All",
+    "alreadyImported": "Imported",
+    "importSelected": "Import Selected",
+    "importedCount": "Addons imported successfully",
+    "noMasterAvailable": "No master addons available",
     "selected": "selected"
   }
 }

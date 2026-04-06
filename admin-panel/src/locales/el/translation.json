@@ -51,7 +51,8 @@
     "menuCategories": "Κατηγορίες Μενού",
     "tenantMenuCategories": "Κατηγορίες Μενού",
     "tenantIngredients": "Συστατικά",
-    "tenantAddonTypes": "Τύποι Πρόσθετων"
+    "tenantAddonTypes": "Τύποι Πρόσθετων",
+    "tenantAddons": "Πρόσθετα"
   },
   "common": {
     "adminSaas": "Admin SaaS",
@@ -1291,6 +1292,39 @@
     "importSelected": "Εισαγωγή",
     "importedCount": "Εισήχθησαν επιτυχώς",
     "noMasterAvailable": "Δεν υπάρχουν διαθέσιμα",
+    "selected": "επιλεγμένα"
+  },
+  "tenantAddons": {
+    "title": "Πρόσθετα",
+    "add": "Προσθήκη Πρόσθετου",
+    "edit": "Επεξεργασία Πρόσθετου",
+    "name": "Όνομα",
+    "addonType": "Τύπος Πρόσθετου",
+    "selectType": "-- Επιλέξτε Τύπο --",
+    "price": "Τιμή",
+    "prices": "Τιμές",
+    "sortOrder": "Σειρά",
+    "translations": "Μεταφράσεις",
+    "translationName": "Όνομα",
+    "translationDescription": "Περιγραφή",
+    "empty": "Δεν βρέθηκαν πρόσθετα",
+    "addonTypeRequired": "Ο τύπος πρόσθετου είναι υποχρεωτικός",
+    "confirmDelete": "Είστε σίγουροι ότι θέλετε να διαγράψετε αυτό το πρόσθετο;",
+    "created": "Το πρόσθετο δημιουργήθηκε επιτυχώς",
+    "updated": "Το πρόσθετο ενημερώθηκε επιτυχώς",
+    "deleted": "Το πρόσθετο διαγράφηκε επιτυχώς",
+    "fetchError": "Αποτυχία φόρτωσης πρόσθετων",
+    "saveError": "Αποτυχία αποθήκευσης πρόσθετου",
+    "deleteError": "Αποτυχία διαγραφής πρόσθετου",
+    "importFromMaster": "Εισαγωγή από Master",
+    "importTitle": "Εισαγωγή Πρόσθετων από Master",
+    "importSubtitle": "Επιλέξτε πρόσθετα για εισαγωγή. Οι αντίστοιχοι τύποι πρόσθετων πρέπει να εισαχθούν πρώτα.",
+    "selectAll": "Επιλογή Όλων",
+    "deselectAll": "Αποεπιλογή Όλων",
+    "alreadyImported": "Εισαχθέν",
+    "importSelected": "Εισαγωγή Επιλεγμένων",
+    "importedCount": "Τα πρόσθετα εισήχθησαν επιτυχώς",
+    "noMasterAvailable": "Δεν υπάρχουν διαθέσιμα πρόσθετα",
     "selected": "επιλεγμένα"
   }
 }

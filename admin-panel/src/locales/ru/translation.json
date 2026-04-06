@@ -51,7 +51,8 @@
     "menuCategories": "Категории меню",
     "tenantMenuCategories": "Категории меню",
     "tenantIngredients": "Ингредиенты",
-    "tenantAddonTypes": "Типы дополнений"
+    "tenantAddonTypes": "Типы дополнений",
+    "tenantAddons": "Дополнения"
   },
   "common": {
     "adminSaas": "Admin SaaS",
@@ -1291,6 +1292,39 @@
     "importSelected": "Импортировать",
     "importedCount": "Импортировано успешно",
     "noMasterAvailable": "Нет доступных",
+    "selected": "выбрано"
+  },
+  "tenantAddons": {
+    "title": "Дополнения",
+    "add": "Добавить дополнение",
+    "edit": "Редактировать дополнение",
+    "name": "Название",
+    "addonType": "Тип дополнения",
+    "selectType": "-- Выберите тип --",
+    "price": "Цена",
+    "prices": "Цены",
+    "sortOrder": "Сортировка",
+    "translations": "Переводы",
+    "translationName": "Название",
+    "translationDescription": "Описание",
+    "empty": "Дополнения не найдены",
+    "addonTypeRequired": "Тип дополнения обязателен",
+    "confirmDelete": "Вы уверены, что хотите удалить это дополнение?",
+    "created": "Дополнение успешно создано",
+    "updated": "Дополнение успешно обновлено",
+    "deleted": "Дополнение успешно удалено",
+    "fetchError": "Ошибка загрузки дополнений",
+    "saveError": "Ошибка сохранения дополнения",
+    "deleteError": "Ошибка удаления дополнения",
+    "importFromMaster": "Импорт из мастер-данных",
+    "importTitle": "Импорт дополнений из мастер-данных",
+    "importSubtitle": "Выберите дополнения для импорта. Соответствующие типы дополнений должны быть импортированы первыми.",
+    "selectAll": "Выбрать все",
+    "deselectAll": "Снять выделение",
+    "alreadyImported": "Импортировано",
+    "importSelected": "Импортировать выбранные",
+    "importedCount": "Дополнения успешно импортированы",
+    "noMasterAvailable": "Нет доступных дополнений",
     "selected": "выбрано"
   }
 }

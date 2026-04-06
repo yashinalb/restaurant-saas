@@ -51,7 +51,8 @@
     "menuCategories": "Menü Kategorileri",
     "tenantMenuCategories": "Menü Kategorileri",
     "tenantIngredients": "Malzemeler",
-    "tenantAddonTypes": "Eklenti Türleri"
+    "tenantAddonTypes": "Eklenti Türleri",
+    "tenantAddons": "Eklentiler"
   },
   "common": {
     "adminSaas": "Admin SaaS",
@@ -1291,6 +1292,39 @@
     "importSelected": "Seçilenleri İçe Aktar",
     "importedCount": "Eklenti türleri başarıyla içe aktarıldı",
     "noMasterAvailable": "Kullanılabilir ana eklenti türü yok",
+    "selected": "seçili"
+  },
+  "tenantAddons": {
+    "title": "Eklentiler",
+    "add": "Eklenti Ekle",
+    "edit": "Eklenti Düzenle",
+    "name": "Ad",
+    "addonType": "Eklenti Türü",
+    "selectType": "-- Tür Seçin --",
+    "price": "Fiyat",
+    "prices": "Fiyatlar",
+    "sortOrder": "Sıralama",
+    "translations": "Çeviriler",
+    "translationName": "Ad",
+    "translationDescription": "Açıklama",
+    "empty": "Eklenti bulunamadı",
+    "addonTypeRequired": "Eklenti türü gereklidir",
+    "confirmDelete": "Bu eklentiyi silmek istediğinizden emin misiniz?",
+    "created": "Eklenti oluşturuldu",
+    "updated": "Eklenti güncellendi",
+    "deleted": "Eklenti silindi",
+    "fetchError": "Eklentiler yüklenemedi",
+    "saveError": "Eklenti kaydedilemedi",
+    "deleteError": "Eklenti silinemedi",
+    "importFromMaster": "Ana Veriden İçe Aktar",
+    "importTitle": "Ana Eklentilerden İçe Aktar",
+    "importSubtitle": "İçe aktarmak istediğiniz eklentileri seçin. Eşleşen eklenti türleri önce içe aktarılmalıdır.",
+    "selectAll": "Tümünü Seç",
+    "deselectAll": "Seçimi Kaldır",
+    "alreadyImported": "İçe Aktarıldı",
+    "importSelected": "Seçilenleri İçe Aktar",
+    "importedCount": "Eklentiler başarıyla içe aktarıldı",
+    "noMasterAvailable": "Kullanılabilir ana eklenti yok",
     "selected": "seçili"
   }
 }

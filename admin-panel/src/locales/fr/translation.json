@@ -51,7 +51,8 @@
     "menuCategories": "Catégories de Menu",
     "tenantMenuCategories": "Catégories de Menu",
     "tenantIngredients": "Ingrédients",
-    "tenantAddonTypes": "Types de Suppléments"
+    "tenantAddonTypes": "Types de Suppléments",
+    "tenantAddons": "Suppléments"
   },
   "common": {
     "adminSaas": "Admin SaaS",
@@ -1291,6 +1292,39 @@
     "importSelected": "Importer",
     "importedCount": "Importés avec succès",
     "noMasterAvailable": "Aucun disponible",
+    "selected": "sélectionnés"
+  },
+  "tenantAddons": {
+    "title": "Suppléments",
+    "add": "Ajouter un Supplément",
+    "edit": "Modifier le Supplément",
+    "name": "Nom",
+    "addonType": "Type de Supplément",
+    "selectType": "-- Sélectionner le Type --",
+    "price": "Prix",
+    "prices": "Prix",
+    "sortOrder": "Ordre",
+    "translations": "Traductions",
+    "translationName": "Nom",
+    "translationDescription": "Description",
+    "empty": "Aucun supplément trouvé",
+    "addonTypeRequired": "Le type de supplément est obligatoire",
+    "confirmDelete": "Êtes-vous sûr de vouloir supprimer ce supplément ?",
+    "created": "Supplément créé avec succès",
+    "updated": "Supplément mis à jour avec succès",
+    "deleted": "Supplément supprimé avec succès",
+    "fetchError": "Échec du chargement des suppléments",
+    "saveError": "Échec de l'enregistrement du supplément",
+    "deleteError": "Échec de la suppression du supplément",
+    "importFromMaster": "Importer depuis Master",
+    "importTitle": "Importer des Suppléments depuis Master",
+    "importSubtitle": "Sélectionnez les suppléments à importer. Les types de suppléments correspondants doivent être importés en premier.",
+    "selectAll": "Tout Sélectionner",
+    "deselectAll": "Tout Désélectionner",
+    "alreadyImported": "Importé",
+    "importSelected": "Importer la Sélection",
+    "importedCount": "Suppléments importés avec succès",
+    "noMasterAvailable": "Aucun supplément maître disponible",
     "selected": "sélectionnés"
   }
 }

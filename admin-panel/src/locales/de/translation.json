@@ -51,7 +51,8 @@
     "menuCategories": "Menükategorien",
     "tenantMenuCategories": "Menükategorien",
     "tenantIngredients": "Zutaten",
-    "tenantAddonTypes": "Zusatztypen"
+    "tenantAddonTypes": "Zusatztypen",
+    "tenantAddons": "Zusätze"
   },
   "common": {
     "adminSaas": "Admin SaaS",
@@ -1291,6 +1292,39 @@
     "importSelected": "Importieren",
     "importedCount": "Erfolgreich importiert",
     "noMasterAvailable": "Keine verfügbar",
+    "selected": "ausgewählt"
+  },
+  "tenantAddons": {
+    "title": "Zusätze",
+    "add": "Zusatz hinzufügen",
+    "edit": "Zusatz bearbeiten",
+    "name": "Name",
+    "addonType": "Zusatztyp",
+    "selectType": "-- Typ auswählen --",
+    "price": "Preis",
+    "prices": "Preise",
+    "sortOrder": "Sortierung",
+    "translations": "Übersetzungen",
+    "translationName": "Name",
+    "translationDescription": "Beschreibung",
+    "empty": "Keine Zusätze gefunden",
+    "addonTypeRequired": "Zusatztyp ist erforderlich",
+    "confirmDelete": "Sind Sie sicher, dass Sie diesen Zusatz löschen möchten?",
+    "created": "Zusatz erfolgreich erstellt",
+    "updated": "Zusatz erfolgreich aktualisiert",
+    "deleted": "Zusatz erfolgreich gelöscht",
+    "fetchError": "Fehler beim Laden der Zusätze",
+    "saveError": "Fehler beim Speichern des Zusatzes",
+    "deleteError": "Fehler beim Löschen des Zusatzes",
+    "importFromMaster": "Aus Stammdaten importieren",
+    "importTitle": "Zusätze aus Stammdaten importieren",
+    "importSubtitle": "Wählen Sie Zusätze zum Importieren. Entsprechende Zusatztypen müssen zuerst importiert werden.",
+    "selectAll": "Alle auswählen",
+    "deselectAll": "Auswahl aufheben",
+    "alreadyImported": "Importiert",
+    "importSelected": "Ausgewählte importieren",
+    "importedCount": "Zusätze erfolgreich importiert",
+    "noMasterAvailable": "Keine Stamm-Zusätze verfügbar",
     "selected": "ausgewählt"
   }
 }
