@@ -507,7 +507,11 @@ async function seedRestaurantLookups() {
       ('settings.view', 'View Settings', 'Can view tenant settings', 'settings', 1),
       ('settings.manage', 'Manage Settings', 'Can manage tenant settings', 'settings', 1),
       ('stores.view', 'View Stores', 'Can view stores', 'stores', 1),
-      ('stores.manage', 'Manage Stores', 'Can manage stores', 'stores', 1)
+      ('stores.manage', 'Manage Stores', 'Can manage stores', 'stores', 1),
+      ('ingredients.view', 'View Ingredients', 'Can view ingredients', 'menu', 1),
+      ('ingredients.create', 'Create Ingredients', 'Can create ingredients', 'menu', 1),
+      ('ingredients.edit', 'Edit Ingredients', 'Can edit ingredients', 'menu', 1),
+      ('ingredients.delete', 'Delete Ingredients', 'Can delete ingredients', 'menu', 1)
     `);
     console.log('✅ Restaurant permissions seeded\n');
 

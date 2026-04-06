@@ -162,6 +162,7 @@ export default function DashboardLayout() {
       items: [
         { name: t('navigation.stores', 'Stores'), to: '/tenant/stores', icon: Store, show: hasPermission('stores.view') },
         { name: t('navigation.tenantMenuCategories', 'Menu Categories'), to: '/tenant/menu-categories', icon: LayoutList, show: hasPermission('menu_categories.view') },
+        { name: t('navigation.tenantIngredients', 'Ingredients'), to: '/tenant/ingredients', icon: Leaf, show: hasPermission('ingredients.view') },
       ].filter(item => item.show)
     },
     {

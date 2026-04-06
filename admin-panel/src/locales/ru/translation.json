@@ -49,7 +49,8 @@
     "ingredients": "Ингредиенты",
     "expenseCategories": "Категории расходов",
     "menuCategories": "Категории меню",
-    "tenantMenuCategories": "Категории меню"
+    "tenantMenuCategories": "Категории меню",
+    "tenantIngredients": "Ингредиенты"
   },
   "common": {
     "adminSaas": "Admin SaaS",
@@ -1226,6 +1227,38 @@
     "importSelected": "Импортировать выбранные",
     "importedCount": "Категории импортированы",
     "noMasterAvailable": "Нет доступных категорий",
+    "selected": "выбрано"
+  },
+  "tenantIngredients": {
+    "title": "Ингредиенты",
+    "add": "Добавить",
+    "edit": "Редактировать",
+    "code": "Код",
+    "name": "Название",
+    "allergenType": "Тип",
+    "iconUrl": "URL иконки",
+    "sortOrder": "Сортировка",
+    "translations": "Переводы",
+    "translationName": "Название",
+    "translationDescription": "Описание",
+    "empty": "Ингредиенты не найдены",
+    "codeRequired": "Код обязателен",
+    "confirmDelete": "Вы уверены?",
+    "created": "Создано",
+    "updated": "Обновлено",
+    "deleted": "Удалено",
+    "fetchError": "Ошибка загрузки",
+    "saveError": "Ошибка сохранения",
+    "deleteError": "Ошибка удаления",
+    "importFromMaster": "Импорт из мастер-данных",
+    "importTitle": "Импорт ингредиентов",
+    "importSubtitle": "Выберите ингредиенты для импорта.",
+    "selectAll": "Выбрать все",
+    "deselectAll": "Снять выделение",
+    "alreadyImported": "Импортировано",
+    "importSelected": "Импортировать",
+    "importedCount": "Импортировано успешно",
+    "noMasterAvailable": "Нет доступных",
     "selected": "выбрано"
   }
 }

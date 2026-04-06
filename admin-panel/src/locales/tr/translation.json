@@ -49,7 +49,8 @@
     "ingredients": "Malzemeler",
     "expenseCategories": "Gider Kategorileri",
     "menuCategories": "Menü Kategorileri",
-    "tenantMenuCategories": "Menü Kategorileri"
+    "tenantMenuCategories": "Menü Kategorileri",
+    "tenantIngredients": "Malzemeler"
   },
   "common": {
     "adminSaas": "Admin SaaS",
@@ -1226,6 +1227,38 @@
     "importSelected": "Seçilenleri İçe Aktar",
     "importedCount": "Kategoriler başarıyla içe aktarıldı",
     "noMasterAvailable": "Kullanılabilir ana kategori yok",
+    "selected": "seçili"
+  },
+  "tenantIngredients": {
+    "title": "Malzemeler",
+    "add": "Malzeme Ekle",
+    "edit": "Malzeme Düzenle",
+    "code": "Kod",
+    "name": "Ad",
+    "allergenType": "Tür",
+    "iconUrl": "İkon URL",
+    "sortOrder": "Sıralama",
+    "translations": "Çeviriler",
+    "translationName": "Ad",
+    "translationDescription": "Açıklama",
+    "empty": "Malzeme bulunamadı",
+    "codeRequired": "Kod gereklidir",
+    "confirmDelete": "Bu malzemeyi silmek istediğinizden emin misiniz?",
+    "created": "Malzeme oluşturuldu",
+    "updated": "Malzeme güncellendi",
+    "deleted": "Malzeme silindi",
+    "fetchError": "Malzemeler yüklenemedi",
+    "saveError": "Malzeme kaydedilemedi",
+    "deleteError": "Malzeme silinemedi",
+    "importFromMaster": "Ana Veriden İçe Aktar",
+    "importTitle": "Ana Malzemelerden İçe Aktar",
+    "importSubtitle": "İçe aktarmak istediğiniz malzemeleri seçin.",
+    "selectAll": "Tümünü Seç",
+    "deselectAll": "Seçimi Kaldır",
+    "alreadyImported": "İçe Aktarıldı",
+    "importSelected": "Seçilenleri İçe Aktar",
+    "importedCount": "Malzemeler başarıyla içe aktarıldı",
+    "noMasterAvailable": "Kullanılabilir ana malzeme yok",
     "selected": "seçili"
   }
 }

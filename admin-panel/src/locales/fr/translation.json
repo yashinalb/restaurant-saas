@@ -49,7 +49,8 @@
     "ingredients": "Ingrédients",
     "expenseCategories": "Catégories de Dépenses",
     "menuCategories": "Catégories de Menu",
-    "tenantMenuCategories": "Catégories de Menu"
+    "tenantMenuCategories": "Catégories de Menu",
+    "tenantIngredients": "Ingrédients"
   },
   "common": {
     "adminSaas": "Admin SaaS",
@@ -1226,6 +1227,38 @@
     "importSelected": "Importer la Sélection",
     "importedCount": "Catégories importées",
     "noMasterAvailable": "Aucune catégorie disponible",
+    "selected": "sélectionnés"
+  },
+  "tenantIngredients": {
+    "title": "Ingrédients",
+    "add": "Ajouter",
+    "edit": "Modifier",
+    "code": "Code",
+    "name": "Nom",
+    "allergenType": "Type",
+    "iconUrl": "URL de l'Icône",
+    "sortOrder": "Ordre",
+    "translations": "Traductions",
+    "translationName": "Nom",
+    "translationDescription": "Description",
+    "empty": "Aucun ingrédient trouvé",
+    "codeRequired": "Le code est obligatoire",
+    "confirmDelete": "Êtes-vous sûr ?",
+    "created": "Créé",
+    "updated": "Mis à jour",
+    "deleted": "Supprimé",
+    "fetchError": "Échec du chargement",
+    "saveError": "Échec de l'enregistrement",
+    "deleteError": "Échec de la suppression",
+    "importFromMaster": "Importer depuis Master",
+    "importTitle": "Importer des Ingrédients",
+    "importSubtitle": "Sélectionnez les ingrédients à importer.",
+    "selectAll": "Tout Sélectionner",
+    "deselectAll": "Désélectionner",
+    "alreadyImported": "Importé",
+    "importSelected": "Importer",
+    "importedCount": "Importés avec succès",
+    "noMasterAvailable": "Aucun disponible",
     "selected": "sélectionnés"
   }
 }

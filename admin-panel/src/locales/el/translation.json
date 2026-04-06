@@ -49,7 +49,8 @@
     "ingredients": "Συστατικά",
     "expenseCategories": "Κατηγορίες Εξόδων",
     "menuCategories": "Κατηγορίες Μενού",
-    "tenantMenuCategories": "Κατηγορίες Μενού"
+    "tenantMenuCategories": "Κατηγορίες Μενού",
+    "tenantIngredients": "Συστατικά"
   },
   "common": {
     "adminSaas": "Admin SaaS",
@@ -1226,6 +1227,38 @@
     "importSelected": "Εισαγωγή Επιλεγμένων",
     "importedCount": "Οι κατηγορίες εισήχθησαν",
     "noMasterAvailable": "Δεν υπάρχουν διαθέσιμες κατηγορίες",
+    "selected": "επιλεγμένα"
+  },
+  "tenantIngredients": {
+    "title": "Συστατικά",
+    "add": "Προσθήκη",
+    "edit": "Επεξεργασία",
+    "code": "Κωδικός",
+    "name": "Όνομα",
+    "allergenType": "Τύπος",
+    "iconUrl": "URL Εικονιδίου",
+    "sortOrder": "Σειρά",
+    "translations": "Μεταφράσεις",
+    "translationName": "Όνομα",
+    "translationDescription": "Περιγραφή",
+    "empty": "Δεν βρέθηκαν συστατικά",
+    "codeRequired": "Ο κωδικός είναι υποχρεωτικός",
+    "confirmDelete": "Είστε σίγουροι;",
+    "created": "Δημιουργήθηκε",
+    "updated": "Ενημερώθηκε",
+    "deleted": "Διαγράφηκε",
+    "fetchError": "Αποτυχία φόρτωσης",
+    "saveError": "Αποτυχία αποθήκευσης",
+    "deleteError": "Αποτυχία διαγραφής",
+    "importFromMaster": "Εισαγωγή από Master",
+    "importTitle": "Εισαγωγή Συστατικών",
+    "importSubtitle": "Επιλέξτε συστατικά για εισαγωγή.",
+    "selectAll": "Επιλογή Όλων",
+    "deselectAll": "Αποεπιλογή",
+    "alreadyImported": "Εισαχθέν",
+    "importSelected": "Εισαγωγή",
+    "importedCount": "Εισήχθησαν επιτυχώς",
+    "noMasterAvailable": "Δεν υπάρχουν διαθέσιμα",
     "selected": "επιλεγμένα"
   }
 }

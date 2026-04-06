@@ -185,7 +185,7 @@ Create full CRUD for tenant_menu_categories + tenant_menu_category_translations.
 Has import-from-master pattern (master_menu_category_id FK). Hierarchical (parent_id), per-store optional (store_id), visibility flags (show_on_website, show_on_pos, show_on_kiosk), vat_rate. Also manages tenant_menu_category_images (slideshow).
 ```
 
-### [ ] 15. Tenant Ingredients
+### [x] 15. Tenant Ingredients
 
 Tables: `tenant_ingredients` + `tenant_ingredient_translations`
 
