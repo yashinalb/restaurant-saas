@@ -52,7 +52,8 @@
     "tenantMenuCategories": "Catégories de Menu",
     "tenantIngredients": "Ingrédients",
     "tenantAddonTypes": "Types de Suppléments",
-    "tenantAddons": "Suppléments"
+    "tenantAddons": "Suppléments",
+    "tenantOrderDestinations": "Destinations de Commande"
   },
   "common": {
     "adminSaas": "Admin SaaS",
@@ -1325,6 +1326,37 @@
     "importSelected": "Importer la Sélection",
     "importedCount": "Suppléments importés avec succès",
     "noMasterAvailable": "Aucun supplément maître disponible",
+    "selected": "sélectionnés"
+  },
+  "tenantOrderDestinations": {
+    "title": "Destinations de Commande",
+    "add": "Ajouter une Destination",
+    "edit": "Modifier la Destination",
+    "code": "Code",
+    "name": "Nom",
+    "printerIp": "IP de l'Imprimante",
+    "kdsScreen": "ID Écran KDS",
+    "sortOrder": "Ordre",
+    "translations": "Traductions",
+    "translationName": "Nom",
+    "empty": "Aucune destination de commande trouvée",
+    "codeRequired": "Le code est obligatoire",
+    "confirmDelete": "Êtes-vous sûr de vouloir supprimer cette destination de commande ?",
+    "created": "Destination de commande créée avec succès",
+    "updated": "Destination de commande mise à jour avec succès",
+    "deleted": "Destination de commande supprimée avec succès",
+    "fetchError": "Échec du chargement des destinations de commande",
+    "saveError": "Échec de l'enregistrement de la destination de commande",
+    "deleteError": "Échec de la suppression de la destination de commande",
+    "importFromMaster": "Importer depuis Master",
+    "importTitle": "Importer des Destinations de Commande depuis Master",
+    "importSubtitle": "Sélectionnez les destinations à importer.",
+    "selectAll": "Tout Sélectionner",
+    "deselectAll": "Tout Désélectionner",
+    "alreadyImported": "Importé",
+    "importSelected": "Importer la Sélection",
+    "importedCount": "Destinations importées avec succès",
+    "noMasterAvailable": "Aucune destination maître disponible",
     "selected": "sélectionnés"
   }
 }

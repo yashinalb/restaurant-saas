@@ -52,7 +52,8 @@
     "tenantMenuCategories": "Menü Kategorileri",
     "tenantIngredients": "Malzemeler",
     "tenantAddonTypes": "Eklenti Türleri",
-    "tenantAddons": "Eklentiler"
+    "tenantAddons": "Eklentiler",
+    "tenantOrderDestinations": "Sipariş Hedefleri"
   },
   "common": {
     "adminSaas": "Admin SaaS",
@@ -1325,6 +1326,37 @@
     "importSelected": "Seçilenleri İçe Aktar",
     "importedCount": "Eklentiler başarıyla içe aktarıldı",
     "noMasterAvailable": "Kullanılabilir ana eklenti yok",
+    "selected": "seçili"
+  },
+  "tenantOrderDestinations": {
+    "title": "Sipariş Hedefleri",
+    "add": "Hedef Ekle",
+    "edit": "Hedef Düzenle",
+    "code": "Kod",
+    "name": "Ad",
+    "printerIp": "Yazıcı IP",
+    "kdsScreen": "KDS Ekran ID",
+    "sortOrder": "Sıralama",
+    "translations": "Çeviriler",
+    "translationName": "Ad",
+    "empty": "Sipariş hedefi bulunamadı",
+    "codeRequired": "Kod gereklidir",
+    "confirmDelete": "Bu sipariş hedefini silmek istediğinizden emin misiniz?",
+    "created": "Sipariş hedefi başarıyla oluşturuldu",
+    "updated": "Sipariş hedefi başarıyla güncellendi",
+    "deleted": "Sipariş hedefi başarıyla silindi",
+    "fetchError": "Sipariş hedefleri yüklenemedi",
+    "saveError": "Sipariş hedefi kaydedilemedi",
+    "deleteError": "Sipariş hedefi silinemedi",
+    "importFromMaster": "Ana Veriden İçe Aktar",
+    "importTitle": "Ana Sipariş Hedeflerinden İçe Aktar",
+    "importSubtitle": "İçe aktarmak istediğiniz hedefleri seçin.",
+    "selectAll": "Tümünü Seç",
+    "deselectAll": "Seçimi Kaldır",
+    "alreadyImported": "İçe Aktarıldı",
+    "importSelected": "Seçilenleri İçe Aktar",
+    "importedCount": "Hedefler başarıyla içe aktarıldı",
+    "noMasterAvailable": "Kullanılabilir ana hedef yok",
     "selected": "seçili"
   }
 }

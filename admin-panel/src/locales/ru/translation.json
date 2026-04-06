@@ -52,7 +52,8 @@
     "tenantMenuCategories": "Категории меню",
     "tenantIngredients": "Ингредиенты",
     "tenantAddonTypes": "Типы дополнений",
-    "tenantAddons": "Дополнения"
+    "tenantAddons": "Дополнения",
+    "tenantOrderDestinations": "Направления заказов"
   },
   "common": {
     "adminSaas": "Admin SaaS",
@@ -1325,6 +1326,37 @@
     "importSelected": "Импортировать выбранные",
     "importedCount": "Дополнения успешно импортированы",
     "noMasterAvailable": "Нет доступных дополнений",
+    "selected": "выбрано"
+  },
+  "tenantOrderDestinations": {
+    "title": "Направления заказов",
+    "add": "Добавить направление",
+    "edit": "Редактировать направление",
+    "code": "Код",
+    "name": "Название",
+    "printerIp": "IP принтера",
+    "kdsScreen": "ID экрана KDS",
+    "sortOrder": "Сортировка",
+    "translations": "Переводы",
+    "translationName": "Название",
+    "empty": "Направления заказов не найдены",
+    "codeRequired": "Код обязателен",
+    "confirmDelete": "Вы уверены, что хотите удалить это направление заказа?",
+    "created": "Направление заказа успешно создано",
+    "updated": "Направление заказа успешно обновлено",
+    "deleted": "Направление заказа успешно удалено",
+    "fetchError": "Ошибка загрузки направлений заказов",
+    "saveError": "Ошибка сохранения направления заказа",
+    "deleteError": "Ошибка удаления направления заказа",
+    "importFromMaster": "Импорт из мастер-данных",
+    "importTitle": "Импорт направлений заказов из мастер-данных",
+    "importSubtitle": "Выберите направления для импорта.",
+    "selectAll": "Выбрать все",
+    "deselectAll": "Снять выделение",
+    "alreadyImported": "Импортировано",
+    "importSelected": "Импортировать выбранные",
+    "importedCount": "Направления успешно импортированы",
+    "noMasterAvailable": "Нет доступных направлений",
     "selected": "выбрано"
   }
 }

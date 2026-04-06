@@ -52,7 +52,8 @@
     "tenantMenuCategories": "Menu Categories",
     "tenantIngredients": "Ingredients",
     "tenantAddonTypes": "Addon Types",
-    "tenantAddons": "Addons"
+    "tenantAddons": "Addons",
+    "tenantOrderDestinations": "Order Destinations"
   },
   "common": {
     "adminSaas": "Admin SaaS",
@@ -1325,6 +1326,37 @@
     "importSelected": "Import Selected",
     "importedCount": "Addons imported successfully",
     "noMasterAvailable": "No master addons available",
+    "selected": "selected"
+  },
+  "tenantOrderDestinations": {
+    "title": "Order Destinations",
+    "add": "Add Destination",
+    "edit": "Edit Destination",
+    "code": "Code",
+    "name": "Name",
+    "printerIp": "Printer IP",
+    "kdsScreen": "KDS Screen ID",
+    "sortOrder": "Sort Order",
+    "translations": "Translations",
+    "translationName": "Name",
+    "empty": "No order destinations found",
+    "codeRequired": "Code is required",
+    "confirmDelete": "Are you sure you want to delete this order destination?",
+    "created": "Order destination created successfully",
+    "updated": "Order destination updated successfully",
+    "deleted": "Order destination deleted successfully",
+    "fetchError": "Failed to load order destinations",
+    "saveError": "Failed to save order destination",
+    "deleteError": "Failed to delete order destination",
+    "importFromMaster": "Import from Master",
+    "importTitle": "Import from Master Order Destinations",
+    "importSubtitle": "Select destinations to import.",
+    "selectAll": "Select All",
+    "deselectAll": "Deselect All",
+    "alreadyImported": "Imported",
+    "importSelected": "Import Selected",
+    "importedCount": "Destinations imported successfully",
+    "noMasterAvailable": "No master destinations available",
     "selected": "selected"
   }
 }

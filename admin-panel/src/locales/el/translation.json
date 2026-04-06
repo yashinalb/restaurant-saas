@@ -52,7 +52,8 @@
     "tenantMenuCategories": "Κατηγορίες Μενού",
     "tenantIngredients": "Συστατικά",
     "tenantAddonTypes": "Τύποι Πρόσθετων",
-    "tenantAddons": "Πρόσθετα"
+    "tenantAddons": "Πρόσθετα",
+    "tenantOrderDestinations": "Προορισμοί Παραγγελίας"
   },
   "common": {
     "adminSaas": "Admin SaaS",
@@ -1325,6 +1326,37 @@
     "importSelected": "Εισαγωγή Επιλεγμένων",
     "importedCount": "Τα πρόσθετα εισήχθησαν επιτυχώς",
     "noMasterAvailable": "Δεν υπάρχουν διαθέσιμα πρόσθετα",
+    "selected": "επιλεγμένα"
+  },
+  "tenantOrderDestinations": {
+    "title": "Προορισμοί Παραγγελίας",
+    "add": "Προσθήκη Προορισμού",
+    "edit": "Επεξεργασία Προορισμού",
+    "code": "Κωδικός",
+    "name": "Όνομα",
+    "printerIp": "IP Εκτυπωτή",
+    "kdsScreen": "ID Οθόνης KDS",
+    "sortOrder": "Σειρά",
+    "translations": "Μεταφράσεις",
+    "translationName": "Όνομα",
+    "empty": "Δεν βρέθηκαν προορισμοί παραγγελίας",
+    "codeRequired": "Ο κωδικός είναι υποχρεωτικός",
+    "confirmDelete": "Είστε σίγουροι ότι θέλετε να διαγράψετε αυτόν τον προορισμό παραγγελίας;",
+    "created": "Ο προορισμός παραγγελίας δημιουργήθηκε επιτυχώς",
+    "updated": "Ο προορισμός παραγγελίας ενημερώθηκε επιτυχώς",
+    "deleted": "Ο προορισμός παραγγελίας διαγράφηκε επιτυχώς",
+    "fetchError": "Αποτυχία φόρτωσης προορισμών παραγγελίας",
+    "saveError": "Αποτυχία αποθήκευσης προορισμού παραγγελίας",
+    "deleteError": "Αποτυχία διαγραφής προορισμού παραγγελίας",
+    "importFromMaster": "Εισαγωγή από Master",
+    "importTitle": "Εισαγωγή Προορισμών Παραγγελίας από Master",
+    "importSubtitle": "Επιλέξτε προορισμούς για εισαγωγή.",
+    "selectAll": "Επιλογή Όλων",
+    "deselectAll": "Αποεπιλογή Όλων",
+    "alreadyImported": "Εισαχθέν",
+    "importSelected": "Εισαγωγή Επιλεγμένων",
+    "importedCount": "Οι προορισμοί εισήχθησαν επιτυχώς",
+    "noMasterAvailable": "Δεν υπάρχουν διαθέσιμοι προορισμοί",
     "selected": "επιλεγμένα"
   }
 }

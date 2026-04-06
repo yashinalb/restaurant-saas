@@ -52,7 +52,8 @@
     "tenantMenuCategories": "Categorías de Menú",
     "tenantIngredients": "Ingredientes",
     "tenantAddonTypes": "Tipos de Complementos",
-    "tenantAddons": "Complementos"
+    "tenantAddons": "Complementos",
+    "tenantOrderDestinations": "Destinos de Pedido"
   },
   "common": {
     "adminSaas": "Admin SaaS",
@@ -1325,6 +1326,37 @@
     "importSelected": "Importar Seleccionados",
     "importedCount": "Complementos importados exitosamente",
     "noMasterAvailable": "No hay complementos maestros disponibles",
+    "selected": "seleccionados"
+  },
+  "tenantOrderDestinations": {
+    "title": "Destinos de Pedido",
+    "add": "Agregar Destino",
+    "edit": "Editar Destino",
+    "code": "Código",
+    "name": "Nombre",
+    "printerIp": "IP de Impresora",
+    "kdsScreen": "ID de Pantalla KDS",
+    "sortOrder": "Orden",
+    "translations": "Traducciones",
+    "translationName": "Nombre",
+    "empty": "No se encontraron destinos de pedido",
+    "codeRequired": "El código es obligatorio",
+    "confirmDelete": "¿Está seguro de que desea eliminar este destino de pedido?",
+    "created": "Destino de pedido creado exitosamente",
+    "updated": "Destino de pedido actualizado exitosamente",
+    "deleted": "Destino de pedido eliminado exitosamente",
+    "fetchError": "Error al cargar destinos de pedido",
+    "saveError": "Error al guardar destino de pedido",
+    "deleteError": "Error al eliminar destino de pedido",
+    "importFromMaster": "Importar desde Master",
+    "importTitle": "Importar Destinos de Pedido desde Master",
+    "importSubtitle": "Seleccione destinos para importar.",
+    "selectAll": "Seleccionar Todo",
+    "deselectAll": "Deseleccionar Todo",
+    "alreadyImported": "Importado",
+    "importSelected": "Importar Seleccionados",
+    "importedCount": "Destinos importados exitosamente",
+    "noMasterAvailable": "No hay destinos maestros disponibles",
     "selected": "seleccionados"
   }
 }

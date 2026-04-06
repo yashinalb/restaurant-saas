@@ -52,7 +52,8 @@
     "tenantMenuCategories": "Menükategorien",
     "tenantIngredients": "Zutaten",
     "tenantAddonTypes": "Zusatztypen",
-    "tenantAddons": "Zusätze"
+    "tenantAddons": "Zusätze",
+    "tenantOrderDestinations": "Bestellziele"
   },
   "common": {
     "adminSaas": "Admin SaaS",
@@ -1325,6 +1326,37 @@
     "importSelected": "Ausgewählte importieren",
     "importedCount": "Zusätze erfolgreich importiert",
     "noMasterAvailable": "Keine Stamm-Zusätze verfügbar",
+    "selected": "ausgewählt"
+  },
+  "tenantOrderDestinations": {
+    "title": "Bestellziele",
+    "add": "Ziel hinzufügen",
+    "edit": "Ziel bearbeiten",
+    "code": "Code",
+    "name": "Name",
+    "printerIp": "Drucker-IP",
+    "kdsScreen": "KDS-Bildschirm-ID",
+    "sortOrder": "Sortierung",
+    "translations": "Übersetzungen",
+    "translationName": "Name",
+    "empty": "Keine Bestellziele gefunden",
+    "codeRequired": "Code ist erforderlich",
+    "confirmDelete": "Sind Sie sicher, dass Sie dieses Bestellziel löschen möchten?",
+    "created": "Bestellziel erfolgreich erstellt",
+    "updated": "Bestellziel erfolgreich aktualisiert",
+    "deleted": "Bestellziel erfolgreich gelöscht",
+    "fetchError": "Fehler beim Laden der Bestellziele",
+    "saveError": "Fehler beim Speichern des Bestellziels",
+    "deleteError": "Fehler beim Löschen des Bestellziels",
+    "importFromMaster": "Aus Stammdaten importieren",
+    "importTitle": "Bestellziele aus Stammdaten importieren",
+    "importSubtitle": "Wählen Sie Ziele zum Importieren.",
+    "selectAll": "Alle auswählen",
+    "deselectAll": "Auswahl aufheben",
+    "alreadyImported": "Importiert",
+    "importSelected": "Ausgewählte importieren",
+    "importedCount": "Bestellziele erfolgreich importiert",
+    "noMasterAvailable": "Keine Stamm-Bestellziele verfügbar",
     "selected": "ausgewählt"
   }
 }

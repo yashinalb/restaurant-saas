@@ -215,7 +215,7 @@ Create full CRUD for tenant_addons + tenant_addon_translations.
 Has import-from-master pattern (master_addon_id FK). FK to tenant_addon_types. Also manages tenant_addon_prices (per currency, per store).
 ```
 
-### [ ] 18. Tenant Order Destinations
+### [x] 18. Tenant Order Destinations
 
 Tables: `tenant_order_destinations` + `tenant_order_destination_translations`
 
