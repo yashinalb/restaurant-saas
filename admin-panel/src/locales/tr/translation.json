@@ -42,7 +42,8 @@
     "addons": "Eklentiler",
     "orderSources": "Sipariş Kaynakları",
     "orderTypes": "Sipariş Türleri",
-    "orderDestinations": "Sipariş Hedefleri"
+    "orderDestinations": "Sipariş Hedefleri",
+    "paymentTypes": "Ödeme Türleri"
   },
   "common": {
     "adminSaas": "Admin SaaS",
@@ -1049,5 +1050,25 @@
     "fetchError": "Sipariş hedefleri yüklenemedi",
     "saveError": "Sipariş hedefi kaydedilemedi",
     "deleteError": "Sipariş hedefi silinemedi"
+  },
+  "paymentTypes": {
+    "title": "Ödeme Türleri",
+    "add": "Ödeme Türü Ekle",
+    "edit": "Ödeme Türü Düzenle",
+    "code": "Kod",
+    "name": "Ad",
+    "icon": "İkon",
+    "sortOrder": "Sıralama",
+    "translations": "Çeviriler",
+    "translationName": "Ad",
+    "empty": "Ödeme türü bulunamadı",
+    "codeRequired": "Kod gereklidir",
+    "confirmDelete": "Bu ödeme türünü silmek istediğinizden emin misiniz?",
+    "created": "Ödeme türü oluşturuldu",
+    "updated": "Ödeme türü güncellendi",
+    "deleted": "Ödeme türü silindi",
+    "fetchError": "Ödeme türleri yüklenemedi",
+    "saveError": "Ödeme türü kaydedilemedi",
+    "deleteError": "Ödeme türü silinemedi"
   }
 }

@@ -42,7 +42,8 @@
     "addons": "Addons",
     "orderSources": "Order Sources",
     "orderTypes": "Order Types",
-    "orderDestinations": "Order Destinations"
+    "orderDestinations": "Order Destinations",
+    "paymentTypes": "Τύποι Πληρωμής"
   },
   "common": {
     "adminSaas": "Admin SaaS",
@@ -1049,5 +1050,25 @@
     "fetchError": "Failed to load order destinations",
     "saveError": "Failed to save order destination",
     "deleteError": "Failed to delete order destination"
+  },
+  "paymentTypes": {
+    "title": "Τύποι Πληρωμής",
+    "add": "Προσθήκη Τύπου Πληρωμής",
+    "edit": "Επεξεργασία Τύπου Πληρωμής",
+    "code": "Κωδικός",
+    "name": "Όνομα",
+    "icon": "Εικονίδιο",
+    "sortOrder": "Σειρά",
+    "translations": "Μεταφράσεις",
+    "translationName": "Όνομα",
+    "empty": "Δεν βρέθηκαν τύποι πληρωμής",
+    "codeRequired": "Ο κωδικός είναι υποχρεωτικός",
+    "confirmDelete": "Είστε σίγουροι ότι θέλετε να διαγράψετε αυτόν τον τύπο πληρωμής;",
+    "created": "Ο τύπος πληρωμής δημιουργήθηκε επιτυχώς",
+    "updated": "Ο τύπος πληρωμής ενημερώθηκε επιτυχώς",
+    "deleted": "Ο τύπος πληρωμής διαγράφηκε επιτυχώς",
+    "fetchError": "Αποτυχία φόρτωσης τύπων πληρωμής",
+    "saveError": "Αποτυχία αποθήκευσης τύπου πληρωμής",
+    "deleteError": "Αποτυχία διαγραφής τύπου πληρωμής"
   }
 }

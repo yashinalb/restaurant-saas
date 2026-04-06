@@ -42,7 +42,8 @@
     "addons": "Addons",
     "orderSources": "Order Sources",
     "orderTypes": "Order Types",
-    "orderDestinations": "Order Destinations"
+    "orderDestinations": "Order Destinations",
+    "paymentTypes": "Tipos de Pago"
   },
   "common": {
     "adminSaas": "Admin SaaS",
@@ -1049,5 +1050,25 @@
     "fetchError": "Failed to load order destinations",
     "saveError": "Failed to save order destination",
     "deleteError": "Failed to delete order destination"
+  },
+  "paymentTypes": {
+    "title": "Tipos de Pago",
+    "add": "Agregar Tipo de Pago",
+    "edit": "Editar Tipo de Pago",
+    "code": "Código",
+    "name": "Nombre",
+    "icon": "Icono",
+    "sortOrder": "Orden",
+    "translations": "Traducciones",
+    "translationName": "Nombre",
+    "empty": "No se encontraron tipos de pago",
+    "codeRequired": "El código es obligatorio",
+    "confirmDelete": "¿Está seguro de que desea eliminar este tipo de pago?",
+    "created": "Tipo de pago creado exitosamente",
+    "updated": "Tipo de pago actualizado exitosamente",
+    "deleted": "Tipo de pago eliminado exitosamente",
+    "fetchError": "Error al cargar tipos de pago",
+    "saveError": "Error al guardar tipo de pago",
+    "deleteError": "Error al eliminar tipo de pago"
   }
 }

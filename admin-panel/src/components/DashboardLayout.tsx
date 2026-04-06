@@ -26,6 +26,7 @@ import {
   ShoppingBag,
   ClipboardList,
   Navigation,
+  Wallet,
   LucideIcon
 } from 'lucide-react';
 
@@ -127,6 +128,7 @@ export default function DashboardLayout() {
         { name: t('navigation.orderSources', 'Order Sources'), to: '/order-sources', icon: ShoppingBag, show: true },
         { name: t('navigation.orderTypes', 'Order Types'), to: '/order-types', icon: ClipboardList, show: true },
         { name: t('navigation.orderDestinations', 'Order Destinations'), to: '/order-destinations', icon: Navigation, show: true },
+        { name: t('navigation.paymentTypes', 'Payment Types'), to: '/payment-types', icon: Wallet, show: true },
       ]
     },
     {

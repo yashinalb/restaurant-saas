@@ -111,7 +111,7 @@ Create full CRUD for master_order_destinations + master_order_destination_transl
 Pre-seeded: kitchen, bar, dessert_station, grill, cold_kitchen.
 ```
 
-### [ ] 8. Master Payment Types
+### [x] 8. Master Payment Types
 
 Tables: `master_payment_types` + `master_payment_type_translations`
 

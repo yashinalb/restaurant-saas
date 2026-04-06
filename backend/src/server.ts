@@ -29,6 +29,7 @@ import addonRoutes from './routes/addon.routes';
 import orderSourceRoutes from './routes/orderSource.routes';
 import orderTypeRoutes from './routes/orderType.routes';
 import orderDestinationRoutes from './routes/orderDestination.routes';
+import paymentTypeRoutes from './routes/paymentType.routes';
 
 // Get __dirname equivalent in ES modules
 const __filename = fileURLToPath(import.meta.url);
@@ -144,6 +145,7 @@ app.use('/api/admin', addonRoutes);
 app.use('/api/admin', orderSourceRoutes);
 app.use('/api/admin', orderTypeRoutes);
 app.use('/api/admin', orderDestinationRoutes);
+app.use('/api/admin', paymentTypeRoutes);
 
 // Tenant routes (tenant-specific, permission-based)
 app.use('/api/tenant', permissionRoutes);

@@ -42,7 +42,8 @@
     "addons": "Addons",
     "orderSources": "Order Sources",
     "orderTypes": "Order Types",
-    "orderDestinations": "Order Destinations"
+    "orderDestinations": "Order Destinations",
+    "paymentTypes": "Zahlungsarten"
   },
   "common": {
     "adminSaas": "Admin SaaS",
@@ -1049,5 +1050,25 @@
     "fetchError": "Failed to load order destinations",
     "saveError": "Failed to save order destination",
     "deleteError": "Failed to delete order destination"
+  },
+  "paymentTypes": {
+    "title": "Zahlungsarten",
+    "add": "Zahlungsart hinzufügen",
+    "edit": "Zahlungsart bearbeiten",
+    "code": "Code",
+    "name": "Name",
+    "icon": "Symbol",
+    "sortOrder": "Sortierung",
+    "translations": "Übersetzungen",
+    "translationName": "Name",
+    "empty": "Keine Zahlungsarten gefunden",
+    "codeRequired": "Code ist erforderlich",
+    "confirmDelete": "Möchten Sie diese Zahlungsart wirklich löschen?",
+    "created": "Zahlungsart erfolgreich erstellt",
+    "updated": "Zahlungsart erfolgreich aktualisiert",
+    "deleted": "Zahlungsart erfolgreich gelöscht",
+    "fetchError": "Zahlungsarten konnten nicht geladen werden",
+    "saveError": "Zahlungsart konnte nicht gespeichert werden",
+    "deleteError": "Zahlungsart konnte nicht gelöscht werden"
   }
 }

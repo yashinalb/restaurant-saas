@@ -42,7 +42,8 @@
     "addons": "Addons",
     "orderSources": "Order Sources",
     "orderTypes": "Order Types",
-    "orderDestinations": "Order Destinations"
+    "orderDestinations": "Order Destinations",
+    "paymentTypes": "Типы оплаты"
   },
   "common": {
     "adminSaas": "Admin SaaS",
@@ -1049,5 +1050,25 @@
     "fetchError": "Failed to load order destinations",
     "saveError": "Failed to save order destination",
     "deleteError": "Failed to delete order destination"
+  },
+  "paymentTypes": {
+    "title": "Типы оплаты",
+    "add": "Добавить тип оплаты",
+    "edit": "Редактировать тип оплаты",
+    "code": "Код",
+    "name": "Название",
+    "icon": "Иконка",
+    "sortOrder": "Порядок сортировки",
+    "translations": "Переводы",
+    "translationName": "Название",
+    "empty": "Типы оплаты не найдены",
+    "codeRequired": "Код обязателен",
+    "confirmDelete": "Вы уверены, что хотите удалить этот тип оплаты?",
+    "created": "Тип оплаты успешно создан",
+    "updated": "Тип оплаты успешно обновлён",
+    "deleted": "Тип оплаты успешно удалён",
+    "fetchError": "Не удалось загрузить типы оплаты",
+    "saveError": "Не удалось сохранить тип оплаты",
+    "deleteError": "Не удалось удалить тип оплаты"
   }
 }
