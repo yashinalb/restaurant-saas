@@ -55,7 +55,8 @@
     "tenantAddons": "Дополнения",
     "tenantOrderDestinations": "Направления заказов",
     "tenantMenuItems": "Пункты меню",
-    "tenantSeatingAreas": "Зоны рассадки"
+    "tenantSeatingAreas": "Зоны рассадки",
+    "tenantTables": "Столы"
   },
   "common": {
     "adminSaas": "Admin SaaS",
@@ -1414,5 +1415,43 @@
     "fetchError": "Не удалось загрузить зоны рассадки",
     "saveError": "Не удалось сохранить зону рассадки",
     "deleteError": "Не удалось удалить зону рассадки"
+  },
+  "tenantTables": {
+    "title": "Столы",
+    "add": "Добавить стол",
+    "edit": "Редактировать стол",
+    "name": "Название",
+    "store": "Магазин",
+    "selectStore": "-- Выберите магазин --",
+    "seatingArea": "Зона рассадки",
+    "noArea": "-- Без зоны --",
+    "shape": "Форма",
+    "shape_square": "Квадрат",
+    "shape_rectangle": "Прямоугольник",
+    "shape_circle": "Круг",
+    "shape_oval": "Овал",
+    "capacity": "Вместимость",
+    "minCapacity": "Мин. вместимость",
+    "tableStatus": "Статус",
+    "status_available": "Свободен",
+    "status_occupied": "Занят",
+    "status_reserved": "Зарезервирован",
+    "status_blocked": "Заблокирован",
+    "floorPlan": "Позиция на плане",
+    "width": "Ш",
+    "height": "В",
+    "empty": "Столы не найдены",
+    "storeRequired": "Магазин обязателен",
+    "nameRequired": "Название обязательно",
+    "confirmDelete": "Вы уверены, что хотите удалить этот стол?",
+    "created": "Стол успешно создан",
+    "updated": "Стол успешно обновлён",
+    "deleted": "Стол успешно удалён",
+    "fetchError": "Не удалось загрузить столы",
+    "saveError": "Не удалось сохранить стол",
+    "deleteError": "Не удалось удалить стол",
+    "allStores": "Все магазины",
+    "dragHint": "Перетащите для перемещения. Двойной клик для редактирования.",
+    "emptyFloorPlan": "Пока нет столов. Добавьте столы и расставьте их."
   }
 }

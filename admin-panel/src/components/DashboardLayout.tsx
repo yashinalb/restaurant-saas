@@ -169,6 +169,7 @@ export default function DashboardLayout() {
         { name: t('navigation.tenantOrderDestinations', 'Order Destinations'), to: '/tenant/order-destinations', icon: Navigation, show: hasPermission('order_destinations.view') },
         { name: t('navigation.tenantMenuItems', 'Menu Items'), to: '/tenant/menu-items', icon: ClipboardList, show: hasPermission('menu_items.view') },
         { name: t('navigation.tenantSeatingAreas', 'Seating Areas'), to: '/tenant/seating-areas', icon: Armchair, show: hasPermission('seating_areas.view') },
+        { name: t('navigation.tenantTables', 'Tables'), to: '/tenant/tables', icon: LayoutDashboard, show: hasPermission('tables.view') },
       ].filter(item => item.show)
     },
     {

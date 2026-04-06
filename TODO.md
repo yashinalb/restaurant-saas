@@ -250,7 +250,7 @@ Create full CRUD for tenant_seating_areas + tenant_seating_area_translations.
 Per-store (store_id FK required). E.g. Indoor, Terrace, Garden, VIP.
 ```
 
-### [ ] 21. Tenant Table Structures
+### [x] 21. Tenant Table Structures
 
 Tables: `tenant_table_structures`
 

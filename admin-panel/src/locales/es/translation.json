@@ -55,7 +55,8 @@
     "tenantAddons": "Complementos",
     "tenantOrderDestinations": "Destinos de Pedido",
     "tenantMenuItems": "Artículos del Menú",
-    "tenantSeatingAreas": "Áreas de Asientos"
+    "tenantSeatingAreas": "Áreas de Asientos",
+    "tenantTables": "Mesas"
   },
   "common": {
     "adminSaas": "Admin SaaS",
@@ -1414,5 +1415,43 @@
     "fetchError": "Error al cargar áreas de asientos",
     "saveError": "Error al guardar área de asientos",
     "deleteError": "Error al eliminar área de asientos"
+  },
+  "tenantTables": {
+    "title": "Mesas",
+    "add": "Agregar Mesa",
+    "edit": "Editar Mesa",
+    "name": "Nombre",
+    "store": "Tienda",
+    "selectStore": "-- Seleccionar Tienda --",
+    "seatingArea": "Área de Asientos",
+    "noArea": "-- Sin Área --",
+    "shape": "Forma",
+    "shape_square": "Cuadrado",
+    "shape_rectangle": "Rectángulo",
+    "shape_circle": "Círculo",
+    "shape_oval": "Óvalo",
+    "capacity": "Capacidad",
+    "minCapacity": "Capacidad Mín.",
+    "tableStatus": "Estado",
+    "status_available": "Disponible",
+    "status_occupied": "Ocupada",
+    "status_reserved": "Reservada",
+    "status_blocked": "Bloqueada",
+    "floorPlan": "Posición en Plano",
+    "width": "An",
+    "height": "Al",
+    "empty": "No se encontraron mesas",
+    "storeRequired": "La tienda es obligatoria",
+    "nameRequired": "El nombre es obligatorio",
+    "confirmDelete": "¿Está seguro de que desea eliminar esta mesa?",
+    "created": "Mesa creada exitosamente",
+    "updated": "Mesa actualizada exitosamente",
+    "deleted": "Mesa eliminada exitosamente",
+    "fetchError": "Error al cargar mesas",
+    "saveError": "Error al guardar mesa",
+    "deleteError": "Error al eliminar mesa",
+    "allStores": "Todas las Tiendas",
+    "dragHint": "Arrastre para reposicionar. Doble clic para editar.",
+    "emptyFloorPlan": "Sin mesas. Agregue mesas y arrástrelas a su posición."
   }
 }

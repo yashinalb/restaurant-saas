@@ -55,7 +55,8 @@
     "tenantAddons": "Addons",
     "tenantOrderDestinations": "Order Destinations",
     "tenantMenuItems": "Menu Items",
-    "tenantSeatingAreas": "Seating Areas"
+    "tenantSeatingAreas": "Seating Areas",
+    "tenantTables": "Tables"
   },
   "common": {
     "adminSaas": "Admin SaaS",
@@ -1414,5 +1415,43 @@
     "fetchError": "Failed to load seating areas",
     "saveError": "Failed to save seating area",
     "deleteError": "Failed to delete seating area"
+  },
+  "tenantTables": {
+    "title": "Tables",
+    "add": "Add Table",
+    "edit": "Edit Table",
+    "name": "Name",
+    "store": "Store",
+    "selectStore": "-- Select Store --",
+    "seatingArea": "Seating Area",
+    "noArea": "-- No Area --",
+    "shape": "Shape",
+    "shape_square": "Square",
+    "shape_rectangle": "Rectangle",
+    "shape_circle": "Circle",
+    "shape_oval": "Oval",
+    "capacity": "Capacity",
+    "minCapacity": "Min Capacity",
+    "tableStatus": "Status",
+    "status_available": "Available",
+    "status_occupied": "Occupied",
+    "status_reserved": "Reserved",
+    "status_blocked": "Blocked",
+    "floorPlan": "Floor Plan Position",
+    "width": "W",
+    "height": "H",
+    "empty": "No tables found",
+    "storeRequired": "Store is required",
+    "nameRequired": "Name is required",
+    "confirmDelete": "Are you sure you want to delete this table?",
+    "created": "Table created successfully",
+    "updated": "Table updated successfully",
+    "deleted": "Table deleted successfully",
+    "fetchError": "Failed to load tables",
+    "saveError": "Failed to save table",
+    "deleteError": "Failed to delete table",
+    "allStores": "All Stores",
+    "dragHint": "Drag to reposition. Double-click to edit.",
+    "emptyFloorPlan": "No tables yet. Add tables and drag them into position."
   }
 }

@@ -55,7 +55,8 @@
     "tenantAddons": "Zusätze",
     "tenantOrderDestinations": "Bestellziele",
     "tenantMenuItems": "Menüpunkte",
-    "tenantSeatingAreas": "Sitzbereiche"
+    "tenantSeatingAreas": "Sitzbereiche",
+    "tenantTables": "Tische"
   },
   "common": {
     "adminSaas": "Admin SaaS",
@@ -1414,5 +1415,43 @@
     "fetchError": "Sitzbereiche konnten nicht geladen werden",
     "saveError": "Sitzbereich konnte nicht gespeichert werden",
     "deleteError": "Sitzbereich konnte nicht gelöscht werden"
+  },
+  "tenantTables": {
+    "title": "Tische",
+    "add": "Tisch hinzufügen",
+    "edit": "Tisch bearbeiten",
+    "name": "Name",
+    "store": "Filiale",
+    "selectStore": "-- Filiale auswählen --",
+    "seatingArea": "Sitzbereich",
+    "noArea": "-- Kein Bereich --",
+    "shape": "Form",
+    "shape_square": "Quadrat",
+    "shape_rectangle": "Rechteck",
+    "shape_circle": "Kreis",
+    "shape_oval": "Oval",
+    "capacity": "Kapazität",
+    "minCapacity": "Min. Kapazität",
+    "tableStatus": "Status",
+    "status_available": "Verfügbar",
+    "status_occupied": "Besetzt",
+    "status_reserved": "Reserviert",
+    "status_blocked": "Gesperrt",
+    "floorPlan": "Grundrissposition",
+    "width": "B",
+    "height": "H",
+    "empty": "Keine Tische gefunden",
+    "storeRequired": "Filiale ist erforderlich",
+    "nameRequired": "Name ist erforderlich",
+    "confirmDelete": "Sind Sie sicher, dass Sie diesen Tisch löschen möchten?",
+    "created": "Tisch erfolgreich erstellt",
+    "updated": "Tisch erfolgreich aktualisiert",
+    "deleted": "Tisch erfolgreich gelöscht",
+    "fetchError": "Tische konnten nicht geladen werden",
+    "saveError": "Tisch konnte nicht gespeichert werden",
+    "deleteError": "Tisch konnte nicht gelöscht werden",
+    "allStores": "Alle Filialen",
+    "dragHint": "Ziehen zum Positionieren. Doppelklick zum Bearbeiten.",
+    "emptyFloorPlan": "Noch keine Tische. Fügen Sie Tische hinzu und positionieren Sie sie."
   }
 }

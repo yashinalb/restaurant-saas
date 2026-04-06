@@ -55,7 +55,8 @@
     "tenantAddons": "Eklentiler",
     "tenantOrderDestinations": "Sipariş Hedefleri",
     "tenantMenuItems": "Menü Öğeleri",
-    "tenantSeatingAreas": "Oturma Alanları"
+    "tenantSeatingAreas": "Oturma Alanları",
+    "tenantTables": "Masalar"
   },
   "common": {
     "adminSaas": "Admin SaaS",
@@ -1414,5 +1415,43 @@
     "fetchError": "Oturma alanları yüklenemedi",
     "saveError": "Oturma alanı kaydedilemedi",
     "deleteError": "Oturma alanı silinemedi"
+  },
+  "tenantTables": {
+    "title": "Masalar",
+    "add": "Masa Ekle",
+    "edit": "Masayı Düzenle",
+    "name": "Ad",
+    "store": "Mağaza",
+    "selectStore": "-- Mağaza Seçin --",
+    "seatingArea": "Oturma Alanı",
+    "noArea": "-- Alan Yok --",
+    "shape": "Şekil",
+    "shape_square": "Kare",
+    "shape_rectangle": "Dikdörtgen",
+    "shape_circle": "Daire",
+    "shape_oval": "Oval",
+    "capacity": "Kapasite",
+    "minCapacity": "Min Kapasite",
+    "tableStatus": "Durum",
+    "status_available": "Müsait",
+    "status_occupied": "Dolu",
+    "status_reserved": "Rezerve",
+    "status_blocked": "Engelli",
+    "floorPlan": "Kat Planı Konumu",
+    "width": "G",
+    "height": "Y",
+    "empty": "Masa bulunamadı",
+    "storeRequired": "Mağaza gereklidir",
+    "nameRequired": "Ad gereklidir",
+    "confirmDelete": "Bu masayı silmek istediğinizden emin misiniz?",
+    "created": "Masa başarıyla oluşturuldu",
+    "updated": "Masa başarıyla güncellendi",
+    "deleted": "Masa başarıyla silindi",
+    "fetchError": "Masalar yüklenemedi",
+    "saveError": "Masa kaydedilemedi",
+    "deleteError": "Masa silinemedi",
+    "allStores": "Tüm Mağazalar",
+    "dragHint": "Konumlandırmak için sürükleyin. Düzenlemek için çift tıklayın.",
+    "emptyFloorPlan": "Henüz masa yok. Masa ekleyin ve konumlandırın."
   }
 }

@@ -55,7 +55,8 @@
     "tenantAddons": "Suppléments",
     "tenantOrderDestinations": "Destinations de Commande",
     "tenantMenuItems": "Articles du Menu",
-    "tenantSeatingAreas": "Zones de Places"
+    "tenantSeatingAreas": "Zones de Places",
+    "tenantTables": "Tables"
   },
   "common": {
     "adminSaas": "Admin SaaS",
@@ -1414,5 +1415,43 @@
     "fetchError": "Échec du chargement des zones de places",
     "saveError": "Échec de l'enregistrement de la zone de places",
     "deleteError": "Échec de la suppression de la zone de places"
+  },
+  "tenantTables": {
+    "title": "Tables",
+    "add": "Ajouter une Table",
+    "edit": "Modifier la Table",
+    "name": "Nom",
+    "store": "Magasin",
+    "selectStore": "-- Sélectionner un Magasin --",
+    "seatingArea": "Zone de Places",
+    "noArea": "-- Aucune Zone --",
+    "shape": "Forme",
+    "shape_square": "Carré",
+    "shape_rectangle": "Rectangle",
+    "shape_circle": "Cercle",
+    "shape_oval": "Ovale",
+    "capacity": "Capacité",
+    "minCapacity": "Capacité Min.",
+    "tableStatus": "Statut",
+    "status_available": "Disponible",
+    "status_occupied": "Occupée",
+    "status_reserved": "Réservée",
+    "status_blocked": "Bloquée",
+    "floorPlan": "Position sur le Plan",
+    "width": "L",
+    "height": "H",
+    "empty": "Aucune table trouvée",
+    "storeRequired": "Le magasin est obligatoire",
+    "nameRequired": "Le nom est obligatoire",
+    "confirmDelete": "Êtes-vous sûr de vouloir supprimer cette table ?",
+    "created": "Table créée avec succès",
+    "updated": "Table mise à jour avec succès",
+    "deleted": "Table supprimée avec succès",
+    "fetchError": "Échec du chargement des tables",
+    "saveError": "Échec de l'enregistrement de la table",
+    "deleteError": "Échec de la suppression de la table",
+    "allStores": "Tous les Magasins",
+    "dragHint": "Glissez pour repositionner. Double-cliquez pour modifier.",
+    "emptyFloorPlan": "Pas encore de tables. Ajoutez des tables et positionnez-les."
   }
 }
