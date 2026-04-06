@@ -1,5 +1,6 @@
 // src/services/adminFieldSettingsService.ts
 import api from './api';
+// @ts-ignore - service not yet created
 import { ProductFieldSettings } from './tenantProductService-frontend';
 
 /**

@@ -32,6 +32,7 @@ export interface AdminUser extends DatabaseRow {
   is_super_admin: boolean;
   is_active: boolean;
   last_login_at: Date | null;
+  email_verified_at: Date | null;
 }
 
 // Role

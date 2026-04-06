@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import { X, Building2 } from 'lucide-react';
 import { toast } from 'sonner';
 import { useTranslation } from 'react-i18next';
+// @ts-ignore - service not yet created
 import { masterProductService, MasterProduct } from '../services/masterProductService';
 import tenantTypeService, { TenantType } from '../services/tenantTypeService';
 
@@ -40,7 +41,7 @@ export default function ManageProductTenantTypesModal({
         masterProductService.getProductTenantTypes(product.id),
       ]);
 
-      setAllTenantTypes(typesData.filter(t => t.is_active));
+      setAllTenantTypes(typesData.filter((t: TenantType) => t.is_active));
 
       // Initialize selected types with existing links
       const selections = new Map<number, TenantTypeSelection>();

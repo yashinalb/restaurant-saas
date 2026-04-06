@@ -131,7 +131,7 @@ Create full CRUD for master_order_item_statuses + master_order_item_status_trans
 Has color field. Pre-seeded: pending, preparing, ready, served, cancelled.
 ```
 
-### [ ] 10. Master Payment Statuses
+### [x] 10. Master Payment Statuses
 
 Tables: `master_payment_statuses` + `master_payment_status_translations`
 

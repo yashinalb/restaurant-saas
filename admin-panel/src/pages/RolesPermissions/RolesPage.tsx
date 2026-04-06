@@ -5,7 +5,7 @@ import { toast } from 'sonner';
 import { useTranslation } from 'react-i18next';
 
 export default function RolesPage() {
-  const { t } = useTranslation();
+  const { } = useTranslation();
   const [roles, setRoles] = useState<Role[]>([]);
   const [permissions, setPermissions] = useState<Record<string, Permission[]>>({});
   const [loading, setLoading] = useState(true);

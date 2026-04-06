@@ -44,7 +44,8 @@
     "orderTypes": "Sipariş Türleri",
     "orderDestinations": "Sipariş Hedefleri",
     "paymentTypes": "Ödeme Türleri",
-    "orderItemStatuses": "Sipariş Kalemi Durumları"
+    "orderItemStatuses": "Sipariş Kalemi Durumları",
+    "paymentStatuses": "Ödeme Durumları"
   },
   "common": {
     "adminSaas": "Admin SaaS",
@@ -1091,5 +1092,25 @@
     "fetchError": "Sipariş kalemi durumları yüklenemedi",
     "saveError": "Sipariş kalemi durumu kaydedilemedi",
     "deleteError": "Sipariş kalemi durumu silinemedi"
+  },
+  "paymentStatuses": {
+    "title": "Ödeme Durumları",
+    "add": "Ödeme Durumu Ekle",
+    "edit": "Ödeme Durumu Düzenle",
+    "code": "Kod",
+    "name": "Ad",
+    "color": "Renk",
+    "sortOrder": "Sıralama",
+    "translations": "Çeviriler",
+    "translationName": "Ad",
+    "empty": "Ödeme durumu bulunamadı",
+    "codeRequired": "Kod gereklidir",
+    "confirmDelete": "Bu ödeme durumunu silmek istediğinizden emin misiniz?",
+    "created": "Ödeme durumu oluşturuldu",
+    "updated": "Ödeme durumu güncellendi",
+    "deleted": "Ödeme durumu silindi",
+    "fetchError": "Ödeme durumları yüklenemedi",
+    "saveError": "Ödeme durumu kaydedilemedi",
+    "deleteError": "Ödeme durumu silinemedi"
   }
 }

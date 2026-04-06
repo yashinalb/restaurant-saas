@@ -31,6 +31,7 @@ import orderTypeRoutes from './routes/orderType.routes';
 import orderDestinationRoutes from './routes/orderDestination.routes';
 import paymentTypeRoutes from './routes/paymentType.routes';
 import orderItemStatusRoutes from './routes/orderItemStatus.routes';
+import paymentStatusRoutes from './routes/paymentStatus.routes';
 
 // Get __dirname equivalent in ES modules
 const __filename = fileURLToPath(import.meta.url);
@@ -148,6 +149,7 @@ app.use('/api/admin', orderTypeRoutes);
 app.use('/api/admin', orderDestinationRoutes);
 app.use('/api/admin', paymentTypeRoutes);
 app.use('/api/admin', orderItemStatusRoutes);
+app.use('/api/admin', paymentStatusRoutes);
 
 // Tenant routes (tenant-specific, permission-based)
 app.use('/api/tenant', permissionRoutes);

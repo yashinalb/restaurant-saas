@@ -3,7 +3,7 @@ import { AuthRequest } from '../middleware/auth.js';
 import { OrderDestinationService } from '../services/orderDestinationService.js';
 
 export class OrderDestinationController {
-  static async getAll(req: AuthRequest, res: Response): Promise<void> {
+  static async getAll(_req: AuthRequest, res: Response): Promise<void> {
     try { res.json({ data: await OrderDestinationService.getAll() }); }
     catch (error: any) { console.error('[OrderDestinationController] getAll error:', error); res.status(500).json({ message: 'Failed to fetch order destinations' }); }
   }

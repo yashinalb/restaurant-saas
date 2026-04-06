@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import { toast } from 'sonner';
 import { Plus, Pencil, Trash2, X, Loader2 } from 'lucide-react';
-import addonTypeService, { AddonType, AddonTypeTranslation } from '../services/addonTypeService';
+import addonTypeService, { AddonType } from '../services/addonTypeService';
 import { languageService, Language } from '../services/languageService';
 
 export default function AddonTypesPage() {

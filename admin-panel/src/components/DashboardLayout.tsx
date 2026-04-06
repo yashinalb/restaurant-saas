@@ -28,6 +28,7 @@ import {
   Navigation,
   Wallet,
   CircleDot,
+  BadgeCheck,
   LucideIcon
 } from 'lucide-react';
 
@@ -131,6 +132,7 @@ export default function DashboardLayout() {
         { name: t('navigation.orderDestinations', 'Order Destinations'), to: '/order-destinations', icon: Navigation, show: true },
         { name: t('navigation.paymentTypes', 'Payment Types'), to: '/payment-types', icon: Wallet, show: true },
         { name: t('navigation.orderItemStatuses', 'Order Item Statuses'), to: '/order-item-statuses', icon: CircleDot, show: true },
+        { name: t('navigation.paymentStatuses', 'Payment Statuses'), to: '/payment-statuses', icon: BadgeCheck, show: true },
       ]
     },
     {

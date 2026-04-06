@@ -44,7 +44,8 @@
     "orderTypes": "Order Types",
     "orderDestinations": "Order Destinations",
     "paymentTypes": "Payment Types",
-    "orderItemStatuses": "Order Item Statuses"
+    "orderItemStatuses": "Order Item Statuses",
+    "paymentStatuses": "Payment Statuses"
   },
   "common": {
     "adminSaas": "Admin SaaS",
@@ -1091,5 +1092,25 @@
     "fetchError": "Failed to load order item statuses",
     "saveError": "Failed to save order item status",
     "deleteError": "Failed to delete order item status"
+  },
+  "paymentStatuses": {
+    "title": "Payment Statuses",
+    "add": "Add Payment Status",
+    "edit": "Edit Payment Status",
+    "code": "Code",
+    "name": "Name",
+    "color": "Color",
+    "sortOrder": "Sort Order",
+    "translations": "Translations",
+    "translationName": "Name",
+    "empty": "No payment statuses found",
+    "codeRequired": "Code is required",
+    "confirmDelete": "Are you sure you want to delete this payment status?",
+    "created": "Payment status created successfully",
+    "updated": "Payment status updated successfully",
+    "deleted": "Payment status deleted successfully",
+    "fetchError": "Failed to load payment statuses",
+    "saveError": "Failed to save payment status",
+    "deleteError": "Failed to delete payment status"
   }
 }

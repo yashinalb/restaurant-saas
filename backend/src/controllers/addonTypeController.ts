@@ -3,7 +3,7 @@ import { AuthRequest } from '../middleware/auth.js';
 import { AddonTypeService } from '../services/addonTypeService.js';
 
 export class AddonTypeController {
-  static async getAll(req: AuthRequest, res: Response): Promise<void> {
+  static async getAll(_req: AuthRequest, res: Response): Promise<void> {
     try {
       const items = await AddonTypeService.getAll();
       res.json({ data: items });

@@ -5,7 +5,7 @@
  */
 
 import pool from '../config/database.js';
-import { ResultSetHeader } from 'mysql2';
+
 
 export interface ActivityLogOptions {
   tenantId?: number | null;

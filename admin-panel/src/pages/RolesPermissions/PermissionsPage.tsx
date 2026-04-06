@@ -10,7 +10,7 @@ import { toast } from 'sonner';
 import { useTranslation } from 'react-i18next';
 
 export default function PermissionsPage() {
-  const { t } = useTranslation();
+  const { } = useTranslation();
   const [permissions, setPermissions] = useState<Permission[]>([]);
   const [loading, setLoading] = useState(true);
 

@@ -3,7 +3,7 @@ import { AuthRequest } from '../middleware/auth.js';
 import { OrderItemStatusService } from '../services/orderItemStatusService.js';
 
 export class OrderItemStatusController {
-  static async getAll(req: AuthRequest, res: Response): Promise<void> {
+  static async getAll(_req: AuthRequest, res: Response): Promise<void> {
     try {
       const items = await OrderItemStatusService.getAll();
       res.json({ data: items });

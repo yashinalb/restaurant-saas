@@ -44,7 +44,8 @@
     "orderTypes": "Order Types",
     "orderDestinations": "Order Destinations",
     "paymentTypes": "Типы оплаты",
-    "orderItemStatuses": "Статусы позиций заказа"
+    "orderItemStatuses": "Статусы позиций заказа",
+    "paymentStatuses": "Статусы оплаты"
   },
   "common": {
     "adminSaas": "Admin SaaS",
@@ -1091,5 +1092,25 @@
     "fetchError": "Не удалось загрузить статусы",
     "saveError": "Не удалось сохранить статус",
     "deleteError": "Не удалось удалить статус"
+  },
+  "paymentStatuses": {
+    "title": "Статусы оплаты",
+    "add": "Добавить статус оплаты",
+    "edit": "Редактировать статус оплаты",
+    "code": "Код",
+    "name": "Название",
+    "color": "Цвет",
+    "sortOrder": "Порядок сортировки",
+    "translations": "Переводы",
+    "translationName": "Название",
+    "empty": "Статусы оплаты не найдены",
+    "codeRequired": "Код обязателен",
+    "confirmDelete": "Вы уверены, что хотите удалить этот статус оплаты?",
+    "created": "Статус оплаты успешно создан",
+    "updated": "Статус оплаты успешно обновлён",
+    "deleted": "Статус оплаты успешно удалён",
+    "fetchError": "Не удалось загрузить статусы оплаты",
+    "saveError": "Не удалось сохранить статус оплаты",
+    "deleteError": "Не удалось удалить статус оплаты"
   }
 }

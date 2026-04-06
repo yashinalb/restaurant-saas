@@ -3,7 +3,7 @@ import { AuthRequest } from '../middleware/auth.js';
 import { PaymentTypeService } from '../services/paymentTypeService.js';
 
 export class PaymentTypeController {
-  static async getAll(req: AuthRequest, res: Response): Promise<void> {
+  static async getAll(_req: AuthRequest, res: Response): Promise<void> {
     try {
       const items = await PaymentTypeService.getAll();
       res.json({ data: items });

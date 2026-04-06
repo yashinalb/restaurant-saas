@@ -44,7 +44,8 @@
     "orderTypes": "Order Types",
     "orderDestinations": "Order Destinations",
     "paymentTypes": "Zahlungsarten",
-    "orderItemStatuses": "Bestellpositionsstatus"
+    "orderItemStatuses": "Bestellpositionsstatus",
+    "paymentStatuses": "Zahlungsstatus"
   },
   "common": {
     "adminSaas": "Admin SaaS",
@@ -1091,5 +1092,25 @@
     "fetchError": "Status konnten nicht geladen werden",
     "saveError": "Status konnte nicht gespeichert werden",
     "deleteError": "Status konnte nicht gelöscht werden"
+  },
+  "paymentStatuses": {
+    "title": "Zahlungsstatus",
+    "add": "Zahlungsstatus hinzufügen",
+    "edit": "Zahlungsstatus bearbeiten",
+    "code": "Code",
+    "name": "Name",
+    "color": "Farbe",
+    "sortOrder": "Sortierung",
+    "translations": "Übersetzungen",
+    "translationName": "Name",
+    "empty": "Keine Zahlungsstatus gefunden",
+    "codeRequired": "Code ist erforderlich",
+    "confirmDelete": "Möchten Sie diesen Zahlungsstatus wirklich löschen?",
+    "created": "Zahlungsstatus erfolgreich erstellt",
+    "updated": "Zahlungsstatus erfolgreich aktualisiert",
+    "deleted": "Zahlungsstatus erfolgreich gelöscht",
+    "fetchError": "Zahlungsstatus konnten nicht geladen werden",
+    "saveError": "Zahlungsstatus konnte nicht gespeichert werden",
+    "deleteError": "Zahlungsstatus konnte nicht gelöscht werden"
   }
 }
