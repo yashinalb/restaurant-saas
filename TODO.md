@@ -121,7 +121,7 @@ Create full CRUD for master_payment_types + master_payment_type_translations.
 Pre-seeded: cash, credit_card, debit_card, mobile_pay, voucher, online_payment.
 ```
 
-### [ ] 9. Master Order Item Statuses
+### [] 9. Master Order Item Statuses
 
 Tables: `master_order_item_statuses` + `master_order_item_status_translations`
 
