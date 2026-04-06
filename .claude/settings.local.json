@@ -9,7 +9,13 @@
       "Bash(node -e 'JSON.parse\\(require\\('\\\\''fs'\\\\''\\).readFileSync\\('\\\\''admin-panel/src/locales/__TRACKED_VAR__/translation.json'\\\\'','\\\\''utf8'\\\\''\\)\\); console.log\\('\\\\''valid'\\\\''\\)')",
       "Bash(npm run:*)",
       "Bash(node -e 'JSON.parse\\(require\\('\\\\''fs'\\\\''\\).readFileSync\\('\\\\''__TRACKED_VAR__'\\\\'','\\\\''utf8'\\\\''\\)\\); console.log\\('\\\\''valid'\\\\''\\);')",
-      "Bash(python -c 'import json; json.load\\(open\\('\\\\''admin-panel/src/locales/__TRACKED_VAR__/translation.json'\\\\''\\)\\); print\\('\\\\''valid'\\\\''\\)')"
+      "Bash(python -c 'import json; json.load\\(open\\('\\\\''admin-panel/src/locales/__TRACKED_VAR__/translation.json'\\\\''\\)\\); print\\('\\\\''valid'\\\\''\\)')",
+      "Bash(npx tsc:*)",
+      "Bash(node -e \"JSON.parse\\(require\\('fs'\\).readFileSync\\('src/locales/en/translation.json','utf8'\\)\\); console.log\\('EN OK'\\)\")",
+      "Bash(node -e \"JSON.parse\\(require\\('fs'\\).readFileSync\\('src/locales/tr/translation.json','utf8'\\)\\); console.log\\('TR OK'\\)\")",
+      "Bash(node -e \"JSON.parse\\(require\\('fs'\\).readFileSync\\('src/locales/el/translation.json','utf8'\\)\\); console.log\\('EL OK'\\)\")",
+      "Bash(node -e \"JSON.parse\\(require\\('fs'\\).readFileSync\\('src/locales/ru/translation.json','utf8'\\)\\); console.log\\('RU OK'\\)\")",
+      "Bash(node -e \"JSON.parse\\(require\\('fs'\\).readFileSync\\('src/locales/de/translation.json','utf8'\\)\\); console.log\\('DE OK'\\)\")"
     ]
   }
 }

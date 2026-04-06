@@ -53,7 +53,8 @@
     "tenantIngredients": "Malzemeler",
     "tenantAddonTypes": "Eklenti Türleri",
     "tenantAddons": "Eklentiler",
-    "tenantOrderDestinations": "Sipariş Hedefleri"
+    "tenantOrderDestinations": "Sipariş Hedefleri",
+    "tenantMenuItems": "Menü Öğeleri"
   },
   "common": {
     "adminSaas": "Admin SaaS",
@@ -1358,5 +1359,39 @@
     "importedCount": "Hedefler başarıyla içe aktarıldı",
     "noMasterAvailable": "Kullanılabilir ana hedef yok",
     "selected": "seçili"
+  },
+  "tenantMenuItems": {
+    "title": "Menü Öğeleri",
+    "add": "Menü Öğesi Ekle",
+    "edit": "Menü Öğesini Düzenle",
+    "name": "Ad",
+    "category": "Kategori",
+    "noCategory": "-- Kategori Yok --",
+    "destination": "Sipariş Hedefi",
+    "noDestination": "-- Hedef Yok --",
+    "imageUrl": "Görsel URL",
+    "sortOrder": "Sıralama",
+    "vatRate": "KDV Oranı (%)",
+    "price": "Fiyat",
+    "prices": "Fiyatlar",
+    "isWeighted": "Tartılı Ürün",
+    "isCombo": "Kombo Ürün",
+    "showOn": "Göster",
+    "showOnWebsite": "Web Sitesi",
+    "showOnPos": "POS",
+    "showOnKiosk": "Kiosk",
+    "translations": "Çeviriler",
+    "translationName": "Ad",
+    "translationSlug": "Slug",
+    "translationDescription": "Açıklama",
+    "translationShortDescription": "Kısa Açıklama",
+    "empty": "Menü öğesi bulunamadı",
+    "confirmDelete": "Bu menü öğesini silmek istediğinizden emin misiniz?",
+    "created": "Menü öğesi başarıyla oluşturuldu",
+    "updated": "Menü öğesi başarıyla güncellendi",
+    "deleted": "Menü öğesi başarıyla silindi",
+    "fetchError": "Menü öğeleri yüklenemedi",
+    "saveError": "Menü öğesi kaydedilemedi",
+    "deleteError": "Menü öğesi silinemedi"
   }
 }

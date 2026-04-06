@@ -53,7 +53,8 @@
     "tenantIngredients": "Ingrédients",
     "tenantAddonTypes": "Types de Suppléments",
     "tenantAddons": "Suppléments",
-    "tenantOrderDestinations": "Destinations de Commande"
+    "tenantOrderDestinations": "Destinations de Commande",
+    "tenantMenuItems": "Articles du Menu"
   },
   "common": {
     "adminSaas": "Admin SaaS",
@@ -1358,5 +1359,39 @@
     "importedCount": "Destinations importées avec succès",
     "noMasterAvailable": "Aucune destination maître disponible",
     "selected": "sélectionnés"
+  },
+  "tenantMenuItems": {
+    "title": "Articles du Menu",
+    "add": "Ajouter un Article",
+    "edit": "Modifier l'Article",
+    "name": "Nom",
+    "category": "Catégorie",
+    "noCategory": "-- Aucune Catégorie --",
+    "destination": "Destination de Commande",
+    "noDestination": "-- Aucune Destination --",
+    "imageUrl": "URL de l'Image",
+    "sortOrder": "Ordre de Tri",
+    "vatRate": "Taux de TVA (%)",
+    "price": "Prix",
+    "prices": "Prix",
+    "isWeighted": "Article au Poids",
+    "isCombo": "Article Combo",
+    "showOn": "Afficher Sur",
+    "showOnWebsite": "Site Web",
+    "showOnPos": "POS",
+    "showOnKiosk": "Kiosque",
+    "translations": "Traductions",
+    "translationName": "Nom",
+    "translationSlug": "Slug",
+    "translationDescription": "Description",
+    "translationShortDescription": "Description Courte",
+    "empty": "Aucun article de menu trouvé",
+    "confirmDelete": "Êtes-vous sûr de vouloir supprimer cet article du menu ?",
+    "created": "Article du menu créé avec succès",
+    "updated": "Article du menu mis à jour avec succès",
+    "deleted": "Article du menu supprimé avec succès",
+    "fetchError": "Échec du chargement des articles du menu",
+    "saveError": "Échec de l'enregistrement de l'article du menu",
+    "deleteError": "Échec de la suppression de l'article du menu"
   }
 }

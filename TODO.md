@@ -225,7 +225,7 @@ Create full CRUD for tenant_order_destinations + tenant_order_destination_transl
 Has import-from-master pattern (master_order_destination_id FK). Extra fields: printer_ip, kds_screen_id.
 ```
 
-### [ ] 19. Tenant Menu Items
+### [x] 19. Tenant Menu Items
 
 Tables: `tenant_menu_items` + `tenant_menu_item_translations` + `tenant_menu_item_prices` + `tenant_menu_item_images`
 

@@ -53,7 +53,8 @@
     "tenantIngredients": "Συστατικά",
     "tenantAddonTypes": "Τύποι Πρόσθετων",
     "tenantAddons": "Πρόσθετα",
-    "tenantOrderDestinations": "Προορισμοί Παραγγελίας"
+    "tenantOrderDestinations": "Προορισμοί Παραγγελίας",
+    "tenantMenuItems": "Στοιχεία Μενού"
   },
   "common": {
     "adminSaas": "Admin SaaS",
@@ -1358,5 +1359,39 @@
     "importedCount": "Οι προορισμοί εισήχθησαν επιτυχώς",
     "noMasterAvailable": "Δεν υπάρχουν διαθέσιμοι προορισμοί",
     "selected": "επιλεγμένα"
+  },
+  "tenantMenuItems": {
+    "title": "Στοιχεία Μενού",
+    "add": "Προσθήκη Στοιχείου Μενού",
+    "edit": "Επεξεργασία Στοιχείου Μενού",
+    "name": "Όνομα",
+    "category": "Κατηγορία",
+    "noCategory": "-- Χωρίς Κατηγορία --",
+    "destination": "Προορισμός Παραγγελίας",
+    "noDestination": "-- Χωρίς Προορισμό --",
+    "imageUrl": "URL Εικόνας",
+    "sortOrder": "Σειρά Ταξινόμησης",
+    "vatRate": "Συντελεστής ΦΠΑ (%)",
+    "price": "Τιμή",
+    "prices": "Τιμές",
+    "isWeighted": "Ζυγιζόμενο Προϊόν",
+    "isCombo": "Κόμπο Προϊόν",
+    "showOn": "Εμφάνιση Σε",
+    "showOnWebsite": "Ιστοσελίδα",
+    "showOnPos": "POS",
+    "showOnKiosk": "Kiosk",
+    "translations": "Μεταφράσεις",
+    "translationName": "Όνομα",
+    "translationSlug": "Slug",
+    "translationDescription": "Περιγραφή",
+    "translationShortDescription": "Σύντομη Περιγραφή",
+    "empty": "Δεν βρέθηκαν στοιχεία μενού",
+    "confirmDelete": "Είστε σίγουροι ότι θέλετε να διαγράψετε αυτό το στοιχείο μενού;",
+    "created": "Το στοιχείο μενού δημιουργήθηκε επιτυχώς",
+    "updated": "Το στοιχείο μενού ενημερώθηκε επιτυχώς",
+    "deleted": "Το στοιχείο μενού διαγράφηκε επιτυχώς",
+    "fetchError": "Αποτυχία φόρτωσης στοιχείων μενού",
+    "saveError": "Αποτυχία αποθήκευσης στοιχείου μενού",
+    "deleteError": "Αποτυχία διαγραφής στοιχείου μενού"
   }
 }

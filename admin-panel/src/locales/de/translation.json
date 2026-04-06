@@ -53,7 +53,8 @@
     "tenantIngredients": "Zutaten",
     "tenantAddonTypes": "Zusatztypen",
     "tenantAddons": "Zusätze",
-    "tenantOrderDestinations": "Bestellziele"
+    "tenantOrderDestinations": "Bestellziele",
+    "tenantMenuItems": "Menüpunkte"
   },
   "common": {
     "adminSaas": "Admin SaaS",
@@ -1358,5 +1359,39 @@
     "importedCount": "Bestellziele erfolgreich importiert",
     "noMasterAvailable": "Keine Stamm-Bestellziele verfügbar",
     "selected": "ausgewählt"
+  },
+  "tenantMenuItems": {
+    "title": "Menüpunkte",
+    "add": "Menüpunkt hinzufügen",
+    "edit": "Menüpunkt bearbeiten",
+    "name": "Name",
+    "category": "Kategorie",
+    "noCategory": "-- Keine Kategorie --",
+    "destination": "Bestellziel",
+    "noDestination": "-- Kein Ziel --",
+    "imageUrl": "Bild-URL",
+    "sortOrder": "Sortierung",
+    "vatRate": "MwSt.-Satz (%)",
+    "price": "Preis",
+    "prices": "Preise",
+    "isWeighted": "Gewichtsartikel",
+    "isCombo": "Kombo-Artikel",
+    "showOn": "Anzeigen auf",
+    "showOnWebsite": "Webseite",
+    "showOnPos": "POS",
+    "showOnKiosk": "Kiosk",
+    "translations": "Übersetzungen",
+    "translationName": "Name",
+    "translationSlug": "Slug",
+    "translationDescription": "Beschreibung",
+    "translationShortDescription": "Kurzbeschreibung",
+    "empty": "Keine Menüpunkte gefunden",
+    "confirmDelete": "Sind Sie sicher, dass Sie diesen Menüpunkt löschen möchten?",
+    "created": "Menüpunkt erfolgreich erstellt",
+    "updated": "Menüpunkt erfolgreich aktualisiert",
+    "deleted": "Menüpunkt erfolgreich gelöscht",
+    "fetchError": "Menüpunkte konnten nicht geladen werden",
+    "saveError": "Menüpunkt konnte nicht gespeichert werden",
+    "deleteError": "Menüpunkt konnte nicht gelöscht werden"
   }
 }

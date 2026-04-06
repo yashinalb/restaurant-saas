@@ -53,7 +53,8 @@
     "tenantIngredients": "Ингредиенты",
     "tenantAddonTypes": "Типы дополнений",
     "tenantAddons": "Дополнения",
-    "tenantOrderDestinations": "Направления заказов"
+    "tenantOrderDestinations": "Направления заказов",
+    "tenantMenuItems": "Пункты меню"
   },
   "common": {
     "adminSaas": "Admin SaaS",
@@ -1358,5 +1359,39 @@
     "importedCount": "Направления успешно импортированы",
     "noMasterAvailable": "Нет доступных направлений",
     "selected": "выбрано"
+  },
+  "tenantMenuItems": {
+    "title": "Пункты меню",
+    "add": "Добавить пункт меню",
+    "edit": "Редактировать пункт меню",
+    "name": "Название",
+    "category": "Категория",
+    "noCategory": "-- Без категории --",
+    "destination": "Направление заказа",
+    "noDestination": "-- Без направления --",
+    "imageUrl": "URL изображения",
+    "sortOrder": "Порядок сортировки",
+    "vatRate": "Ставка НДС (%)",
+    "price": "Цена",
+    "prices": "Цены",
+    "isWeighted": "Весовой товар",
+    "isCombo": "Комбо товар",
+    "showOn": "Показывать на",
+    "showOnWebsite": "Сайт",
+    "showOnPos": "POS",
+    "showOnKiosk": "Киоск",
+    "translations": "Переводы",
+    "translationName": "Название",
+    "translationSlug": "Slug",
+    "translationDescription": "Описание",
+    "translationShortDescription": "Краткое описание",
+    "empty": "Пункты меню не найдены",
+    "confirmDelete": "Вы уверены, что хотите удалить этот пункт меню?",
+    "created": "Пункт меню успешно создан",
+    "updated": "Пункт меню успешно обновлён",
+    "deleted": "Пункт меню успешно удалён",
+    "fetchError": "Не удалось загрузить пункты меню",
+    "saveError": "Не удалось сохранить пункт меню",
+    "deleteError": "Не удалось удалить пункт меню"
   }
 }
