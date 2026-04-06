@@ -56,7 +56,8 @@
     "tenantOrderDestinations": "Destinos de Pedido",
     "tenantMenuItems": "Artículos del Menú",
     "tenantSeatingAreas": "Áreas de Asientos",
-    "tenantTables": "Mesas"
+    "tenantTables": "Mesas",
+    "tenantWaiters": "Meseros"
   },
   "common": {
     "adminSaas": "Admin SaaS",
@@ -1453,5 +1454,30 @@
     "allStores": "Todas las Tiendas",
     "dragHint": "Arrastre para reposicionar. Doble clic para editar.",
     "emptyFloorPlan": "Sin mesas. Agregue mesas y arrástrelas a su posición."
+  },
+  "tenantWaiters": {
+    "title": "Meseros",
+    "add": "Agregar Mesero",
+    "edit": "Editar Mesero",
+    "name": "Nombre",
+    "pin": "PIN",
+    "store": "Tienda",
+    "allStores": "Todas las Tiendas",
+    "phone": "Teléfono",
+    "phone1": "Teléfono 1",
+    "phone2": "Teléfono 2",
+    "address": "Dirección",
+    "imageUrl": "URL de Imagen",
+    "empty": "No se encontraron meseros",
+    "nameRequired": "El nombre es obligatorio",
+    "pinRequired": "El PIN es obligatorio",
+    "pinLength": "El PIN debe tener 4-6 dígitos",
+    "confirmDelete": "¿Está seguro de que desea eliminar este mesero?",
+    "created": "Mesero creado exitosamente",
+    "updated": "Mesero actualizado exitosamente",
+    "deleted": "Mesero eliminado exitosamente",
+    "fetchError": "Error al cargar meseros",
+    "saveError": "Error al guardar mesero",
+    "deleteError": "Error al eliminar mesero"
   }
 }

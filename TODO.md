@@ -260,7 +260,7 @@ Create full CRUD for tenant_table_structures.
 No translations. Per-store, FK to seating_area. Floor plan fields (position_x, position_y, width, height, shape), capacity, status (available|occupied|reserved|blocked). Table merging support (parent_table_id, is_temporary_merge, merged_at, merged_by).
 ```
 
-### [ ] 22. Tenant Waiters
+### [x] 22. Tenant Waiters
 
 Tables: `tenant_waiters` + `tenant_waiter_sessions`
 

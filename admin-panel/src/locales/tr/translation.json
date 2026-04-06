@@ -56,7 +56,8 @@
     "tenantOrderDestinations": "Sipariş Hedefleri",
     "tenantMenuItems": "Menü Öğeleri",
     "tenantSeatingAreas": "Oturma Alanları",
-    "tenantTables": "Masalar"
+    "tenantTables": "Masalar",
+    "tenantWaiters": "Garsonlar"
   },
   "common": {
     "adminSaas": "Admin SaaS",
@@ -1453,5 +1454,30 @@
     "allStores": "Tüm Mağazalar",
     "dragHint": "Konumlandırmak için sürükleyin. Düzenlemek için çift tıklayın.",
     "emptyFloorPlan": "Henüz masa yok. Masa ekleyin ve konumlandırın."
+  },
+  "tenantWaiters": {
+    "title": "Garsonlar",
+    "add": "Garson Ekle",
+    "edit": "Garsonu Düzenle",
+    "name": "Ad",
+    "pin": "PIN",
+    "store": "Mağaza",
+    "allStores": "Tüm Mağazalar",
+    "phone": "Telefon",
+    "phone1": "Telefon 1",
+    "phone2": "Telefon 2",
+    "address": "Adres",
+    "imageUrl": "Görsel URL",
+    "empty": "Garson bulunamadı",
+    "nameRequired": "Ad gereklidir",
+    "pinRequired": "PIN gereklidir",
+    "pinLength": "PIN 4-6 haneli olmalıdır",
+    "confirmDelete": "Bu garsonu silmek istediğinizden emin misiniz?",
+    "created": "Garson başarıyla oluşturuldu",
+    "updated": "Garson başarıyla güncellendi",
+    "deleted": "Garson başarıyla silindi",
+    "fetchError": "Garsonlar yüklenemedi",
+    "saveError": "Garson kaydedilemedi",
+    "deleteError": "Garson silinemedi"
   }
 }

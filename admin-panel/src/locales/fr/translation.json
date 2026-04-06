@@ -56,7 +56,8 @@
     "tenantOrderDestinations": "Destinations de Commande",
     "tenantMenuItems": "Articles du Menu",
     "tenantSeatingAreas": "Zones de Places",
-    "tenantTables": "Tables"
+    "tenantTables": "Tables",
+    "tenantWaiters": "Serveurs"
   },
   "common": {
     "adminSaas": "Admin SaaS",
@@ -1453,5 +1454,30 @@
     "allStores": "Tous les Magasins",
     "dragHint": "Glissez pour repositionner. Double-cliquez pour modifier.",
     "emptyFloorPlan": "Pas encore de tables. Ajoutez des tables et positionnez-les."
+  },
+  "tenantWaiters": {
+    "title": "Serveurs",
+    "add": "Ajouter un Serveur",
+    "edit": "Modifier le Serveur",
+    "name": "Nom",
+    "pin": "PIN",
+    "store": "Magasin",
+    "allStores": "Tous les Magasins",
+    "phone": "Téléphone",
+    "phone1": "Téléphone 1",
+    "phone2": "Téléphone 2",
+    "address": "Adresse",
+    "imageUrl": "URL de l'image",
+    "empty": "Aucun serveur trouvé",
+    "nameRequired": "Le nom est obligatoire",
+    "pinRequired": "Le PIN est obligatoire",
+    "pinLength": "Le PIN doit comporter 4 à 6 chiffres",
+    "confirmDelete": "Êtes-vous sûr de vouloir supprimer ce serveur ?",
+    "created": "Serveur créé avec succès",
+    "updated": "Serveur mis à jour avec succès",
+    "deleted": "Serveur supprimé avec succès",
+    "fetchError": "Échec du chargement des serveurs",
+    "saveError": "Échec de l'enregistrement du serveur",
+    "deleteError": "Échec de la suppression du serveur"
   }
 }

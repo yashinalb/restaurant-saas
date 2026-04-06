@@ -56,7 +56,8 @@
     "tenantOrderDestinations": "Order Destinations",
     "tenantMenuItems": "Menu Items",
     "tenantSeatingAreas": "Seating Areas",
-    "tenantTables": "Tables"
+    "tenantTables": "Tables",
+    "tenantWaiters": "Waiters"
   },
   "common": {
     "adminSaas": "Admin SaaS",
@@ -1453,5 +1454,30 @@
     "allStores": "All Stores",
     "dragHint": "Drag to reposition. Double-click to edit.",
     "emptyFloorPlan": "No tables yet. Add tables and drag them into position."
+  },
+  "tenantWaiters": {
+    "title": "Waiters",
+    "add": "Add Waiter",
+    "edit": "Edit Waiter",
+    "name": "Name",
+    "pin": "PIN",
+    "store": "Store",
+    "allStores": "All Stores",
+    "phone": "Phone",
+    "phone1": "Phone 1",
+    "phone2": "Phone 2",
+    "address": "Address",
+    "imageUrl": "Image URL",
+    "empty": "No waiters found",
+    "nameRequired": "Name is required",
+    "pinRequired": "PIN is required",
+    "pinLength": "PIN must be 4-6 digits",
+    "confirmDelete": "Are you sure you want to delete this waiter?",
+    "created": "Waiter created successfully",
+    "updated": "Waiter updated successfully",
+    "deleted": "Waiter deleted successfully",
+    "fetchError": "Failed to load waiters",
+    "saveError": "Failed to save waiter",
+    "deleteError": "Failed to delete waiter"
   }
 }

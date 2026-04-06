@@ -56,7 +56,8 @@
     "tenantOrderDestinations": "Bestellziele",
     "tenantMenuItems": "Menüpunkte",
     "tenantSeatingAreas": "Sitzbereiche",
-    "tenantTables": "Tische"
+    "tenantTables": "Tische",
+    "tenantWaiters": "Kellner"
   },
   "common": {
     "adminSaas": "Admin SaaS",
@@ -1453,5 +1454,30 @@
     "allStores": "Alle Filialen",
     "dragHint": "Ziehen zum Positionieren. Doppelklick zum Bearbeiten.",
     "emptyFloorPlan": "Noch keine Tische. Fügen Sie Tische hinzu und positionieren Sie sie."
+  },
+  "tenantWaiters": {
+    "title": "Kellner",
+    "add": "Kellner hinzufügen",
+    "edit": "Kellner bearbeiten",
+    "name": "Name",
+    "pin": "PIN",
+    "store": "Filiale",
+    "allStores": "Alle Filialen",
+    "phone": "Telefon",
+    "phone1": "Telefon 1",
+    "phone2": "Telefon 2",
+    "address": "Adresse",
+    "imageUrl": "Bild-URL",
+    "empty": "Keine Kellner gefunden",
+    "nameRequired": "Name ist erforderlich",
+    "pinRequired": "PIN ist erforderlich",
+    "pinLength": "PIN muss 4-6 Ziffern haben",
+    "confirmDelete": "Sind Sie sicher, dass Sie diesen Kellner löschen möchten?",
+    "created": "Kellner erfolgreich erstellt",
+    "updated": "Kellner erfolgreich aktualisiert",
+    "deleted": "Kellner erfolgreich gelöscht",
+    "fetchError": "Kellner konnten nicht geladen werden",
+    "saveError": "Kellner konnte nicht gespeichert werden",
+    "deleteError": "Kellner konnte nicht gelöscht werden"
   }
 }
