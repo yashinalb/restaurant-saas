@@ -46,7 +46,8 @@
     "paymentTypes": "Zahlungsarten",
     "orderItemStatuses": "Bestellpositionsstatus",
     "paymentStatuses": "Zahlungsstatus",
-    "ingredients": "Zutaten"
+    "ingredients": "Zutaten",
+    "expenseCategories": "Ausgabenkategorien"
   },
   "common": {
     "adminSaas": "Admin SaaS",
@@ -1139,5 +1140,26 @@
     "fetchError": "Zutaten konnten nicht geladen werden",
     "saveError": "Zutat konnte nicht gespeichert werden",
     "deleteError": "Zutat konnte nicht gelöscht werden"
+  },
+  "expenseCategories": {
+    "title": "Ausgabenkategorien",
+    "add": "Ausgabenkategorie hinzufügen",
+    "edit": "Ausgabenkategorie bearbeiten",
+    "code": "Code",
+    "name": "Name",
+    "icon": "Symbol",
+    "sortOrder": "Sortierung",
+    "translations": "Übersetzungen",
+    "translationName": "Name",
+    "translationDescription": "Beschreibung",
+    "empty": "Keine Ausgabenkategorien gefunden",
+    "codeRequired": "Code ist erforderlich",
+    "confirmDelete": "Möchten Sie diese Ausgabenkategorie wirklich löschen?",
+    "created": "Ausgabenkategorie erfolgreich erstellt",
+    "updated": "Ausgabenkategorie erfolgreich aktualisiert",
+    "deleted": "Ausgabenkategorie erfolgreich gelöscht",
+    "fetchError": "Ausgabenkategorien konnten nicht geladen werden",
+    "saveError": "Ausgabenkategorie konnte nicht gespeichert werden",
+    "deleteError": "Ausgabenkategorie konnte nicht gelöscht werden"
   }
 }

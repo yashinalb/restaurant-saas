@@ -151,7 +151,7 @@ Create full CRUD for master_ingredients + master_ingredient_translations.
 Has allergen_type field (allergen|dietary|ingredient), icon_url. Pre-seeded: 14 EU allergens + 6 dietary markers.
 ```
 
-### [ ] 12. Master Expense Categories
+### [x] 12. Master Expense Categories
 
 Tables: `master_expense_categories` + `master_expense_category_translations`
 

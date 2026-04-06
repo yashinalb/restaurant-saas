@@ -46,7 +46,8 @@
     "paymentTypes": "Types de Paiement",
     "orderItemStatuses": "Statuts des Articles",
     "paymentStatuses": "Statuts de Paiement",
-    "ingredients": "Ingrédients"
+    "ingredients": "Ingrédients",
+    "expenseCategories": "Catégories de Dépenses"
   },
   "common": {
     "adminSaas": "Admin SaaS",
@@ -1139,5 +1140,26 @@
     "fetchError": "Échec du chargement des ingrédients",
     "saveError": "Échec de l'enregistrement de l'ingrédient",
     "deleteError": "Échec de la suppression de l'ingrédient"
+  },
+  "expenseCategories": {
+    "title": "Catégories de Dépenses",
+    "add": "Ajouter une Catégorie de Dépenses",
+    "edit": "Modifier la Catégorie de Dépenses",
+    "code": "Code",
+    "name": "Nom",
+    "icon": "Icône",
+    "sortOrder": "Ordre de tri",
+    "translations": "Traductions",
+    "translationName": "Nom",
+    "translationDescription": "Description",
+    "empty": "Aucune catégorie de dépenses trouvée",
+    "codeRequired": "Le code est obligatoire",
+    "confirmDelete": "Êtes-vous sûr de vouloir supprimer cette catégorie de dépenses ?",
+    "created": "Catégorie de dépenses créée avec succès",
+    "updated": "Catégorie de dépenses mise à jour avec succès",
+    "deleted": "Catégorie de dépenses supprimée avec succès",
+    "fetchError": "Échec du chargement des catégories de dépenses",
+    "saveError": "Échec de l'enregistrement de la catégorie de dépenses",
+    "deleteError": "Échec de la suppression de la catégorie de dépenses"
   }
 }

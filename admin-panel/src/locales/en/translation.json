@@ -46,7 +46,8 @@
     "paymentTypes": "Payment Types",
     "orderItemStatuses": "Order Item Statuses",
     "paymentStatuses": "Payment Statuses",
-    "ingredients": "Ingredients"
+    "ingredients": "Ingredients",
+    "expenseCategories": "Expense Categories"
   },
   "common": {
     "adminSaas": "Admin SaaS",
@@ -1139,5 +1140,26 @@
     "fetchError": "Failed to load ingredients",
     "saveError": "Failed to save ingredient",
     "deleteError": "Failed to delete ingredient"
+  },
+  "expenseCategories": {
+    "title": "Expense Categories",
+    "add": "Add Expense Category",
+    "edit": "Edit Expense Category",
+    "code": "Code",
+    "name": "Name",
+    "icon": "Icon",
+    "sortOrder": "Sort Order",
+    "translations": "Translations",
+    "translationName": "Name",
+    "translationDescription": "Description",
+    "empty": "No expense categories found",
+    "codeRequired": "Code is required",
+    "confirmDelete": "Are you sure you want to delete this expense category?",
+    "created": "Expense category created successfully",
+    "updated": "Expense category updated successfully",
+    "deleted": "Expense category deleted successfully",
+    "fetchError": "Failed to load expense categories",
+    "saveError": "Failed to save expense category",
+    "deleteError": "Failed to delete expense category"
   }
 }

@@ -46,7 +46,8 @@
     "paymentTypes": "Tipos de Pago",
     "orderItemStatuses": "Estados de Artículos",
     "paymentStatuses": "Estados de Pago",
-    "ingredients": "Ingredientes"
+    "ingredients": "Ingredientes",
+    "expenseCategories": "Categorías de Gastos"
   },
   "common": {
     "adminSaas": "Admin SaaS",
@@ -1139,5 +1140,26 @@
     "fetchError": "Error al cargar ingredientes",
     "saveError": "Error al guardar ingrediente",
     "deleteError": "Error al eliminar ingrediente"
+  },
+  "expenseCategories": {
+    "title": "Categorías de Gastos",
+    "add": "Agregar Categoría de Gastos",
+    "edit": "Editar Categoría de Gastos",
+    "code": "Código",
+    "name": "Nombre",
+    "icon": "Icono",
+    "sortOrder": "Orden",
+    "translations": "Traducciones",
+    "translationName": "Nombre",
+    "translationDescription": "Descripción",
+    "empty": "No se encontraron categorías de gastos",
+    "codeRequired": "El código es obligatorio",
+    "confirmDelete": "¿Está seguro de que desea eliminar esta categoría de gastos?",
+    "created": "Categoría de gastos creada exitosamente",
+    "updated": "Categoría de gastos actualizada exitosamente",
+    "deleted": "Categoría de gastos eliminada exitosamente",
+    "fetchError": "Error al cargar categorías de gastos",
+    "saveError": "Error al guardar categoría de gastos",
+    "deleteError": "Error al eliminar categoría de gastos"
   }
 }

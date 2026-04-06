@@ -46,7 +46,8 @@
     "paymentTypes": "Ödeme Türleri",
     "orderItemStatuses": "Sipariş Kalemi Durumları",
     "paymentStatuses": "Ödeme Durumları",
-    "ingredients": "Malzemeler"
+    "ingredients": "Malzemeler",
+    "expenseCategories": "Gider Kategorileri"
   },
   "common": {
     "adminSaas": "Admin SaaS",
@@ -1139,5 +1140,26 @@
     "fetchError": "Malzemeler yüklenemedi",
     "saveError": "Malzeme kaydedilemedi",
     "deleteError": "Malzeme silinemedi"
+  },
+  "expenseCategories": {
+    "title": "Gider Kategorileri",
+    "add": "Gider Kategorisi Ekle",
+    "edit": "Gider Kategorisi Düzenle",
+    "code": "Kod",
+    "name": "Ad",
+    "icon": "İkon",
+    "sortOrder": "Sıralama",
+    "translations": "Çeviriler",
+    "translationName": "Ad",
+    "translationDescription": "Açıklama",
+    "empty": "Gider kategorisi bulunamadı",
+    "codeRequired": "Kod gereklidir",
+    "confirmDelete": "Bu gider kategorisini silmek istediğinizden emin misiniz?",
+    "created": "Gider kategorisi oluşturuldu",
+    "updated": "Gider kategorisi güncellendi",
+    "deleted": "Gider kategorisi silindi",
+    "fetchError": "Gider kategorileri yüklenemedi",
+    "saveError": "Gider kategorisi kaydedilemedi",
+    "deleteError": "Gider kategorisi silinemedi"
   }
 }
