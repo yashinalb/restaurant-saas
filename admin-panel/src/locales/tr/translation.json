@@ -47,7 +47,8 @@
     "orderItemStatuses": "Sipariş Kalemi Durumları",
     "paymentStatuses": "Ödeme Durumları",
     "ingredients": "Malzemeler",
-    "expenseCategories": "Gider Kategorileri"
+    "expenseCategories": "Gider Kategorileri",
+    "menuCategories": "Menü Kategorileri"
   },
   "common": {
     "adminSaas": "Admin SaaS",
@@ -1161,5 +1162,29 @@
     "fetchError": "Gider kategorileri yüklenemedi",
     "saveError": "Gider kategorisi kaydedilemedi",
     "deleteError": "Gider kategorisi silinemedi"
+  },
+  "menuCategories": {
+    "title": "Menü Kategorileri",
+    "add": "Menü Kategorisi Ekle",
+    "edit": "Menü Kategorisi Düzenle",
+    "code": "Kod",
+    "name": "Ad",
+    "parent": "Üst Kategori",
+    "noParent": "-- Üst Kategori Yok (En Üst) --",
+    "iconUrl": "İkon URL",
+    "imageUrl": "Görsel URL",
+    "sortOrder": "Sıralama",
+    "translations": "Çeviriler",
+    "translationName": "Ad",
+    "translationDescription": "Açıklama",
+    "empty": "Menü kategorisi bulunamadı",
+    "codeRequired": "Kod gereklidir",
+    "confirmDelete": "Bu menü kategorisini silmek istediğinizden emin misiniz?",
+    "created": "Menü kategorisi oluşturuldu",
+    "updated": "Menü kategorisi güncellendi",
+    "deleted": "Menü kategorisi silindi",
+    "fetchError": "Menü kategorileri yüklenemedi",
+    "saveError": "Menü kategorisi kaydedilemedi",
+    "deleteError": "Menü kategorisi silinemedi"
   }
 }

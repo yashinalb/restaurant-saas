@@ -31,6 +31,7 @@ import {
   BadgeCheck,
   Leaf,
   Receipt,
+  LayoutList,
   LucideIcon
 } from 'lucide-react';
 
@@ -137,6 +138,7 @@ export default function DashboardLayout() {
         { name: t('navigation.paymentStatuses', 'Payment Statuses'), to: '/payment-statuses', icon: BadgeCheck, show: true },
         { name: t('navigation.ingredients', 'Ingredients'), to: '/ingredients', icon: Leaf, show: true },
         { name: t('navigation.expenseCategories', 'Expense Categories'), to: '/expense-categories', icon: Receipt, show: true },
+        { name: t('navigation.menuCategories', 'Menu Categories'), to: '/menu-categories', icon: LayoutList, show: true },
       ]
     },
     {

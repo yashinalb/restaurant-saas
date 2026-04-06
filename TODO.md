@@ -161,7 +161,7 @@ Create full CRUD for master_expense_categories + master_expense_category_transla
 Pre-seeded: rent, utilities, food_supplies, beverage_supplies, cleaning_supplies, equipment, maintenance, marketing, insurance, labor, licenses, other.
 ```
 
-### [ ] 13. Master Menu Categories
+### [x] 13. Master Menu Categories
 
 Tables: `master_menu_categories` + `master_menu_category_translations`
 

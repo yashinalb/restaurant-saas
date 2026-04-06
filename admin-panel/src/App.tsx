@@ -34,6 +34,7 @@ import OrderItemStatusesPage from './pages/OrderItemStatusesPage';
 import PaymentStatusesPage from './pages/PaymentStatusesPage';
 import IngredientsPage from './pages/IngredientsPage';
 import ExpenseCategoriesPage from './pages/ExpenseCategoriesPage';
+import MenuCategoriesPage from './pages/MenuCategoriesPage';
 
 
 function ProtectedRoute({ children }: { children: React.ReactNode }) {
@@ -85,6 +86,7 @@ function App() {
           <Route path="payment-statuses" element={<PaymentStatusesPage />} />
           <Route path="ingredients" element={<IngredientsPage />} />
           <Route path="expense-categories" element={<ExpenseCategoriesPage />} />
+          <Route path="menu-categories" element={<MenuCategoriesPage />} />
           <Route path="roles" element={<RolesPage />} />
           <Route path="permissions" element={<PermissionsPage />} />
           <Route path="tenant/stores" element={<StoresPage />} />

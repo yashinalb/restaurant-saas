@@ -47,7 +47,8 @@
     "orderItemStatuses": "Estados de Artículos",
     "paymentStatuses": "Estados de Pago",
     "ingredients": "Ingredientes",
-    "expenseCategories": "Categorías de Gastos"
+    "expenseCategories": "Categorías de Gastos",
+    "menuCategories": "Categorías de Menú"
   },
   "common": {
     "adminSaas": "Admin SaaS",
@@ -1161,5 +1162,29 @@
     "fetchError": "Error al cargar categorías de gastos",
     "saveError": "Error al guardar categoría de gastos",
     "deleteError": "Error al eliminar categoría de gastos"
+  },
+  "menuCategories": {
+    "title": "Categorías de Menú",
+    "add": "Agregar Categoría de Menú",
+    "edit": "Editar Categoría de Menú",
+    "code": "Código",
+    "name": "Nombre",
+    "parent": "Categoría Superior",
+    "noParent": "-- Sin Superior (Nivel Superior) --",
+    "iconUrl": "URL del Icono",
+    "imageUrl": "URL de Imagen",
+    "sortOrder": "Orden",
+    "translations": "Traducciones",
+    "translationName": "Nombre",
+    "translationDescription": "Descripción",
+    "empty": "No se encontraron categorías de menú",
+    "codeRequired": "El código es obligatorio",
+    "confirmDelete": "¿Está seguro de que desea eliminar esta categoría de menú?",
+    "created": "Categoría de menú creada exitosamente",
+    "updated": "Categoría de menú actualizada exitosamente",
+    "deleted": "Categoría de menú eliminada exitosamente",
+    "fetchError": "Error al cargar categorías de menú",
+    "saveError": "Error al guardar categoría de menú",
+    "deleteError": "Error al eliminar categoría de menú"
   }
 }

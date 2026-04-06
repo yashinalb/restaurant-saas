@@ -47,7 +47,8 @@
     "orderItemStatuses": "Statuts des Articles",
     "paymentStatuses": "Statuts de Paiement",
     "ingredients": "Ingrédients",
-    "expenseCategories": "Catégories de Dépenses"
+    "expenseCategories": "Catégories de Dépenses",
+    "menuCategories": "Catégories de Menu"
   },
   "common": {
     "adminSaas": "Admin SaaS",
@@ -1161,5 +1162,29 @@
     "fetchError": "Échec du chargement des catégories de dépenses",
     "saveError": "Échec de l'enregistrement de la catégorie de dépenses",
     "deleteError": "Échec de la suppression de la catégorie de dépenses"
+  },
+  "menuCategories": {
+    "title": "Catégories de Menu",
+    "add": "Ajouter une Catégorie de Menu",
+    "edit": "Modifier la Catégorie de Menu",
+    "code": "Code",
+    "name": "Nom",
+    "parent": "Catégorie Parente",
+    "noParent": "-- Pas de Parent (Niveau Supérieur) --",
+    "iconUrl": "URL de l'Icône",
+    "imageUrl": "URL de l'Image",
+    "sortOrder": "Ordre de tri",
+    "translations": "Traductions",
+    "translationName": "Nom",
+    "translationDescription": "Description",
+    "empty": "Aucune catégorie de menu trouvée",
+    "codeRequired": "Le code est obligatoire",
+    "confirmDelete": "Êtes-vous sûr de vouloir supprimer cette catégorie de menu ?",
+    "created": "Catégorie de menu créée avec succès",
+    "updated": "Catégorie de menu mise à jour avec succès",
+    "deleted": "Catégorie de menu supprimée avec succès",
+    "fetchError": "Échec du chargement des catégories de menu",
+    "saveError": "Échec de l'enregistrement de la catégorie de menu",
+    "deleteError": "Échec de la suppression de la catégorie de menu"
   }
 }

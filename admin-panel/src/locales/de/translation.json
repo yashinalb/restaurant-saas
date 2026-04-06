@@ -47,7 +47,8 @@
     "orderItemStatuses": "Bestellpositionsstatus",
     "paymentStatuses": "Zahlungsstatus",
     "ingredients": "Zutaten",
-    "expenseCategories": "Ausgabenkategorien"
+    "expenseCategories": "Ausgabenkategorien",
+    "menuCategories": "Menükategorien"
   },
   "common": {
     "adminSaas": "Admin SaaS",
@@ -1161,5 +1162,29 @@
     "fetchError": "Ausgabenkategorien konnten nicht geladen werden",
     "saveError": "Ausgabenkategorie konnte nicht gespeichert werden",
     "deleteError": "Ausgabenkategorie konnte nicht gelöscht werden"
+  },
+  "menuCategories": {
+    "title": "Menükategorien",
+    "add": "Menükategorie hinzufügen",
+    "edit": "Menükategorie bearbeiten",
+    "code": "Code",
+    "name": "Name",
+    "parent": "Übergeordnete Kategorie",
+    "noParent": "-- Keine übergeordnete (Oberste Ebene) --",
+    "iconUrl": "Symbol-URL",
+    "imageUrl": "Bild-URL",
+    "sortOrder": "Sortierung",
+    "translations": "Übersetzungen",
+    "translationName": "Name",
+    "translationDescription": "Beschreibung",
+    "empty": "Keine Menükategorien gefunden",
+    "codeRequired": "Code ist erforderlich",
+    "confirmDelete": "Möchten Sie diese Menükategorie wirklich löschen?",
+    "created": "Menükategorie erfolgreich erstellt",
+    "updated": "Menükategorie erfolgreich aktualisiert",
+    "deleted": "Menükategorie erfolgreich gelöscht",
+    "fetchError": "Menükategorien konnten nicht geladen werden",
+    "saveError": "Menükategorie konnte nicht gespeichert werden",
+    "deleteError": "Menükategorie konnte nicht gelöscht werden"
   }
 }
