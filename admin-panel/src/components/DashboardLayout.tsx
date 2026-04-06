@@ -163,6 +163,7 @@ export default function DashboardLayout() {
         { name: t('navigation.stores', 'Stores'), to: '/tenant/stores', icon: Store, show: hasPermission('stores.view') },
         { name: t('navigation.tenantMenuCategories', 'Menu Categories'), to: '/tenant/menu-categories', icon: LayoutList, show: hasPermission('menu_categories.view') },
         { name: t('navigation.tenantIngredients', 'Ingredients'), to: '/tenant/ingredients', icon: Leaf, show: hasPermission('ingredients.view') },
+        { name: t('navigation.tenantAddonTypes', 'Addon Types'), to: '/tenant/addon-types', icon: UtensilsCrossed, show: hasPermission('addon_types.view') },
       ].filter(item => item.show)
     },
     {

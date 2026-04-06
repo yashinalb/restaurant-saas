@@ -511,7 +511,11 @@ async function seedRestaurantLookups() {
       ('ingredients.view', 'View Ingredients', 'Can view ingredients', 'menu', 1),
       ('ingredients.create', 'Create Ingredients', 'Can create ingredients', 'menu', 1),
       ('ingredients.edit', 'Edit Ingredients', 'Can edit ingredients', 'menu', 1),
-      ('ingredients.delete', 'Delete Ingredients', 'Can delete ingredients', 'menu', 1)
+      ('ingredients.delete', 'Delete Ingredients', 'Can delete ingredients', 'menu', 1),
+      ('addon_types.view', 'View Addon Types', 'Can view addon types', 'menu', 1),
+      ('addon_types.create', 'Create Addon Types', 'Can create addon types', 'menu', 1),
+      ('addon_types.edit', 'Edit Addon Types', 'Can edit addon types', 'menu', 1),
+      ('addon_types.delete', 'Delete Addon Types', 'Can delete addon types', 'menu', 1)
     `);
     console.log('✅ Restaurant permissions seeded\n');
 

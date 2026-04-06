@@ -26,6 +26,7 @@ import storeRoutes from './routes/store.routes';
 import tenantSettingRoutes from './routes/tenantSetting.routes';
 import tenantMenuCategoryRoutes from './routes/tenantMenuCategory.routes';
 import tenantIngredientRoutes from './routes/tenantIngredient.routes';
+import tenantAddonTypeRoutes from './routes/tenantAddonType.routes';
 import addonTypeRoutes from './routes/addonType.routes';
 import addonRoutes from './routes/addon.routes';
 import orderSourceRoutes from './routes/orderSource.routes';
@@ -167,6 +168,7 @@ app.use('/api/tenant', storeRoutes);
 app.use('/api/tenant', tenantSettingRoutes);
 app.use('/api/tenant', tenantMenuCategoryRoutes);
 app.use('/api/tenant', tenantIngredientRoutes);
+app.use('/api/tenant', tenantAddonTypeRoutes);
 
 
 

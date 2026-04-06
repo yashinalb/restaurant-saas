@@ -195,7 +195,7 @@ Create full CRUD for tenant_ingredients + tenant_ingredient_translations.
 Has import-from-master pattern (master_ingredient_id FK). allergen_type field, icon_url.
 ```
 
-### [ ] 16. Tenant Addon Types
+### [x] 16. Tenant Addon Types
 
 Tables: `tenant_addon_types` + `tenant_addon_type_translations`
 
