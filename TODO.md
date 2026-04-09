@@ -505,6 +505,120 @@ No translations. Per-store. Shift management: opened_by/closed_by (admin_users),
 Set up public-facing storefront app (React + TailwindCSS) for online menu browsing, QR ordering, and online reservations. Follow supermarket-saas storefront pattern.
 ```
 
+### [ ] 43.1 Banner System (Backend — before storefront)
+
+When building the storefront, include the full banner system from supermarket-saas. This requires:
+
+**Migration — `tenant_banners` + `tenant_banner_translations` tables:**
+```sql
+CREATE TABLE tenant_banners (
+  id BIGINT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+  tenant_id BIGINT UNSIGNED NOT NULL,
+  banner_type ENUM('hero','top','middle','bottom','alert','promotional','sidebar') DEFAULT 'hero',
+  image_url VARCHAR(500),
+  mobile_image_url VARCHAR(500),
+  background_color VARCHAR(7),
+  text_color VARCHAR(7) DEFAULT '#FFFFFF',
+  text_position ENUM('top-left','top-center','top-right','center-left','center','center-right','bottom-left','bottom-center','bottom-right') DEFAULT 'center',
+  text_alignment ENUM('left','center','right') DEFAULT 'center',
+  text_position_mobile ENUM('top-left','top-center','top-right','center-left','center','center-right','bottom-left','bottom-center','bottom-right') DEFAULT NULL,
+  text_alignment_mobile ENUM('left','center','right') DEFAULT NULL,
+  text_style JSON DEFAULT NULL,
+  link_type ENUM('menu_item','menu_category','page','url','none') DEFAULT 'none',
+  link_menu_item_id BIGINT UNSIGNED NULL,
+  link_menu_category_id BIGINT UNSIGNED NULL,
+  link_page_code VARCHAR(50),
+  link_url VARCHAR(500),
+  link_target ENUM('_self','_blank') DEFAULT '_self',
+  show_cta TINYINT(1) DEFAULT 0,
+  cta_style ENUM('primary','secondary','outline','ghost') DEFAULT 'primary',
+  valid_from DATETIME NULL,
+  valid_to DATETIME NULL,
+  show_on_mobile TINYINT(1) DEFAULT 1,
+  show_on_desktop TINYINT(1) DEFAULT 1,
+  is_dismissible TINYINT(1) DEFAULT 0,
+  is_active TINYINT(1) DEFAULT 1,
+  sort_order INT DEFAULT 0,
+  created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
+  updated_at DATETIME DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  FOREIGN KEY (tenant_id) REFERENCES tenants(id) ON DELETE CASCADE
+);
+
+CREATE TABLE tenant_banner_translations (
+  id BIGINT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+  banner_id BIGINT UNSIGNED NOT NULL,
+  language_id BIGINT UNSIGNED NOT NULL,
+  title VARCHAR(255),
+  subtitle VARCHAR(255),
+  description TEXT,
+  cta_text VARCHAR(100),
+  alt_text VARCHAR(255),
+  FOREIGN KEY (banner_id) REFERENCES tenant_banners(id) ON DELETE CASCADE,
+  FOREIGN KEY (language_id) REFERENCES languages(id) ON DELETE CASCADE,
+  UNIQUE KEY (banner_id, language_id)
+);
+```
+
+**Backend files to create (copy from supermarket-saas and adapt):**
+- `backend/src/services/bannerService.ts` — CRUD + getBannersByType
+- `backend/src/controllers/bannerController.ts` — REST handlers
+- `backend/src/routes/banner.routes.ts` — tenant routes with permissions
+- Add to `backend/src/routes/tenant.routes.ts`
+
+**Admin panel files to create:**
+- `admin-panel/src/services/bannerService.ts` — API wrapper + types
+- `admin-panel/src/pages/TenantBanners/BannerFormPage.tsx` — full form with:
+  - Image upload (desktop + mobile)
+  - Multi-language translations (title, subtitle, description, CTA)
+  - Text position (9-position grid picker) + alignment
+  - Mobile override position/alignment
+  - Font size controls (title, subtitle, description — desktop + mobile)
+  - Color pickers with hex input (background, text)
+  - Link type (menu_item, menu_category, page, url, none)
+  - CTA button toggle + style
+  - Scheduling (valid_from, valid_to)
+  - Device visibility + dismissible
+  - Live preview with dynamic positioning
+  - Mobile preview
+
+**Note:** `link_type` for restaurant uses `menu_item` and `menu_category` instead of `campaign` and `product` (adapted to restaurant domain).
+
+### [ ] 43.2 Storefront App Setup
+
+```
+storefront/
+├── src/
+│   ├── api/          — Axios instance, types
+│   ├── components/
+│   │   ├── home/     — HeroBanner, MenuHighlights, FeaturedItems
+│   │   ├── layout/   — Header, Footer, Layout
+│   │   ├── common/   — Loading, SEOHead
+│   │   └── pages/    — DynamicPage, block components
+│   ├── hooks/        — useBanners, useTenantStore
+│   ├── locales/      — en.json, tr.json, el.json, ru.json
+│   ├── pages/        — HomePage, MenuPage, ReservationPage, ContactPage
+│   ├── store/        — Zustand tenant store
+│   └── App.tsx
+```
+
+Key pages:
+- **HomePage** — HeroBanner carousel + featured menu items + specials
+- **MenuPage** (`/menu`) — full menu with category sidebar
+- **MenuItemPage** (`/menu/:slug`) — item detail with images, description, addons
+- **ReservationPage** (`/reserve`) — online table reservation form
+- **ContactPage** (`/contact`) — store info, hours, map
+- **CustomPage** (`/page/:slug`) — block-builder CMS pages
+
+### [ ] 43.3 Storefront Banner Component (HeroBanner)
+
+Port the HeroBanner from supermarket-saas with:
+- Dynamic text positioning (9 positions + mobile override)
+- Responsive font sizes from `text_style` JSON
+- Desktop/mobile separate images (`object-contain`)
+- Auto-advance carousel with arrows + dots
+- Banner impression/click analytics tracking
+- Boolean conversion for MySQL tinyint fields (prevent "0" rendering)
+
 ### [ ] 44. POS Interface
 
 ```
