@@ -57,7 +57,8 @@
     "tenantMenuItems": "Пункты меню",
     "tenantSeatingAreas": "Зоны рассадки",
     "tenantTables": "Столы",
-    "tenantWaiters": "Официанты"
+    "tenantWaiters": "Официанты",
+    "tenantCustomers": "Клиенты"
   },
   "common": {
     "adminSaas": "Admin SaaS",
@@ -1479,5 +1480,33 @@
     "fetchError": "Не удалось загрузить официантов",
     "saveError": "Не удалось сохранить официанта",
     "deleteError": "Не удалось удалить официанта"
+  },
+  "tenantCustomers": {
+    "title": "Клиенты",
+    "add": "Добавить клиента",
+    "edit": "Редактировать клиента",
+    "name": "Имя",
+    "email": "Эл. почта",
+    "phone": "Телефон",
+    "password": "Пароль",
+    "passwordPlaceholder": "Оставьте пустым для сохранения",
+    "registered": "Зарегистрирован",
+    "guest": "Гость",
+    "type": "Тип",
+    "addressLine1": "Адрес строка 1",
+    "addressLine2": "Адрес строка 2",
+    "city": "Город",
+    "postalCode": "Почтовый индекс",
+    "countryCode": "Страна",
+    "notes": "Заметки",
+    "empty": "Клиенты не найдены",
+    "nameRequired": "Имя обязательно",
+    "confirmDelete": "Вы уверены, что хотите удалить этого клиента?",
+    "created": "Клиент успешно создан",
+    "updated": "Клиент успешно обновлён",
+    "deleted": "Клиент успешно удалён",
+    "fetchError": "Не удалось загрузить клиентов",
+    "saveError": "Не удалось сохранить клиента",
+    "deleteError": "Не удалось удалить клиента"
   }
 }

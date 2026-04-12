@@ -57,7 +57,8 @@
     "tenantMenuItems": "Articles du Menu",
     "tenantSeatingAreas": "Zones de Places",
     "tenantTables": "Tables",
-    "tenantWaiters": "Serveurs"
+    "tenantWaiters": "Serveurs",
+    "tenantCustomers": "Clients"
   },
   "common": {
     "adminSaas": "Admin SaaS",
@@ -1479,5 +1480,33 @@
     "fetchError": "Échec du chargement des serveurs",
     "saveError": "Échec de l'enregistrement du serveur",
     "deleteError": "Échec de la suppression du serveur"
+  },
+  "tenantCustomers": {
+    "title": "Clients",
+    "add": "Ajouter un Client",
+    "edit": "Modifier le Client",
+    "name": "Nom",
+    "email": "E-mail",
+    "phone": "Téléphone",
+    "password": "Mot de passe",
+    "passwordPlaceholder": "Laisser vide pour conserver",
+    "registered": "Enregistré",
+    "guest": "Invité",
+    "type": "Type",
+    "addressLine1": "Adresse Ligne 1",
+    "addressLine2": "Adresse Ligne 2",
+    "city": "Ville",
+    "postalCode": "Code Postal",
+    "countryCode": "Pays",
+    "notes": "Notes",
+    "empty": "Aucun client trouvé",
+    "nameRequired": "Le nom est obligatoire",
+    "confirmDelete": "Êtes-vous sûr de vouloir supprimer ce client ?",
+    "created": "Client créé avec succès",
+    "updated": "Client mis à jour avec succès",
+    "deleted": "Client supprimé avec succès",
+    "fetchError": "Échec du chargement des clients",
+    "saveError": "Échec de l'enregistrement du client",
+    "deleteError": "Échec de la suppression du client"
   }
 }

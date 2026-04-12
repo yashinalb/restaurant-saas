@@ -57,7 +57,8 @@
     "tenantMenuItems": "Menü Öğeleri",
     "tenantSeatingAreas": "Oturma Alanları",
     "tenantTables": "Masalar",
-    "tenantWaiters": "Garsonlar"
+    "tenantWaiters": "Garsonlar",
+    "tenantCustomers": "Müşteriler"
   },
   "common": {
     "adminSaas": "Admin SaaS",
@@ -1479,5 +1480,33 @@
     "fetchError": "Garsonlar yüklenemedi",
     "saveError": "Garson kaydedilemedi",
     "deleteError": "Garson silinemedi"
+  },
+  "tenantCustomers": {
+    "title": "Müşteriler",
+    "add": "Müşteri Ekle",
+    "edit": "Müşteri Düzenle",
+    "name": "Ad",
+    "email": "E-posta",
+    "phone": "Telefon",
+    "password": "Şifre",
+    "passwordPlaceholder": "Mevcut şifreyi korumak için boş bırakın",
+    "registered": "Kayıtlı",
+    "guest": "Misafir",
+    "type": "Tür",
+    "addressLine1": "Adres Satırı 1",
+    "addressLine2": "Adres Satırı 2",
+    "city": "Şehir",
+    "postalCode": "Posta Kodu",
+    "countryCode": "Ülke",
+    "notes": "Notlar",
+    "empty": "Müşteri bulunamadı",
+    "nameRequired": "Ad gereklidir",
+    "confirmDelete": "Bu müşteriyi silmek istediğinizden emin misiniz?",
+    "created": "Müşteri başarıyla oluşturuldu",
+    "updated": "Müşteri başarıyla güncellendi",
+    "deleted": "Müşteri başarıyla silindi",
+    "fetchError": "Müşteriler yüklenemedi",
+    "saveError": "Müşteri kaydedilemedi",
+    "deleteError": "Müşteri silinemedi"
   }
 }

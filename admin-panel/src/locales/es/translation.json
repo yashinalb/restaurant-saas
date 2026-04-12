@@ -57,7 +57,8 @@
     "tenantMenuItems": "Artículos del Menú",
     "tenantSeatingAreas": "Áreas de Asientos",
     "tenantTables": "Mesas",
-    "tenantWaiters": "Meseros"
+    "tenantWaiters": "Meseros",
+    "tenantCustomers": "Clientes"
   },
   "common": {
     "adminSaas": "Admin SaaS",
@@ -1479,5 +1480,33 @@
     "fetchError": "Error al cargar meseros",
     "saveError": "Error al guardar mesero",
     "deleteError": "Error al eliminar mesero"
+  },
+  "tenantCustomers": {
+    "title": "Clientes",
+    "add": "Agregar Cliente",
+    "edit": "Editar Cliente",
+    "name": "Nombre",
+    "email": "Correo electrónico",
+    "phone": "Teléfono",
+    "password": "Contraseña",
+    "passwordPlaceholder": "Dejar en blanco para mantener",
+    "registered": "Registrado",
+    "guest": "Invitado",
+    "type": "Tipo",
+    "addressLine1": "Dirección Línea 1",
+    "addressLine2": "Dirección Línea 2",
+    "city": "Ciudad",
+    "postalCode": "Código Postal",
+    "countryCode": "País",
+    "notes": "Notas",
+    "empty": "No se encontraron clientes",
+    "nameRequired": "El nombre es obligatorio",
+    "confirmDelete": "¿Está seguro de que desea eliminar este cliente?",
+    "created": "Cliente creado exitosamente",
+    "updated": "Cliente actualizado exitosamente",
+    "deleted": "Cliente eliminado exitosamente",
+    "fetchError": "Error al cargar clientes",
+    "saveError": "Error al guardar cliente",
+    "deleteError": "Error al eliminar cliente"
   }
 }

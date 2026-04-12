@@ -57,7 +57,8 @@
     "tenantMenuItems": "Στοιχεία Μενού",
     "tenantSeatingAreas": "Ζώνες Καθίσματος",
     "tenantTables": "Τραπέζια",
-    "tenantWaiters": "Σερβιτόροι"
+    "tenantWaiters": "Σερβιτόροι",
+    "tenantCustomers": "Πελάτες"
   },
   "common": {
     "adminSaas": "Admin SaaS",
@@ -1479,5 +1480,33 @@
     "fetchError": "Αποτυχία φόρτωσης σερβιτόρων",
     "saveError": "Αποτυχία αποθήκευσης σερβιτόρου",
     "deleteError": "Αποτυχία διαγραφής σερβιτόρου"
+  },
+  "tenantCustomers": {
+    "title": "Πελάτες",
+    "add": "Προσθήκη Πελάτη",
+    "edit": "Επεξεργασία Πελάτη",
+    "name": "Όνομα",
+    "email": "Email",
+    "phone": "Τηλέφωνο",
+    "password": "Κωδικός",
+    "passwordPlaceholder": "Αφήστε κενό για διατήρηση",
+    "registered": "Εγγεγραμμένος",
+    "guest": "Επισκέπτης",
+    "type": "Τύπος",
+    "addressLine1": "Διεύθυνση 1",
+    "addressLine2": "Διεύθυνση 2",
+    "city": "Πόλη",
+    "postalCode": "Ταχυδρομικός Κώδικας",
+    "countryCode": "Χώρα",
+    "notes": "Σημειώσεις",
+    "empty": "Δεν βρέθηκαν πελάτες",
+    "nameRequired": "Το όνομα είναι υποχρεωτικό",
+    "confirmDelete": "Είστε σίγουροι ότι θέλετε να διαγράψετε αυτόν τον πελάτη;",
+    "created": "Ο πελάτης δημιουργήθηκε επιτυχώς",
+    "updated": "Ο πελάτης ενημερώθηκε επιτυχώς",
+    "deleted": "Ο πελάτης διαγράφηκε επιτυχώς",
+    "fetchError": "Αποτυχία φόρτωσης πελατών",
+    "saveError": "Αποτυχία αποθήκευσης πελάτη",
+    "deleteError": "Αποτυχία διαγραφής πελάτη"
   }
 }

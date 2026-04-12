@@ -178,6 +178,7 @@ export default function DashboardLayout() {
       icon: Users,
       items: [
         { name: t('navigation.tenantWaiters', 'Waiters'), to: '/tenant/waiters', icon: Users, show: hasPermission('waiters.view') },
+        { name: t('navigation.tenantCustomers', 'Customers'), to: '/tenant/customers', icon: Users, show: hasPermission('customers.view') },
         { name: t('navigation.teamMembers'), to: '/tenant/users', icon: Users, show: hasPermission('tenant_users.view') },
       ].filter(item => item.show)
     }

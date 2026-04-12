@@ -57,7 +57,8 @@
     "tenantMenuItems": "Menüpunkte",
     "tenantSeatingAreas": "Sitzbereiche",
     "tenantTables": "Tische",
-    "tenantWaiters": "Kellner"
+    "tenantWaiters": "Kellner",
+    "tenantCustomers": "Kunden"
   },
   "common": {
     "adminSaas": "Admin SaaS",
@@ -1479,5 +1480,33 @@
     "fetchError": "Kellner konnten nicht geladen werden",
     "saveError": "Kellner konnte nicht gespeichert werden",
     "deleteError": "Kellner konnte nicht gelöscht werden"
+  },
+  "tenantCustomers": {
+    "title": "Kunden",
+    "add": "Kunde hinzufügen",
+    "edit": "Kunde bearbeiten",
+    "name": "Name",
+    "email": "E-Mail",
+    "phone": "Telefon",
+    "password": "Passwort",
+    "passwordPlaceholder": "Leer lassen, um beizubehalten",
+    "registered": "Registriert",
+    "guest": "Gast",
+    "type": "Typ",
+    "addressLine1": "Adresszeile 1",
+    "addressLine2": "Adresszeile 2",
+    "city": "Stadt",
+    "postalCode": "Postleitzahl",
+    "countryCode": "Land",
+    "notes": "Notizen",
+    "empty": "Keine Kunden gefunden",
+    "nameRequired": "Name ist erforderlich",
+    "confirmDelete": "Möchten Sie diesen Kunden wirklich löschen?",
+    "created": "Kunde erfolgreich erstellt",
+    "updated": "Kunde erfolgreich aktualisiert",
+    "deleted": "Kunde erfolgreich gelöscht",
+    "fetchError": "Kunden konnten nicht geladen werden",
+    "saveError": "Kunde konnte nicht gespeichert werden",
+    "deleteError": "Kunde konnte nicht gelöscht werden"
   }
 }
