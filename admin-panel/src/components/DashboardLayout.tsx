@@ -34,6 +34,8 @@ import {
   LayoutList,
   Armchair,
   CalendarClock,
+  Inbox,
+  Tags,
   LucideIcon
 } from 'lucide-react';
 
@@ -172,6 +174,8 @@ export default function DashboardLayout() {
         { name: t('navigation.tenantSeatingAreas', 'Seating Areas'), to: '/tenant/seating-areas', icon: Armchair, show: hasPermission('seating_areas.view') },
         { name: t('navigation.tenantTables', 'Tables'), to: '/tenant/tables', icon: LayoutDashboard, show: hasPermission('tables.view') },
         { name: t('navigation.reservations', 'Reservations'), to: '/tenant/reservations', icon: CalendarClock, show: hasPermission('reservations.view') },
+        { name: t('navigation.tenantOrderSources', 'Order Sources'), to: '/tenant/order-sources', icon: Inbox, show: hasPermission('order_sources.view') },
+        { name: t('navigation.tenantOrderTypes', 'Order Types'), to: '/tenant/order-types', icon: Tags, show: hasPermission('order_types.view') },
       ].filter(item => item.show)
     },
     {

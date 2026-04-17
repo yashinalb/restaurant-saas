@@ -294,7 +294,7 @@ No translations. Per-store, FK to primary_table + optional customer. guest_count
 
 ## PRIORITY 5: Order System (Migration 009)
 
-### [ ] 25. Tenant Order Sources
+### [x] 25. Tenant Order Sources
 
 Tables: `tenant_order_sources` + `tenant_order_source_translations`
 
@@ -304,7 +304,7 @@ Create full CRUD for tenant_order_sources + tenant_order_source_translations.
 Has import-from-master pattern (master_order_source_id FK).
 ```
 
-### [ ] 26. Tenant Order Types
+### [x] 26. Tenant Order Types
 
 Tables: `tenant_order_types` + `tenant_order_type_translations`
 
@@ -497,7 +497,128 @@ No translations. Per-store. Shift management: opened_by/closed_by (admin_users),
 
 ---
 
-## PRIORITY 10: Storefront (Future)
+## PRIORITY 10: POS (Point of Sale)
+
+Prerequisites (must be [x] before starting any POS sub-task):
+- #25–28 Tenant Order Sources / Types / Item Statuses / Payment Statuses
+- #29 Orders + Order Items
+- #30 Tenant Payment Types
+- #31 Transactions + Transaction Payments
+- #40 KDS Orders (for real-time kitchen routing)
+
+Shared conventions:
+- POS lives inside admin-panel under the route prefix `/pos/*` (separate page shell from the `/tenant/*` management pages, same login session).
+- Gated by new permissions under the `pos` module: `pos.access`, `pos.take_order`, `pos.discount`, `pos.ikram`, `pos.split_bill`, `pos.refund`, `pos.void`.
+- Reuses `tenant_waiter_sessions` for the per-device PIN login flow.
+- The existing admin CRUD pages (Reservations #24, Customers #23, Waiters #22, Tables #21) remain for management and history; POS consumes the same data but with an operations-oriented UI.
+
+### [ ] 44.1 POS Shell & Waiter PIN Login
+
+Route group `/pos/*`, PIN-based waiter sign-in, `device_identifier` + `ip_address` capture, session row written to `tenant_waiter_sessions`, global "current waiter" indicator, logout button that closes the session.
+
+### [ ] 44.2 POS Floor Plan (Tables View)
+
+Grid/canvas of `tenant_table_structures` for the selected store, filterable by seating area. Status badges: available / occupied / reserved / blocked / merged. Tap-to-open-order. Floating action menu: walk-in, merge tables, check-in reservation. Today's reservations appear as chips on the relevant tables (visual cue only — check-in handled by 44.17).
+
+### [ ] 44.3 POS Cart / Active Order Panel
+
+Left panel matching the screenshot: line items with qty, customizations, subtotal/total. Action buttons: new order, ikram (comp), iade (refund), böl (split), iskonto (discount), yazdır (print), iptal (cancel), taşı (move item to another order).
+
+### [ ] 44.4 POS Menu Browser
+
+Category sidebar filtered to `show_on_pos = 1`, items grid with image + price + availability, search bar, quick-add. Tapping an item opens 44.5 when the item has portions/addons/weight, otherwise it's added directly to the cart.
+
+### [ ] 44.5 Item Options Modal
+
+Portions, addons, extras, ingredients, main-dish options, per-item note, weighted-item kg input. Recomputes the final line price as modifiers are toggled. Confirm adds the line to the active order.
+
+### [ ] 44.6 Table Merging & Move Items
+
+Merge/unmerge tables using `parent_table_id` + `is_temporary_merge`. Move a single item or a group of items between active orders on different tables (updates `order_items.order_id`).
+
+### [ ] 44.7 Payment Flow
+
+Full / partial / per-item / mixed payment modes. Supports multiple `tenant_payment_types` in one transaction. Tip. Discount (percent + flat). Ikram (comp a specific item without voiding). Writes to `transactions` and `transaction_payments`.
+
+### [ ] 44.8 Customer Receipt Printing
+
+Per-order customer receipt with store header, line items, modifiers, subtotal, discounts/ikram, tip, per-rate VAT breakdown, total, payment split, and QR payment link. Supports re-print (pre-payment or post-payment) and the order's language/currency. Routes to `stores.receipt_printer_ip` via ESC/POS (browser print as fallback for non-thermal).
+
+### [ ] 44.9 Kitchen / Bar Ticket Printing
+
+One ticket per `tenant_order_destination` in the order — no prices, shows qty, modifiers, per-item note, seat number, and course. Routes each ticket to the destination's printer (`stores.kitchen_printer_ip` / `bar_printer_ip`, or a per-destination override if present). Supports re-fire (reprints only the un-served items) and void ticket (strikethrough + notice to the cook).
+
+### [ ] 44.10 Order Destination Routing & Fire Flow
+
+When the waiter taps "Fire" on the cart, split the new/un-fired items by `menu_items.tenant_order_destination_id`, transition each item `pending → preparing`, then dispatch two parallel outputs per destination: (1) print the kitchen/bar ticket via 44.9, (2) broadcast to the KDS display (Priority 11) via 44.16. Handles partial fire (send appetizers now, hold mains), re-fire (resend the same slice), and void-after-fire (notify KDS + print a void ticket).
+
+### [ ] 44.11 Item Status Lifecycle
+
+Status machine `pending → preparing → ready → served → cancelled` enforced at the service layer (no skipping except `cancelled`). POS cart shows a colored status badge per line; a toast fires when any item transitions to `ready` (coming from the KDS via 44.16). Tap the ready badge to mark the item `served`. Cancel while `preparing` triggers the void-after-fire branch in 44.10.
+
+### [ ] 44.12 Order Mode (Dine-in / Takeaway / Delivery / Kiosk)
+
+Select the `tenant_order_type` at order creation. Dine-in requires a table (uses 44.2). Takeaway / delivery capture customer + address instead of a table, skip the floor plan, and print a customer-copy receipt at order-fire time (not just at payment). Kiosk is a customer-self-service variant of 44.4. Controls which fields are required, which printers fire, and which POS screens are shown.
+
+### [ ] 44.13 Cash Register Session Integration
+
+Require an open `cash_register_session` (#42) at the POS device before accepting any payment. Cash payments trigger an ESC/POS drawer-open pulse on the receipt printer. "Close shift" reconciles expected vs counted cash and closes the session. POS blocks new payments (not new orders) if no session is open.
+
+### [ ] 44.14 Void / Re-print / Audit Trail
+
+Re-print any receipt or kitchen ticket for an order (within the shift). Void a whole order or a single item with a mandatory reason code. Every privileged action (void, ikram, discount, refund, reprint, drawer-open) writes a row to an `audit_log` table with `waiter_id`, `admin_user_id`, action, target_type/id, before/after JSON, and timestamp — queryable from the admin panel.
+
+### [ ] 44.15 QR Invoice Generation
+
+Depends on #32. Generate a signed, short-lived token for the table, render a QR the guest can scan to view and pay the bill from their phone.
+
+### [ ] 44.16 Real-time Order Sync (WebSocket)
+
+Item-status broadcast so KDS (Priority 11) and other POS devices mirror changes live. Order-level broadcast so a manager's view updates when a waiter adds or removes an item. Also carries the "ready" signal that 44.11 surfaces as a toast in the POS cart.
+
+### [ ] 44.17 POS Reservations Quick View
+
+Today's reservations drawer on the tables page (reuses #24). "Check in" button flips reservation status `confirmed` → `checked_in` AND opens a new order on the primary table with the reservation's customer pre-filled.
+
+---
+
+## PRIORITY 11: KDS (Kitchen Display Application)
+
+Prerequisites (must be [x] before starting any KDS sub-task):
+- #40 KDS Orders
+- 44.10 Order Destination Routing & Fire Flow (produces the events KDS consumes)
+- 44.11 Item Status Lifecycle
+- 44.16 Real-time Order Sync
+
+Shared conventions:
+- KDS is a separate app from POS, intended to run on a wall-mounted tablet or monitor in the kitchen / bar (route prefix `/kds/*`).
+- Each KDS device is paired to a specific `store` + `tenant_order_destination` at first boot via a one-time code; a device only shows tickets routed to its destination.
+- Cook-facing UI — large tap targets, high-contrast badges, no waiter / payment concepts.
+- Gated by a new `kds` permission module: `kds.access`, `kds.bump`, `kds.recall`, `kds.manage_device`.
+
+### [ ] 45.1 KDS Shell & Device Pairing
+
+Route group `/kds/*`, first-run pairing flow (enter a one-time code generated from the tenant admin; binds the device to a `store_id` + `tenant_order_destination_id`). Persistent session; auto-reconnect on network drop. Status bar with destination name, network indicator, and "un-pair device" action.
+
+### [ ] 45.2 KDS Display View
+
+Card grid of active tickets for the paired destination. Each ticket shows table (or takeaway label), order time, seat number per item, item name, qty, modifiers, and per-item note. Layout: up to 4 columns, oldest first, overflow paginates. Pulls from `kds_orders` (#40) filtered by the device's destination.
+
+### [ ] 45.3 Bump / Recall / Timers
+
+"Bump" per item marks it `ready` (writes the transition defined in 44.11; POS hears it via 44.16). "Bump all" per ticket. "Recall" reverses a just-bumped item back to `preparing` within a short window. Per-ticket elapsed-time badge with color thresholds — green under target, yellow approaching, red over target — thresholds configurable per destination.
+
+### [ ] 45.4 Course & Seat Management
+
+Group items on a ticket by seat number (so the cook sees "Seat 1: burger, Seat 2: steak"). Support courses (appetizer / main / dessert) with a "hold" flag that keeps the main course hidden until the appetizer is bumped. Course separator between groups on the card.
+
+### [ ] 45.5 Audio Alerts & Overdue Escalation
+
+Chime on each new ticket; a different chime on overdue (past the red threshold). Volume + mute. Flashing border on the single most-overdue ticket. Optional notification-webhook hook on tickets overdue more than X minutes (config stub for now — wire later).
+
+---
+
+## PRIORITY 12: Storefront (Future)
 
 ### [ ] 43. Storefront Foundation
 
@@ -618,12 +739,6 @@ Port the HeroBanner from supermarket-saas with:
 - Auto-advance carousel with arrows + dots
 - Banner impression/click analytics tracking
 - Boolean conversion for MySQL tinyint fields (prevent "0" rendering)
-
-### [ ] 44. POS Interface
-
-```
-Build the POS (Point of Sale) interface as a dedicated section within the admin panel or as a standalone app. Table selection → order creation → item selection → payment processing → receipt/QR. Needs real-time updates (WebSocket) for KDS integration.
-```
 
 ---
 
