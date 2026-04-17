@@ -334,7 +334,7 @@ Create full CRUD for tenant_payment_statuses + tenant_payment_status_translation
 Has import-from-master pattern (master_payment_status_id FK). Has color field.
 ```
 
-### [ ] 29. Orders + Order Items
+### [x] 29. Orders + Order Items
 
 Tables: `orders` + `order_items`
 

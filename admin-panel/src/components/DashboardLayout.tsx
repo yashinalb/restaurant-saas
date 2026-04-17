@@ -38,6 +38,7 @@ import {
   Tags,
   ListChecks,
   BadgeDollarSign,
+  ShoppingCart,
   LucideIcon
 } from 'lucide-react';
 
@@ -190,6 +191,14 @@ export default function DashboardLayout() {
         { name: t('navigation.tenantWaiters', 'Waiters'), to: '/tenant/waiters', icon: Users, show: hasPermission('waiters.view') },
         { name: t('navigation.tenantCustomers', 'Customers'), to: '/tenant/customers', icon: Users, show: hasPermission('customers.view') },
         { name: t('navigation.teamMembers'), to: '/tenant/users', icon: Users, show: hasPermission('tenant_users.view') },
+      ].filter(item => item.show)
+    },
+    {
+      id: 'operations',
+      name: t('navigation.groups.operations', 'Operations'),
+      icon: ShoppingCart,
+      items: [
+        { name: t('navigation.orders', 'Orders'), to: '/tenant/orders', icon: ShoppingCart, show: hasPermission('orders.view') },
       ].filter(item => item.show)
     }
   ].filter(group => group.items.length > 0) : [];
