@@ -65,6 +65,7 @@
     "tenantOrderTypes": "Tipos de Pedidos",
     "tenantOrderItemStatuses": "Estados de Artículos",
     "tenantPaymentStatuses": "Estados de Pago",
+    "tenantPaymentTypes": "Tipos de Pago",
     "orders": "Pedidos"
   },
   "common": {
@@ -1741,5 +1742,35 @@
       "cancelled": "Cancelado",
       "void": "Anulado"
     }
+  },
+  "tenantPaymentTypes": {
+    "title": "Tipos de Pago",
+    "add": "Añadir Tipo de Pago",
+    "edit": "Editar Tipo de Pago",
+    "code": "Código",
+    "name": "Nombre",
+    "icon": "Icono",
+    "sortOrder": "Orden",
+    "translations": "Traducciones",
+    "translationName": "Nombre",
+    "empty": "No se encontraron tipos de pago",
+    "codeRequired": "El código es obligatorio",
+    "confirmDelete": "¿Está seguro de que desea eliminar este tipo de pago?",
+    "created": "Tipo de pago creado exitosamente",
+    "updated": "Tipo de pago actualizado exitosamente",
+    "deleted": "Tipo de pago eliminado exitosamente",
+    "fetchError": "Error al cargar tipos de pago",
+    "saveError": "Error al guardar tipo de pago",
+    "deleteError": "Error al eliminar tipo de pago",
+    "importFromMaster": "Importar del Catálogo Maestro",
+    "importTitle": "Importar de Tipos de Pago Maestros",
+    "importSubtitle": "Seleccione los tipos de pago a importar del catálogo maestro.",
+    "selectAll": "Seleccionar Todo",
+    "deselectAll": "Deseleccionar Todo",
+    "alreadyImported": "Importado",
+    "importSelected": "Importar Seleccionados",
+    "importedCount": "Importados con éxito",
+    "selected": "seleccionados",
+    "noMasterAvailable": "No hay tipos de pago maestros disponibles"
   }
 }

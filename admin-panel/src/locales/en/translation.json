@@ -65,6 +65,7 @@
     "tenantOrderTypes": "Order Types",
     "tenantOrderItemStatuses": "Order Item Statuses",
     "tenantPaymentStatuses": "Payment Statuses",
+    "tenantPaymentTypes": "Payment Types",
     "orders": "Orders"
   },
   "common": {
@@ -1741,5 +1742,35 @@
       "cancelled": "Cancelled",
       "void": "Void"
     }
+  },
+  "tenantPaymentTypes": {
+    "title": "Payment Types",
+    "add": "Add Payment Type",
+    "edit": "Edit Payment Type",
+    "code": "Code",
+    "name": "Name",
+    "icon": "Icon",
+    "sortOrder": "Sort Order",
+    "translations": "Translations",
+    "translationName": "Name",
+    "empty": "No payment types found",
+    "codeRequired": "Code is required",
+    "confirmDelete": "Are you sure you want to delete this payment type?",
+    "created": "Payment type created successfully",
+    "updated": "Payment type updated successfully",
+    "deleted": "Payment type deleted successfully",
+    "fetchError": "Failed to load payment types",
+    "saveError": "Failed to save payment type",
+    "deleteError": "Failed to delete payment type",
+    "importFromMaster": "Import from Master",
+    "importTitle": "Import from Master Payment Types",
+    "importSubtitle": "Select payment types to import from the master catalog.",
+    "selectAll": "Select All",
+    "deselectAll": "Deselect All",
+    "alreadyImported": "Imported",
+    "importSelected": "Import Selected",
+    "importedCount": "Imported successfully",
+    "selected": "selected",
+    "noMasterAvailable": "No master payment types available"
   }
 }

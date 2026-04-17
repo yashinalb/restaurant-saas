@@ -65,6 +65,7 @@
     "tenantOrderTypes": "Bestellarten",
     "tenantOrderItemStatuses": "Artikelstatus",
     "tenantPaymentStatuses": "Zahlungsstatus",
+    "tenantPaymentTypes": "Zahlungsarten",
     "orders": "Bestellungen"
   },
   "common": {
@@ -1741,5 +1742,35 @@
       "cancelled": "Storniert",
       "void": "Ungültig"
     }
+  },
+  "tenantPaymentTypes": {
+    "title": "Zahlungsarten",
+    "add": "Zahlungsart hinzufügen",
+    "edit": "Zahlungsart bearbeiten",
+    "code": "Code",
+    "name": "Name",
+    "icon": "Symbol",
+    "sortOrder": "Sortierung",
+    "translations": "Übersetzungen",
+    "translationName": "Name",
+    "empty": "Keine Zahlungsarten gefunden",
+    "codeRequired": "Code ist erforderlich",
+    "confirmDelete": "Möchten Sie diese Zahlungsart wirklich löschen?",
+    "created": "Zahlungsart erfolgreich erstellt",
+    "updated": "Zahlungsart erfolgreich aktualisiert",
+    "deleted": "Zahlungsart erfolgreich gelöscht",
+    "fetchError": "Zahlungsarten konnten nicht geladen werden",
+    "saveError": "Zahlungsart konnte nicht gespeichert werden",
+    "deleteError": "Zahlungsart konnte nicht gelöscht werden",
+    "importFromMaster": "Aus Stammkatalog importieren",
+    "importTitle": "Aus Stamm-Zahlungsarten importieren",
+    "importSubtitle": "Wählen Sie Zahlungsarten zum Import aus dem Stammkatalog.",
+    "selectAll": "Alle auswählen",
+    "deselectAll": "Auswahl aufheben",
+    "alreadyImported": "Importiert",
+    "importSelected": "Ausgewählte importieren",
+    "importedCount": "Erfolgreich importiert",
+    "selected": "ausgewählt",
+    "noMasterAvailable": "Keine Stamm-Zahlungsarten verfügbar"
   }
 }

@@ -349,7 +349,7 @@ order_items: FK to order, menu_item, order_item_status. Per-item payment trackin
 
 ## PRIORITY 6: Transactions & Payments (Migration 010)
 
-### [ ] 30. Tenant Payment Types
+### [x] 30. Tenant Payment Types
 
 Tables: `tenant_payment_types` + `tenant_payment_type_translations`
 

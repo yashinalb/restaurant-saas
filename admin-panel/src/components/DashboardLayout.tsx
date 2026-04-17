@@ -181,6 +181,7 @@ export default function DashboardLayout() {
         { name: t('navigation.tenantOrderTypes', 'Order Types'), to: '/tenant/order-types', icon: Tags, show: hasPermission('order_types.view') },
         { name: t('navigation.tenantOrderItemStatuses', 'Order Item Statuses'), to: '/tenant/order-item-statuses', icon: ListChecks, show: hasPermission('order_item_statuses.view') },
         { name: t('navigation.tenantPaymentStatuses', 'Payment Statuses'), to: '/tenant/payment-statuses', icon: BadgeDollarSign, show: hasPermission('payment_statuses.view') },
+        { name: t('navigation.tenantPaymentTypes', 'Payment Types'), to: '/tenant/payment-types', icon: Wallet, show: hasPermission('payment_types.view') },
       ].filter(item => item.show)
     },
     {

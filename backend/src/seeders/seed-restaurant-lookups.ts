@@ -539,7 +539,11 @@ async function seedRestaurantLookups() {
       ('payment_statuses.view', 'View Payment Statuses', 'Can view payment statuses', 'payments', 1),
       ('payment_statuses.create', 'Create Payment Statuses', 'Can create payment statuses', 'payments', 1),
       ('payment_statuses.edit', 'Edit Payment Statuses', 'Can edit payment statuses', 'payments', 1),
-      ('payment_statuses.delete', 'Delete Payment Statuses', 'Can delete payment statuses', 'payments', 1)
+      ('payment_statuses.delete', 'Delete Payment Statuses', 'Can delete payment statuses', 'payments', 1),
+      ('payment_types.view', 'View Payment Types', 'Can view payment types', 'payments', 1),
+      ('payment_types.create', 'Create Payment Types', 'Can create payment types', 'payments', 1),
+      ('payment_types.edit', 'Edit Payment Types', 'Can edit payment types', 'payments', 1),
+      ('payment_types.delete', 'Delete Payment Types', 'Can delete payment types', 'payments', 1)
     `);
     console.log('✅ Restaurant permissions seeded\n');
 

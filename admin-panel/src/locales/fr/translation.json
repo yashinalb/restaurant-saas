@@ -65,6 +65,7 @@
     "tenantOrderTypes": "Types de Commandes",
     "tenantOrderItemStatuses": "Statuts d'Articles",
     "tenantPaymentStatuses": "Statuts de Paiement",
+    "tenantPaymentTypes": "Types de Paiement",
     "orders": "Commandes"
   },
   "common": {
@@ -1741,5 +1742,35 @@
       "cancelled": "Annulée",
       "void": "Annulée"
     }
+  },
+  "tenantPaymentTypes": {
+    "title": "Types de Paiement",
+    "add": "Ajouter un Type de Paiement",
+    "edit": "Modifier le Type de Paiement",
+    "code": "Code",
+    "name": "Nom",
+    "icon": "Icône",
+    "sortOrder": "Ordre",
+    "translations": "Traductions",
+    "translationName": "Nom",
+    "empty": "Aucun type de paiement trouvé",
+    "codeRequired": "Le code est obligatoire",
+    "confirmDelete": "Êtes-vous sûr de vouloir supprimer ce type de paiement ?",
+    "created": "Type de paiement créé avec succès",
+    "updated": "Type de paiement mis à jour avec succès",
+    "deleted": "Type de paiement supprimé avec succès",
+    "fetchError": "Échec du chargement des types de paiement",
+    "saveError": "Échec de l'enregistrement du type de paiement",
+    "deleteError": "Échec de la suppression du type de paiement",
+    "importFromMaster": "Importer depuis le Catalogue Principal",
+    "importTitle": "Importer depuis les Types de Paiement Principaux",
+    "importSubtitle": "Sélectionnez les types de paiement à importer depuis le catalogue principal.",
+    "selectAll": "Tout Sélectionner",
+    "deselectAll": "Tout Désélectionner",
+    "alreadyImported": "Importé",
+    "importSelected": "Importer la Sélection",
+    "importedCount": "Importé avec succès",
+    "selected": "sélectionnés",
+    "noMasterAvailable": "Aucun type de paiement principal disponible"
   }
 }

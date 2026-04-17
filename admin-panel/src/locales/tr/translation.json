@@ -65,6 +65,7 @@
     "tenantOrderTypes": "Sipariş Türleri",
     "tenantOrderItemStatuses": "Sipariş Öğe Durumları",
     "tenantPaymentStatuses": "Ödeme Durumları",
+    "tenantPaymentTypes": "Ödeme Türleri",
     "orders": "Siparişler"
   },
   "common": {
@@ -1741,5 +1742,35 @@
       "cancelled": "İptal",
       "void": "Geçersiz"
     }
+  },
+  "tenantPaymentTypes": {
+    "title": "Ödeme Türleri",
+    "add": "Ödeme Türü Ekle",
+    "edit": "Ödeme Türü Düzenle",
+    "code": "Kod",
+    "name": "Ad",
+    "icon": "İkon",
+    "sortOrder": "Sıralama",
+    "translations": "Çeviriler",
+    "translationName": "Ad",
+    "empty": "Ödeme türü bulunamadı",
+    "codeRequired": "Kod gereklidir",
+    "confirmDelete": "Bu ödeme türünü silmek istediğinizden emin misiniz?",
+    "created": "Ödeme türü başarıyla oluşturuldu",
+    "updated": "Ödeme türü başarıyla güncellendi",
+    "deleted": "Ödeme türü başarıyla silindi",
+    "fetchError": "Ödeme türleri yüklenemedi",
+    "saveError": "Ödeme türü kaydedilemedi",
+    "deleteError": "Ödeme türü silinemedi",
+    "importFromMaster": "Ana Listeden İçe Aktar",
+    "importTitle": "Ana Ödeme Türlerinden İçe Aktar",
+    "importSubtitle": "Ana katalogdan içe aktarılacak ödeme türlerini seçin.",
+    "selectAll": "Tümünü Seç",
+    "deselectAll": "Seçimi Kaldır",
+    "alreadyImported": "İçe Aktarıldı",
+    "importSelected": "Seçilenleri İçe Aktar",
+    "importedCount": "Başarıyla içe aktarıldı",
+    "selected": "seçildi",
+    "noMasterAvailable": "Ana ödeme türü bulunamadı"
   }
 }

@@ -41,6 +41,7 @@ import tenantOrderTypeRoutes from './routes/tenantOrderType.routes';
 import tenantOrderItemStatusRoutes from './routes/tenantOrderItemStatus.routes';
 import tenantPaymentStatusRoutes from './routes/tenantPaymentStatus.routes';
 import orderRoutes from './routes/order.routes';
+import tenantPaymentTypeRoutes from './routes/tenantPaymentType.routes';
 import addonTypeRoutes from './routes/addonType.routes';
 import addonRoutes from './routes/addon.routes';
 import orderSourceRoutes from './routes/orderSource.routes';
@@ -197,6 +198,7 @@ app.use('/api/tenant', tenantOrderTypeRoutes);
 app.use('/api/tenant', tenantOrderItemStatusRoutes);
 app.use('/api/tenant', tenantPaymentStatusRoutes);
 app.use('/api/tenant', orderRoutes);
+app.use('/api/tenant', tenantPaymentTypeRoutes);
 
 
 
