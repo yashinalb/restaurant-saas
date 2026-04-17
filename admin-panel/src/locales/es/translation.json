@@ -58,7 +58,8 @@
     "tenantSeatingAreas": "Áreas de Asientos",
     "tenantTables": "Mesas",
     "tenantWaiters": "Meseros",
-    "tenantCustomers": "Clientes"
+    "tenantCustomers": "Clientes",
+    "reservations": "Reservas"
   },
   "common": {
     "adminSaas": "Admin SaaS",
@@ -1508,5 +1509,55 @@
     "fetchError": "Error al cargar clientes",
     "saveError": "Error al guardar cliente",
     "deleteError": "Error al eliminar cliente"
+  },
+  "reservations": {
+    "title": "Reservas",
+    "add": "Añadir Reserva",
+    "edit": "Editar Reserva",
+    "store": "Tienda",
+    "primaryTable": "Mesa Principal",
+    "table": "Mesa",
+    "reservedAt": "Fecha/Hora",
+    "duration": "Duración (min)",
+    "guests": "Comensales",
+    "customer": "Cliente",
+    "existingCustomer": "Cliente Existente (opcional)",
+    "noCustomer": "Ninguno (usar nombre/teléfono abajo)",
+    "customerName": "Nombre del Invitado",
+    "customerPhone": "Teléfono",
+    "customerEmail": "Correo",
+    "notes": "Notas",
+    "statusLabel": "Estado",
+    "sourceLabel": "Fuente",
+    "additionalTables": "Mesas Adicionales (para unir)",
+    "noOtherTables": "No hay otras mesas en esta tienda",
+    "allStores": "Todas las Tiendas",
+    "allStatuses": "Todos los Estados",
+    "empty": "No se encontraron reservas",
+    "storeRequired": "La tienda es obligatoria",
+    "tableRequired": "La mesa principal es obligatoria",
+    "dateRequired": "La fecha de reserva es obligatoria",
+    "guestCountRequired": "El número de comensales es obligatorio",
+    "confirmDelete": "¿Está seguro de que desea eliminar esta reserva?",
+    "created": "Reserva creada exitosamente",
+    "updated": "Reserva actualizada exitosamente",
+    "deleted": "Reserva eliminada exitosamente",
+    "fetchError": "Error al cargar reservas",
+    "saveError": "Error al guardar reserva",
+    "deleteError": "Error al eliminar reserva",
+    "status": {
+      "pending": "Pendiente",
+      "confirmed": "Confirmada",
+      "checked_in": "Registrada",
+      "completed": "Completada",
+      "cancelled": "Cancelada",
+      "no_show": "No Presentado"
+    },
+    "source": {
+      "phone": "Teléfono",
+      "online": "En Línea",
+      "walk_in": "Sin Reserva",
+      "third_party": "Tercero"
+    }
   }
 }

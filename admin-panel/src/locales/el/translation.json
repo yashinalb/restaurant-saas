@@ -58,7 +58,8 @@
     "tenantSeatingAreas": "Ζώνες Καθίσματος",
     "tenantTables": "Τραπέζια",
     "tenantWaiters": "Σερβιτόροι",
-    "tenantCustomers": "Πελάτες"
+    "tenantCustomers": "Πελάτες",
+    "reservations": "Κρατήσεις"
   },
   "common": {
     "adminSaas": "Admin SaaS",
@@ -1508,5 +1509,55 @@
     "fetchError": "Αποτυχία φόρτωσης πελατών",
     "saveError": "Αποτυχία αποθήκευσης πελάτη",
     "deleteError": "Αποτυχία διαγραφής πελάτη"
+  },
+  "reservations": {
+    "title": "Κρατήσεις",
+    "add": "Προσθήκη Κράτησης",
+    "edit": "Επεξεργασία Κράτησης",
+    "store": "Κατάστημα",
+    "primaryTable": "Κύριο Τραπέζι",
+    "table": "Τραπέζι",
+    "reservedAt": "Ημερομηνία/Ώρα",
+    "duration": "Διάρκεια (λεπτά)",
+    "guests": "Άτομα",
+    "customer": "Πελάτης",
+    "existingCustomer": "Υπάρχων Πελάτης (προαιρετικό)",
+    "noCustomer": "Κανένας (χρήση ονόματος/τηλεφώνου πιο κάτω)",
+    "customerName": "Όνομα Επισκέπτη",
+    "customerPhone": "Τηλέφωνο",
+    "customerEmail": "Email",
+    "notes": "Σημειώσεις",
+    "statusLabel": "Κατάσταση",
+    "sourceLabel": "Πηγή",
+    "additionalTables": "Επιπλέον Τραπέζια (για συνένωση)",
+    "noOtherTables": "Δεν υπάρχουν άλλα τραπέζια σε αυτό το κατάστημα",
+    "allStores": "Όλα τα Καταστήματα",
+    "allStatuses": "Όλες οι Καταστάσεις",
+    "empty": "Δεν βρέθηκαν κρατήσεις",
+    "storeRequired": "Το κατάστημα είναι υποχρεωτικό",
+    "tableRequired": "Το κύριο τραπέζι είναι υποχρεωτικό",
+    "dateRequired": "Η ημερομηνία κράτησης είναι υποχρεωτική",
+    "guestCountRequired": "Ο αριθμός ατόμων είναι υποχρεωτικός",
+    "confirmDelete": "Είστε σίγουροι ότι θέλετε να διαγράψετε αυτήν την κράτηση;",
+    "created": "Η κράτηση δημιουργήθηκε επιτυχώς",
+    "updated": "Η κράτηση ενημερώθηκε επιτυχώς",
+    "deleted": "Η κράτηση διαγράφηκε επιτυχώς",
+    "fetchError": "Αποτυχία φόρτωσης κρατήσεων",
+    "saveError": "Αποτυχία αποθήκευσης κράτησης",
+    "deleteError": "Αποτυχία διαγραφής κράτησης",
+    "status": {
+      "pending": "Εκκρεμεί",
+      "confirmed": "Επιβεβαιωμένη",
+      "checked_in": "Check-in",
+      "completed": "Ολοκληρώθηκε",
+      "cancelled": "Ακυρώθηκε",
+      "no_show": "Δεν Εμφανίστηκε"
+    },
+    "source": {
+      "phone": "Τηλέφωνο",
+      "online": "Online",
+      "walk_in": "Χωρίς Κράτηση",
+      "third_party": "Τρίτος"
+    }
   }
 }

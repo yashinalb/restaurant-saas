@@ -17,7 +17,8 @@
       "Bash(node -e \"JSON.parse\\(require\\('fs'\\).readFileSync\\('src/locales/ru/translation.json','utf8'\\)\\); console.log\\('RU OK'\\)\")",
       "Bash(node -e \"JSON.parse\\(require\\('fs'\\).readFileSync\\('src/locales/de/translation.json','utf8'\\)\\); console.log\\('DE OK'\\)\")",
       "Bash(node -e 'JSON.parse\\(require\\('\\\\''fs'\\\\''\\).readFileSync\\('\\\\''admin-panel/src/locales/__TRACKED_VAR__/translation.json'\\\\'','\\\\''utf8'\\\\''\\)\\); console.log\\('\\\\''valid'\\\\''\\);')",
-      "Bash(node -e 'JSON.parse\\(require\\('\\\\''fs'\\\\''\\).readFileSync\\('\\\\''admin-panel/src/locales/__TRACKED_VAR__/translation.json'\\\\'','\\\\''utf8'\\\\''\\)\\); console.log\\('\\\\''OK'\\\\''\\)')"
+      "Bash(node -e 'JSON.parse\\(require\\('\\\\''fs'\\\\''\\).readFileSync\\('\\\\''admin-panel/src/locales/__TRACKED_VAR__/translation.json'\\\\'','\\\\''utf8'\\\\''\\)\\); console.log\\('\\\\''OK'\\\\''\\)')",
+      "Bash(node -e 'JSON.parse\\(require\\('\\\\''fs'\\\\''\\).readFileSync\\('\\\\''__TRACKED_VAR__/translation.json'\\\\'','\\\\''utf8'\\\\''\\)\\); console.log\\('\\\\''__TRACKED_VAR__ OK'\\\\''\\)')"
     ]
   }
 }

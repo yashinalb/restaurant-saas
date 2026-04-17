@@ -58,7 +58,8 @@
     "tenantSeatingAreas": "Seating Areas",
     "tenantTables": "Tables",
     "tenantWaiters": "Waiters",
-    "tenantCustomers": "Customers"
+    "tenantCustomers": "Customers",
+    "reservations": "Reservations"
   },
   "common": {
     "adminSaas": "Admin SaaS",
@@ -1508,5 +1509,55 @@
     "fetchError": "Failed to load customers",
     "saveError": "Failed to save customer",
     "deleteError": "Failed to delete customer"
+  },
+  "reservations": {
+    "title": "Reservations",
+    "add": "Add Reservation",
+    "edit": "Edit Reservation",
+    "store": "Store",
+    "primaryTable": "Primary Table",
+    "table": "Table",
+    "reservedAt": "Date/Time",
+    "duration": "Duration (min)",
+    "guests": "Guests",
+    "customer": "Customer",
+    "existingCustomer": "Existing Customer (optional)",
+    "noCustomer": "None (use name/phone below)",
+    "customerName": "Guest Name",
+    "customerPhone": "Phone",
+    "customerEmail": "Email",
+    "notes": "Notes",
+    "statusLabel": "Status",
+    "sourceLabel": "Source",
+    "additionalTables": "Additional Tables (for merging)",
+    "noOtherTables": "No other tables in this store",
+    "allStores": "All Stores",
+    "allStatuses": "All Statuses",
+    "empty": "No reservations found",
+    "storeRequired": "Store is required",
+    "tableRequired": "Primary table is required",
+    "dateRequired": "Reserved date is required",
+    "guestCountRequired": "Guest count is required",
+    "confirmDelete": "Are you sure you want to delete this reservation?",
+    "created": "Reservation created successfully",
+    "updated": "Reservation updated successfully",
+    "deleted": "Reservation deleted successfully",
+    "fetchError": "Failed to load reservations",
+    "saveError": "Failed to save reservation",
+    "deleteError": "Failed to delete reservation",
+    "status": {
+      "pending": "Pending",
+      "confirmed": "Confirmed",
+      "checked_in": "Checked In",
+      "completed": "Completed",
+      "cancelled": "Cancelled",
+      "no_show": "No Show"
+    },
+    "source": {
+      "phone": "Phone",
+      "online": "Online",
+      "walk_in": "Walk-in",
+      "third_party": "Third Party"
+    }
   }
 }

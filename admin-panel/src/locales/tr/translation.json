@@ -58,7 +58,8 @@
     "tenantSeatingAreas": "Oturma Alanları",
     "tenantTables": "Masalar",
     "tenantWaiters": "Garsonlar",
-    "tenantCustomers": "Müşteriler"
+    "tenantCustomers": "Müşteriler",
+    "reservations": "Rezervasyonlar"
   },
   "common": {
     "adminSaas": "Admin SaaS",
@@ -1508,5 +1509,55 @@
     "fetchError": "Müşteriler yüklenemedi",
     "saveError": "Müşteri kaydedilemedi",
     "deleteError": "Müşteri silinemedi"
+  },
+  "reservations": {
+    "title": "Rezervasyonlar",
+    "add": "Rezervasyon Ekle",
+    "edit": "Rezervasyon Düzenle",
+    "store": "Mağaza",
+    "primaryTable": "Ana Masa",
+    "table": "Masa",
+    "reservedAt": "Tarih/Saat",
+    "duration": "Süre (dk)",
+    "guests": "Kişi",
+    "customer": "Müşteri",
+    "existingCustomer": "Mevcut Müşteri (opsiyonel)",
+    "noCustomer": "Yok (aşağıdaki ad/telefonu kullan)",
+    "customerName": "Misafir Adı",
+    "customerPhone": "Telefon",
+    "customerEmail": "E-posta",
+    "notes": "Notlar",
+    "statusLabel": "Durum",
+    "sourceLabel": "Kaynak",
+    "additionalTables": "Ek Masalar (birleştirme için)",
+    "noOtherTables": "Bu mağazada başka masa yok",
+    "allStores": "Tüm Mağazalar",
+    "allStatuses": "Tüm Durumlar",
+    "empty": "Rezervasyon bulunamadı",
+    "storeRequired": "Mağaza gereklidir",
+    "tableRequired": "Ana masa gereklidir",
+    "dateRequired": "Rezervasyon tarihi gereklidir",
+    "guestCountRequired": "Kişi sayısı gereklidir",
+    "confirmDelete": "Bu rezervasyonu silmek istediğinizden emin misiniz?",
+    "created": "Rezervasyon başarıyla oluşturuldu",
+    "updated": "Rezervasyon başarıyla güncellendi",
+    "deleted": "Rezervasyon başarıyla silindi",
+    "fetchError": "Rezervasyonlar yüklenemedi",
+    "saveError": "Rezervasyon kaydedilemedi",
+    "deleteError": "Rezervasyon silinemedi",
+    "status": {
+      "pending": "Beklemede",
+      "confirmed": "Onaylandı",
+      "checked_in": "Giriş Yapıldı",
+      "completed": "Tamamlandı",
+      "cancelled": "İptal Edildi",
+      "no_show": "Gelmedi"
+    },
+    "source": {
+      "phone": "Telefon",
+      "online": "Online",
+      "walk_in": "Kapıdan",
+      "third_party": "Üçüncü Taraf"
+    }
   }
 }

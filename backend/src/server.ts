@@ -35,6 +35,7 @@ import tenantSeatingAreaRoutes from './routes/tenantSeatingArea.routes';
 import tenantTableStructureRoutes from './routes/tenantTableStructure.routes';
 import tenantWaiterRoutes from './routes/tenantWaiter.routes';
 import tenantCustomerRoutes from './routes/tenantCustomer.routes';
+import reservationRoutes from './routes/reservation.routes';
 import addonTypeRoutes from './routes/addonType.routes';
 import addonRoutes from './routes/addon.routes';
 import orderSourceRoutes from './routes/orderSource.routes';
@@ -185,6 +186,7 @@ app.use('/api/tenant', tenantSeatingAreaRoutes);
 app.use('/api/tenant', tenantTableStructureRoutes);
 app.use('/api/tenant', tenantWaiterRoutes);
 app.use('/api/tenant', tenantCustomerRoutes);
+app.use('/api/tenant', reservationRoutes);
 
 
 

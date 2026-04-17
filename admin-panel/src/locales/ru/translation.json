@@ -58,7 +58,8 @@
     "tenantSeatingAreas": "Зоны рассадки",
     "tenantTables": "Столы",
     "tenantWaiters": "Официанты",
-    "tenantCustomers": "Клиенты"
+    "tenantCustomers": "Клиенты",
+    "reservations": "Бронирования"
   },
   "common": {
     "adminSaas": "Admin SaaS",
@@ -1508,5 +1509,55 @@
     "fetchError": "Не удалось загрузить клиентов",
     "saveError": "Не удалось сохранить клиента",
     "deleteError": "Не удалось удалить клиента"
+  },
+  "reservations": {
+    "title": "Бронирования",
+    "add": "Добавить Бронирование",
+    "edit": "Редактировать Бронирование",
+    "store": "Магазин",
+    "primaryTable": "Основной Стол",
+    "table": "Стол",
+    "reservedAt": "Дата/Время",
+    "duration": "Длительность (мин)",
+    "guests": "Гости",
+    "customer": "Клиент",
+    "existingCustomer": "Существующий Клиент (необязательно)",
+    "noCustomer": "Нет (использовать имя/телефон ниже)",
+    "customerName": "Имя Гостя",
+    "customerPhone": "Телефон",
+    "customerEmail": "Email",
+    "notes": "Заметки",
+    "statusLabel": "Статус",
+    "sourceLabel": "Источник",
+    "additionalTables": "Дополнительные Столы (для объединения)",
+    "noOtherTables": "В этом магазине нет других столов",
+    "allStores": "Все Магазины",
+    "allStatuses": "Все Статусы",
+    "empty": "Бронирования не найдены",
+    "storeRequired": "Магазин обязателен",
+    "tableRequired": "Основной стол обязателен",
+    "dateRequired": "Дата бронирования обязательна",
+    "guestCountRequired": "Количество гостей обязательно",
+    "confirmDelete": "Вы уверены, что хотите удалить это бронирование?",
+    "created": "Бронирование успешно создано",
+    "updated": "Бронирование успешно обновлено",
+    "deleted": "Бронирование успешно удалено",
+    "fetchError": "Не удалось загрузить бронирования",
+    "saveError": "Не удалось сохранить бронирование",
+    "deleteError": "Не удалось удалить бронирование",
+    "status": {
+      "pending": "Ожидание",
+      "confirmed": "Подтверждено",
+      "checked_in": "Заселён",
+      "completed": "Завершено",
+      "cancelled": "Отменено",
+      "no_show": "Не Явился"
+    },
+    "source": {
+      "phone": "Телефон",
+      "online": "Онлайн",
+      "walk_in": "Без Брони",
+      "third_party": "Третья Сторона"
+    }
   }
 }

@@ -58,7 +58,8 @@
     "tenantSeatingAreas": "Zones de Places",
     "tenantTables": "Tables",
     "tenantWaiters": "Serveurs",
-    "tenantCustomers": "Clients"
+    "tenantCustomers": "Clients",
+    "reservations": "Réservations"
   },
   "common": {
     "adminSaas": "Admin SaaS",
@@ -1508,5 +1509,55 @@
     "fetchError": "Échec du chargement des clients",
     "saveError": "Échec de l'enregistrement du client",
     "deleteError": "Échec de la suppression du client"
+  },
+  "reservations": {
+    "title": "Réservations",
+    "add": "Ajouter une Réservation",
+    "edit": "Modifier la Réservation",
+    "store": "Boutique",
+    "primaryTable": "Table Principale",
+    "table": "Table",
+    "reservedAt": "Date/Heure",
+    "duration": "Durée (min)",
+    "guests": "Invités",
+    "customer": "Client",
+    "existingCustomer": "Client Existant (optionnel)",
+    "noCustomer": "Aucun (utiliser nom/téléphone ci-dessous)",
+    "customerName": "Nom de l'Invité",
+    "customerPhone": "Téléphone",
+    "customerEmail": "E-mail",
+    "notes": "Notes",
+    "statusLabel": "Statut",
+    "sourceLabel": "Source",
+    "additionalTables": "Tables Supplémentaires (pour fusionner)",
+    "noOtherTables": "Aucune autre table dans cette boutique",
+    "allStores": "Toutes les Boutiques",
+    "allStatuses": "Tous les Statuts",
+    "empty": "Aucune réservation trouvée",
+    "storeRequired": "La boutique est obligatoire",
+    "tableRequired": "La table principale est obligatoire",
+    "dateRequired": "La date de réservation est obligatoire",
+    "guestCountRequired": "Le nombre d'invités est obligatoire",
+    "confirmDelete": "Êtes-vous sûr de vouloir supprimer cette réservation ?",
+    "created": "Réservation créée avec succès",
+    "updated": "Réservation mise à jour avec succès",
+    "deleted": "Réservation supprimée avec succès",
+    "fetchError": "Échec du chargement des réservations",
+    "saveError": "Échec de l'enregistrement de la réservation",
+    "deleteError": "Échec de la suppression de la réservation",
+    "status": {
+      "pending": "En attente",
+      "confirmed": "Confirmée",
+      "checked_in": "Enregistrée",
+      "completed": "Terminée",
+      "cancelled": "Annulée",
+      "no_show": "Non présenté"
+    },
+    "source": {
+      "phone": "Téléphone",
+      "online": "En ligne",
+      "walk_in": "Sur Place",
+      "third_party": "Tiers"
+    }
   }
 }

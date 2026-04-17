@@ -270,7 +270,7 @@ Create full CRUD for tenant_waiters.
 No translations. PIN-based auth (unique per tenant), per-store optional, image_url. Also manages tenant_waiter_sessions (login/logout tracking with device_identifier, ip_address).
 ```
 
-### [ ] 23. Tenant Customers
+### [x] 23. Tenant Customers
 
 Tables: `tenant_customers`
 
@@ -280,7 +280,7 @@ Create full CRUD for tenant_customers.
 No translations. Supports registered (password_hash) and guest (NULL password). Address fields, phone, email (unique per tenant), notes.
 ```
 
-### [ ] 24. Reservations
+### [x] 24. Reservations
 
 Tables: `reservations` + `reservation_tables`
 

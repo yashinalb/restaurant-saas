@@ -58,7 +58,8 @@
     "tenantSeatingAreas": "Sitzbereiche",
     "tenantTables": "Tische",
     "tenantWaiters": "Kellner",
-    "tenantCustomers": "Kunden"
+    "tenantCustomers": "Kunden",
+    "reservations": "Reservierungen"
   },
   "common": {
     "adminSaas": "Admin SaaS",
@@ -1508,5 +1509,55 @@
     "fetchError": "Kunden konnten nicht geladen werden",
     "saveError": "Kunde konnte nicht gespeichert werden",
     "deleteError": "Kunde konnte nicht gelöscht werden"
+  },
+  "reservations": {
+    "title": "Reservierungen",
+    "add": "Reservierung hinzufügen",
+    "edit": "Reservierung bearbeiten",
+    "store": "Filiale",
+    "primaryTable": "Haupttisch",
+    "table": "Tisch",
+    "reservedAt": "Datum/Uhrzeit",
+    "duration": "Dauer (Min)",
+    "guests": "Gäste",
+    "customer": "Kunde",
+    "existingCustomer": "Bestehender Kunde (optional)",
+    "noCustomer": "Keiner (Name/Telefon unten verwenden)",
+    "customerName": "Gastname",
+    "customerPhone": "Telefon",
+    "customerEmail": "E-Mail",
+    "notes": "Notizen",
+    "statusLabel": "Status",
+    "sourceLabel": "Quelle",
+    "additionalTables": "Zusätzliche Tische (zum Zusammenlegen)",
+    "noOtherTables": "Keine weiteren Tische in dieser Filiale",
+    "allStores": "Alle Filialen",
+    "allStatuses": "Alle Status",
+    "empty": "Keine Reservierungen gefunden",
+    "storeRequired": "Filiale ist erforderlich",
+    "tableRequired": "Haupttisch ist erforderlich",
+    "dateRequired": "Reservierungsdatum ist erforderlich",
+    "guestCountRequired": "Gästeanzahl ist erforderlich",
+    "confirmDelete": "Möchten Sie diese Reservierung wirklich löschen?",
+    "created": "Reservierung erfolgreich erstellt",
+    "updated": "Reservierung erfolgreich aktualisiert",
+    "deleted": "Reservierung erfolgreich gelöscht",
+    "fetchError": "Reservierungen konnten nicht geladen werden",
+    "saveError": "Reservierung konnte nicht gespeichert werden",
+    "deleteError": "Reservierung konnte nicht gelöscht werden",
+    "status": {
+      "pending": "Ausstehend",
+      "confirmed": "Bestätigt",
+      "checked_in": "Eingecheckt",
+      "completed": "Abgeschlossen",
+      "cancelled": "Storniert",
+      "no_show": "Nicht erschienen"
+    },
+    "source": {
+      "phone": "Telefon",
+      "online": "Online",
+      "walk_in": "Laufkundschaft",
+      "third_party": "Drittanbieter"
+    }
   }
 }
