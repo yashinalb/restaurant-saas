@@ -314,7 +314,7 @@ Create full CRUD for tenant_order_types + tenant_order_type_translations.
 Has import-from-master pattern (master_order_type_id FK).
 ```
 
-### [ ] 27. Tenant Order Item Statuses
+### [x] 27. Tenant Order Item Statuses
 
 Tables: `tenant_order_item_statuses` + `tenant_order_item_status_translations`
 
@@ -324,7 +324,7 @@ Create full CRUD for tenant_order_item_statuses + tenant_order_item_status_trans
 Has import-from-master pattern (master_order_item_status_id FK). Has color field.
 ```
 
-### [ ] 28. Tenant Payment Statuses
+### [x] 28. Tenant Payment Statuses
 
 Tables: `tenant_payment_statuses` + `tenant_payment_status_translations`
 

@@ -36,6 +36,8 @@ import {
   CalendarClock,
   Inbox,
   Tags,
+  ListChecks,
+  BadgeDollarSign,
   LucideIcon
 } from 'lucide-react';
 
@@ -176,6 +178,8 @@ export default function DashboardLayout() {
         { name: t('navigation.reservations', 'Reservations'), to: '/tenant/reservations', icon: CalendarClock, show: hasPermission('reservations.view') },
         { name: t('navigation.tenantOrderSources', 'Order Sources'), to: '/tenant/order-sources', icon: Inbox, show: hasPermission('order_sources.view') },
         { name: t('navigation.tenantOrderTypes', 'Order Types'), to: '/tenant/order-types', icon: Tags, show: hasPermission('order_types.view') },
+        { name: t('navigation.tenantOrderItemStatuses', 'Order Item Statuses'), to: '/tenant/order-item-statuses', icon: ListChecks, show: hasPermission('order_item_statuses.view') },
+        { name: t('navigation.tenantPaymentStatuses', 'Payment Statuses'), to: '/tenant/payment-statuses', icon: BadgeDollarSign, show: hasPermission('payment_statuses.view') },
       ].filter(item => item.show)
     },
     {
