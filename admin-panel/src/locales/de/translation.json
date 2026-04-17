@@ -66,7 +66,8 @@
     "tenantOrderItemStatuses": "Artikelstatus",
     "tenantPaymentStatuses": "Zahlungsstatus",
     "tenantPaymentTypes": "Zahlungsarten",
-    "orders": "Bestellungen"
+    "orders": "Bestellungen",
+    "transactions": "Transaktionen"
   },
   "common": {
     "adminSaas": "Admin SaaS",
@@ -1772,5 +1773,53 @@
     "importedCount": "Erfolgreich importiert",
     "selected": "ausgewählt",
     "noMasterAvailable": "Keine Stamm-Zahlungsarten verfügbar"
+  },
+  "transactions": {
+    "title": "Transaktionen",
+    "add": "Neue Transaktion",
+    "edit": "Transaktion bearbeiten",
+    "detailTitle": "Transaktion",
+    "id": "#",
+    "createdAt": "Datum",
+    "store": "Filiale",
+    "order": "Bestellung",
+    "currency": "Währung",
+    "statusLabel": "Zahlungsstatus",
+    "amountBeforeVat": "Betrag ohne MwSt",
+    "vatAmount": "MwSt",
+    "serviceCharge": "Service-Gebühr",
+    "totalAmount": "Gesamt",
+    "total": "Gesamt",
+    "paid": "Bezahlt",
+    "remaining": "Rest",
+    "notes": "Notizen",
+    "payments": "Zahlungen",
+    "addPayment": "Zahlung hinzufügen",
+    "paymentType": "Art",
+    "modeLabel": "Modus",
+    "amount": "Betrag",
+    "exchangeRate": "Kurs",
+    "reference": "Referenz",
+    "noPayments": "Noch keine Zahlungen. Klicken Sie auf 'Zahlung hinzufügen', um zu beginnen.",
+    "allStores": "Alle Filialen",
+    "allStatuses": "Alle Status",
+    "empty": "Keine Transaktionen gefunden",
+    "storeRequired": "Filiale ist erforderlich",
+    "orderRequired": "Bestellung ist erforderlich",
+    "statusRequired": "Zahlungsstatus ist erforderlich",
+    "currencyRequired": "Währung ist erforderlich",
+    "confirmDelete": "Möchten Sie diese Transaktion wirklich löschen?",
+    "created": "Transaktion erfolgreich erstellt",
+    "updated": "Transaktion erfolgreich aktualisiert",
+    "deleted": "Transaktion erfolgreich gelöscht",
+    "fetchError": "Transaktionen konnten nicht geladen werden",
+    "saveError": "Transaktion konnte nicht gespeichert werden",
+    "deleteError": "Transaktion konnte nicht gelöscht werden",
+    "mode": {
+      "full": "Voll",
+      "partial": "Teilweise",
+      "per_item": "Pro Artikel",
+      "mixed": "Gemischt"
+    }
   }
 }

@@ -66,7 +66,8 @@
     "tenantOrderItemStatuses": "Статусы Позиций Заказа",
     "tenantPaymentStatuses": "Статусы Платежей",
     "tenantPaymentTypes": "Типы Платежей",
-    "orders": "Заказы"
+    "orders": "Заказы",
+    "transactions": "Транзакции"
   },
   "common": {
     "adminSaas": "Admin SaaS",
@@ -1772,5 +1773,53 @@
     "importedCount": "Успешно импортировано",
     "selected": "выбрано",
     "noMasterAvailable": "Нет доступных мастер-типов платежей"
+  },
+  "transactions": {
+    "title": "Транзакции",
+    "add": "Новая Транзакция",
+    "edit": "Редактировать Транзакцию",
+    "detailTitle": "Транзакция",
+    "id": "#",
+    "createdAt": "Дата",
+    "store": "Магазин",
+    "order": "Заказ",
+    "currency": "Валюта",
+    "statusLabel": "Статус Платежа",
+    "amountBeforeVat": "Сумма без НДС",
+    "vatAmount": "НДС",
+    "serviceCharge": "Сервисный Сбор",
+    "totalAmount": "Итого",
+    "total": "Итого",
+    "paid": "Оплачено",
+    "remaining": "Остаток",
+    "notes": "Заметки",
+    "payments": "Платежи",
+    "addPayment": "Добавить Платёж",
+    "paymentType": "Тип",
+    "modeLabel": "Режим",
+    "amount": "Сумма",
+    "exchangeRate": "Курс",
+    "reference": "Ссылка",
+    "noPayments": "Платежи отсутствуют. Нажмите 'Добавить Платёж' для начала.",
+    "allStores": "Все Магазины",
+    "allStatuses": "Все Статусы",
+    "empty": "Транзакции не найдены",
+    "storeRequired": "Магазин обязателен",
+    "orderRequired": "Заказ обязателен",
+    "statusRequired": "Статус платежа обязателен",
+    "currencyRequired": "Валюта обязательна",
+    "confirmDelete": "Вы уверены, что хотите удалить эту транзакцию?",
+    "created": "Транзакция успешно создана",
+    "updated": "Транзакция успешно обновлена",
+    "deleted": "Транзакция успешно удалена",
+    "fetchError": "Не удалось загрузить транзакции",
+    "saveError": "Не удалось сохранить транзакцию",
+    "deleteError": "Не удалось удалить транзакцию",
+    "mode": {
+      "full": "Полный",
+      "partial": "Частичный",
+      "per_item": "По Позициям",
+      "mixed": "Смешанный"
+    }
   }
 }

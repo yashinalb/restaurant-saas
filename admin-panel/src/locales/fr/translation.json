@@ -66,7 +66,8 @@
     "tenantOrderItemStatuses": "Statuts d'Articles",
     "tenantPaymentStatuses": "Statuts de Paiement",
     "tenantPaymentTypes": "Types de Paiement",
-    "orders": "Commandes"
+    "orders": "Commandes",
+    "transactions": "Transactions"
   },
   "common": {
     "adminSaas": "Admin SaaS",
@@ -1772,5 +1773,53 @@
     "importedCount": "Importé avec succès",
     "selected": "sélectionnés",
     "noMasterAvailable": "Aucun type de paiement principal disponible"
+  },
+  "transactions": {
+    "title": "Transactions",
+    "add": "Nouvelle Transaction",
+    "edit": "Modifier la Transaction",
+    "detailTitle": "Transaction",
+    "id": "#",
+    "createdAt": "Date",
+    "store": "Boutique",
+    "order": "Commande",
+    "currency": "Devise",
+    "statusLabel": "Statut de Paiement",
+    "amountBeforeVat": "Montant Hors TVA",
+    "vatAmount": "TVA",
+    "serviceCharge": "Frais de Service",
+    "totalAmount": "Total",
+    "total": "Total",
+    "paid": "Payé",
+    "remaining": "Restant",
+    "notes": "Notes",
+    "payments": "Paiements",
+    "addPayment": "Ajouter un Paiement",
+    "paymentType": "Type",
+    "modeLabel": "Mode",
+    "amount": "Montant",
+    "exchangeRate": "Taux",
+    "reference": "Référence",
+    "noPayments": "Aucun paiement pour le moment. Cliquez sur 'Ajouter un Paiement' pour commencer.",
+    "allStores": "Toutes les Boutiques",
+    "allStatuses": "Tous les Statuts",
+    "empty": "Aucune transaction trouvée",
+    "storeRequired": "La boutique est obligatoire",
+    "orderRequired": "La commande est obligatoire",
+    "statusRequired": "Le statut de paiement est obligatoire",
+    "currencyRequired": "La devise est obligatoire",
+    "confirmDelete": "Êtes-vous sûr de vouloir supprimer cette transaction ?",
+    "created": "Transaction créée avec succès",
+    "updated": "Transaction mise à jour avec succès",
+    "deleted": "Transaction supprimée avec succès",
+    "fetchError": "Échec du chargement des transactions",
+    "saveError": "Échec de l'enregistrement de la transaction",
+    "deleteError": "Échec de la suppression de la transaction",
+    "mode": {
+      "full": "Complet",
+      "partial": "Partiel",
+      "per_item": "Par Article",
+      "mixed": "Mixte"
+    }
   }
 }

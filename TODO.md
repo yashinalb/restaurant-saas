@@ -359,7 +359,7 @@ Create full CRUD for tenant_payment_types + tenant_payment_type_translations.
 Has import-from-master pattern (master_payment_type_id FK).
 ```
 
-### [ ] 31. Transactions + Transaction Payments
+### [x] 31. Transactions + Transaction Payments
 
 Tables: `transactions` + `transaction_payments`
 

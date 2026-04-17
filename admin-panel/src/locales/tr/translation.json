@@ -66,7 +66,8 @@
     "tenantOrderItemStatuses": "Sipariş Öğe Durumları",
     "tenantPaymentStatuses": "Ödeme Durumları",
     "tenantPaymentTypes": "Ödeme Türleri",
-    "orders": "Siparişler"
+    "orders": "Siparişler",
+    "transactions": "İşlemler"
   },
   "common": {
     "adminSaas": "Admin SaaS",
@@ -1772,5 +1773,53 @@
     "importedCount": "Başarıyla içe aktarıldı",
     "selected": "seçildi",
     "noMasterAvailable": "Ana ödeme türü bulunamadı"
+  },
+  "transactions": {
+    "title": "İşlemler",
+    "add": "Yeni İşlem",
+    "edit": "İşlemi Düzenle",
+    "detailTitle": "İşlem",
+    "id": "#",
+    "createdAt": "Tarih",
+    "store": "Mağaza",
+    "order": "Sipariş",
+    "currency": "Para Birimi",
+    "statusLabel": "Ödeme Durumu",
+    "amountBeforeVat": "KDV Öncesi Tutar",
+    "vatAmount": "KDV",
+    "serviceCharge": "Servis Ücreti",
+    "totalAmount": "Toplam",
+    "total": "Toplam",
+    "paid": "Ödenen",
+    "remaining": "Kalan",
+    "notes": "Notlar",
+    "payments": "Ödemeler",
+    "addPayment": "Ödeme Ekle",
+    "paymentType": "Tür",
+    "modeLabel": "Mod",
+    "amount": "Tutar",
+    "exchangeRate": "Kur",
+    "reference": "Referans",
+    "noPayments": "Henüz ödeme yok. Başlamak için 'Ödeme Ekle'ye tıklayın.",
+    "allStores": "Tüm Mağazalar",
+    "allStatuses": "Tüm Durumlar",
+    "empty": "İşlem bulunamadı",
+    "storeRequired": "Mağaza gereklidir",
+    "orderRequired": "Sipariş gereklidir",
+    "statusRequired": "Ödeme durumu gereklidir",
+    "currencyRequired": "Para birimi gereklidir",
+    "confirmDelete": "Bu işlemi silmek istediğinizden emin misiniz?",
+    "created": "İşlem başarıyla oluşturuldu",
+    "updated": "İşlem başarıyla güncellendi",
+    "deleted": "İşlem başarıyla silindi",
+    "fetchError": "İşlemler yüklenemedi",
+    "saveError": "İşlem kaydedilemedi",
+    "deleteError": "İşlem silinemedi",
+    "mode": {
+      "full": "Tam",
+      "partial": "Kısmi",
+      "per_item": "Ürün Başına",
+      "mixed": "Karışık"
+    }
   }
 }

@@ -200,6 +200,7 @@ export default function DashboardLayout() {
       icon: ShoppingCart,
       items: [
         { name: t('navigation.orders', 'Orders'), to: '/tenant/orders', icon: ShoppingCart, show: hasPermission('orders.view') },
+        { name: t('navigation.transactions', 'Transactions'), to: '/tenant/transactions', icon: CreditCard, show: hasPermission('transactions.view') },
       ].filter(item => item.show)
     }
   ].filter(group => group.items.length > 0) : [];

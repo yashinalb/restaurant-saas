@@ -66,7 +66,8 @@
     "tenantOrderItemStatuses": "Estados de Artículos",
     "tenantPaymentStatuses": "Estados de Pago",
     "tenantPaymentTypes": "Tipos de Pago",
-    "orders": "Pedidos"
+    "orders": "Pedidos",
+    "transactions": "Transacciones"
   },
   "common": {
     "adminSaas": "Admin SaaS",
@@ -1772,5 +1773,53 @@
     "importedCount": "Importados con éxito",
     "selected": "seleccionados",
     "noMasterAvailable": "No hay tipos de pago maestros disponibles"
+  },
+  "transactions": {
+    "title": "Transacciones",
+    "add": "Nueva Transacción",
+    "edit": "Editar Transacción",
+    "detailTitle": "Transacción",
+    "id": "#",
+    "createdAt": "Fecha",
+    "store": "Tienda",
+    "order": "Pedido",
+    "currency": "Moneda",
+    "statusLabel": "Estado de Pago",
+    "amountBeforeVat": "Monto antes de IVA",
+    "vatAmount": "IVA",
+    "serviceCharge": "Cargo por Servicio",
+    "totalAmount": "Total",
+    "total": "Total",
+    "paid": "Pagado",
+    "remaining": "Restante",
+    "notes": "Notas",
+    "payments": "Pagos",
+    "addPayment": "Añadir Pago",
+    "paymentType": "Tipo",
+    "modeLabel": "Modo",
+    "amount": "Monto",
+    "exchangeRate": "Tasa",
+    "reference": "Referencia",
+    "noPayments": "Aún no hay pagos. Haga clic en 'Añadir Pago' para comenzar.",
+    "allStores": "Todas las Tiendas",
+    "allStatuses": "Todos los Estados",
+    "empty": "No se encontraron transacciones",
+    "storeRequired": "La tienda es obligatoria",
+    "orderRequired": "El pedido es obligatorio",
+    "statusRequired": "El estado de pago es obligatorio",
+    "currencyRequired": "La moneda es obligatoria",
+    "confirmDelete": "¿Está seguro de que desea eliminar esta transacción?",
+    "created": "Transacción creada exitosamente",
+    "updated": "Transacción actualizada exitosamente",
+    "deleted": "Transacción eliminada exitosamente",
+    "fetchError": "Error al cargar transacciones",
+    "saveError": "Error al guardar transacción",
+    "deleteError": "Error al eliminar transacción",
+    "mode": {
+      "full": "Completo",
+      "partial": "Parcial",
+      "per_item": "Por Artículo",
+      "mixed": "Mixto"
+    }
   }
 }
