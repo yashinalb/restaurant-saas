@@ -220,6 +220,7 @@ export default function DashboardLayout() {
         { name: t('navigation.expenses', 'Expenses'), to: '/tenant/expenses', icon: Receipt, show: hasPermission('expenses.view') },
         { name: t('navigation.kdsOrders', 'Kitchen Display'), to: '/tenant/kds-orders', icon: ChefHat, show: hasPermission('kds_orders.view') },
         { name: t('navigation.dailyReports', 'Daily Reports'), to: '/tenant/daily-reports', icon: BarChart3, show: hasPermission('daily_reports.view') },
+        { name: t('navigation.cashSessions', 'Cash Sessions'), to: '/tenant/cash-sessions', icon: Wallet, show: hasPermission('cash_sessions.view') },
       ].filter(item => item.show)
     }
   ].filter(group => group.items.length > 0) : [];

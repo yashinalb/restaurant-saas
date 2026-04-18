@@ -591,7 +591,11 @@ async function seedRestaurantLookups() {
       ('daily_reports.view', 'View Daily Reports', 'Can view daily report snapshots', 'daily_reports', 1),
       ('daily_reports.create', 'Create Daily Reports', 'Can create/generate daily report snapshots', 'daily_reports', 1),
       ('daily_reports.edit', 'Edit Daily Reports', 'Can edit daily report snapshots', 'daily_reports', 1),
-      ('daily_reports.delete', 'Delete Daily Reports', 'Can delete daily report snapshots', 'daily_reports', 1)
+      ('daily_reports.delete', 'Delete Daily Reports', 'Can delete daily report snapshots', 'daily_reports', 1),
+      ('cash_sessions.view', 'View Cash Sessions', 'Can view cash register sessions', 'cash_sessions', 1),
+      ('cash_sessions.create', 'Open Cash Sessions', 'Can open cash register sessions', 'cash_sessions', 1),
+      ('cash_sessions.edit', 'Close/Edit Cash Sessions', 'Can close and edit cash register sessions', 'cash_sessions', 1),
+      ('cash_sessions.delete', 'Delete Cash Sessions', 'Can delete cash register sessions', 'cash_sessions', 1)
     `);
     console.log('✅ Restaurant permissions seeded\n');
 

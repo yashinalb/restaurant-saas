@@ -485,7 +485,7 @@ Create full CRUD for daily_report_snapshots.
 No translations. Per-store + currency. End-of-day aggregation: total_orders, total_revenue, total_tax, total_tips, total_discounts, total_refunds, total_expenses, order_count_by_type JSON, payment_breakdown JSON. Unique per (tenant, store, date, currency).
 ```
 
-### [] 42. Cash Register Sessions
+### [x] 42. Cash Register Sessions
 
 Tables: `cash_register_sessions`
 
