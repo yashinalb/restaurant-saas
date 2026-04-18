@@ -394,7 +394,7 @@ Create full CRUD for tenant_suppliers.
 No translations. Contact info: name, contact_person, phone, email, address, tax_id, notes.
 ```
 
-### [] 34. Tenant Inventory Products
+### [x] 34. Tenant Inventory Products
 
 Tables: `tenant_inventory_products` + `tenant_inventory_product_suppliers`
 
@@ -404,7 +404,7 @@ Create full CRUD for tenant_inventory_products.
 No translations. Raw materials (distinct from menu items). product_code, stock tracking (unit_in_stock, low_stock_threshold), carton support (has_carton, units_per_carton), VAT fields, buying prices. Many-to-many supplier link via tenant_inventory_product_suppliers.
 ```
 
-### [ ] 35. Supplier Invoices + Stock Intakes
+### [] 35. Supplier Invoices + Stock Intakes
 
 Tables: `supplier_invoices` + `stock_intakes`
 

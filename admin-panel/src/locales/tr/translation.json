@@ -69,7 +69,8 @@
     "orders": "Siparişler",
     "transactions": "İşlemler",
     "qrInvoiceTokens": "QR Fatura Jetonları",
-    "tenantSuppliers": "Tedarikçiler"
+    "tenantSuppliers": "Tedarikçiler",
+    "tenantInventoryProducts": "Envanter Ürünleri"
   },
   "common": {
     "adminSaas": "Admin SaaS",
@@ -1876,5 +1877,43 @@
     "saveError": "Tedarikçi kaydedilemedi",
     "deleteError": "Tedarikçi silinemedi",
     "empty": "Tedarikçi bulunamadı"
+  },
+  "tenantInventoryProducts": {
+    "title": "Envanter Ürünleri",
+    "add": "Ürün Ekle",
+    "edit": "Ürün Düzenle",
+    "productCode": "Ürün Kodu",
+    "name": "Ad",
+    "unitInStock": "Stoktaki Birim",
+    "lowStockThreshold": "Düşük Stok Eşiği",
+    "isWeighted": "Ağırlıklı",
+    "hasCarton": "Kolisi Var",
+    "unitsPerCarton": "Koli Başına Birim",
+    "buyingPriceExclVat": "Alış Fiyatı (KDV Hariç)",
+    "buyingPriceInclVat": "Alış Fiyatı (KDV Dahil)",
+    "vatType": "KDV Türü",
+    "vatPercent": "KDV %",
+    "vatPercentage": "Yüzde",
+    "vatExempt": "Muaf",
+    "suppliers": "Tedarikçiler",
+    "addSupplier": "Tedarikçi Ekle",
+    "supplierSku": "Tedarikçi SKU",
+    "setPrimary": "Birincil olarak ayarla",
+    "noSuppliers": "Bağlı tedarikçi yok. Bağlamak için \"Tedarikçi Ekle\" düğmesine tıklayın.",
+    "noMoreSuppliers": "Eklenecek başka tedarikçi yok",
+    "allSuppliers": "Tüm Tedarikçiler",
+    "allStatuses": "Tüm Durumlar",
+    "lowStockOnly": "Yalnızca düşük stok",
+    "searchPlaceholder": "Ad veya kod ile ara",
+    "nameRequired": "Ad gereklidir",
+    "unitsPerCartonRequired": "Koli etkinleştirildiğinde koli başına birim gereklidir",
+    "confirmDelete": "Bu ürünü silmek istediğinizden emin misiniz?",
+    "created": "Ürün başarıyla oluşturuldu",
+    "updated": "Ürün başarıyla güncellendi",
+    "deleted": "Ürün başarıyla silindi",
+    "fetchError": "Envanter ürünleri yüklenemedi",
+    "saveError": "Ürün kaydedilemedi",
+    "deleteError": "Ürün silinemedi",
+    "empty": "Envanter ürünü bulunamadı"
   }
 }

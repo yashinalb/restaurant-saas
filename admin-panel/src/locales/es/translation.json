@@ -69,7 +69,8 @@
     "orders": "Pedidos",
     "transactions": "Transacciones",
     "qrInvoiceTokens": "Tokens QR de Factura",
-    "tenantSuppliers": "Proveedores"
+    "tenantSuppliers": "Proveedores",
+    "tenantInventoryProducts": "Productos de Inventario"
   },
   "common": {
     "adminSaas": "Admin SaaS",
@@ -1876,5 +1877,43 @@
     "saveError": "No se pudo guardar el proveedor",
     "deleteError": "No se pudo eliminar el proveedor",
     "empty": "No se encontraron proveedores"
+  },
+  "tenantInventoryProducts": {
+    "title": "Productos de Inventario",
+    "add": "Añadir Producto",
+    "edit": "Editar Producto",
+    "productCode": "Código de Producto",
+    "name": "Nombre",
+    "unitInStock": "Unidades en Stock",
+    "lowStockThreshold": "Umbral de Stock Bajo",
+    "isWeighted": "Pesado",
+    "hasCarton": "Tiene Caja",
+    "unitsPerCarton": "Unidades por Caja",
+    "buyingPriceExclVat": "Precio de Compra (sin IVA)",
+    "buyingPriceInclVat": "Precio de Compra (con IVA)",
+    "vatType": "Tipo de IVA",
+    "vatPercent": "IVA %",
+    "vatPercentage": "Porcentaje",
+    "vatExempt": "Exento",
+    "suppliers": "Proveedores",
+    "addSupplier": "Añadir Proveedor",
+    "supplierSku": "SKU del Proveedor",
+    "setPrimary": "Establecer como principal",
+    "noSuppliers": "No hay proveedores vinculados. Haga clic en \"Añadir Proveedor\" para vincular uno.",
+    "noMoreSuppliers": "No hay más proveedores para añadir",
+    "allSuppliers": "Todos los Proveedores",
+    "allStatuses": "Todos los Estados",
+    "lowStockOnly": "Solo stock bajo",
+    "searchPlaceholder": "Buscar por nombre o código",
+    "nameRequired": "El nombre es obligatorio",
+    "unitsPerCartonRequired": "Las unidades por caja son obligatorias cuando la caja está activada",
+    "confirmDelete": "¿Está seguro de que desea eliminar este producto?",
+    "created": "Producto creado exitosamente",
+    "updated": "Producto actualizado exitosamente",
+    "deleted": "Producto eliminado exitosamente",
+    "fetchError": "No se pudieron cargar los productos de inventario",
+    "saveError": "No se pudo guardar el producto",
+    "deleteError": "No se pudo eliminar el producto",
+    "empty": "No se encontraron productos de inventario"
   }
 }

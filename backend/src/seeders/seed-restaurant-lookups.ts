@@ -555,7 +555,11 @@ async function seedRestaurantLookups() {
       ('suppliers.view', 'View Suppliers', 'Can view suppliers', 'suppliers', 1),
       ('suppliers.create', 'Create Suppliers', 'Can create suppliers', 'suppliers', 1),
       ('suppliers.edit', 'Edit Suppliers', 'Can edit suppliers', 'suppliers', 1),
-      ('suppliers.delete', 'Delete Suppliers', 'Can delete suppliers', 'suppliers', 1)
+      ('suppliers.delete', 'Delete Suppliers', 'Can delete suppliers', 'suppliers', 1),
+      ('inventory_products.view', 'View Inventory Products', 'Can view inventory products', 'inventory_products', 1),
+      ('inventory_products.create', 'Create Inventory Products', 'Can create inventory products', 'inventory_products', 1),
+      ('inventory_products.edit', 'Edit Inventory Products', 'Can edit inventory products', 'inventory_products', 1),
+      ('inventory_products.delete', 'Delete Inventory Products', 'Can delete inventory products', 'inventory_products', 1)
     `);
     console.log('✅ Restaurant permissions seeded\n');
 

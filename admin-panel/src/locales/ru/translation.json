@@ -69,7 +69,8 @@
     "orders": "Заказы",
     "transactions": "Транзакции",
     "qrInvoiceTokens": "QR-токены счетов",
-    "tenantSuppliers": "Поставщики"
+    "tenantSuppliers": "Поставщики",
+    "tenantInventoryProducts": "Складские товары"
   },
   "common": {
     "adminSaas": "Admin SaaS",
@@ -1876,5 +1877,43 @@
     "saveError": "Не удалось сохранить поставщика",
     "deleteError": "Не удалось удалить поставщика",
     "empty": "Поставщики не найдены"
+  },
+  "tenantInventoryProducts": {
+    "title": "Складские товары",
+    "add": "Добавить товар",
+    "edit": "Редактировать товар",
+    "productCode": "Код товара",
+    "name": "Наименование",
+    "unitInStock": "Единиц на складе",
+    "lowStockThreshold": "Порог низкого запаса",
+    "isWeighted": "Весовой",
+    "hasCarton": "Имеет коробку",
+    "unitsPerCarton": "Единиц в коробке",
+    "buyingPriceExclVat": "Закупочная цена (без НДС)",
+    "buyingPriceInclVat": "Закупочная цена (с НДС)",
+    "vatType": "Тип НДС",
+    "vatPercent": "НДС %",
+    "vatPercentage": "Процент",
+    "vatExempt": "Освобождён",
+    "suppliers": "Поставщики",
+    "addSupplier": "Добавить поставщика",
+    "supplierSku": "Артикул поставщика",
+    "setPrimary": "Сделать основным",
+    "noSuppliers": "Нет связанных поставщиков. Нажмите \"Добавить поставщика\", чтобы связать.",
+    "noMoreSuppliers": "Нет больше поставщиков для добавления",
+    "allSuppliers": "Все поставщики",
+    "allStatuses": "Все статусы",
+    "lowStockOnly": "Только низкий запас",
+    "searchPlaceholder": "Поиск по названию или коду",
+    "nameRequired": "Наименование обязательно",
+    "unitsPerCartonRequired": "Единиц в коробке обязательно, когда коробка включена",
+    "confirmDelete": "Вы уверены, что хотите удалить этот товар?",
+    "created": "Товар успешно создан",
+    "updated": "Товар успешно обновлён",
+    "deleted": "Товар успешно удалён",
+    "fetchError": "Не удалось загрузить складские товары",
+    "saveError": "Не удалось сохранить товар",
+    "deleteError": "Не удалось удалить товар",
+    "empty": "Складские товары не найдены"
   }
 }

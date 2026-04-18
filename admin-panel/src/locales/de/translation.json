@@ -69,7 +69,8 @@
     "orders": "Bestellungen",
     "transactions": "Transaktionen",
     "qrInvoiceTokens": "QR-Rechnungstoken",
-    "tenantSuppliers": "Lieferanten"
+    "tenantSuppliers": "Lieferanten",
+    "tenantInventoryProducts": "Lagerprodukte"
   },
   "common": {
     "adminSaas": "Admin SaaS",
@@ -1876,5 +1877,43 @@
     "saveError": "Lieferant konnte nicht gespeichert werden",
     "deleteError": "Lieferant konnte nicht gelöscht werden",
     "empty": "Keine Lieferanten gefunden"
+  },
+  "tenantInventoryProducts": {
+    "title": "Lagerprodukte",
+    "add": "Produkt hinzufügen",
+    "edit": "Produkt bearbeiten",
+    "productCode": "Produktcode",
+    "name": "Name",
+    "unitInStock": "Einheit auf Lager",
+    "lowStockThreshold": "Niedriger Bestandsschwellwert",
+    "isWeighted": "Gewichtet",
+    "hasCarton": "Hat Karton",
+    "unitsPerCarton": "Einheiten pro Karton",
+    "buyingPriceExclVat": "Einkaufspreis (ohne MwSt.)",
+    "buyingPriceInclVat": "Einkaufspreis (inkl. MwSt.)",
+    "vatType": "MwSt.-Art",
+    "vatPercent": "MwSt. %",
+    "vatPercentage": "Prozentsatz",
+    "vatExempt": "Befreit",
+    "suppliers": "Lieferanten",
+    "addSupplier": "Lieferant hinzufügen",
+    "supplierSku": "Lieferanten-SKU",
+    "setPrimary": "Als primär festlegen",
+    "noSuppliers": "Keine Lieferanten verknüpft. Klicken Sie auf \"Lieferant hinzufügen\", um einen zu verknüpfen.",
+    "noMoreSuppliers": "Keine weiteren Lieferanten zum Hinzufügen",
+    "allSuppliers": "Alle Lieferanten",
+    "allStatuses": "Alle Status",
+    "lowStockOnly": "Nur niedriger Bestand",
+    "searchPlaceholder": "Nach Name oder Code suchen",
+    "nameRequired": "Name ist erforderlich",
+    "unitsPerCartonRequired": "Einheiten pro Karton sind erforderlich, wenn Karton aktiviert ist",
+    "confirmDelete": "Sind Sie sicher, dass Sie dieses Produkt löschen möchten?",
+    "created": "Produkt erfolgreich erstellt",
+    "updated": "Produkt erfolgreich aktualisiert",
+    "deleted": "Produkt erfolgreich gelöscht",
+    "fetchError": "Lagerprodukte konnten nicht geladen werden",
+    "saveError": "Produkt konnte nicht gespeichert werden",
+    "deleteError": "Produkt konnte nicht gelöscht werden",
+    "empty": "Keine Lagerprodukte gefunden"
   }
 }

@@ -69,7 +69,8 @@
     "orders": "Commandes",
     "transactions": "Transactions",
     "qrInvoiceTokens": "Jetons QR de Facture",
-    "tenantSuppliers": "Fournisseurs"
+    "tenantSuppliers": "Fournisseurs",
+    "tenantInventoryProducts": "Produits d'Inventaire"
   },
   "common": {
     "adminSaas": "Admin SaaS",
@@ -1876,5 +1877,43 @@
     "saveError": "Impossible de sauvegarder le fournisseur",
     "deleteError": "Impossible de supprimer le fournisseur",
     "empty": "Aucun fournisseur trouvé"
+  },
+  "tenantInventoryProducts": {
+    "title": "Produits d'Inventaire",
+    "add": "Ajouter un Produit",
+    "edit": "Modifier le Produit",
+    "productCode": "Code Produit",
+    "name": "Nom",
+    "unitInStock": "Unités en Stock",
+    "lowStockThreshold": "Seuil de Stock Bas",
+    "isWeighted": "Pesé",
+    "hasCarton": "A un Carton",
+    "unitsPerCarton": "Unités par Carton",
+    "buyingPriceExclVat": "Prix d'Achat (HT)",
+    "buyingPriceInclVat": "Prix d'Achat (TTC)",
+    "vatType": "Type de TVA",
+    "vatPercent": "TVA %",
+    "vatPercentage": "Pourcentage",
+    "vatExempt": "Exonéré",
+    "suppliers": "Fournisseurs",
+    "addSupplier": "Ajouter un Fournisseur",
+    "supplierSku": "SKU Fournisseur",
+    "setPrimary": "Définir comme principal",
+    "noSuppliers": "Aucun fournisseur lié. Cliquez sur \"Ajouter un Fournisseur\" pour en lier un.",
+    "noMoreSuppliers": "Pas d'autres fournisseurs à ajouter",
+    "allSuppliers": "Tous les Fournisseurs",
+    "allStatuses": "Tous les Statuts",
+    "lowStockOnly": "Stock bas uniquement",
+    "searchPlaceholder": "Rechercher par nom ou code",
+    "nameRequired": "Le nom est requis",
+    "unitsPerCartonRequired": "Les unités par carton sont requises lorsque le carton est activé",
+    "confirmDelete": "Êtes-vous sûr de vouloir supprimer ce produit ?",
+    "created": "Produit créé avec succès",
+    "updated": "Produit mis à jour avec succès",
+    "deleted": "Produit supprimé avec succès",
+    "fetchError": "Impossible de charger les produits d'inventaire",
+    "saveError": "Impossible de sauvegarder le produit",
+    "deleteError": "Impossible de supprimer le produit",
+    "empty": "Aucun produit d'inventaire trouvé"
   }
 }
