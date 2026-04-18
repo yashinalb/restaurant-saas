@@ -465,7 +465,7 @@ expense_payments: FK to expense + payment_type + currency. Tracks individual pay
 
 ## PRIORITY 9: KDS & Reporting (Migration 013)
 
-### [] 40. KDS Orders (Kitchen Display System)
+### [x] 40. KDS Orders (Kitchen Display System)
 
 Tables: `kds_orders`
 

@@ -45,6 +45,7 @@ import {
   FileText,
   PackageOpen,
   Banknote,
+  ChefHat,
   LucideIcon
 } from 'lucide-react';
 
@@ -216,6 +217,7 @@ export default function DashboardLayout() {
         { name: t('navigation.tenantExpenseCategories', 'Expense Categories'), to: '/tenant/expense-categories', icon: Receipt, show: hasPermission('tenant_expense_categories.view') },
         { name: t('navigation.tenantExpenseSources', 'Expense Sources'), to: '/tenant/expense-sources', icon: Receipt, show: hasPermission('tenant_expense_sources.view') },
         { name: t('navigation.expenses', 'Expenses'), to: '/tenant/expenses', icon: Receipt, show: hasPermission('expenses.view') },
+        { name: t('navigation.kdsOrders', 'Kitchen Display'), to: '/tenant/kds-orders', icon: ChefHat, show: hasPermission('kds_orders.view') },
       ].filter(item => item.show)
     }
   ].filter(group => group.items.length > 0) : [];

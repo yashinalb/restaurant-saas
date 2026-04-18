@@ -62,6 +62,7 @@ import SupplierCreditsPage from './pages/SupplierCreditsPage';
 import TenantExpenseCategoriesPage from './pages/TenantExpenseCategoriesPage';
 import TenantExpenseSourcesPage from './pages/TenantExpenseSourcesPage';
 import ExpensesPage from './pages/ExpensesPage';
+import KdsOrdersPage from './pages/KdsOrdersPage';
 
 
 function ProtectedRoute({ children }: { children: React.ReactNode }) {
@@ -143,6 +144,7 @@ function App() {
           <Route path="tenant/expense-categories" element={<TenantExpenseCategoriesPage />} />
           <Route path="tenant/expense-sources" element={<TenantExpenseSourcesPage />} />
           <Route path="tenant/expenses" element={<ExpensesPage />} />
+          <Route path="tenant/kds-orders" element={<KdsOrdersPage />} />
           <Route path="tenant/stores" element={<StoresPage />} />
           <Route path="tenant/settings" element={<TenantSettingsPage />} />
           <Route path="tenant/users" element={<TenantUsersPage />} />

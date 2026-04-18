@@ -52,6 +52,7 @@ import supplierCreditRoutes from './routes/supplierCredit.routes';
 import tenantExpenseCategoryRoutes from './routes/tenantExpenseCategory.routes';
 import tenantExpenseSourceRoutes from './routes/tenantExpenseSource.routes';
 import expenseRoutes from './routes/expense.routes';
+import kdsOrderRoutes from './routes/kdsOrder.routes';
 import addonTypeRoutes from './routes/addonType.routes';
 import addonRoutes from './routes/addon.routes';
 import orderSourceRoutes from './routes/orderSource.routes';
@@ -219,6 +220,7 @@ app.use('/api/tenant', supplierCreditRoutes);
 app.use('/api/tenant', tenantExpenseCategoryRoutes);
 app.use('/api/tenant', tenantExpenseSourceRoutes);
 app.use('/api/tenant', expenseRoutes);
+app.use('/api/tenant', kdsOrderRoutes);
 
 // ============================================
 // ERROR HANDLING
