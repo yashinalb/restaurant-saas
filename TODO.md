@@ -524,15 +524,15 @@ Grid/canvas of `tenant_table_structures` for the selected store, filterable by s
 
 Left panel matching the screenshot: line items with qty, customizations, subtotal/total. Action buttons: new order, ikram (comp), iade (refund), böl (split), iskonto (discount), yazdır (print), iptal (cancel), taşı (move item to another order).
 
-### [ ] 44.4 POS Menu Browser
+### [x] 44.4 POS Menu Browser
 
 Category sidebar filtered to `show_on_pos = 1`, items grid with image + price + availability, search bar, quick-add. Tapping an item opens 44.5 when the item has portions/addons/weight, otherwise it's added directly to the cart.
 
-### [ ] 44.5 Item Options Modal
+### [] 44.5 Item Options Modal
 
 Portions, addons, extras, ingredients, main-dish options, per-item note, weighted-item kg input. Recomputes the final line price as modifiers are toggled. Confirm adds the line to the active order.
 
-### [ ] 44.6 Table Merging & Move Items
+### [] 44.6 Table Merging & Move Items
 
 Merge/unmerge tables using `parent_table_id` + `is_temporary_merge`. Move a single item or a group of items between active orders on different tables (updates `order_items.order_id`).
 

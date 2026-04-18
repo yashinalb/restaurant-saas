@@ -2327,6 +2327,25 @@
       "floor": "Зал",
       "orders": "Заказы"
     },
+    "menu": {
+      "searchPlaceholder": "Поиск по меню…",
+      "allCategories": "Все",
+      "items": "позиций",
+      "noCategories": "Нет категорий",
+      "empty": "Нет доступных позиций",
+      "noSearchResults": "Нет позиций, соответствующих вашему запросу",
+      "noPrice": "Нет цены",
+      "weight": "Вес",
+      "combo": "Комбо",
+      "customize": "Настроить",
+      "categoriesError": "Не удалось загрузить категории",
+      "itemsError": "Не удалось загрузить позиции",
+      "addError": "Не удалось добавить позицию",
+      "added": "{{name}} добавлен",
+      "customizeComingSoon": "Настройка (порции/добавки/вес) будет подключена в подзадаче 44.5",
+      "orderLocked": "Заказ заблокирован",
+      "noTakeOrderPermission": "У вас нет разрешения принимать заказы"
+    },
     "order": {
       "backToFloor": "Назад в зал",
       "loadError": "Не удалось загрузить заказ",

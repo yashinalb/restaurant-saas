@@ -2,6 +2,7 @@ import { Router } from 'express';
 import { PosSessionController } from '../controllers/posSessionController.js';
 import { PosFloorController } from '../controllers/posFloorController.js';
 import { PosOrderController } from '../controllers/posOrderController.js';
+import { PosMenuController } from '../controllers/posMenuController.js';
 import { authenticateToken } from '../middleware/auth.js';
 import { loadTenantContext, requireTenantPermission } from '../middleware/tenantAuth.js';
 
@@ -21,5 +22,10 @@ router.post('/pos/tables/:id/unmerge', requireTenantPermission('pos.take_order')
 
 // Orders
 router.post('/pos/orders/start', requireTenantPermission('pos.take_order'), PosOrderController.start);
+router.post('/pos/orders/:id/quick-add', requireTenantPermission('pos.take_order'), PosMenuController.quickAdd);
+
+// Menu browsing
+router.get('/pos/menu/categories', requireTenantPermission('pos.access'), PosMenuController.getCategories);
+router.get('/pos/menu/items', requireTenantPermission('pos.access'), PosMenuController.getItems);
 
 export default router;

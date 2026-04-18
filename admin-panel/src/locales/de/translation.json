@@ -2327,6 +2327,25 @@
       "floor": "Grundriss",
       "orders": "Bestellungen"
     },
+    "menu": {
+      "searchPlaceholder": "Menü durchsuchen…",
+      "allCategories": "Alle",
+      "items": "Artikel",
+      "noCategories": "Keine Kategorien",
+      "empty": "Keine Artikel verfügbar",
+      "noSearchResults": "Keine Artikel entsprechen Ihrer Suche",
+      "noPrice": "Kein Preis",
+      "weight": "Gewicht",
+      "combo": "Combo",
+      "customize": "Anpassen",
+      "categoriesError": "Kategorien konnten nicht geladen werden",
+      "itemsError": "Artikel konnten nicht geladen werden",
+      "addError": "Artikel konnte nicht hinzugefügt werden",
+      "added": "{{name}} hinzugefügt",
+      "customizeComingSoon": "Anpassung (Portionen/Zusätze/Gewicht) wird in Unteraufgabe 44.5 angebunden",
+      "orderLocked": "Bestellung ist gesperrt",
+      "noTakeOrderPermission": "Sie haben keine Berechtigung, Bestellungen anzunehmen"
+    },
     "order": {
       "backToFloor": "Zurück zum Tischplan",
       "loadError": "Bestellung konnte nicht geladen werden",

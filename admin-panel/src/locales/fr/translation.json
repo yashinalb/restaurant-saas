@@ -2327,6 +2327,25 @@
       "floor": "Salle",
       "orders": "Commandes"
     },
+    "menu": {
+      "searchPlaceholder": "Rechercher dans le menu…",
+      "allCategories": "Toutes",
+      "items": "articles",
+      "noCategories": "Aucune catégorie",
+      "empty": "Aucun article disponible",
+      "noSearchResults": "Aucun article ne correspond à votre recherche",
+      "noPrice": "Pas de prix",
+      "weight": "Poids",
+      "combo": "Combo",
+      "customize": "Personnaliser",
+      "categoriesError": "Échec du chargement des catégories",
+      "itemsError": "Échec du chargement des articles",
+      "addError": "Échec de l'ajout de l'article",
+      "added": "{{name}} ajouté",
+      "customizeComingSoon": "La personnalisation (portions/suppléments/poids) sera connectée dans la sous-tâche 44.5",
+      "orderLocked": "La commande est verrouillée",
+      "noTakeOrderPermission": "Vous n'avez pas la permission de prendre des commandes"
+    },
     "order": {
       "backToFloor": "Retour au plan de salle",
       "loadError": "Échec du chargement de la commande",

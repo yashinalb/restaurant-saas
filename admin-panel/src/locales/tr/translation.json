@@ -2327,6 +2327,25 @@
       "floor": "Salon",
       "orders": "Siparişler"
     },
+    "menu": {
+      "searchPlaceholder": "Menüde ara…",
+      "allCategories": "Tümü",
+      "items": "ürün",
+      "noCategories": "Kategori yok",
+      "empty": "Kullanılabilir ürün yok",
+      "noSearchResults": "Aramanızla eşleşen ürün yok",
+      "noPrice": "Fiyat yok",
+      "weight": "Ağırlık",
+      "combo": "Kombo",
+      "customize": "Özelleştir",
+      "categoriesError": "Kategoriler yüklenemedi",
+      "itemsError": "Ürünler yüklenemedi",
+      "addError": "Ürün eklenemedi",
+      "added": "{{name}} eklendi",
+      "customizeComingSoon": "Özelleştirme (porsiyonlar/ekler/ağırlık) alt görev 44.5'te bağlanacak",
+      "orderLocked": "Sipariş kilitli",
+      "noTakeOrderPermission": "Sipariş alma izniniz yok"
+    },
     "order": {
       "backToFloor": "Salona Dön",
       "loadError": "Sipariş yüklenemedi",

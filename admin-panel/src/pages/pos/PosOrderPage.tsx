@@ -7,6 +7,7 @@ import { usePosSessionStore } from '../../store/posSessionStore';
 import orderService, { Order } from '../../services/orderService';
 import posOrderService from '../../services/frontend-posOrderService';
 import PosCartPanel from './PosCartPanel';
+import PosMenuBrowser from './PosMenuBrowser';
 
 export default function PosOrderPage() {
   const { t } = useTranslation();
@@ -89,16 +90,15 @@ export default function PosOrderPage() {
         {/* LEFT: cart panel */}
         <PosCartPanel order={order} onChanged={() => loadOrder(order.id)} onNewOrder={handleNewOrder} />
 
-        {/* RIGHT: menu grid placeholder — wired up in 44.4 */}
-        <div className="bg-white border border-gray-200 rounded-lg shadow-sm flex items-center justify-center">
-          <div className="text-center p-8 max-w-md">
-            <div className="text-5xl mb-3">🍽️</div>
-            <h3 className="font-semibold text-gray-700 mb-1">{t('pos.order.menuComingSoon', 'Menu grid')}</h3>
-            <p className="text-sm text-gray-500">
-              {t('pos.order.menuHelp', 'Category + item browsing to add items to this order will be wired up in the next POS sub-task (44.4).')}
-            </p>
-          </div>
-        </div>
+        {/* RIGHT: menu browser */}
+        <PosMenuBrowser
+          storeId={order.store_id}
+          currencyId={order.currency_id}
+          currencySymbol={order.currency_symbol}
+          orderId={order.id}
+          isLocked={order.order_status !== 'open'}
+          onItemAdded={() => loadOrder(order.id)}
+        />
       </div>
     </div>
   );

@@ -2327,6 +2327,25 @@
       "floor": "Salón",
       "orders": "Pedidos"
     },
+    "menu": {
+      "searchPlaceholder": "Buscar en el menú…",
+      "allCategories": "Todas",
+      "items": "artículos",
+      "noCategories": "Sin categorías",
+      "empty": "No hay artículos disponibles",
+      "noSearchResults": "Ningún artículo coincide con tu búsqueda",
+      "noPrice": "Sin precio",
+      "weight": "Peso",
+      "combo": "Combo",
+      "customize": "Personalizar",
+      "categoriesError": "Error al cargar las categorías",
+      "itemsError": "Error al cargar los artículos",
+      "addError": "Error al añadir el artículo",
+      "added": "{{name}} añadido",
+      "customizeComingSoon": "La personalización (porciones/adiciones/peso) se conectará en la subtarea 44.5",
+      "orderLocked": "El pedido está bloqueado",
+      "noTakeOrderPermission": "No tienes permiso para tomar pedidos"
+    },
     "order": {
       "backToFloor": "Volver al Salón",
       "loadError": "No se pudo cargar el pedido",

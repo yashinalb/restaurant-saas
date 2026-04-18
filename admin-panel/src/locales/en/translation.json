@@ -2327,6 +2327,25 @@
       "floor": "Floor",
       "orders": "Orders"
     },
+    "menu": {
+      "searchPlaceholder": "Search menu…",
+      "allCategories": "All",
+      "items": "items",
+      "noCategories": "No categories",
+      "empty": "No items available",
+      "noSearchResults": "No items match your search",
+      "noPrice": "No price",
+      "weight": "Weight",
+      "combo": "Combo",
+      "customize": "Customize",
+      "categoriesError": "Failed to load categories",
+      "itemsError": "Failed to load items",
+      "addError": "Failed to add item",
+      "added": "{{name}} added",
+      "customizeComingSoon": "Customization (portions/addons/weight) will be wired up in sub-task 44.5",
+      "orderLocked": "Order is locked",
+      "noTakeOrderPermission": "You do not have permission to take orders"
+    },
     "order": {
       "backToFloor": "Back to Floor",
       "loadError": "Failed to load order",
