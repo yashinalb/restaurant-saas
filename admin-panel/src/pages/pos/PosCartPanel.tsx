@@ -6,6 +6,7 @@ import { usePermissions } from '../../hooks/usePermissions';
 import orderService, { Order, OrderItem, OrderItemInput } from '../../services/orderService';
 import PosMoveItemsModal from './PosMoveItemsModal';
 import PosPaymentModal from './PosPaymentModal';
+import PosReceiptModal from './PosReceiptModal';
 
 interface Props {
   order: Order;
@@ -44,6 +45,7 @@ export default function PosCartPanel({ order, onChanged, onNewOrder }: Props) {
   const [saving, setSaving] = useState(false);
   const [moveModalItems, setMoveModalItems] = useState<OrderItem[] | null>(null);
   const [showPaymentModal, setShowPaymentModal] = useState(false);
+  const [showReceiptModal, setShowReceiptModal] = useState(false);
   const [showDiscount, setShowDiscount] = useState(false);
   const [discountValue, setDiscountValue] = useState('');
   const [discountMode, setDiscountMode] = useState<'amount' | 'percent'>('amount');
@@ -348,8 +350,8 @@ export default function PosCartPanel({ order, onChanged, onNewOrder }: Props) {
           <RotateCcw className="w-4 h-4" />
           {t('pos.cart.iade', 'İade')}
         </button>
-        <button onClick={notImplemented(t('pos.cart.print', 'Yazdır'))}
-          className="flex flex-col items-center justify-center gap-0.5 py-2 rounded bg-slate-600 hover:bg-slate-700 text-white text-[11px] font-semibold">
+        <button onClick={() => setShowReceiptModal(true)} disabled={items.length === 0}
+          className="flex flex-col items-center justify-center gap-0.5 py-2 rounded bg-slate-600 hover:bg-slate-700 text-white text-[11px] font-semibold disabled:opacity-40">
           <Printer className="w-4 h-4" />
           {t('pos.cart.yazdir', 'Yazdır')}
         </button>
@@ -415,8 +417,12 @@ export default function PosCartPanel({ order, onChanged, onNewOrder }: Props) {
         <PosPaymentModal
           order={order}
           onClose={() => { setShowPaymentModal(false); onChanged(); }}
-          onPaid={() => onChanged()}
+          onPaid={() => { onChanged(); setShowReceiptModal(true); }}
         />
+      )}
+
+      {showReceiptModal && (
+        <PosReceiptModal orderId={order.id} onClose={() => setShowReceiptModal(false)} />
       )}
     </div>
   );

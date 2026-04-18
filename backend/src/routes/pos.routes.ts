@@ -6,6 +6,7 @@ import { PosMenuController } from '../controllers/posMenuController.js';
 import { PosItemOptionsController } from '../controllers/posItemOptionsController.js';
 import { PosMoveItemsController } from '../controllers/posMoveItemsController.js';
 import { PosPaymentController } from '../controllers/posPaymentController.js';
+import { PosReceiptController } from '../controllers/posReceiptController.js';
 import { authenticateToken } from '../middleware/auth.js';
 import { loadTenantContext, requireTenantPermission } from '../middleware/tenantAuth.js';
 
@@ -39,5 +40,9 @@ router.post('/pos/orders/:id/move-items', requireTenantPermission('pos.take_orde
 
 // Payment
 router.post('/pos/orders/:id/pay', requireTenantPermission('pos.take_order'), PosPaymentController.pay);
+
+// Receipt (re-print anytime)
+router.get('/pos/orders/:id/receipt', requireTenantPermission('pos.access'), PosReceiptController.getReceipt);
+router.post('/pos/orders/:id/print-receipt', requireTenantPermission('pos.access'), PosReceiptController.printThermal);
 
 export default router;

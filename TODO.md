@@ -540,7 +540,7 @@ Merge/unmerge tables using `parent_table_id` + `is_temporary_merge`. Move a sing
 
 Full / partial / per-item / mixed payment modes. Supports multiple `tenant_payment_types` in one transaction. Tip. Discount (percent + flat). Ikram (comp a specific item without voiding). Writes to `transactions` and `transaction_payments`.
 
-### [ ] 44.8 Customer Receipt Printing
+### [x] 44.8 Customer Receipt Printing
 
 Per-order customer receipt with store header, line items, modifiers, subtotal, discounts/ikram, tip, per-rate VAT breakdown, total, payment split, and QR payment link. Supports re-print (pre-payment or post-payment) and the order's language/currency. Routes to `stores.receipt_printer_ip` via ESC/POS (browser print as fallback for non-thermal).
 
