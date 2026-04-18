@@ -161,9 +161,13 @@ export class OrderService {
     );
     if (rows.length === 0) return null;
     const [items] = await pool.query<RowDataPacket[]>(
-      `SELECT oi.*, mi.name as menu_item_name, ois.code as status_code
+      `SELECT oi.*,
+         (SELECT t.name FROM tenant_menu_item_translations t
+            JOIN languages l ON l.id = t.language_id
+            WHERE t.tenant_menu_item_id = oi.tenant_menu_item_id
+            ORDER BY (l.code = 'en') DESC, l.sort_order ASC LIMIT 1) as menu_item_name,
+         ois.code as status_code
        FROM order_items oi
-       LEFT JOIN tenant_menu_items mi ON mi.id = oi.tenant_menu_item_id
        LEFT JOIN tenant_order_item_statuses ois ON ois.id = oi.tenant_order_item_status_id
        WHERE oi.order_id = ?
        ORDER BY oi.id ASC`, [id]

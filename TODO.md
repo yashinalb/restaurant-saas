@@ -520,7 +520,7 @@ Route group `/pos/*`, PIN-based waiter sign-in, `device_identifier` + `ip_addres
 
 Grid/canvas of `tenant_table_structures` for the selected store, filterable by seating area. Status badges: available / occupied / reserved / blocked / merged. Tap-to-open-order. Floating action menu: walk-in, merge tables, check-in reservation. Today's reservations appear as chips on the relevant tables (visual cue only — check-in handled by 44.17).
 
-### [ ] 44.3 POS Cart / Active Order Panel
+### [x] 44.3 POS Cart / Active Order Panel
 
 Left panel matching the screenshot: line items with qty, customizations, subtotal/total. Action buttons: new order, ikram (comp), iade (refund), böl (split), iskonto (discount), yazdır (print), iptal (cancel), taşı (move item to another order).
 

@@ -1,6 +1,7 @@
 import { Router } from 'express';
 import { PosSessionController } from '../controllers/posSessionController.js';
 import { PosFloorController } from '../controllers/posFloorController.js';
+import { PosOrderController } from '../controllers/posOrderController.js';
 import { authenticateToken } from '../middleware/auth.js';
 import { loadTenantContext, requireTenantPermission } from '../middleware/tenantAuth.js';
 
@@ -17,5 +18,8 @@ router.get('/pos/seating-areas', requireTenantPermission('pos.access'), PosFloor
 router.get('/pos/floor', requireTenantPermission('pos.access'), PosFloorController.getFloor);
 router.post('/pos/tables/:id/merge', requireTenantPermission('pos.take_order'), PosFloorController.merge);
 router.post('/pos/tables/:id/unmerge', requireTenantPermission('pos.take_order'), PosFloorController.unmerge);
+
+// Orders
+router.post('/pos/orders/start', requireTenantPermission('pos.take_order'), PosOrderController.start);
 
 export default router;
