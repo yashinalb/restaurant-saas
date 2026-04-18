@@ -65,6 +65,9 @@ import ExpensesPage from './pages/ExpensesPage';
 import KdsOrdersPage from './pages/KdsOrdersPage';
 import DailyReportSnapshotsPage from './pages/DailyReportSnapshotsPage';
 import CashRegisterSessionsPage from './pages/CashRegisterSessionsPage';
+import PosLayout from './pages/pos/PosLayout';
+import PosLoginPage from './pages/pos/PosLoginPage';
+import PosHomePage from './pages/pos/PosHomePage';
 
 
 function ProtectedRoute({ children }: { children: React.ReactNode }) {
@@ -86,6 +89,17 @@ function App() {
         <Route path="/forgot-password" element={<ForgotPasswordPage />} />
         <Route path="/reset-password" element={<ResetPasswordPage />} />
         <Route path="/accept-invitation" element={<AcceptInvitationPage />} />
+
+        <Route path="/pos" element={
+          <ProtectedRoute>
+            <PosLayout />
+          </ProtectedRoute>
+        }>
+          <Route index element={<Navigate to="/pos/login" replace />} />
+          <Route path="login" element={<PosLoginPage />} />
+          <Route path="floor" element={<PosHomePage />} />
+          <Route path="orders" element={<PosHomePage />} />
+        </Route>
 
         <Route path="/" element={
           <ProtectedRoute>

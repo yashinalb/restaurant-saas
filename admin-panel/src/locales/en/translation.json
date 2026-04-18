@@ -79,7 +79,8 @@
     "expenses": "Expenses",
     "kdsOrders": "Kitchen Display",
     "dailyReports": "Daily Reports",
-    "cashSessions": "Cash Sessions"
+    "cashSessions": "Cash Sessions",
+    "posTerminal": "POS Terminal"
   },
   "common": {
     "adminSaas": "Admin SaaS",
@@ -2300,5 +2301,31 @@
     "deleteError": "Failed to delete session",
     "fetchError": "Failed to load sessions",
     "empty": "No sessions found"
+  },
+  "pos": {
+    "title": "POS",
+    "signInTitle": "Waiter Sign In",
+    "signInSubtitle": "Enter your PIN to start a shift",
+    "store": "Store",
+    "selectStore": "Select a store",
+    "selectStoreFirst": "Select a store first",
+    "pin": "PIN",
+    "pinMinLength": "PIN must be at least 4 digits",
+    "signIn": "Sign In",
+    "welcome": "Welcome",
+    "welcomeName": "Welcome, {{name}}",
+    "homeSubtitle": "You are signed in at {{store}}.",
+    "comingSoon": "Floor plan, order taking, and payment flows will be wired up in the next POS sub-tasks.",
+    "backToAdmin": "Back to Admin",
+    "logout": "Logout",
+    "loggedOut": "Waiter logged out",
+    "notSignedIn": "Not signed in",
+    "noAccess": "You do not have permission to access POS",
+    "loginFailed": "Invalid PIN",
+    "fetchStoresError": "Failed to load stores",
+    "nav": {
+      "floor": "Floor",
+      "orders": "Orders"
+    }
   }
 }

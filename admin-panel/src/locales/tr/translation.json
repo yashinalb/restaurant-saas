@@ -79,7 +79,8 @@
     "expenses": "Giderler",
     "kdsOrders": "Mutfak Ekranı",
     "dailyReports": "Günlük Raporlar",
-    "cashSessions": "Kasa Oturumları"
+    "cashSessions": "Kasa Oturumları",
+    "posTerminal": "POS Terminali"
   },
   "common": {
     "adminSaas": "Admin SaaS",
@@ -2300,5 +2301,31 @@
     "deleteError": "Oturum silinemedi",
     "fetchError": "Oturumlar yüklenemedi",
     "empty": "Oturum bulunamadı"
+  },
+  "pos": {
+    "title": "POS",
+    "signInTitle": "Garson Girişi",
+    "signInSubtitle": "Vardiyayı başlatmak için PIN'inizi girin",
+    "store": "Mağaza",
+    "selectStore": "Bir mağaza seçin",
+    "selectStoreFirst": "Önce bir mağaza seçin",
+    "pin": "PIN",
+    "pinMinLength": "PIN en az 4 haneli olmalıdır",
+    "signIn": "Giriş Yap",
+    "welcome": "Hoş geldiniz",
+    "welcomeName": "Hoş geldiniz, {{name}}",
+    "homeSubtitle": "{{store}} mağazasında giriş yaptınız.",
+    "comingSoon": "Salon planı, sipariş alma ve ödeme akışları sonraki POS alt görevlerinde bağlanacak.",
+    "backToAdmin": "Yönetime Dön",
+    "logout": "Çıkış Yap",
+    "loggedOut": "Garson çıkış yaptı",
+    "notSignedIn": "Giriş yapılmadı",
+    "noAccess": "POS'a erişim izniniz yok",
+    "loginFailed": "Geçersiz PIN",
+    "fetchStoresError": "Mağazalar yüklenemedi",
+    "nav": {
+      "floor": "Salon",
+      "orders": "Siparişler"
+    }
   }
 }

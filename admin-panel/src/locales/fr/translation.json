@@ -79,7 +79,8 @@
     "expenses": "Dépenses",
     "kdsOrders": "Écran Cuisine",
     "dailyReports": "Rapports Quotidiens",
-    "cashSessions": "Sessions de Caisse"
+    "cashSessions": "Sessions de Caisse",
+    "posTerminal": "Terminal POS"
   },
   "common": {
     "adminSaas": "Admin SaaS",
@@ -2300,5 +2301,31 @@
     "deleteError": "Échec de la suppression de la session",
     "fetchError": "Échec du chargement des sessions",
     "empty": "Aucune session trouvée"
+  },
+  "pos": {
+    "title": "POS",
+    "signInTitle": "Connexion du serveur",
+    "signInSubtitle": "Entrez votre PIN pour commencer un service",
+    "store": "Magasin",
+    "selectStore": "Sélectionnez un magasin",
+    "selectStoreFirst": "Sélectionnez d'abord un magasin",
+    "pin": "PIN",
+    "pinMinLength": "Le PIN doit comporter au moins 4 chiffres",
+    "signIn": "Se connecter",
+    "welcome": "Bienvenue",
+    "welcomeName": "Bienvenue, {{name}}",
+    "homeSubtitle": "Vous êtes connecté à {{store}}.",
+    "comingSoon": "Le plan de salle, la prise de commandes et les flux de paiement seront connectés dans les prochaines sous-tâches POS.",
+    "backToAdmin": "Retour à l'administration",
+    "logout": "Déconnexion",
+    "loggedOut": "Serveur déconnecté",
+    "notSignedIn": "Non connecté",
+    "noAccess": "Vous n'avez pas l'autorisation d'accéder au POS",
+    "loginFailed": "PIN invalide",
+    "fetchStoresError": "Échec du chargement des magasins",
+    "nav": {
+      "floor": "Salle",
+      "orders": "Commandes"
+    }
   }
 }

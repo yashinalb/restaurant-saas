@@ -79,7 +79,8 @@
     "expenses": "Расходы",
     "kdsOrders": "Кухонный экран",
     "dailyReports": "Ежедневные отчёты",
-    "cashSessions": "Кассовые смены"
+    "cashSessions": "Кассовые смены",
+    "posTerminal": "POS-терминал"
   },
   "common": {
     "adminSaas": "Admin SaaS",
@@ -2300,5 +2301,31 @@
     "deleteError": "Не удалось удалить смену",
     "fetchError": "Не удалось загрузить смены",
     "empty": "Смены не найдены"
+  },
+  "pos": {
+    "title": "POS",
+    "signInTitle": "Вход официанта",
+    "signInSubtitle": "Введите PIN, чтобы начать смену",
+    "store": "Магазин",
+    "selectStore": "Выберите магазин",
+    "selectStoreFirst": "Сначала выберите магазин",
+    "pin": "PIN",
+    "pinMinLength": "PIN должен содержать не менее 4 цифр",
+    "signIn": "Войти",
+    "welcome": "Добро пожаловать",
+    "welcomeName": "Добро пожаловать, {{name}}",
+    "homeSubtitle": "Вы вошли в систему в {{store}}.",
+    "comingSoon": "План зала, приём заказов и процессы оплаты будут подключены в следующих подзадачах POS.",
+    "backToAdmin": "Назад в админку",
+    "logout": "Выйти",
+    "loggedOut": "Официант вышел",
+    "notSignedIn": "Не выполнен вход",
+    "noAccess": "У вас нет прав доступа к POS",
+    "loginFailed": "Неверный PIN",
+    "fetchStoresError": "Не удалось загрузить магазины",
+    "nav": {
+      "floor": "Зал",
+      "orders": "Заказы"
+    }
   }
 }

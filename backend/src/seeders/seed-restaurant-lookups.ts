@@ -595,7 +595,14 @@ async function seedRestaurantLookups() {
       ('cash_sessions.view', 'View Cash Sessions', 'Can view cash register sessions', 'cash_sessions', 1),
       ('cash_sessions.create', 'Open Cash Sessions', 'Can open cash register sessions', 'cash_sessions', 1),
       ('cash_sessions.edit', 'Close/Edit Cash Sessions', 'Can close and edit cash register sessions', 'cash_sessions', 1),
-      ('cash_sessions.delete', 'Delete Cash Sessions', 'Can delete cash register sessions', 'cash_sessions', 1)
+      ('cash_sessions.delete', 'Delete Cash Sessions', 'Can delete cash register sessions', 'cash_sessions', 1),
+      ('pos.access', 'Access POS', 'Can access the Point of Sale terminal', 'pos', 1),
+      ('pos.take_order', 'Take POS Orders', 'Can create and edit POS orders', 'pos', 1),
+      ('pos.discount', 'Apply POS Discounts', 'Can apply discounts at POS', 'pos', 1),
+      ('pos.ikram', 'Apply Ikram (On-the-house)', 'Can comp items at POS', 'pos', 1),
+      ('pos.split_bill', 'Split Bill', 'Can split bills at POS', 'pos', 1),
+      ('pos.refund', 'Process Refunds', 'Can process refunds at POS', 'pos', 1),
+      ('pos.void', 'Void Transactions', 'Can void transactions at POS', 'pos', 1)
     `);
     console.log('✅ Restaurant permissions seeded\n');
 

@@ -55,6 +55,7 @@ import expenseRoutes from './routes/expense.routes';
 import kdsOrderRoutes from './routes/kdsOrder.routes';
 import dailyReportSnapshotRoutes from './routes/dailyReportSnapshot.routes';
 import cashRegisterSessionRoutes from './routes/cashRegisterSession.routes';
+import posRoutes from './routes/pos.routes';
 import addonTypeRoutes from './routes/addonType.routes';
 import addonRoutes from './routes/addon.routes';
 import orderSourceRoutes from './routes/orderSource.routes';
@@ -225,6 +226,7 @@ app.use('/api/tenant', expenseRoutes);
 app.use('/api/tenant', kdsOrderRoutes);
 app.use('/api/tenant', dailyReportSnapshotRoutes);
 app.use('/api/tenant', cashRegisterSessionRoutes);
+app.use('/api/tenant', posRoutes);
 
 // ============================================
 // ERROR HANDLING

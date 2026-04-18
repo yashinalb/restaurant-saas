@@ -79,7 +79,8 @@
     "expenses": "Ausgaben",
     "kdsOrders": "Küchendisplay",
     "dailyReports": "Tagesberichte",
-    "cashSessions": "Kassensitzungen"
+    "cashSessions": "Kassensitzungen",
+    "posTerminal": "POS-Terminal"
   },
   "common": {
     "adminSaas": "Admin SaaS",
@@ -2300,5 +2301,31 @@
     "deleteError": "Sitzung konnte nicht gelöscht werden",
     "fetchError": "Sitzungen konnten nicht geladen werden",
     "empty": "Keine Sitzungen gefunden"
+  },
+  "pos": {
+    "title": "POS",
+    "signInTitle": "Kellner-Anmeldung",
+    "signInSubtitle": "Geben Sie Ihre PIN ein, um eine Schicht zu beginnen",
+    "store": "Filiale",
+    "selectStore": "Filiale auswählen",
+    "selectStoreFirst": "Wählen Sie zuerst eine Filiale",
+    "pin": "PIN",
+    "pinMinLength": "PIN muss mindestens 4 Ziffern haben",
+    "signIn": "Anmelden",
+    "welcome": "Willkommen",
+    "welcomeName": "Willkommen, {{name}}",
+    "homeSubtitle": "Sie sind in {{store}} angemeldet.",
+    "comingSoon": "Grundriss, Bestellaufnahme und Zahlungsabläufe werden in den nächsten POS-Teilaufgaben angebunden.",
+    "backToAdmin": "Zurück zur Verwaltung",
+    "logout": "Abmelden",
+    "loggedOut": "Kellner abgemeldet",
+    "notSignedIn": "Nicht angemeldet",
+    "noAccess": "Sie haben keine Berechtigung für den POS-Zugriff",
+    "loginFailed": "Ungültige PIN",
+    "fetchStoresError": "Filialen konnten nicht geladen werden",
+    "nav": {
+      "floor": "Grundriss",
+      "orders": "Bestellungen"
+    }
   }
 }

@@ -512,7 +512,7 @@ Shared conventions:
 - Reuses `tenant_waiter_sessions` for the per-device PIN login flow.
 - The existing admin CRUD pages (Reservations #24, Customers #23, Waiters #22, Tables #21) remain for management and history; POS consumes the same data but with an operations-oriented UI.
 
-### [] 44.1 POS Shell & Waiter PIN Login
+### [x] 44.1 POS Shell & Waiter PIN Login
 
 Route group `/pos/*`, PIN-based waiter sign-in, `device_identifier` + `ip_address` capture, session row written to `tenant_waiter_sessions`, global "current waiter" indicator, logout button that closes the session.
 

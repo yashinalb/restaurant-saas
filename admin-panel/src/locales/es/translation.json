@@ -79,7 +79,8 @@
     "expenses": "Gastos",
     "kdsOrders": "Pantalla de Cocina",
     "dailyReports": "Informes Diarios",
-    "cashSessions": "Sesiones de Caja"
+    "cashSessions": "Sesiones de Caja",
+    "posTerminal": "Terminal POS"
   },
   "common": {
     "adminSaas": "Admin SaaS",
@@ -2300,5 +2301,31 @@
     "deleteError": "Error al eliminar la sesión",
     "fetchError": "Error al cargar las sesiones",
     "empty": "No se encontraron sesiones"
+  },
+  "pos": {
+    "title": "POS",
+    "signInTitle": "Inicio de sesión del camarero",
+    "signInSubtitle": "Ingrese su PIN para comenzar un turno",
+    "store": "Tienda",
+    "selectStore": "Seleccione una tienda",
+    "selectStoreFirst": "Seleccione primero una tienda",
+    "pin": "PIN",
+    "pinMinLength": "El PIN debe tener al menos 4 dígitos",
+    "signIn": "Iniciar sesión",
+    "welcome": "Bienvenido",
+    "welcomeName": "Bienvenido, {{name}}",
+    "homeSubtitle": "Ha iniciado sesión en {{store}}.",
+    "comingSoon": "El plano del salón, la toma de pedidos y los flujos de pago se conectarán en las próximas subtareas de POS.",
+    "backToAdmin": "Volver a Administración",
+    "logout": "Cerrar sesión",
+    "loggedOut": "Camarero desconectado",
+    "notSignedIn": "No ha iniciado sesión",
+    "noAccess": "No tiene permiso para acceder al POS",
+    "loginFailed": "PIN no válido",
+    "fetchStoresError": "Error al cargar las tiendas",
+    "nav": {
+      "floor": "Salón",
+      "orders": "Pedidos"
+    }
   }
 }
