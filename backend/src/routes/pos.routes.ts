@@ -5,6 +5,7 @@ import { PosOrderController } from '../controllers/posOrderController.js';
 import { PosMenuController } from '../controllers/posMenuController.js';
 import { PosItemOptionsController } from '../controllers/posItemOptionsController.js';
 import { PosMoveItemsController } from '../controllers/posMoveItemsController.js';
+import { PosPaymentController } from '../controllers/posPaymentController.js';
 import { authenticateToken } from '../middleware/auth.js';
 import { loadTenantContext, requireTenantPermission } from '../middleware/tenantAuth.js';
 
@@ -35,5 +36,8 @@ router.post('/pos/orders/:id/add-item', requireTenantPermission('pos.take_order'
 // Move items between orders
 router.get('/pos/orders/active', requireTenantPermission('pos.take_order'), PosMoveItemsController.listActiveOrders);
 router.post('/pos/orders/:id/move-items', requireTenantPermission('pos.take_order'), PosMoveItemsController.move);
+
+// Payment
+router.post('/pos/orders/:id/pay', requireTenantPermission('pos.take_order'), PosPaymentController.pay);
 
 export default router;

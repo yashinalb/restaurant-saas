@@ -1,10 +1,11 @@
 import { useMemo, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { toast } from 'sonner';
-import { Loader2, Minus, Plus, Trash2, Gift, Percent, Printer, Split, RotateCcw, Ban, MoveRight, FilePlus } from 'lucide-react';
+import { Loader2, Minus, Plus, Trash2, Gift, Percent, Printer, Split, RotateCcw, Ban, MoveRight, FilePlus, CreditCard } from 'lucide-react';
 import { usePermissions } from '../../hooks/usePermissions';
 import orderService, { Order, OrderItem, OrderItemInput } from '../../services/orderService';
 import PosMoveItemsModal from './PosMoveItemsModal';
+import PosPaymentModal from './PosPaymentModal';
 
 interface Props {
   order: Order;
@@ -42,6 +43,7 @@ export default function PosCartPanel({ order, onChanged, onNewOrder }: Props) {
 
   const [saving, setSaving] = useState(false);
   const [moveModalItems, setMoveModalItems] = useState<OrderItem[] | null>(null);
+  const [showPaymentModal, setShowPaymentModal] = useState(false);
   const [showDiscount, setShowDiscount] = useState(false);
   const [discountValue, setDiscountValue] = useState('');
   const [discountMode, setDiscountMode] = useState<'amount' | 'percent'>('amount');
@@ -314,6 +316,16 @@ export default function PosCartPanel({ order, onChanged, onNewOrder }: Props) {
         </div>
       </div>
 
+      {/* Primary charge button */}
+      <div className="border-t bg-white p-2">
+        <button onClick={() => setShowPaymentModal(true)}
+          disabled={isLocked || items.length === 0 || !canTakeOrder}
+          className="w-full py-3 rounded bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-base flex items-center justify-center gap-2 disabled:opacity-40">
+          <CreditCard className="w-5 h-5" />
+          {t('pos.cart.charge', 'Charge')} · {currencySymbol}{total.toFixed(2)}
+        </button>
+      </div>
+
       {/* Action buttons */}
       <div className="border-t bg-white p-2 grid grid-cols-4 gap-1.5">
         <button onClick={onNewOrder}
@@ -396,6 +408,14 @@ export default function PosCartPanel({ order, onChanged, onNewOrder }: Props) {
           items={moveModalItems}
           onClose={() => setMoveModalItems(null)}
           onMoved={onChanged}
+        />
+      )}
+
+      {showPaymentModal && (
+        <PosPaymentModal
+          order={order}
+          onClose={() => { setShowPaymentModal(false); onChanged(); }}
+          onPaid={() => onChanged()}
         />
       )}
     </div>

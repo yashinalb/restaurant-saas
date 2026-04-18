@@ -532,11 +532,11 @@ Category sidebar filtered to `show_on_pos = 1`, items grid with image + price + 
 
 Portions, addons, extras, ingredients, main-dish options, per-item note, weighted-item kg input. Recomputes the final line price as modifiers are toggled. Confirm adds the line to the active order.
 
-### [] 44.6 Table Merging & Move Items
+### [x] 44.6 Table Merging & Move Items
 
 Merge/unmerge tables using `parent_table_id` + `is_temporary_merge`. Move a single item or a group of items between active orders on different tables (updates `order_items.order_id`).
 
-### [ ] 44.7 Payment Flow
+### [x] 44.7 Payment Flow
 
 Full / partial / per-item / mixed payment modes. Supports multiple `tenant_payment_types` in one transaction. Tip. Discount (percent + flat). Ikram (comp a specific item without voiding). Writes to `transactions` and `transaction_payments`.
 
