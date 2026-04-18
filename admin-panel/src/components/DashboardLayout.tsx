@@ -213,6 +213,7 @@ export default function DashboardLayout() {
         { name: t('navigation.supplierInvoices', 'Supplier Invoices'), to: '/tenant/supplier-invoices', icon: FileText, show: hasPermission('supplier_invoices.view') },
         { name: t('navigation.stockIntakes', 'Stock Intakes'), to: '/tenant/stock-intakes', icon: PackageOpen, show: hasPermission('stock_intakes.view') },
         { name: t('navigation.supplierCredits', 'Supplier Credits'), to: '/tenant/supplier-credits', icon: Banknote, show: hasPermission('supplier_credits.view') },
+        { name: t('navigation.tenantExpenseCategories', 'Expense Categories'), to: '/tenant/expense-categories', icon: Receipt, show: hasPermission('tenant_expense_categories.view') },
       ].filter(item => item.show)
     }
   ].filter(group => group.items.length > 0) : [];

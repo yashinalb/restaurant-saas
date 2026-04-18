@@ -73,7 +73,8 @@
     "tenantInventoryProducts": "Produits d'Inventaire",
     "supplierInvoices": "Factures Fournisseurs",
     "stockIntakes": "Entrées de Stock",
-    "supplierCredits": "Crédits Fournisseurs"
+    "supplierCredits": "Crédits Fournisseurs",
+    "tenantExpenseCategories": "Catégories de Dépenses"
   },
   "common": {
     "adminSaas": "Admin SaaS",
@@ -2059,5 +2060,36 @@
     "saveError": "Échec de l'enregistrement du crédit",
     "deleteError": "Échec de la suppression du crédit",
     "empty": "Aucun crédit fournisseur trouvé"
+  },
+  "tenantExpenseCategories": {
+    "title": "Catégories de Dépenses",
+    "add": "Ajouter une Catégorie",
+    "edit": "Modifier la Catégorie",
+    "code": "Code",
+    "name": "Nom",
+    "icon": "Icône",
+    "sortOrder": "Ordre de Tri",
+    "translations": "Traductions",
+    "translationName": "Nom",
+    "translationDescription": "Description",
+    "codeRequired": "Le code est obligatoire",
+    "confirmDelete": "Êtes-vous sûr de vouloir supprimer cette catégorie ?",
+    "created": "Catégorie créée avec succès",
+    "updated": "Catégorie mise à jour avec succès",
+    "deleted": "Catégorie supprimée avec succès",
+    "fetchError": "Échec du chargement des catégories de dépenses",
+    "saveError": "Échec de l'enregistrement de la catégorie",
+    "deleteError": "Échec de la suppression de la catégorie",
+    "empty": "Aucune catégorie de dépenses trouvée",
+    "importFromMaster": "Importer depuis le Maître",
+    "importTitle": "Importer depuis les Catégories Maîtres de Dépenses",
+    "importSubtitle": "Sélectionnez les catégories de dépenses à importer.",
+    "selectAll": "Tout Sélectionner",
+    "deselectAll": "Tout Désélectionner",
+    "alreadyImported": "Importé",
+    "noMasterAvailable": "Aucune catégorie maître de dépenses disponible",
+    "selected": "sélectionné",
+    "importSelected": "Importer la Sélection",
+    "importedCount": "Importé avec succès"
   }
 }

@@ -571,7 +571,11 @@ async function seedRestaurantLookups() {
       ('supplier_credits.view', 'View Supplier Credits', 'Can view supplier credits', 'supplier_credits', 1),
       ('supplier_credits.create', 'Create Supplier Credits', 'Can create supplier credits', 'supplier_credits', 1),
       ('supplier_credits.edit', 'Edit Supplier Credits', 'Can edit supplier credits', 'supplier_credits', 1),
-      ('supplier_credits.delete', 'Delete Supplier Credits', 'Can delete supplier credits', 'supplier_credits', 1)
+      ('supplier_credits.delete', 'Delete Supplier Credits', 'Can delete supplier credits', 'supplier_credits', 1),
+      ('tenant_expense_categories.view', 'View Expense Categories', 'Can view expense categories', 'tenant_expense_categories', 1),
+      ('tenant_expense_categories.create', 'Create Expense Categories', 'Can create expense categories', 'tenant_expense_categories', 1),
+      ('tenant_expense_categories.edit', 'Edit Expense Categories', 'Can edit expense categories', 'tenant_expense_categories', 1),
+      ('tenant_expense_categories.delete', 'Delete Expense Categories', 'Can delete expense categories', 'tenant_expense_categories', 1)
     `);
     console.log('✅ Restaurant permissions seeded\n');
 

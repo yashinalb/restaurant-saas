@@ -73,7 +73,8 @@
     "tenantInventoryProducts": "Складские товары",
     "supplierInvoices": "Счета поставщиков",
     "stockIntakes": "Поступления товаров",
-    "supplierCredits": "Кредиты поставщиков"
+    "supplierCredits": "Кредиты поставщиков",
+    "tenantExpenseCategories": "Категории расходов"
   },
   "common": {
     "adminSaas": "Admin SaaS",
@@ -2059,5 +2060,36 @@
     "saveError": "Не удалось сохранить кредит",
     "deleteError": "Не удалось удалить кредит",
     "empty": "Кредиты поставщиков не найдены"
+  },
+  "tenantExpenseCategories": {
+    "title": "Категории расходов",
+    "add": "Добавить категорию",
+    "edit": "Редактировать категорию",
+    "code": "Код",
+    "name": "Название",
+    "icon": "Иконка",
+    "sortOrder": "Порядок сортировки",
+    "translations": "Переводы",
+    "translationName": "Название",
+    "translationDescription": "Описание",
+    "codeRequired": "Код обязателен",
+    "confirmDelete": "Вы уверены, что хотите удалить эту категорию?",
+    "created": "Категория успешно создана",
+    "updated": "Категория успешно обновлена",
+    "deleted": "Категория успешно удалена",
+    "fetchError": "Не удалось загрузить категории расходов",
+    "saveError": "Не удалось сохранить категорию",
+    "deleteError": "Не удалось удалить категорию",
+    "empty": "Категории расходов не найдены",
+    "importFromMaster": "Импортировать из основного",
+    "importTitle": "Импорт из основных категорий расходов",
+    "importSubtitle": "Выберите категории расходов для импорта.",
+    "selectAll": "Выбрать все",
+    "deselectAll": "Снять выбор",
+    "alreadyImported": "Импортировано",
+    "noMasterAvailable": "Основные категории расходов недоступны",
+    "selected": "выбрано",
+    "importSelected": "Импортировать выбранные",
+    "importedCount": "Импортировано успешно"
   }
 }

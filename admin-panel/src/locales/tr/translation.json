@@ -73,7 +73,8 @@
     "tenantInventoryProducts": "Envanter Ürünleri",
     "supplierInvoices": "Tedarikçi Faturaları",
     "stockIntakes": "Stok Girişleri",
-    "supplierCredits": "Tedarikçi Borçları"
+    "supplierCredits": "Tedarikçi Borçları",
+    "tenantExpenseCategories": "Gider Kategorileri"
   },
   "common": {
     "adminSaas": "Admin SaaS",
@@ -2059,5 +2060,36 @@
     "saveError": "Borç kaydedilemedi",
     "deleteError": "Borç silinemedi",
     "empty": "Tedarikçi borcu bulunamadı"
+  },
+  "tenantExpenseCategories": {
+    "title": "Gider Kategorileri",
+    "add": "Kategori Ekle",
+    "edit": "Kategoriyi Düzenle",
+    "code": "Kod",
+    "name": "Ad",
+    "icon": "Simge",
+    "sortOrder": "Sıra",
+    "translations": "Çeviriler",
+    "translationName": "Ad",
+    "translationDescription": "Açıklama",
+    "codeRequired": "Kod zorunludur",
+    "confirmDelete": "Bu kategoriyi silmek istediğinizden emin misiniz?",
+    "created": "Kategori başarıyla oluşturuldu",
+    "updated": "Kategori başarıyla güncellendi",
+    "deleted": "Kategori başarıyla silindi",
+    "fetchError": "Gider kategorileri yüklenemedi",
+    "saveError": "Kategori kaydedilemedi",
+    "deleteError": "Kategori silinemedi",
+    "empty": "Gider kategorisi bulunamadı",
+    "importFromMaster": "Ana Listeden İçe Aktar",
+    "importTitle": "Ana Gider Kategorilerinden İçe Aktar",
+    "importSubtitle": "İçe aktarılacak gider kategorilerini seçin.",
+    "selectAll": "Tümünü Seç",
+    "deselectAll": "Seçimi Kaldır",
+    "alreadyImported": "İçe Aktarıldı",
+    "noMasterAvailable": "Ana gider kategorisi bulunamadı",
+    "selected": "seçildi",
+    "importSelected": "Seçilenleri İçe Aktar",
+    "importedCount": "Başarıyla içe aktarıldı"
   }
 }

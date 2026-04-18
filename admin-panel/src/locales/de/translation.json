@@ -73,7 +73,8 @@
     "tenantInventoryProducts": "Lagerprodukte",
     "supplierInvoices": "Lieferantenrechnungen",
     "stockIntakes": "Wareneingänge",
-    "supplierCredits": "Lieferantenguthaben"
+    "supplierCredits": "Lieferantenguthaben",
+    "tenantExpenseCategories": "Ausgabenkategorien"
   },
   "common": {
     "adminSaas": "Admin SaaS",
@@ -2059,5 +2060,36 @@
     "saveError": "Guthaben konnte nicht gespeichert werden",
     "deleteError": "Guthaben konnte nicht gelöscht werden",
     "empty": "Keine Lieferantenguthaben gefunden"
+  },
+  "tenantExpenseCategories": {
+    "title": "Ausgabenkategorien",
+    "add": "Kategorie hinzufügen",
+    "edit": "Kategorie bearbeiten",
+    "code": "Code",
+    "name": "Name",
+    "icon": "Symbol",
+    "sortOrder": "Sortierreihenfolge",
+    "translations": "Übersetzungen",
+    "translationName": "Name",
+    "translationDescription": "Beschreibung",
+    "codeRequired": "Code ist erforderlich",
+    "confirmDelete": "Sind Sie sicher, dass Sie diese Kategorie löschen möchten?",
+    "created": "Kategorie erfolgreich erstellt",
+    "updated": "Kategorie erfolgreich aktualisiert",
+    "deleted": "Kategorie erfolgreich gelöscht",
+    "fetchError": "Ausgabenkategorien konnten nicht geladen werden",
+    "saveError": "Kategorie konnte nicht gespeichert werden",
+    "deleteError": "Kategorie konnte nicht gelöscht werden",
+    "empty": "Keine Ausgabenkategorien gefunden",
+    "importFromMaster": "Aus Master importieren",
+    "importTitle": "Aus Master-Ausgabenkategorien importieren",
+    "importSubtitle": "Wählen Sie Ausgabenkategorien zum Importieren aus.",
+    "selectAll": "Alle auswählen",
+    "deselectAll": "Auswahl aufheben",
+    "alreadyImported": "Importiert",
+    "noMasterAvailable": "Keine Master-Ausgabenkategorien verfügbar",
+    "selected": "ausgewählt",
+    "importSelected": "Ausgewählte importieren",
+    "importedCount": "Erfolgreich importiert"
   }
 }

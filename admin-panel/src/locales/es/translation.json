@@ -73,7 +73,8 @@
     "tenantInventoryProducts": "Productos de Inventario",
     "supplierInvoices": "Facturas de Proveedores",
     "stockIntakes": "Entradas de Stock",
-    "supplierCredits": "Créditos de Proveedores"
+    "supplierCredits": "Créditos de Proveedores",
+    "tenantExpenseCategories": "Categorías de Gastos"
   },
   "common": {
     "adminSaas": "Admin SaaS",
@@ -2059,5 +2060,36 @@
     "saveError": "No se pudo guardar el crédito",
     "deleteError": "No se pudo eliminar el crédito",
     "empty": "No se encontraron créditos de proveedores"
+  },
+  "tenantExpenseCategories": {
+    "title": "Categorías de Gastos",
+    "add": "Agregar Categoría",
+    "edit": "Editar Categoría",
+    "code": "Código",
+    "name": "Nombre",
+    "icon": "Icono",
+    "sortOrder": "Orden",
+    "translations": "Traducciones",
+    "translationName": "Nombre",
+    "translationDescription": "Descripción",
+    "codeRequired": "El código es obligatorio",
+    "confirmDelete": "¿Está seguro de que desea eliminar esta categoría?",
+    "created": "Categoría creada correctamente",
+    "updated": "Categoría actualizada correctamente",
+    "deleted": "Categoría eliminada correctamente",
+    "fetchError": "No se pudieron cargar las categorías de gastos",
+    "saveError": "No se pudo guardar la categoría",
+    "deleteError": "No se pudo eliminar la categoría",
+    "empty": "No se encontraron categorías de gastos",
+    "importFromMaster": "Importar desde Maestro",
+    "importTitle": "Importar desde Categorías Maestras de Gastos",
+    "importSubtitle": "Seleccione las categorías de gastos para importar.",
+    "selectAll": "Seleccionar todo",
+    "deselectAll": "Deseleccionar todo",
+    "alreadyImported": "Importado",
+    "noMasterAvailable": "No hay categorías maestras de gastos disponibles",
+    "selected": "seleccionado",
+    "importSelected": "Importar seleccionados",
+    "importedCount": "Importado correctamente"
   }
 }
