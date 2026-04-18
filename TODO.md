@@ -516,7 +516,7 @@ Shared conventions:
 
 Route group `/pos/*`, PIN-based waiter sign-in, `device_identifier` + `ip_address` capture, session row written to `tenant_waiter_sessions`, global "current waiter" indicator, logout button that closes the session.
 
-### [] 44.2 POS Floor Plan (Tables View)
+### [x] 44.2 POS Floor Plan (Tables View)
 
 Grid/canvas of `tenant_table_structures` for the selected store, filterable by seating area. Status badges: available / occupied / reserved / blocked / merged. Tap-to-open-order. Floating action menu: walk-in, merge tables, check-in reservation. Today's reservations appear as chips on the relevant tables (visual cue only — check-in handled by 44.17).
 

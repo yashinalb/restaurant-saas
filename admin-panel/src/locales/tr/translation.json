@@ -2326,6 +2326,36 @@
     "nav": {
       "floor": "Salon",
       "orders": "Siparişler"
+    },
+    "floor": {
+      "title": "Masa Planı",
+      "allAreas": "Tüm Alanlar",
+      "noArea": "Atanmamış",
+      "empty": "Bu mağaza için yapılandırılmış masa yok",
+      "fetchError": "Masa planı yüklenemedi",
+      "walkIn": "Gelip geçici sipariş",
+      "merge": "Masaları Birleştir",
+      "confirmMerge": "Birleştirmeyi Onayla",
+      "mergeSelected": "{{count}} seçildi",
+      "mergeMinTwo": "Birleştirmek için en az 2 masa seçin",
+      "mergeSuccess": "Masalar birleştirildi",
+      "mergeError": "Birleştirme başarısız",
+      "unmerge": "Birleştirmeyi Kaldır",
+      "confirmUnmerge": "Bu masanın birleştirmesi kaldırılsın mı?",
+      "unmergeSuccess": "Masa ayrıldı",
+      "unmergeError": "Ayırma başarısız",
+      "tableBlocked": "Bu masa kapalı",
+      "mergedChild": "Bu masa birleştirilmiş. Siparişi açmak için ana masaya dokunun.",
+      "noTakeOrderPermission": "Sipariş alma izniniz yok",
+      "checkInReservation": "Rezervasyon girişi",
+      "checkInComingSoon": "Rezervasyon girişi sonraki bir adımda kullanılabilir olacak",
+      "status": {
+        "available": "Müsait",
+        "occupied": "Dolu",
+        "reserved": "Rezerve",
+        "blocked": "Kapalı",
+        "merged": "Birleştirilmiş"
+      }
     }
   }
 }

@@ -68,6 +68,7 @@ import CashRegisterSessionsPage from './pages/CashRegisterSessionsPage';
 import PosLayout from './pages/pos/PosLayout';
 import PosLoginPage from './pages/pos/PosLoginPage';
 import PosHomePage from './pages/pos/PosHomePage';
+import PosFloorPage from './pages/pos/PosFloorPage';
 
 
 function ProtectedRoute({ children }: { children: React.ReactNode }) {
@@ -97,8 +98,10 @@ function App() {
         }>
           <Route index element={<Navigate to="/pos/login" replace />} />
           <Route path="login" element={<PosLoginPage />} />
-          <Route path="floor" element={<PosHomePage />} />
+          <Route path="floor" element={<PosFloorPage />} />
           <Route path="orders" element={<PosHomePage />} />
+          <Route path="orders/new" element={<PosHomePage />} />
+          <Route path="orders/:id" element={<PosHomePage />} />
         </Route>
 
         <Route path="/" element={

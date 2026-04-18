@@ -2326,6 +2326,36 @@
     "nav": {
       "floor": "Grundriss",
       "orders": "Bestellungen"
+    },
+    "floor": {
+      "title": "Tischplan",
+      "allAreas": "Alle Bereiche",
+      "noArea": "Nicht zugewiesen",
+      "empty": "Für dieses Geschäft sind keine Tische konfiguriert",
+      "fetchError": "Tischplan konnte nicht geladen werden",
+      "walkIn": "Laufkundschaft-Bestellung",
+      "merge": "Tische zusammenlegen",
+      "confirmMerge": "Zusammenlegung bestätigen",
+      "mergeSelected": "{{count}} ausgewählt",
+      "mergeMinTwo": "Wählen Sie mindestens 2 Tische zum Zusammenlegen",
+      "mergeSuccess": "Tische zusammengelegt",
+      "mergeError": "Zusammenlegen fehlgeschlagen",
+      "unmerge": "Trennen",
+      "confirmUnmerge": "Diesen Tisch trennen?",
+      "unmergeSuccess": "Tisch getrennt",
+      "unmergeError": "Trennen fehlgeschlagen",
+      "tableBlocked": "Dieser Tisch ist gesperrt",
+      "mergedChild": "Dieser Tisch ist zusammengelegt. Tippen Sie auf den Haupttisch, um dessen Bestellung zu öffnen.",
+      "noTakeOrderPermission": "Sie haben keine Berechtigung, Bestellungen aufzunehmen",
+      "checkInReservation": "Reservierung einchecken",
+      "checkInComingSoon": "Reservierungs-Check-in wird in einem späteren Schritt verfügbar sein",
+      "status": {
+        "available": "Verfügbar",
+        "occupied": "Besetzt",
+        "reserved": "Reserviert",
+        "blocked": "Gesperrt",
+        "merged": "Zusammengelegt"
+      }
     }
   }
 }

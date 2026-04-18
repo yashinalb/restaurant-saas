@@ -2326,6 +2326,36 @@
     "nav": {
       "floor": "Salón",
       "orders": "Pedidos"
+    },
+    "floor": {
+      "title": "Plano del Salón",
+      "allAreas": "Todas las Áreas",
+      "noArea": "Sin asignar",
+      "empty": "No hay mesas configuradas para esta tienda",
+      "fetchError": "Error al cargar el plano del salón",
+      "walkIn": "Pedido sin reserva",
+      "merge": "Unir Mesas",
+      "confirmMerge": "Confirmar Unión",
+      "mergeSelected": "{{count}} seleccionadas",
+      "mergeMinTwo": "Seleccione al menos 2 mesas para unir",
+      "mergeSuccess": "Mesas unidas",
+      "mergeError": "Error al unir",
+      "unmerge": "Separar",
+      "confirmUnmerge": "¿Separar esta mesa?",
+      "unmergeSuccess": "Mesa separada",
+      "unmergeError": "Error al separar",
+      "tableBlocked": "Esta mesa está bloqueada",
+      "mergedChild": "Esta mesa está unida. Toque la principal para abrir su pedido.",
+      "noTakeOrderPermission": "No tiene permiso para tomar pedidos",
+      "checkInReservation": "Registrar reserva",
+      "checkInComingSoon": "El registro de reservas estará disponible en un paso posterior",
+      "status": {
+        "available": "Disponible",
+        "occupied": "Ocupada",
+        "reserved": "Reservada",
+        "blocked": "Bloqueada",
+        "merged": "Unida"
+      }
     }
   }
 }

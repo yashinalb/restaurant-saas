@@ -2326,6 +2326,36 @@
     "nav": {
       "floor": "Floor",
       "orders": "Orders"
+    },
+    "floor": {
+      "title": "Floor Plan",
+      "allAreas": "All Areas",
+      "noArea": "Unassigned",
+      "empty": "No tables configured for this store",
+      "fetchError": "Failed to load floor plan",
+      "walkIn": "Walk-in order",
+      "merge": "Merge Tables",
+      "confirmMerge": "Confirm Merge",
+      "mergeSelected": "{{count}} selected",
+      "mergeMinTwo": "Select at least 2 tables to merge",
+      "mergeSuccess": "Tables merged",
+      "mergeError": "Failed to merge",
+      "unmerge": "Unmerge",
+      "confirmUnmerge": "Unmerge this table?",
+      "unmergeSuccess": "Table unmerged",
+      "unmergeError": "Failed to unmerge",
+      "tableBlocked": "This table is blocked",
+      "mergedChild": "This table is merged. Tap the parent to open its order.",
+      "noTakeOrderPermission": "You do not have permission to take orders",
+      "checkInReservation": "Check-in reservation",
+      "checkInComingSoon": "Reservation check-in will be available in a later step",
+      "status": {
+        "available": "Available",
+        "occupied": "Occupied",
+        "reserved": "Reserved",
+        "blocked": "Blocked",
+        "merged": "Merged"
+      }
     }
   }
 }

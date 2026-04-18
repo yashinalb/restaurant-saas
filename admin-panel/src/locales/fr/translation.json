@@ -2326,6 +2326,36 @@
     "nav": {
       "floor": "Salle",
       "orders": "Commandes"
+    },
+    "floor": {
+      "title": "Plan de Salle",
+      "allAreas": "Toutes les Zones",
+      "noArea": "Non attribué",
+      "empty": "Aucune table configurée pour ce magasin",
+      "fetchError": "Échec du chargement du plan de salle",
+      "walkIn": "Commande sans réservation",
+      "merge": "Fusionner les Tables",
+      "confirmMerge": "Confirmer la Fusion",
+      "mergeSelected": "{{count}} sélectionnées",
+      "mergeMinTwo": "Sélectionnez au moins 2 tables à fusionner",
+      "mergeSuccess": "Tables fusionnées",
+      "mergeError": "Échec de la fusion",
+      "unmerge": "Défusionner",
+      "confirmUnmerge": "Défusionner cette table ?",
+      "unmergeSuccess": "Table défusionnée",
+      "unmergeError": "Échec de la défusion",
+      "tableBlocked": "Cette table est bloquée",
+      "mergedChild": "Cette table est fusionnée. Appuyez sur la table principale pour ouvrir sa commande.",
+      "noTakeOrderPermission": "Vous n'avez pas la permission de prendre des commandes",
+      "checkInReservation": "Enregistrer la réservation",
+      "checkInComingSoon": "L'enregistrement des réservations sera disponible à une étape ultérieure",
+      "status": {
+        "available": "Disponible",
+        "occupied": "Occupée",
+        "reserved": "Réservée",
+        "blocked": "Bloquée",
+        "merged": "Fusionnée"
+      }
     }
   }
 }
