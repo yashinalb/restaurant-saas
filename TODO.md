@@ -475,7 +475,7 @@ Create full CRUD for kds_orders.
 No translations. Per-store, FK to order + order_item + order_destination. Status workflow (pending��preparing→ready→served/cancelled). priority (0=normal, 1=rush), estimated_prep_time, timing (started_at, completed_at).
 ```
 
-### [] 41. Daily Report Snapshots
+### [x] 41. Daily Report Snapshots
 
 Tables: `daily_report_snapshots`
 

@@ -77,7 +77,8 @@
     "tenantExpenseCategories": "Ausgabenkategorien",
     "tenantExpenseSources": "Ausgabenquellen",
     "expenses": "Ausgaben",
-    "kdsOrders": "Küchendisplay"
+    "kdsOrders": "Küchendisplay",
+    "dailyReports": "Tagesberichte"
   },
   "common": {
     "adminSaas": "Admin SaaS",
@@ -2224,5 +2225,37 @@
     "fetchError": "KDS-Bestellungen konnten nicht geladen werden",
     "saveError": "Speichern fehlgeschlagen",
     "deleteError": "Löschen fehlgeschlagen"
+  },
+  "dailyReports": {
+    "title": "Tagesbericht-Snapshots",
+    "generate": "Snapshot erstellen",
+    "generateHelp": "Aggregiert Transaktionen, Bestellungen und Ausgaben für die ausgewählte Filiale, das Datum und die Währung. Überschreibt einen vorhandenen Snapshot für diesen Schlüssel.",
+    "date": "Datum",
+    "store": "Filiale",
+    "currency": "Währung",
+    "orders": "Bestellungen",
+    "revenue": "Umsatz",
+    "tax": "Steuer",
+    "tips": "Trinkgelder",
+    "discounts": "Rabatte",
+    "refunds": "Rückerstattungen",
+    "expenses": "Ausgaben",
+    "netProfit": "Nettogewinn",
+    "ordersByType": "Bestellungen nach Typ",
+    "paymentBreakdown": "Zahlungsaufschlüsselung",
+    "noData": "Keine Daten",
+    "generatedAt": "Erstellt am",
+    "selectStore": "Filiale auswählen",
+    "selectCurrency": "Währung auswählen",
+    "allStores": "Alle Filialen",
+    "allCurrencies": "Alle Währungen",
+    "fieldsRequired": "Filiale, Datum und Währung sind erforderlich",
+    "confirmDelete": "Diesen Snapshot löschen?",
+    "generated": "Snapshot erstellt",
+    "generateError": "Erstellung fehlgeschlagen",
+    "deleted": "Snapshot gelöscht",
+    "deleteError": "Snapshot konnte nicht gelöscht werden",
+    "fetchError": "Tagesberichte konnten nicht geladen werden",
+    "empty": "Keine Snapshots gefunden"
   }
 }

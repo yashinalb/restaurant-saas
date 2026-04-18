@@ -77,7 +77,8 @@
     "tenantExpenseCategories": "Catégories de Dépenses",
     "tenantExpenseSources": "Sources de Dépenses",
     "expenses": "Dépenses",
-    "kdsOrders": "Écran Cuisine"
+    "kdsOrders": "Écran Cuisine",
+    "dailyReports": "Rapports Quotidiens"
   },
   "common": {
     "adminSaas": "Admin SaaS",
@@ -2224,5 +2225,37 @@
     "fetchError": "Échec du chargement des commandes KDS",
     "saveError": "Échec de l'enregistrement",
     "deleteError": "Échec de la suppression"
+  },
+  "dailyReports": {
+    "title": "Instantanés de Rapports Quotidiens",
+    "generate": "Générer un Instantané",
+    "generateHelp": "Agrège les transactions, commandes et dépenses pour le magasin, la date et la devise sélectionnés. Écrase tout instantané existant pour cette clé.",
+    "date": "Date",
+    "store": "Magasin",
+    "currency": "Devise",
+    "orders": "Commandes",
+    "revenue": "Revenu",
+    "tax": "Taxe",
+    "tips": "Pourboires",
+    "discounts": "Remises",
+    "refunds": "Remboursements",
+    "expenses": "Dépenses",
+    "netProfit": "Bénéfice Net",
+    "ordersByType": "Commandes par Type",
+    "paymentBreakdown": "Répartition des Paiements",
+    "noData": "Aucune donnée",
+    "generatedAt": "Généré le",
+    "selectStore": "Sélectionnez un magasin",
+    "selectCurrency": "Sélectionnez une devise",
+    "allStores": "Tous les Magasins",
+    "allCurrencies": "Toutes les Devises",
+    "fieldsRequired": "Le magasin, la date et la devise sont obligatoires",
+    "confirmDelete": "Supprimer cet instantané ?",
+    "generated": "Instantané généré",
+    "generateError": "Échec de la génération",
+    "deleted": "Instantané supprimé",
+    "deleteError": "Échec de la suppression de l'instantané",
+    "fetchError": "Échec du chargement des rapports quotidiens",
+    "empty": "Aucun instantané trouvé"
   }
 }

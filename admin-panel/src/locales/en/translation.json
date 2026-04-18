@@ -77,7 +77,8 @@
     "tenantExpenseCategories": "Expense Categories",
     "tenantExpenseSources": "Expense Sources",
     "expenses": "Expenses",
-    "kdsOrders": "Kitchen Display"
+    "kdsOrders": "Kitchen Display",
+    "dailyReports": "Daily Reports"
   },
   "common": {
     "adminSaas": "Admin SaaS",
@@ -2224,5 +2225,37 @@
     "fetchError": "Failed to load KDS orders",
     "saveError": "Failed to save",
     "deleteError": "Failed to delete"
+  },
+  "dailyReports": {
+    "title": "Daily Report Snapshots",
+    "generate": "Generate Snapshot",
+    "generateHelp": "Aggregates transactions, orders, and expenses for the selected store, date, and currency. Overwrites any existing snapshot for that key.",
+    "date": "Date",
+    "store": "Store",
+    "currency": "Currency",
+    "orders": "Orders",
+    "revenue": "Revenue",
+    "tax": "Tax",
+    "tips": "Tips",
+    "discounts": "Discounts",
+    "refunds": "Refunds",
+    "expenses": "Expenses",
+    "netProfit": "Net Profit",
+    "ordersByType": "Orders by Type",
+    "paymentBreakdown": "Payment Breakdown",
+    "noData": "No data",
+    "generatedAt": "Generated at",
+    "selectStore": "Select a store",
+    "selectCurrency": "Select a currency",
+    "allStores": "All Stores",
+    "allCurrencies": "All Currencies",
+    "fieldsRequired": "Store, date, and currency are required",
+    "confirmDelete": "Delete this snapshot?",
+    "generated": "Snapshot generated",
+    "generateError": "Failed to generate",
+    "deleted": "Snapshot deleted",
+    "deleteError": "Failed to delete snapshot",
+    "fetchError": "Failed to load daily reports",
+    "empty": "No snapshots found"
   }
 }

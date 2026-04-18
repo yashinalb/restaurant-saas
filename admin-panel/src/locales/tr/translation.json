@@ -77,7 +77,8 @@
     "tenantExpenseCategories": "Gider Kategorileri",
     "tenantExpenseSources": "Gider Kaynakları",
     "expenses": "Giderler",
-    "kdsOrders": "Mutfak Ekranı"
+    "kdsOrders": "Mutfak Ekranı",
+    "dailyReports": "Günlük Raporlar"
   },
   "common": {
     "adminSaas": "Admin SaaS",
@@ -2224,5 +2225,37 @@
     "fetchError": "KDS siparişleri yüklenemedi",
     "saveError": "Kaydedilemedi",
     "deleteError": "Silinemedi"
+  },
+  "dailyReports": {
+    "title": "Günlük Rapor Anlık Görüntüleri",
+    "generate": "Anlık Görüntü Oluştur",
+    "generateHelp": "Seçilen mağaza, tarih ve para birimi için işlemleri, siparişleri ve giderleri toplar. Bu anahtar için mevcut anlık görüntünün üzerine yazar.",
+    "date": "Tarih",
+    "store": "Mağaza",
+    "currency": "Para Birimi",
+    "orders": "Siparişler",
+    "revenue": "Gelir",
+    "tax": "Vergi",
+    "tips": "Bahşişler",
+    "discounts": "İndirimler",
+    "refunds": "İadeler",
+    "expenses": "Giderler",
+    "netProfit": "Net Kâr",
+    "ordersByType": "Türe Göre Siparişler",
+    "paymentBreakdown": "Ödeme Dağılımı",
+    "noData": "Veri yok",
+    "generatedAt": "Oluşturulma zamanı",
+    "selectStore": "Bir mağaza seçin",
+    "selectCurrency": "Bir para birimi seçin",
+    "allStores": "Tüm Mağazalar",
+    "allCurrencies": "Tüm Para Birimleri",
+    "fieldsRequired": "Mağaza, tarih ve para birimi zorunludur",
+    "confirmDelete": "Bu anlık görüntü silinsin mi?",
+    "generated": "Anlık görüntü oluşturuldu",
+    "generateError": "Oluşturma başarısız",
+    "deleted": "Anlık görüntü silindi",
+    "deleteError": "Anlık görüntü silinemedi",
+    "fetchError": "Günlük raporlar yüklenemedi",
+    "empty": "Anlık görüntü bulunamadı"
   }
 }

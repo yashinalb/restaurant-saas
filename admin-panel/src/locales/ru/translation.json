@@ -77,7 +77,8 @@
     "tenantExpenseCategories": "Категории расходов",
     "tenantExpenseSources": "Источники расходов",
     "expenses": "Расходы",
-    "kdsOrders": "Кухонный экран"
+    "kdsOrders": "Кухонный экран",
+    "dailyReports": "Ежедневные отчёты"
   },
   "common": {
     "adminSaas": "Admin SaaS",
@@ -2224,5 +2225,37 @@
     "fetchError": "Не удалось загрузить заказы KDS",
     "saveError": "Не удалось сохранить",
     "deleteError": "Не удалось удалить"
+  },
+  "dailyReports": {
+    "title": "Снимки ежедневных отчётов",
+    "generate": "Создать снимок",
+    "generateHelp": "Агрегирует транзакции, заказы и расходы для выбранного магазина, даты и валюты. Перезаписывает существующий снимок для этого ключа.",
+    "date": "Дата",
+    "store": "Магазин",
+    "currency": "Валюта",
+    "orders": "Заказы",
+    "revenue": "Выручка",
+    "tax": "Налог",
+    "tips": "Чаевые",
+    "discounts": "Скидки",
+    "refunds": "Возвраты",
+    "expenses": "Расходы",
+    "netProfit": "Чистая прибыль",
+    "ordersByType": "Заказы по типу",
+    "paymentBreakdown": "Разбивка платежей",
+    "noData": "Нет данных",
+    "generatedAt": "Создано",
+    "selectStore": "Выберите магазин",
+    "selectCurrency": "Выберите валюту",
+    "allStores": "Все магазины",
+    "allCurrencies": "Все валюты",
+    "fieldsRequired": "Магазин, дата и валюта обязательны",
+    "confirmDelete": "Удалить этот снимок?",
+    "generated": "Снимок создан",
+    "generateError": "Не удалось создать",
+    "deleted": "Снимок удалён",
+    "deleteError": "Не удалось удалить снимок",
+    "fetchError": "Не удалось загрузить ежедневные отчёты",
+    "empty": "Снимки не найдены"
   }
 }

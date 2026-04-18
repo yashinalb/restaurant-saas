@@ -77,7 +77,8 @@
     "tenantExpenseCategories": "Categorías de Gastos",
     "tenantExpenseSources": "Fuentes de Gastos",
     "expenses": "Gastos",
-    "kdsOrders": "Pantalla de Cocina"
+    "kdsOrders": "Pantalla de Cocina",
+    "dailyReports": "Informes Diarios"
   },
   "common": {
     "adminSaas": "Admin SaaS",
@@ -2224,5 +2225,37 @@
     "fetchError": "Error al cargar los pedidos KDS",
     "saveError": "Error al guardar",
     "deleteError": "Error al eliminar"
+  },
+  "dailyReports": {
+    "title": "Instantáneas de Informes Diarios",
+    "generate": "Generar Instantánea",
+    "generateHelp": "Agrega transacciones, pedidos y gastos para la tienda, fecha y moneda seleccionadas. Sobrescribe cualquier instantánea existente para esa clave.",
+    "date": "Fecha",
+    "store": "Tienda",
+    "currency": "Moneda",
+    "orders": "Pedidos",
+    "revenue": "Ingresos",
+    "tax": "Impuesto",
+    "tips": "Propinas",
+    "discounts": "Descuentos",
+    "refunds": "Reembolsos",
+    "expenses": "Gastos",
+    "netProfit": "Beneficio Neto",
+    "ordersByType": "Pedidos por Tipo",
+    "paymentBreakdown": "Desglose de Pagos",
+    "noData": "Sin datos",
+    "generatedAt": "Generado el",
+    "selectStore": "Seleccione una tienda",
+    "selectCurrency": "Seleccione una moneda",
+    "allStores": "Todas las Tiendas",
+    "allCurrencies": "Todas las Monedas",
+    "fieldsRequired": "La tienda, la fecha y la moneda son obligatorias",
+    "confirmDelete": "¿Eliminar esta instantánea?",
+    "generated": "Instantánea generada",
+    "generateError": "Error al generar",
+    "deleted": "Instantánea eliminada",
+    "deleteError": "Error al eliminar la instantánea",
+    "fetchError": "Error al cargar los informes diarios",
+    "empty": "No se encontraron instantáneas"
   }
 }

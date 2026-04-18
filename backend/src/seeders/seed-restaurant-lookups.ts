@@ -587,7 +587,11 @@ async function seedRestaurantLookups() {
       ('kds_orders.view', 'View KDS Orders', 'Can view KDS orders', 'kds_orders', 1),
       ('kds_orders.create', 'Create KDS Orders', 'Can create KDS orders', 'kds_orders', 1),
       ('kds_orders.edit', 'Edit KDS Orders', 'Can edit/update KDS orders', 'kds_orders', 1),
-      ('kds_orders.delete', 'Delete KDS Orders', 'Can delete KDS orders', 'kds_orders', 1)
+      ('kds_orders.delete', 'Delete KDS Orders', 'Can delete KDS orders', 'kds_orders', 1),
+      ('daily_reports.view', 'View Daily Reports', 'Can view daily report snapshots', 'daily_reports', 1),
+      ('daily_reports.create', 'Create Daily Reports', 'Can create/generate daily report snapshots', 'daily_reports', 1),
+      ('daily_reports.edit', 'Edit Daily Reports', 'Can edit daily report snapshots', 'daily_reports', 1),
+      ('daily_reports.delete', 'Delete Daily Reports', 'Can delete daily report snapshots', 'daily_reports', 1)
     `);
     console.log('✅ Restaurant permissions seeded\n');
 
