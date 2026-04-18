@@ -67,7 +67,8 @@
     "tenantPaymentStatuses": "Καταστάσεις Πληρωμών",
     "tenantPaymentTypes": "Τύποι Πληρωμών",
     "orders": "Παραγγελίες",
-    "transactions": "Συναλλαγές"
+    "transactions": "Συναλλαγές",
+    "qrInvoiceTokens": "QR Κωδικοί Τιμολογίων"
   },
   "common": {
     "adminSaas": "Admin SaaS",
@@ -1821,5 +1822,35 @@
       "per_item": "Ανά Προϊόν",
       "mixed": "Μικτή"
     }
+  },
+  "qrInvoiceTokens": {
+    "title": "QR Κωδικοί Τιμολογίων",
+    "add": "Προσθήκη QR Κωδικού",
+    "edit": "Επεξεργασία QR Κωδικού",
+    "token": "Κωδικός",
+    "order": "Παραγγελία",
+    "table": "Τραπέζι",
+    "statusLabel": "Κατάσταση",
+    "statusActive": "Ενεργός",
+    "statusExpired": "Ληγμένος",
+    "statusUsed": "Χρησιμοποιημένος",
+    "expiresAt": "Λήγει Στις",
+    "lastAccessed": "Τελευταία Πρόσβαση",
+    "metadata": "Μεταδεδομένα (JSON)",
+    "selectOrder": "Επιλέξτε παραγγελία",
+    "selectTable": "Επιλέξτε τραπέζι",
+    "allStatuses": "Όλες οι Καταστάσεις",
+    "orderRequired": "Η παραγγελία είναι υποχρεωτική",
+    "tableRequired": "Το τραπέζι είναι υποχρεωτικό",
+    "expiresAtRequired": "Η ημερομηνία λήξης είναι υποχρεωτική",
+    "invalidJson": "Τα μεταδεδομένα πρέπει να είναι έγκυρο JSON",
+    "confirmDelete": "Είστε σίγουροι ότι θέλετε να διαγράψετε αυτόν τον QR κωδικό;",
+    "created": "Ο QR κωδικός δημιουργήθηκε επιτυχώς",
+    "updated": "Ο QR κωδικός ενημερώθηκε επιτυχώς",
+    "deleted": "Ο QR κωδικός διαγράφηκε επιτυχώς",
+    "fetchError": "Αποτυχία φόρτωσης QR κωδικών τιμολογίων",
+    "saveError": "Αποτυχία αποθήκευσης QR κωδικού",
+    "deleteError": "Αποτυχία διαγραφής QR κωδικού",
+    "empty": "Δεν βρέθηκαν QR κωδικοί τιμολογίων"
   }
 }

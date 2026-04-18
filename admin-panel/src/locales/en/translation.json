@@ -67,7 +67,8 @@
     "tenantPaymentStatuses": "Payment Statuses",
     "tenantPaymentTypes": "Payment Types",
     "orders": "Orders",
-    "transactions": "Transactions"
+    "transactions": "Transactions",
+    "qrInvoiceTokens": "QR Invoice Tokens"
   },
   "common": {
     "adminSaas": "Admin SaaS",
@@ -1821,5 +1822,35 @@
       "per_item": "Per Item",
       "mixed": "Mixed"
     }
+  },
+  "qrInvoiceTokens": {
+    "title": "QR Invoice Tokens",
+    "add": "Add QR Token",
+    "edit": "Edit QR Token",
+    "token": "Token",
+    "order": "Order",
+    "table": "Table",
+    "statusLabel": "Status",
+    "statusActive": "Active",
+    "statusExpired": "Expired",
+    "statusUsed": "Used",
+    "expiresAt": "Expires At",
+    "lastAccessed": "Last Accessed",
+    "metadata": "Metadata (JSON)",
+    "selectOrder": "Select an order",
+    "selectTable": "Select a table",
+    "allStatuses": "All Statuses",
+    "orderRequired": "Order is required",
+    "tableRequired": "Table is required",
+    "expiresAtRequired": "Expiry date is required",
+    "invalidJson": "Metadata must be valid JSON",
+    "confirmDelete": "Are you sure you want to delete this QR token?",
+    "created": "QR token created successfully",
+    "updated": "QR token updated successfully",
+    "deleted": "QR token deleted successfully",
+    "fetchError": "Failed to load QR invoice tokens",
+    "saveError": "Failed to save QR token",
+    "deleteError": "Failed to delete QR token",
+    "empty": "No QR invoice tokens found"
   }
 }

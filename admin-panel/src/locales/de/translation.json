@@ -67,7 +67,8 @@
     "tenantPaymentStatuses": "Zahlungsstatus",
     "tenantPaymentTypes": "Zahlungsarten",
     "orders": "Bestellungen",
-    "transactions": "Transaktionen"
+    "transactions": "Transaktionen",
+    "qrInvoiceTokens": "QR-Rechnungstoken"
   },
   "common": {
     "adminSaas": "Admin SaaS",
@@ -1821,5 +1822,35 @@
       "per_item": "Pro Artikel",
       "mixed": "Gemischt"
     }
+  },
+  "qrInvoiceTokens": {
+    "title": "QR-Rechnungstoken",
+    "add": "QR-Token hinzufügen",
+    "edit": "QR-Token bearbeiten",
+    "token": "Token",
+    "order": "Bestellung",
+    "table": "Tisch",
+    "statusLabel": "Status",
+    "statusActive": "Aktiv",
+    "statusExpired": "Abgelaufen",
+    "statusUsed": "Verwendet",
+    "expiresAt": "Läuft ab am",
+    "lastAccessed": "Letzter Zugriff",
+    "metadata": "Metadaten (JSON)",
+    "selectOrder": "Bestellung auswählen",
+    "selectTable": "Tisch auswählen",
+    "allStatuses": "Alle Status",
+    "orderRequired": "Bestellung ist erforderlich",
+    "tableRequired": "Tisch ist erforderlich",
+    "expiresAtRequired": "Ablaufdatum ist erforderlich",
+    "invalidJson": "Metadaten müssen gültiges JSON sein",
+    "confirmDelete": "Sind Sie sicher, dass Sie diesen QR-Token löschen möchten?",
+    "created": "QR-Token erfolgreich erstellt",
+    "updated": "QR-Token erfolgreich aktualisiert",
+    "deleted": "QR-Token erfolgreich gelöscht",
+    "fetchError": "QR-Rechnungstoken konnten nicht geladen werden",
+    "saveError": "QR-Token konnte nicht gespeichert werden",
+    "deleteError": "QR-Token konnte nicht gelöscht werden",
+    "empty": "Keine QR-Rechnungstoken gefunden"
   }
 }

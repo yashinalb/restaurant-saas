@@ -67,7 +67,8 @@
     "tenantPaymentStatuses": "Statuts de Paiement",
     "tenantPaymentTypes": "Types de Paiement",
     "orders": "Commandes",
-    "transactions": "Transactions"
+    "transactions": "Transactions",
+    "qrInvoiceTokens": "Jetons QR de Facture"
   },
   "common": {
     "adminSaas": "Admin SaaS",
@@ -1821,5 +1822,35 @@
       "per_item": "Par Article",
       "mixed": "Mixte"
     }
+  },
+  "qrInvoiceTokens": {
+    "title": "Jetons QR de Facture",
+    "add": "Ajouter un Jeton QR",
+    "edit": "Modifier le Jeton QR",
+    "token": "Jeton",
+    "order": "Commande",
+    "table": "Table",
+    "statusLabel": "Statut",
+    "statusActive": "Actif",
+    "statusExpired": "Expiré",
+    "statusUsed": "Utilisé",
+    "expiresAt": "Expire Le",
+    "lastAccessed": "Dernier Accès",
+    "metadata": "Métadonnées (JSON)",
+    "selectOrder": "Sélectionnez une commande",
+    "selectTable": "Sélectionnez une table",
+    "allStatuses": "Tous les Statuts",
+    "orderRequired": "La commande est obligatoire",
+    "tableRequired": "La table est obligatoire",
+    "expiresAtRequired": "La date d'expiration est obligatoire",
+    "invalidJson": "Les métadonnées doivent être un JSON valide",
+    "confirmDelete": "Êtes-vous sûr de vouloir supprimer ce jeton QR ?",
+    "created": "Jeton QR créé avec succès",
+    "updated": "Jeton QR mis à jour avec succès",
+    "deleted": "Jeton QR supprimé avec succès",
+    "fetchError": "Impossible de charger les jetons QR de facture",
+    "saveError": "Impossible de sauvegarder le jeton QR",
+    "deleteError": "Impossible de supprimer le jeton QR",
+    "empty": "Aucun jeton QR de facture trouvé"
   }
 }

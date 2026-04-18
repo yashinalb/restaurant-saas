@@ -67,7 +67,8 @@
     "tenantPaymentStatuses": "Ödeme Durumları",
     "tenantPaymentTypes": "Ödeme Türleri",
     "orders": "Siparişler",
-    "transactions": "İşlemler"
+    "transactions": "İşlemler",
+    "qrInvoiceTokens": "QR Fatura Jetonları"
   },
   "common": {
     "adminSaas": "Admin SaaS",
@@ -1821,5 +1822,35 @@
       "per_item": "Ürün Başına",
       "mixed": "Karışık"
     }
+  },
+  "qrInvoiceTokens": {
+    "title": "QR Fatura Jetonları",
+    "add": "QR Jetonu Ekle",
+    "edit": "QR Jetonu Düzenle",
+    "token": "Jeton",
+    "order": "Sipariş",
+    "table": "Masa",
+    "statusLabel": "Durum",
+    "statusActive": "Aktif",
+    "statusExpired": "Süresi Dolmuş",
+    "statusUsed": "Kullanılmış",
+    "expiresAt": "Son Kullanma Tarihi",
+    "lastAccessed": "Son Erişim",
+    "metadata": "Meta Veri (JSON)",
+    "selectOrder": "Bir sipariş seçin",
+    "selectTable": "Bir masa seçin",
+    "allStatuses": "Tüm Durumlar",
+    "orderRequired": "Sipariş gereklidir",
+    "tableRequired": "Masa gereklidir",
+    "expiresAtRequired": "Son kullanma tarihi gereklidir",
+    "invalidJson": "Meta veri geçerli bir JSON olmalıdır",
+    "confirmDelete": "Bu QR jetonunu silmek istediğinizden emin misiniz?",
+    "created": "QR jetonu başarıyla oluşturuldu",
+    "updated": "QR jetonu başarıyla güncellendi",
+    "deleted": "QR jetonu başarıyla silindi",
+    "fetchError": "QR fatura jetonları yüklenemedi",
+    "saveError": "QR jetonu kaydedilemedi",
+    "deleteError": "QR jetonu silinemedi",
+    "empty": "QR fatura jetonu bulunamadı"
   }
 }

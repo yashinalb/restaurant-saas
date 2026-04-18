@@ -67,7 +67,8 @@
     "tenantPaymentStatuses": "Статусы Платежей",
     "tenantPaymentTypes": "Типы Платежей",
     "orders": "Заказы",
-    "transactions": "Транзакции"
+    "transactions": "Транзакции",
+    "qrInvoiceTokens": "QR-токены счетов"
   },
   "common": {
     "adminSaas": "Admin SaaS",
@@ -1821,5 +1822,35 @@
       "per_item": "По Позициям",
       "mixed": "Смешанный"
     }
+  },
+  "qrInvoiceTokens": {
+    "title": "QR-токены счетов",
+    "add": "Добавить QR-токен",
+    "edit": "Редактировать QR-токен",
+    "token": "Токен",
+    "order": "Заказ",
+    "table": "Стол",
+    "statusLabel": "Статус",
+    "statusActive": "Активный",
+    "statusExpired": "Истёкший",
+    "statusUsed": "Использованный",
+    "expiresAt": "Истекает",
+    "lastAccessed": "Последний доступ",
+    "metadata": "Метаданные (JSON)",
+    "selectOrder": "Выберите заказ",
+    "selectTable": "Выберите стол",
+    "allStatuses": "Все статусы",
+    "orderRequired": "Заказ обязателен",
+    "tableRequired": "Стол обязателен",
+    "expiresAtRequired": "Дата истечения обязательна",
+    "invalidJson": "Метаданные должны быть валидным JSON",
+    "confirmDelete": "Вы уверены, что хотите удалить этот QR-токен?",
+    "created": "QR-токен успешно создан",
+    "updated": "QR-токен успешно обновлён",
+    "deleted": "QR-токен успешно удалён",
+    "fetchError": "Не удалось загрузить QR-токены счетов",
+    "saveError": "Не удалось сохранить QR-токен",
+    "deleteError": "Не удалось удалить QR-токен",
+    "empty": "QR-токены счетов не найдены"
   }
 }

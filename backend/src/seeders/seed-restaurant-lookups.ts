@@ -547,7 +547,11 @@ async function seedRestaurantLookups() {
       ('transactions.view', 'View Transactions', 'Can view transactions', 'payments', 1),
       ('transactions.create', 'Create Transactions', 'Can create transactions', 'payments', 1),
       ('transactions.edit', 'Edit Transactions', 'Can edit transactions', 'payments', 1),
-      ('transactions.delete', 'Delete Transactions', 'Can delete transactions', 'payments', 1)
+      ('transactions.delete', 'Delete Transactions', 'Can delete transactions', 'payments', 1),
+      ('qr_invoice_tokens.view', 'View QR Invoice Tokens', 'Can view QR invoice tokens', 'qr_invoice_tokens', 1),
+      ('qr_invoice_tokens.create', 'Create QR Invoice Tokens', 'Can create QR invoice tokens', 'qr_invoice_tokens', 1),
+      ('qr_invoice_tokens.edit', 'Edit QR Invoice Tokens', 'Can edit QR invoice tokens', 'qr_invoice_tokens', 1),
+      ('qr_invoice_tokens.delete', 'Delete QR Invoice Tokens', 'Can delete QR invoice tokens', 'qr_invoice_tokens', 1)
     `);
     console.log('✅ Restaurant permissions seeded\n');
 

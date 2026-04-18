@@ -67,7 +67,8 @@
     "tenantPaymentStatuses": "Estados de Pago",
     "tenantPaymentTypes": "Tipos de Pago",
     "orders": "Pedidos",
-    "transactions": "Transacciones"
+    "transactions": "Transacciones",
+    "qrInvoiceTokens": "Tokens QR de Factura"
   },
   "common": {
     "adminSaas": "Admin SaaS",
@@ -1821,5 +1822,35 @@
       "per_item": "Por Artículo",
       "mixed": "Mixto"
     }
+  },
+  "qrInvoiceTokens": {
+    "title": "Tokens QR de Factura",
+    "add": "Agregar Token QR",
+    "edit": "Editar Token QR",
+    "token": "Token",
+    "order": "Pedido",
+    "table": "Mesa",
+    "statusLabel": "Estado",
+    "statusActive": "Activo",
+    "statusExpired": "Expirado",
+    "statusUsed": "Usado",
+    "expiresAt": "Expira El",
+    "lastAccessed": "Último Acceso",
+    "metadata": "Metadatos (JSON)",
+    "selectOrder": "Seleccione un pedido",
+    "selectTable": "Seleccione una mesa",
+    "allStatuses": "Todos los Estados",
+    "orderRequired": "El pedido es obligatorio",
+    "tableRequired": "La mesa es obligatoria",
+    "expiresAtRequired": "La fecha de expiración es obligatoria",
+    "invalidJson": "Los metadatos deben ser JSON válido",
+    "confirmDelete": "¿Está seguro de que desea eliminar este token QR?",
+    "created": "Token QR creado exitosamente",
+    "updated": "Token QR actualizado exitosamente",
+    "deleted": "Token QR eliminado exitosamente",
+    "fetchError": "No se pudieron cargar los tokens QR de factura",
+    "saveError": "No se pudo guardar el token QR",
+    "deleteError": "No se pudo eliminar el token QR",
+    "empty": "No se encontraron tokens QR de factura"
   }
 }
