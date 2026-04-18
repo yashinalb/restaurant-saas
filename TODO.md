@@ -415,7 +415,7 @@ FK to supplier + currency. Invoice tracking with stock_status (pending|partial|r
 stock_intakes: Per-store, FK to supplier + invoice + product. Tracks quantity_ordered vs quantity_received, carton support, received_by + received_at.
 ```
 
-### [ ] 36. Supplier Credits + Payments
+### [x] 36. Supplier Credits + Payments
 
 Tables: `supplier_credits` + `supplier_payment_records`
 
@@ -430,7 +430,7 @@ supplier_payment_records: FK to credit + payment_type + currency. Tracks individ
 
 ## PRIORITY 8: Expenses (Migration 012)
 
-### [ ] 37. Tenant Expense Categories
+### [] 37. Tenant Expense Categories
 
 Tables: `tenant_expense_categories` + `tenant_expense_category_translations`
 
@@ -440,7 +440,7 @@ Create full CRUD for tenant_expense_categories + tenant_expense_category_transla
 Has import-from-master pattern (master_expense_category_id FK).
 ```
 
-### [ ] 38. Tenant Expense Sources
+### [] 38. Tenant Expense Sources
 
 Tables: `tenant_expense_sources` + `tenant_expense_source_translations`
 
@@ -450,7 +450,7 @@ Create full CRUD for tenant_expense_sources + tenant_expense_source_translations
 FK to tenant_expense_categories. Sub-categories for expenses.
 ```
 
-### [ ] 39. Expenses + Expense Payments
+### [] 39. Expenses + Expense Payments
 
 Tables: `expenses` + `expense_payments`
 
@@ -465,7 +465,7 @@ expense_payments: FK to expense + payment_type + currency. Tracks individual pay
 
 ## PRIORITY 9: KDS & Reporting (Migration 013)
 
-### [ ] 40. KDS Orders (Kitchen Display System)
+### [] 40. KDS Orders (Kitchen Display System)
 
 Tables: `kds_orders`
 
@@ -475,7 +475,7 @@ Create full CRUD for kds_orders.
 No translations. Per-store, FK to order + order_item + order_destination. Status workflow (pending��preparing→ready→served/cancelled). priority (0=normal, 1=rush), estimated_prep_time, timing (started_at, completed_at).
 ```
 
-### [ ] 41. Daily Report Snapshots
+### [] 41. Daily Report Snapshots
 
 Tables: `daily_report_snapshots`
 
@@ -485,7 +485,7 @@ Create full CRUD for daily_report_snapshots.
 No translations. Per-store + currency. End-of-day aggregation: total_orders, total_revenue, total_tax, total_tips, total_discounts, total_refunds, total_expenses, order_count_by_type JSON, payment_breakdown JSON. Unique per (tenant, store, date, currency).
 ```
 
-### [ ] 42. Cash Register Sessions
+### [] 42. Cash Register Sessions
 
 Tables: `cash_register_sessions`
 
@@ -512,11 +512,11 @@ Shared conventions:
 - Reuses `tenant_waiter_sessions` for the per-device PIN login flow.
 - The existing admin CRUD pages (Reservations #24, Customers #23, Waiters #22, Tables #21) remain for management and history; POS consumes the same data but with an operations-oriented UI.
 
-### [ ] 44.1 POS Shell & Waiter PIN Login
+### [] 44.1 POS Shell & Waiter PIN Login
 
 Route group `/pos/*`, PIN-based waiter sign-in, `device_identifier` + `ip_address` capture, session row written to `tenant_waiter_sessions`, global "current waiter" indicator, logout button that closes the session.
 
-### [ ] 44.2 POS Floor Plan (Tables View)
+### [] 44.2 POS Floor Plan (Tables View)
 
 Grid/canvas of `tenant_table_structures` for the selected store, filterable by seating area. Status badges: available / occupied / reserved / blocked / merged. Tap-to-open-order. Floating action menu: walk-in, merge tables, check-in reservation. Today's reservations appear as chips on the relevant tables (visual cue only — check-in handled by 44.17).
 

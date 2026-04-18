@@ -44,6 +44,7 @@ import {
   Boxes,
   FileText,
   PackageOpen,
+  Banknote,
   LucideIcon
 } from 'lucide-react';
 
@@ -211,6 +212,7 @@ export default function DashboardLayout() {
         { name: t('navigation.tenantInventoryProducts', 'Inventory Products'), to: '/tenant/inventory-products', icon: Boxes, show: hasPermission('inventory_products.view') },
         { name: t('navigation.supplierInvoices', 'Supplier Invoices'), to: '/tenant/supplier-invoices', icon: FileText, show: hasPermission('supplier_invoices.view') },
         { name: t('navigation.stockIntakes', 'Stock Intakes'), to: '/tenant/stock-intakes', icon: PackageOpen, show: hasPermission('stock_intakes.view') },
+        { name: t('navigation.supplierCredits', 'Supplier Credits'), to: '/tenant/supplier-credits', icon: Banknote, show: hasPermission('supplier_credits.view') },
       ].filter(item => item.show)
     }
   ].filter(group => group.items.length > 0) : [];

@@ -567,7 +567,11 @@ async function seedRestaurantLookups() {
       ('stock_intakes.view', 'View Stock Intakes', 'Can view stock intakes', 'stock_intakes', 1),
       ('stock_intakes.create', 'Create Stock Intakes', 'Can create stock intakes', 'stock_intakes', 1),
       ('stock_intakes.edit', 'Edit Stock Intakes', 'Can edit stock intakes', 'stock_intakes', 1),
-      ('stock_intakes.delete', 'Delete Stock Intakes', 'Can delete stock intakes', 'stock_intakes', 1)
+      ('stock_intakes.delete', 'Delete Stock Intakes', 'Can delete stock intakes', 'stock_intakes', 1),
+      ('supplier_credits.view', 'View Supplier Credits', 'Can view supplier credits', 'supplier_credits', 1),
+      ('supplier_credits.create', 'Create Supplier Credits', 'Can create supplier credits', 'supplier_credits', 1),
+      ('supplier_credits.edit', 'Edit Supplier Credits', 'Can edit supplier credits', 'supplier_credits', 1),
+      ('supplier_credits.delete', 'Delete Supplier Credits', 'Can delete supplier credits', 'supplier_credits', 1)
     `);
     console.log('✅ Restaurant permissions seeded\n');
 
