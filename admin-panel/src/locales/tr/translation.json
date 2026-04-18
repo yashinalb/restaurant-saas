@@ -74,7 +74,8 @@
     "supplierInvoices": "Tedarikçi Faturaları",
     "stockIntakes": "Stok Girişleri",
     "supplierCredits": "Tedarikçi Borçları",
-    "tenantExpenseCategories": "Gider Kategorileri"
+    "tenantExpenseCategories": "Gider Kategorileri",
+    "tenantExpenseSources": "Gider Kaynakları"
   },
   "common": {
     "adminSaas": "Admin SaaS",
@@ -2091,5 +2092,29 @@
     "selected": "seçildi",
     "importSelected": "Seçilenleri İçe Aktar",
     "importedCount": "Başarıyla içe aktarıldı"
+  },
+  "tenantExpenseSources": {
+    "title": "Gider Kaynakları",
+    "add": "Kaynak Ekle",
+    "edit": "Kaynağı Düzenle",
+    "category": "Kategori",
+    "name": "Ad",
+    "translations": "Çeviriler",
+    "translationName": "Ad",
+    "translationDescription": "Açıklama",
+    "selectCategory": "Bir kategori seçin",
+    "allCategories": "Tüm Kategoriler",
+    "allStatuses": "Tüm Durumlar",
+    "categoryRequired": "Kategori zorunludur",
+    "nameRequired": "En az bir ad çevirisi zorunludur",
+    "noCategories": "Önce bir gider kategorisi oluşturun",
+    "confirmDelete": "Bu gider kaynağını silmek istediğinizden emin misiniz?",
+    "created": "Kaynak başarıyla oluşturuldu",
+    "updated": "Kaynak başarıyla güncellendi",
+    "deleted": "Kaynak başarıyla silindi",
+    "fetchError": "Gider kaynakları yüklenemedi",
+    "saveError": "Kaynak kaydedilemedi",
+    "deleteError": "Kaynak silinemedi",
+    "empty": "Gider kaynağı bulunamadı"
   }
 }

@@ -74,7 +74,8 @@
     "supplierInvoices": "Factures Fournisseurs",
     "stockIntakes": "Entrées de Stock",
     "supplierCredits": "Crédits Fournisseurs",
-    "tenantExpenseCategories": "Catégories de Dépenses"
+    "tenantExpenseCategories": "Catégories de Dépenses",
+    "tenantExpenseSources": "Sources de Dépenses"
   },
   "common": {
     "adminSaas": "Admin SaaS",
@@ -2091,5 +2092,29 @@
     "selected": "sélectionné",
     "importSelected": "Importer la Sélection",
     "importedCount": "Importé avec succès"
+  },
+  "tenantExpenseSources": {
+    "title": "Sources de Dépenses",
+    "add": "Ajouter une Source",
+    "edit": "Modifier la Source",
+    "category": "Catégorie",
+    "name": "Nom",
+    "translations": "Traductions",
+    "translationName": "Nom",
+    "translationDescription": "Description",
+    "selectCategory": "Sélectionnez une catégorie",
+    "allCategories": "Toutes les Catégories",
+    "allStatuses": "Tous les Statuts",
+    "categoryRequired": "La catégorie est requise",
+    "nameRequired": "Au moins une traduction de nom est requise",
+    "noCategories": "Créez d'abord une catégorie de dépenses",
+    "confirmDelete": "Êtes-vous sûr de vouloir supprimer cette source de dépenses ?",
+    "created": "Source créée avec succès",
+    "updated": "Source mise à jour avec succès",
+    "deleted": "Source supprimée avec succès",
+    "fetchError": "Échec du chargement des sources de dépenses",
+    "saveError": "Échec de l'enregistrement de la source",
+    "deleteError": "Échec de la suppression de la source",
+    "empty": "Aucune source de dépenses trouvée"
   }
 }

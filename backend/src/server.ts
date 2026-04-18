@@ -50,6 +50,7 @@ import supplierInvoiceRoutes from './routes/supplierInvoice.routes';
 import stockIntakeRoutes from './routes/stockIntake.routes';
 import supplierCreditRoutes from './routes/supplierCredit.routes';
 import tenantExpenseCategoryRoutes from './routes/tenantExpenseCategory.routes';
+import tenantExpenseSourceRoutes from './routes/tenantExpenseSource.routes';
 import addonTypeRoutes from './routes/addonType.routes';
 import addonRoutes from './routes/addon.routes';
 import orderSourceRoutes from './routes/orderSource.routes';
@@ -215,6 +216,7 @@ app.use('/api/tenant', supplierInvoiceRoutes);
 app.use('/api/tenant', stockIntakeRoutes);
 app.use('/api/tenant', supplierCreditRoutes);
 app.use('/api/tenant', tenantExpenseCategoryRoutes);
+app.use('/api/tenant', tenantExpenseSourceRoutes);
 
 // ============================================
 // ERROR HANDLING

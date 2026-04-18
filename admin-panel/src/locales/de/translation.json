@@ -74,7 +74,8 @@
     "supplierInvoices": "Lieferantenrechnungen",
     "stockIntakes": "Wareneingänge",
     "supplierCredits": "Lieferantenguthaben",
-    "tenantExpenseCategories": "Ausgabenkategorien"
+    "tenantExpenseCategories": "Ausgabenkategorien",
+    "tenantExpenseSources": "Ausgabenquellen"
   },
   "common": {
     "adminSaas": "Admin SaaS",
@@ -2091,5 +2092,29 @@
     "selected": "ausgewählt",
     "importSelected": "Ausgewählte importieren",
     "importedCount": "Erfolgreich importiert"
+  },
+  "tenantExpenseSources": {
+    "title": "Ausgabenquellen",
+    "add": "Quelle hinzufügen",
+    "edit": "Quelle bearbeiten",
+    "category": "Kategorie",
+    "name": "Name",
+    "translations": "Übersetzungen",
+    "translationName": "Name",
+    "translationDescription": "Beschreibung",
+    "selectCategory": "Kategorie auswählen",
+    "allCategories": "Alle Kategorien",
+    "allStatuses": "Alle Status",
+    "categoryRequired": "Kategorie ist erforderlich",
+    "nameRequired": "Mindestens eine Namensübersetzung ist erforderlich",
+    "noCategories": "Erstellen Sie zuerst eine Ausgabenkategorie",
+    "confirmDelete": "Möchten Sie diese Ausgabenquelle wirklich löschen?",
+    "created": "Quelle erfolgreich erstellt",
+    "updated": "Quelle erfolgreich aktualisiert",
+    "deleted": "Quelle erfolgreich gelöscht",
+    "fetchError": "Ausgabenquellen konnten nicht geladen werden",
+    "saveError": "Quelle konnte nicht gespeichert werden",
+    "deleteError": "Quelle konnte nicht gelöscht werden",
+    "empty": "Keine Ausgabenquellen gefunden"
   }
 }

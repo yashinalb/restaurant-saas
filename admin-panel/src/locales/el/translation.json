@@ -74,7 +74,8 @@
     "supplierInvoices": "Τιμολόγια Προμηθευτών",
     "stockIntakes": "Εισαγωγές Αποθέματος",
     "supplierCredits": "Πιστώσεις Προμηθευτών",
-    "tenantExpenseCategories": "Κατηγορίες Εξόδων"
+    "tenantExpenseCategories": "Κατηγορίες Εξόδων",
+    "tenantExpenseSources": "Πηγές Εξόδων"
   },
   "common": {
     "adminSaas": "Admin SaaS",
@@ -2091,5 +2092,29 @@
     "selected": "επιλεγμένα",
     "importSelected": "Εισαγωγή Επιλεγμένων",
     "importedCount": "Η εισαγωγή ολοκληρώθηκε με επιτυχία"
+  },
+  "tenantExpenseSources": {
+    "title": "Πηγές Εξόδων",
+    "add": "Προσθήκη Πηγής",
+    "edit": "Επεξεργασία Πηγής",
+    "category": "Κατηγορία",
+    "name": "Όνομα",
+    "translations": "Μεταφράσεις",
+    "translationName": "Όνομα",
+    "translationDescription": "Περιγραφή",
+    "selectCategory": "Επιλέξτε μια κατηγορία",
+    "allCategories": "Όλες οι Κατηγορίες",
+    "allStatuses": "Όλες οι Καταστάσεις",
+    "categoryRequired": "Η κατηγορία είναι υποχρεωτική",
+    "nameRequired": "Απαιτείται τουλάχιστον μία μετάφραση ονόματος",
+    "noCategories": "Δημιουργήστε πρώτα μια κατηγορία εξόδων",
+    "confirmDelete": "Είστε βέβαιοι ότι θέλετε να διαγράψετε αυτήν την πηγή εξόδων;",
+    "created": "Η πηγή δημιουργήθηκε με επιτυχία",
+    "updated": "Η πηγή ενημερώθηκε με επιτυχία",
+    "deleted": "Η πηγή διαγράφηκε με επιτυχία",
+    "fetchError": "Αποτυχία φόρτωσης πηγών εξόδων",
+    "saveError": "Αποτυχία αποθήκευσης πηγής",
+    "deleteError": "Αποτυχία διαγραφής πηγής",
+    "empty": "Δεν βρέθηκαν πηγές εξόδων"
   }
 }

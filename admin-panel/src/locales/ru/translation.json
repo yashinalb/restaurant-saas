@@ -74,7 +74,8 @@
     "supplierInvoices": "Счета поставщиков",
     "stockIntakes": "Поступления товаров",
     "supplierCredits": "Кредиты поставщиков",
-    "tenantExpenseCategories": "Категории расходов"
+    "tenantExpenseCategories": "Категории расходов",
+    "tenantExpenseSources": "Источники расходов"
   },
   "common": {
     "adminSaas": "Admin SaaS",
@@ -2091,5 +2092,29 @@
     "selected": "выбрано",
     "importSelected": "Импортировать выбранные",
     "importedCount": "Импортировано успешно"
+  },
+  "tenantExpenseSources": {
+    "title": "Источники расходов",
+    "add": "Добавить источник",
+    "edit": "Редактировать источник",
+    "category": "Категория",
+    "name": "Название",
+    "translations": "Переводы",
+    "translationName": "Название",
+    "translationDescription": "Описание",
+    "selectCategory": "Выберите категорию",
+    "allCategories": "Все категории",
+    "allStatuses": "Все статусы",
+    "categoryRequired": "Категория обязательна",
+    "nameRequired": "Требуется хотя бы один перевод названия",
+    "noCategories": "Сначала создайте категорию расходов",
+    "confirmDelete": "Вы уверены, что хотите удалить этот источник расходов?",
+    "created": "Источник успешно создан",
+    "updated": "Источник успешно обновлён",
+    "deleted": "Источник успешно удалён",
+    "fetchError": "Не удалось загрузить источники расходов",
+    "saveError": "Не удалось сохранить источник",
+    "deleteError": "Не удалось удалить источник",
+    "empty": "Источники расходов не найдены"
   }
 }

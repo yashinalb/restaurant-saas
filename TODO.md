@@ -430,7 +430,7 @@ supplier_payment_records: FK to credit + payment_type + currency. Tracks individ
 
 ## PRIORITY 8: Expenses (Migration 012)
 
-### [] 37. Tenant Expense Categories
+### [x] 37. Tenant Expense Categories
 
 Tables: `tenant_expense_categories` + `tenant_expense_category_translations`
 
@@ -440,7 +440,7 @@ Create full CRUD for tenant_expense_categories + tenant_expense_category_transla
 Has import-from-master pattern (master_expense_category_id FK).
 ```
 
-### [] 38. Tenant Expense Sources
+### [x] 38. Tenant Expense Sources
 
 Tables: `tenant_expense_sources` + `tenant_expense_source_translations`
 

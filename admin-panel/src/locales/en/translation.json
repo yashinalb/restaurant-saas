@@ -74,7 +74,8 @@
     "supplierInvoices": "Supplier Invoices",
     "stockIntakes": "Stock Intakes",
     "supplierCredits": "Supplier Credits",
-    "tenantExpenseCategories": "Expense Categories"
+    "tenantExpenseCategories": "Expense Categories",
+    "tenantExpenseSources": "Expense Sources"
   },
   "common": {
     "adminSaas": "Admin SaaS",
@@ -2091,5 +2092,29 @@
     "selected": "selected",
     "importSelected": "Import Selected",
     "importedCount": "Imported successfully"
+  },
+  "tenantExpenseSources": {
+    "title": "Expense Sources",
+    "add": "Add Source",
+    "edit": "Edit Source",
+    "category": "Category",
+    "name": "Name",
+    "translations": "Translations",
+    "translationName": "Name",
+    "translationDescription": "Description",
+    "selectCategory": "Select a category",
+    "allCategories": "All Categories",
+    "allStatuses": "All Statuses",
+    "categoryRequired": "Category is required",
+    "nameRequired": "At least one name translation is required",
+    "noCategories": "Create an expense category first",
+    "confirmDelete": "Are you sure you want to delete this expense source?",
+    "created": "Source created successfully",
+    "updated": "Source updated successfully",
+    "deleted": "Source deleted successfully",
+    "fetchError": "Failed to load expense sources",
+    "saveError": "Failed to save source",
+    "deleteError": "Failed to delete source",
+    "empty": "No expense sources found"
   }
 }

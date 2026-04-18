@@ -74,7 +74,8 @@
     "supplierInvoices": "Facturas de Proveedores",
     "stockIntakes": "Entradas de Stock",
     "supplierCredits": "Créditos de Proveedores",
-    "tenantExpenseCategories": "Categorías de Gastos"
+    "tenantExpenseCategories": "Categorías de Gastos",
+    "tenantExpenseSources": "Fuentes de Gastos"
   },
   "common": {
     "adminSaas": "Admin SaaS",
@@ -2091,5 +2092,29 @@
     "selected": "seleccionado",
     "importSelected": "Importar seleccionados",
     "importedCount": "Importado correctamente"
+  },
+  "tenantExpenseSources": {
+    "title": "Fuentes de Gastos",
+    "add": "Añadir Fuente",
+    "edit": "Editar Fuente",
+    "category": "Categoría",
+    "name": "Nombre",
+    "translations": "Traducciones",
+    "translationName": "Nombre",
+    "translationDescription": "Descripción",
+    "selectCategory": "Seleccione una categoría",
+    "allCategories": "Todas las Categorías",
+    "allStatuses": "Todos los Estados",
+    "categoryRequired": "La categoría es obligatoria",
+    "nameRequired": "Se requiere al menos una traducción del nombre",
+    "noCategories": "Cree primero una categoría de gastos",
+    "confirmDelete": "¿Está seguro de que desea eliminar esta fuente de gastos?",
+    "created": "Fuente creada correctamente",
+    "updated": "Fuente actualizada correctamente",
+    "deleted": "Fuente eliminada correctamente",
+    "fetchError": "Error al cargar las fuentes de gastos",
+    "saveError": "Error al guardar la fuente",
+    "deleteError": "Error al eliminar la fuente",
+    "empty": "No se encontraron fuentes de gastos"
   }
 }

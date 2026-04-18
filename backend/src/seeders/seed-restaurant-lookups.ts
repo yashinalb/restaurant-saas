@@ -575,7 +575,11 @@ async function seedRestaurantLookups() {
       ('tenant_expense_categories.view', 'View Expense Categories', 'Can view expense categories', 'tenant_expense_categories', 1),
       ('tenant_expense_categories.create', 'Create Expense Categories', 'Can create expense categories', 'tenant_expense_categories', 1),
       ('tenant_expense_categories.edit', 'Edit Expense Categories', 'Can edit expense categories', 'tenant_expense_categories', 1),
-      ('tenant_expense_categories.delete', 'Delete Expense Categories', 'Can delete expense categories', 'tenant_expense_categories', 1)
+      ('tenant_expense_categories.delete', 'Delete Expense Categories', 'Can delete expense categories', 'tenant_expense_categories', 1),
+      ('tenant_expense_sources.view', 'View Expense Sources', 'Can view expense sources', 'tenant_expense_sources', 1),
+      ('tenant_expense_sources.create', 'Create Expense Sources', 'Can create expense sources', 'tenant_expense_sources', 1),
+      ('tenant_expense_sources.edit', 'Edit Expense Sources', 'Can edit expense sources', 'tenant_expense_sources', 1),
+      ('tenant_expense_sources.delete', 'Delete Expense Sources', 'Can delete expense sources', 'tenant_expense_sources', 1)
     `);
     console.log('✅ Restaurant permissions seeded\n');
 
