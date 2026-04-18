@@ -2450,6 +2450,24 @@
         "blocked": "Bloquée",
         "merged": "Fusionnée"
       }
+    },
+    "move": {
+      "title": "Déplacer des articles vers une autre commande",
+      "itemsToMove": "Articles à déplacer",
+      "itemsHelp": "Appuyez sur les articles pour inclure / exclure",
+      "noItems": "Aucun article à déplacer",
+      "selected": "sélectionné(s)",
+      "targetOrder": "Déplacer vers",
+      "targetHelp": "Sélectionnez une commande active sur une autre table",
+      "noTargets": "Aucune autre commande active. Créez d'abord une nouvelle commande.",
+      "walkIn": "Sans réservation",
+      "itemsSuffix": "articles",
+      "selectTarget": "Sélectionnez une commande cible",
+      "selectItems": "Sélectionnez au moins un article",
+      "confirm": "Déplacer",
+      "moved": "{{count}} article(s) déplacé(s)",
+      "moveError": "Échec du déplacement des articles",
+      "fetchError": "Échec du chargement des commandes actives"
     }
   }
 }

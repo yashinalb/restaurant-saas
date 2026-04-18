@@ -2327,6 +2327,24 @@
       "floor": "Floor",
       "orders": "Orders"
     },
+    "move": {
+      "title": "Move Items to Another Order",
+      "itemsToMove": "Items to move",
+      "itemsHelp": "Tap items to include / exclude",
+      "noItems": "No items to move",
+      "selected": "selected",
+      "targetOrder": "Move to",
+      "targetHelp": "Select an active order at another table",
+      "noTargets": "No other active orders. Start a new order first.",
+      "walkIn": "Walk-in",
+      "itemsSuffix": "items",
+      "selectTarget": "Select a target order",
+      "selectItems": "Select at least one item",
+      "confirm": "Move",
+      "moved": "Moved {{count}} item(s)",
+      "moveError": "Failed to move items",
+      "fetchError": "Failed to load active orders"
+    },
     "options": {
       "fetchError": "Failed to load item options",
       "addError": "Failed to add item",

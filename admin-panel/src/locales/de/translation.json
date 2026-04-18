@@ -2450,6 +2450,24 @@
         "blocked": "Gesperrt",
         "merged": "Zusammengelegt"
       }
+    },
+    "move": {
+      "title": "Artikel in andere Bestellung verschieben",
+      "itemsToMove": "Zu verschiebende Artikel",
+      "itemsHelp": "Artikel tippen, um ein- / auszuschließen",
+      "noItems": "Keine Artikel zum Verschieben",
+      "selected": "ausgewählt",
+      "targetOrder": "Verschieben nach",
+      "targetHelp": "Wählen Sie eine aktive Bestellung an einem anderen Tisch",
+      "noTargets": "Keine weiteren aktiven Bestellungen. Starten Sie zuerst eine neue Bestellung.",
+      "walkIn": "Laufkundschaft",
+      "itemsSuffix": "Artikel",
+      "selectTarget": "Zielbestellung auswählen",
+      "selectItems": "Mindestens einen Artikel auswählen",
+      "confirm": "Verschieben",
+      "moved": "{{count}} Artikel verschoben",
+      "moveError": "Artikel konnten nicht verschoben werden",
+      "fetchError": "Aktive Bestellungen konnten nicht geladen werden"
     }
   }
 }

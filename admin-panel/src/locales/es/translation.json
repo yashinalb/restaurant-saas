@@ -2450,6 +2450,24 @@
         "blocked": "Bloqueada",
         "merged": "Unida"
       }
+    },
+    "move": {
+      "title": "Mover artículos a otro pedido",
+      "itemsToMove": "Artículos a mover",
+      "itemsHelp": "Toca los artículos para incluir / excluir",
+      "noItems": "No hay artículos para mover",
+      "selected": "seleccionados",
+      "targetOrder": "Mover a",
+      "targetHelp": "Selecciona un pedido activo en otra mesa",
+      "noTargets": "No hay otros pedidos activos. Crea primero un pedido nuevo.",
+      "walkIn": "Sin reserva",
+      "itemsSuffix": "artículos",
+      "selectTarget": "Selecciona un pedido destino",
+      "selectItems": "Selecciona al menos un artículo",
+      "confirm": "Mover",
+      "moved": "Se movieron {{count}} artículo(s)",
+      "moveError": "No se pudieron mover los artículos",
+      "fetchError": "No se pudieron cargar los pedidos activos"
     }
   }
 }

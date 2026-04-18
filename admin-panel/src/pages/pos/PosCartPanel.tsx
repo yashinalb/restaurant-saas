@@ -4,6 +4,7 @@ import { toast } from 'sonner';
 import { Loader2, Minus, Plus, Trash2, Gift, Percent, Printer, Split, RotateCcw, Ban, MoveRight, FilePlus } from 'lucide-react';
 import { usePermissions } from '../../hooks/usePermissions';
 import orderService, { Order, OrderItem, OrderItemInput } from '../../services/orderService';
+import PosMoveItemsModal from './PosMoveItemsModal';
 
 interface Props {
   order: Order;
@@ -40,6 +41,7 @@ export default function PosCartPanel({ order, onChanged, onNewOrder }: Props) {
   const canTakeOrder = hasPermission('pos.take_order');
 
   const [saving, setSaving] = useState(false);
+  const [moveModalItems, setMoveModalItems] = useState<OrderItem[] | null>(null);
   const [showDiscount, setShowDiscount] = useState(false);
   const [discountValue, setDiscountValue] = useState('');
   const [discountMode, setDiscountMode] = useState<'amount' | 'percent'>('amount');
@@ -259,7 +261,7 @@ export default function PosCartPanel({ order, onChanged, onNewOrder }: Props) {
                           <Gift className="w-3.5 h-3.5" />
                         </button>
                       )}
-                      <button onClick={notImplemented(t('pos.cart.move', 'Taşı'))}
+                      <button onClick={() => setMoveModalItems([item])}
                         title={t('pos.cart.move', 'Taşı (Move)')}
                         className="w-7 h-7 rounded text-blue-600 hover:bg-blue-50 flex items-center justify-center">
                         <MoveRight className="w-3.5 h-3.5" />
@@ -384,6 +386,17 @@ export default function PosCartPanel({ order, onChanged, onNewOrder }: Props) {
             </div>
           </div>
         </div>
+      )}
+
+      {moveModalItems && (
+        <PosMoveItemsModal
+          sourceOrderId={order.id}
+          storeId={order.store_id}
+          currencySymbol={currencySymbol}
+          items={moveModalItems}
+          onClose={() => setMoveModalItems(null)}
+          onMoved={onChanged}
+        />
       )}
     </div>
   );
