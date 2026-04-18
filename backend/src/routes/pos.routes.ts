@@ -3,6 +3,7 @@ import { PosSessionController } from '../controllers/posSessionController.js';
 import { PosFloorController } from '../controllers/posFloorController.js';
 import { PosOrderController } from '../controllers/posOrderController.js';
 import { PosMenuController } from '../controllers/posMenuController.js';
+import { PosItemOptionsController } from '../controllers/posItemOptionsController.js';
 import { authenticateToken } from '../middleware/auth.js';
 import { loadTenantContext, requireTenantPermission } from '../middleware/tenantAuth.js';
 
@@ -27,5 +28,7 @@ router.post('/pos/orders/:id/quick-add', requireTenantPermission('pos.take_order
 // Menu browsing
 router.get('/pos/menu/categories', requireTenantPermission('pos.access'), PosMenuController.getCategories);
 router.get('/pos/menu/items', requireTenantPermission('pos.access'), PosMenuController.getItems);
+router.get('/pos/menu/items/:id/options', requireTenantPermission('pos.access'), PosItemOptionsController.getOptions);
+router.post('/pos/orders/:id/add-item', requireTenantPermission('pos.take_order'), PosItemOptionsController.addItem);
 
 export default router;

@@ -4,6 +4,7 @@ import { toast } from 'sonner';
 import { Loader2, Search, Image as ImageIcon, Scale, Sparkles } from 'lucide-react';
 import { usePermissions } from '../../hooks/usePermissions';
 import posMenuService, { PosMenuCategory, PosMenuItem } from '../../services/frontend-posMenuService';
+import PosItemOptionsModal from './PosItemOptionsModal';
 
 interface Props {
   storeId: number;
@@ -30,6 +31,7 @@ export default function PosMenuBrowser({ storeId, currencyId, currencySymbol, or
   const [categoryId, setCategoryId] = useState<number | null>(null);
   const [search, setSearch] = useState('');
   const [adding, setAdding] = useState<number | null>(null);
+  const [customizeItemId, setCustomizeItemId] = useState<number | null>(null);
 
   const getTranslatedName = (
     translations: Array<{ language_code?: string; name: string }> | undefined,
@@ -85,7 +87,7 @@ export default function PosMenuBrowser({ storeId, currencyId, currencySymbol, or
       return;
     }
     if (item.requires_customization) {
-      toast.message(t('pos.menu.customizeComingSoon', 'Customization (portions/addons/weight) will be wired up in sub-task 44.5'));
+      setCustomizeItemId(item.id);
       return;
     }
     try {
@@ -205,6 +207,18 @@ export default function PosMenuBrowser({ storeId, currencyId, currencySymbol, or
           )}
         </div>
       </div>
+
+      {customizeItemId != null && (
+        <PosItemOptionsModal
+          itemId={customizeItemId}
+          orderId={orderId}
+          storeId={storeId}
+          currencyId={currencyId}
+          currencySymbol={currencySymbol}
+          onClose={() => setCustomizeItemId(null)}
+          onAdded={onItemAdded}
+        />
+      )}
     </div>
   );
 }

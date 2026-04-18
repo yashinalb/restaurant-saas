@@ -528,7 +528,7 @@ Left panel matching the screenshot: line items with qty, customizations, subtota
 
 Category sidebar filtered to `show_on_pos = 1`, items grid with image + price + availability, search bar, quick-add. Tapping an item opens 44.5 when the item has portions/addons/weight, otherwise it's added directly to the cart.
 
-### [] 44.5 Item Options Modal
+### [x] 44.5 Item Options Modal
 
 Portions, addons, extras, ingredients, main-dish options, per-item note, weighted-item kg input. Recomputes the final line price as modifiers are toggled. Confirm adds the line to the active order.
 
