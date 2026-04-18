@@ -450,7 +450,7 @@ Create full CRUD for tenant_expense_sources + tenant_expense_source_translations
 FK to tenant_expense_categories. Sub-categories for expenses.
 ```
 
-### [] 39. Expenses + Expense Payments
+### [x] 39. Expenses + Expense Payments
 
 Tables: `expenses` + `expense_payments`
 
