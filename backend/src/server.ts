@@ -46,6 +46,8 @@ import transactionRoutes from './routes/transaction.routes';
 import qrInvoiceTokenRoutes from './routes/qrInvoiceToken.routes';
 import tenantSupplierRoutes from './routes/tenantSupplier.routes';
 import tenantInventoryProductRoutes from './routes/tenantInventoryProduct.routes';
+import supplierInvoiceRoutes from './routes/supplierInvoice.routes';
+import stockIntakeRoutes from './routes/stockIntake.routes';
 import addonTypeRoutes from './routes/addonType.routes';
 import addonRoutes from './routes/addon.routes';
 import orderSourceRoutes from './routes/orderSource.routes';
@@ -207,6 +209,8 @@ app.use('/api/tenant', transactionRoutes);
 app.use('/api/tenant', qrInvoiceTokenRoutes);
 app.use('/api/tenant', tenantSupplierRoutes);
 app.use('/api/tenant', tenantInventoryProductRoutes);
+app.use('/api/tenant', supplierInvoiceRoutes);
+app.use('/api/tenant', stockIntakeRoutes);
 
 // ============================================
 // ERROR HANDLING

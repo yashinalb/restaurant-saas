@@ -42,6 +42,8 @@ import {
   QrCode,
   Truck,
   Boxes,
+  FileText,
+  PackageOpen,
   LucideIcon
 } from 'lucide-react';
 
@@ -207,6 +209,8 @@ export default function DashboardLayout() {
         { name: t('navigation.qrInvoiceTokens', 'QR Invoice Tokens'), to: '/tenant/qr-invoice-tokens', icon: QrCode, show: hasPermission('qr_invoice_tokens.view') },
         { name: t('navigation.tenantSuppliers', 'Suppliers'), to: '/tenant/suppliers', icon: Truck, show: hasPermission('suppliers.view') },
         { name: t('navigation.tenantInventoryProducts', 'Inventory Products'), to: '/tenant/inventory-products', icon: Boxes, show: hasPermission('inventory_products.view') },
+        { name: t('navigation.supplierInvoices', 'Supplier Invoices'), to: '/tenant/supplier-invoices', icon: FileText, show: hasPermission('supplier_invoices.view') },
+        { name: t('navigation.stockIntakes', 'Stock Intakes'), to: '/tenant/stock-intakes', icon: PackageOpen, show: hasPermission('stock_intakes.view') },
       ].filter(item => item.show)
     }
   ].filter(group => group.items.length > 0) : [];

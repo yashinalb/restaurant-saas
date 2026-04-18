@@ -559,7 +559,15 @@ async function seedRestaurantLookups() {
       ('inventory_products.view', 'View Inventory Products', 'Can view inventory products', 'inventory_products', 1),
       ('inventory_products.create', 'Create Inventory Products', 'Can create inventory products', 'inventory_products', 1),
       ('inventory_products.edit', 'Edit Inventory Products', 'Can edit inventory products', 'inventory_products', 1),
-      ('inventory_products.delete', 'Delete Inventory Products', 'Can delete inventory products', 'inventory_products', 1)
+      ('inventory_products.delete', 'Delete Inventory Products', 'Can delete inventory products', 'inventory_products', 1),
+      ('supplier_invoices.view', 'View Supplier Invoices', 'Can view supplier invoices', 'supplier_invoices', 1),
+      ('supplier_invoices.create', 'Create Supplier Invoices', 'Can create supplier invoices', 'supplier_invoices', 1),
+      ('supplier_invoices.edit', 'Edit Supplier Invoices', 'Can edit supplier invoices', 'supplier_invoices', 1),
+      ('supplier_invoices.delete', 'Delete Supplier Invoices', 'Can delete supplier invoices', 'supplier_invoices', 1),
+      ('stock_intakes.view', 'View Stock Intakes', 'Can view stock intakes', 'stock_intakes', 1),
+      ('stock_intakes.create', 'Create Stock Intakes', 'Can create stock intakes', 'stock_intakes', 1),
+      ('stock_intakes.edit', 'Edit Stock Intakes', 'Can edit stock intakes', 'stock_intakes', 1),
+      ('stock_intakes.delete', 'Delete Stock Intakes', 'Can delete stock intakes', 'stock_intakes', 1)
     `);
     console.log('✅ Restaurant permissions seeded\n');
 

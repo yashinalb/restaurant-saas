@@ -56,6 +56,8 @@ import TransactionsPage from './pages/TransactionsPage';
 import QrInvoiceTokensPage from './pages/QrInvoiceTokensPage';
 import TenantSuppliersPage from './pages/TenantSuppliersPage';
 import TenantInventoryProductsPage from './pages/TenantInventoryProductsPage';
+import SupplierInvoicesPage from './pages/SupplierInvoicesPage';
+import StockIntakesPage from './pages/StockIntakesPage';
 
 
 function ProtectedRoute({ children }: { children: React.ReactNode }) {
@@ -131,6 +133,8 @@ function App() {
           <Route path="tenant/qr-invoice-tokens" element={<QrInvoiceTokensPage />} />
           <Route path="tenant/suppliers" element={<TenantSuppliersPage />} />
           <Route path="tenant/inventory-products" element={<TenantInventoryProductsPage />} />
+          <Route path="tenant/supplier-invoices" element={<SupplierInvoicesPage />} />
+          <Route path="tenant/stock-intakes" element={<StockIntakesPage />} />
           <Route path="tenant/stores" element={<StoresPage />} />
           <Route path="tenant/settings" element={<TenantSettingsPage />} />
           <Route path="tenant/users" element={<TenantUsersPage />} />
