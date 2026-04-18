@@ -54,6 +54,7 @@ import OrdersPage from './pages/OrdersPage';
 import TenantPaymentTypesPage from './pages/TenantPaymentTypesPage';
 import TransactionsPage from './pages/TransactionsPage';
 import QrInvoiceTokensPage from './pages/QrInvoiceTokensPage';
+import TenantSuppliersPage from './pages/TenantSuppliersPage';
 
 
 function ProtectedRoute({ children }: { children: React.ReactNode }) {
@@ -127,6 +128,7 @@ function App() {
           <Route path="tenant/payment-types" element={<TenantPaymentTypesPage />} />
           <Route path="tenant/transactions" element={<TransactionsPage />} />
           <Route path="tenant/qr-invoice-tokens" element={<QrInvoiceTokensPage />} />
+          <Route path="tenant/suppliers" element={<TenantSuppliersPage />} />
           <Route path="tenant/stores" element={<StoresPage />} />
           <Route path="tenant/settings" element={<TenantSettingsPage />} />
           <Route path="tenant/users" element={<TenantUsersPage />} />

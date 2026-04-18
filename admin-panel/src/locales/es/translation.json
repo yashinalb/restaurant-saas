@@ -68,7 +68,8 @@
     "tenantPaymentTypes": "Tipos de Pago",
     "orders": "Pedidos",
     "transactions": "Transacciones",
-    "qrInvoiceTokens": "Tokens QR de Factura"
+    "qrInvoiceTokens": "Tokens QR de Factura",
+    "tenantSuppliers": "Proveedores"
   },
   "common": {
     "adminSaas": "Admin SaaS",
@@ -1852,5 +1853,28 @@
     "saveError": "No se pudo guardar el token QR",
     "deleteError": "No se pudo eliminar el token QR",
     "empty": "No se encontraron tokens QR de factura"
+  },
+  "tenantSuppliers": {
+    "title": "Proveedores",
+    "add": "Agregar Proveedor",
+    "edit": "Editar Proveedor",
+    "name": "Nombre",
+    "contactPerson": "Persona de Contacto",
+    "phone": "Teléfono",
+    "email": "Correo Electrónico",
+    "address": "Dirección",
+    "taxId": "NIF/CIF",
+    "notes": "Notas",
+    "searchPlaceholder": "Buscar por nombre, contacto, correo, teléfono",
+    "allStatuses": "Todos los Estados",
+    "nameRequired": "El nombre es obligatorio",
+    "confirmDelete": "¿Está seguro de que desea eliminar este proveedor?",
+    "created": "Proveedor creado exitosamente",
+    "updated": "Proveedor actualizado exitosamente",
+    "deleted": "Proveedor eliminado exitosamente",
+    "fetchError": "No se pudieron cargar los proveedores",
+    "saveError": "No se pudo guardar el proveedor",
+    "deleteError": "No se pudo eliminar el proveedor",
+    "empty": "No se encontraron proveedores"
   }
 }

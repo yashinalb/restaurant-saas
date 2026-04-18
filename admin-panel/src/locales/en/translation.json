@@ -68,7 +68,8 @@
     "tenantPaymentTypes": "Payment Types",
     "orders": "Orders",
     "transactions": "Transactions",
-    "qrInvoiceTokens": "QR Invoice Tokens"
+    "qrInvoiceTokens": "QR Invoice Tokens",
+    "tenantSuppliers": "Suppliers"
   },
   "common": {
     "adminSaas": "Admin SaaS",
@@ -1852,5 +1853,28 @@
     "saveError": "Failed to save QR token",
     "deleteError": "Failed to delete QR token",
     "empty": "No QR invoice tokens found"
+  },
+  "tenantSuppliers": {
+    "title": "Suppliers",
+    "add": "Add Supplier",
+    "edit": "Edit Supplier",
+    "name": "Name",
+    "contactPerson": "Contact Person",
+    "phone": "Phone",
+    "email": "Email",
+    "address": "Address",
+    "taxId": "Tax ID",
+    "notes": "Notes",
+    "searchPlaceholder": "Search by name, contact, email, phone",
+    "allStatuses": "All Statuses",
+    "nameRequired": "Name is required",
+    "confirmDelete": "Are you sure you want to delete this supplier?",
+    "created": "Supplier created successfully",
+    "updated": "Supplier updated successfully",
+    "deleted": "Supplier deleted successfully",
+    "fetchError": "Failed to load suppliers",
+    "saveError": "Failed to save supplier",
+    "deleteError": "Failed to delete supplier",
+    "empty": "No suppliers found"
   }
 }

@@ -68,7 +68,8 @@
     "tenantPaymentTypes": "Zahlungsarten",
     "orders": "Bestellungen",
     "transactions": "Transaktionen",
-    "qrInvoiceTokens": "QR-Rechnungstoken"
+    "qrInvoiceTokens": "QR-Rechnungstoken",
+    "tenantSuppliers": "Lieferanten"
   },
   "common": {
     "adminSaas": "Admin SaaS",
@@ -1852,5 +1853,28 @@
     "saveError": "QR-Token konnte nicht gespeichert werden",
     "deleteError": "QR-Token konnte nicht gelöscht werden",
     "empty": "Keine QR-Rechnungstoken gefunden"
+  },
+  "tenantSuppliers": {
+    "title": "Lieferanten",
+    "add": "Lieferant hinzufügen",
+    "edit": "Lieferant bearbeiten",
+    "name": "Name",
+    "contactPerson": "Ansprechpartner",
+    "phone": "Telefon",
+    "email": "E-Mail",
+    "address": "Adresse",
+    "taxId": "Steuernummer",
+    "notes": "Notizen",
+    "searchPlaceholder": "Suche nach Name, Kontakt, E-Mail, Telefon",
+    "allStatuses": "Alle Status",
+    "nameRequired": "Name ist erforderlich",
+    "confirmDelete": "Sind Sie sicher, dass Sie diesen Lieferanten löschen möchten?",
+    "created": "Lieferant erfolgreich erstellt",
+    "updated": "Lieferant erfolgreich aktualisiert",
+    "deleted": "Lieferant erfolgreich gelöscht",
+    "fetchError": "Lieferanten konnten nicht geladen werden",
+    "saveError": "Lieferant konnte nicht gespeichert werden",
+    "deleteError": "Lieferant konnte nicht gelöscht werden",
+    "empty": "Keine Lieferanten gefunden"
   }
 }

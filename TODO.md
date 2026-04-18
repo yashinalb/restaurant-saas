@@ -370,7 +370,7 @@ Per-store, FK to order + payment_status + currency. Tracks amount_before_vat, va
 transaction_payments: FK to transaction + payment_type + currency. payment_mode (full|partial|per_item|mixed). paid_items JSON for per_item mode. exchange_rate for multi-currency. reference_number for card/mobile refs.
 ```
 
-### [ ] 32. QR Invoice Tokens
+### [x] 32. QR Invoice Tokens
 
 Tables: `qr_invoice_tokens`
 
@@ -384,7 +384,7 @@ No translations. FK to order + table. Token-based access with status (active|exp
 
 ## PRIORITY 7: Inventory & Suppliers (Migration 011)
 
-### [ ] 33. Tenant Suppliers
+### [x] 33. Tenant Suppliers
 
 Tables: `tenant_suppliers`
 
@@ -394,7 +394,7 @@ Create full CRUD for tenant_suppliers.
 No translations. Contact info: name, contact_person, phone, email, address, tax_id, notes.
 ```
 
-### [ ] 34. Tenant Inventory Products
+### [] 34. Tenant Inventory Products
 
 Tables: `tenant_inventory_products` + `tenant_inventory_product_suppliers`
 

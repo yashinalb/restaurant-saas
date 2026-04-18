@@ -68,7 +68,8 @@
     "tenantPaymentTypes": "Types de Paiement",
     "orders": "Commandes",
     "transactions": "Transactions",
-    "qrInvoiceTokens": "Jetons QR de Facture"
+    "qrInvoiceTokens": "Jetons QR de Facture",
+    "tenantSuppliers": "Fournisseurs"
   },
   "common": {
     "adminSaas": "Admin SaaS",
@@ -1852,5 +1853,28 @@
     "saveError": "Impossible de sauvegarder le jeton QR",
     "deleteError": "Impossible de supprimer le jeton QR",
     "empty": "Aucun jeton QR de facture trouvé"
+  },
+  "tenantSuppliers": {
+    "title": "Fournisseurs",
+    "add": "Ajouter un Fournisseur",
+    "edit": "Modifier le Fournisseur",
+    "name": "Nom",
+    "contactPerson": "Personne de Contact",
+    "phone": "Téléphone",
+    "email": "E-mail",
+    "address": "Adresse",
+    "taxId": "Numéro Fiscal",
+    "notes": "Notes",
+    "searchPlaceholder": "Rechercher par nom, contact, e-mail, téléphone",
+    "allStatuses": "Tous les Statuts",
+    "nameRequired": "Le nom est requis",
+    "confirmDelete": "Êtes-vous sûr de vouloir supprimer ce fournisseur ?",
+    "created": "Fournisseur créé avec succès",
+    "updated": "Fournisseur mis à jour avec succès",
+    "deleted": "Fournisseur supprimé avec succès",
+    "fetchError": "Impossible de charger les fournisseurs",
+    "saveError": "Impossible de sauvegarder le fournisseur",
+    "deleteError": "Impossible de supprimer le fournisseur",
+    "empty": "Aucun fournisseur trouvé"
   }
 }

@@ -40,6 +40,7 @@ import {
   BadgeDollarSign,
   ShoppingCart,
   QrCode,
+  Truck,
   LucideIcon
 } from 'lucide-react';
 
@@ -203,6 +204,7 @@ export default function DashboardLayout() {
         { name: t('navigation.orders', 'Orders'), to: '/tenant/orders', icon: ShoppingCart, show: hasPermission('orders.view') },
         { name: t('navigation.transactions', 'Transactions'), to: '/tenant/transactions', icon: CreditCard, show: hasPermission('transactions.view') },
         { name: t('navigation.qrInvoiceTokens', 'QR Invoice Tokens'), to: '/tenant/qr-invoice-tokens', icon: QrCode, show: hasPermission('qr_invoice_tokens.view') },
+        { name: t('navigation.tenantSuppliers', 'Suppliers'), to: '/tenant/suppliers', icon: Truck, show: hasPermission('suppliers.view') },
       ].filter(item => item.show)
     }
   ].filter(group => group.items.length > 0) : [];

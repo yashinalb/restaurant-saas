@@ -68,7 +68,8 @@
     "tenantPaymentTypes": "Ödeme Türleri",
     "orders": "Siparişler",
     "transactions": "İşlemler",
-    "qrInvoiceTokens": "QR Fatura Jetonları"
+    "qrInvoiceTokens": "QR Fatura Jetonları",
+    "tenantSuppliers": "Tedarikçiler"
   },
   "common": {
     "adminSaas": "Admin SaaS",
@@ -1852,5 +1853,28 @@
     "saveError": "QR jetonu kaydedilemedi",
     "deleteError": "QR jetonu silinemedi",
     "empty": "QR fatura jetonu bulunamadı"
+  },
+  "tenantSuppliers": {
+    "title": "Tedarikçiler",
+    "add": "Tedarikçi Ekle",
+    "edit": "Tedarikçi Düzenle",
+    "name": "Ad",
+    "contactPerson": "İletişim Kişisi",
+    "phone": "Telefon",
+    "email": "E-posta",
+    "address": "Adres",
+    "taxId": "Vergi Numarası",
+    "notes": "Notlar",
+    "searchPlaceholder": "Ad, iletişim, e-posta, telefon ile ara",
+    "allStatuses": "Tüm Durumlar",
+    "nameRequired": "Ad gereklidir",
+    "confirmDelete": "Bu tedarikçiyi silmek istediğinizden emin misiniz?",
+    "created": "Tedarikçi başarıyla oluşturuldu",
+    "updated": "Tedarikçi başarıyla güncellendi",
+    "deleted": "Tedarikçi başarıyla silindi",
+    "fetchError": "Tedarikçiler yüklenemedi",
+    "saveError": "Tedarikçi kaydedilemedi",
+    "deleteError": "Tedarikçi silinemedi",
+    "empty": "Tedarikçi bulunamadı"
   }
 }
