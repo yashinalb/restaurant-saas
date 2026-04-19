@@ -2611,7 +2611,36 @@
         "partial": "Parcial",
         "per_item": "Por Artículo",
         "mixed": "Mixto"
-      }
+      },
+      "shiftClosed": "No hay turno abierto. Toque la insignia de turno en el encabezado para iniciar uno antes de recibir el pago.",
+      "drawer": "Cajón de efectivo",
+      "drawerOpened": "abierto",
+      "drawerFailed": "no abierto"
+    },
+    "shift": {
+      "open": "Turno abierto",
+      "closed": "Turno cerrado",
+      "openTooltip": "Turno abierto — haga clic para cerrar",
+      "closedTooltip": "Sin turno — haga clic para abrir",
+      "openTitle": "Abrir turno",
+      "openHelp": "Cuente el efectivo actualmente en el cajón para {{store}}.",
+      "openingAmount": "Monto de apertura",
+      "notes": "Notas",
+      "openSubmit": "Abrir turno",
+      "openAmountInvalid": "El monto de apertura debe ser cero o más",
+      "closingAmountInvalid": "El monto contado debe ser cero o más",
+      "opened": "Turno abierto",
+      "openFailed": "No se pudo abrir el turno",
+      "closedToast": "Turno cerrado · Diferencia {{sym}}{{diff}}",
+      "closeFailed": "No se pudo cerrar el turno",
+      "closeTitle": "Cerrar turno",
+      "opening": "Apertura",
+      "cashReceived": "Efectivo recibido (este turno)",
+      "expected": "Esperado en cajón",
+      "countedAmount": "Monto contado",
+      "overrideExpected": "Anular monto esperado",
+      "difference": "Diferencia",
+      "closeSubmit": "Cerrar turno"
     }
   }
 }

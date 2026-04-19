@@ -10,6 +10,7 @@ import { PosReceiptController } from '../controllers/posReceiptController.js';
 import { PosKitchenTicketController } from '../controllers/posKitchenTicketController.js';
 import { PosFireController } from '../controllers/posFireController.js';
 import { PosItemStatusController } from '../controllers/posItemStatusController.js';
+import { PosShiftController } from '../controllers/posShiftController.js';
 import { authenticateToken } from '../middleware/auth.js';
 import { loadTenantContext, requireTenantPermission } from '../middleware/tenantAuth.js';
 
@@ -57,5 +58,10 @@ router.post('/pos/orders/:id/fire', requireTenantPermission('pos.take_order'), P
 
 // Per-item status machine (tap-to-serve, manual transitions, cancel → void)
 router.patch('/pos/order-items/:itemId/status', requireTenantPermission('pos.take_order'), PosItemStatusController.patch);
+
+// Cash register shift (required before payments)
+router.get('/pos/shift', requireTenantPermission('pos.access'), PosShiftController.getActive);
+router.post('/pos/shift/open', requireTenantPermission('cash_sessions.create'), PosShiftController.open);
+router.post('/pos/shift/close', requireTenantPermission('cash_sessions.edit'), PosShiftController.close);
 
 export default router;

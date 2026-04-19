@@ -2611,7 +2611,36 @@
         "partial": "Partiel",
         "per_item": "Par Article",
         "mixed": "Mixte"
-      }
+      },
+      "shiftClosed": "Aucun service ouvert. Appuyez sur le badge de service dans l'en-tête pour en démarrer un avant d'accepter un paiement.",
+      "drawer": "Tiroir-caisse",
+      "drawerOpened": "ouvert",
+      "drawerFailed": "non ouvert"
+    },
+    "shift": {
+      "open": "Service ouvert",
+      "closed": "Service fermé",
+      "openTooltip": "Service ouvert — cliquez pour fermer",
+      "closedTooltip": "Aucun service — cliquez pour ouvrir",
+      "openTitle": "Ouvrir le service",
+      "openHelp": "Comptez les espèces actuellement dans le tiroir pour {{store}}.",
+      "openingAmount": "Montant d'ouverture",
+      "notes": "Notes",
+      "openSubmit": "Ouvrir le service",
+      "openAmountInvalid": "Le montant d'ouverture doit être zéro ou plus",
+      "closingAmountInvalid": "Le montant compté doit être zéro ou plus",
+      "opened": "Service ouvert",
+      "openFailed": "Échec de l'ouverture du service",
+      "closedToast": "Service fermé · Différence {{sym}}{{diff}}",
+      "closeFailed": "Échec de la fermeture du service",
+      "closeTitle": "Fermer le service",
+      "opening": "Ouverture",
+      "cashReceived": "Espèces reçues (ce service)",
+      "expected": "Attendu dans le tiroir",
+      "countedAmount": "Montant compté",
+      "overrideExpected": "Remplacer le montant attendu",
+      "difference": "Différence",
+      "closeSubmit": "Fermer le service"
     }
   }
 }

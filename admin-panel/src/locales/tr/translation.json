@@ -2611,7 +2611,36 @@
         "partial": "Kısmi",
         "per_item": "Ürün Başına",
         "mixed": "Karışık"
-      }
+      },
+      "shiftClosed": "Açık vardiya yok. Ödeme almadan önce başlıktaki vardiya rozetine dokunarak bir vardiya başlatın.",
+      "drawer": "Para çekmecesi",
+      "drawerOpened": "açıldı",
+      "drawerFailed": "açılmadı"
+    },
+    "shift": {
+      "open": "Vardiya Açık",
+      "closed": "Vardiya Kapalı",
+      "openTooltip": "Vardiya açık — kapatmak için tıklayın",
+      "closedTooltip": "Vardiya yok — açmak için tıklayın",
+      "openTitle": "Vardiya Aç",
+      "openHelp": "{{store}} için şu anda kasadaki nakdi sayın.",
+      "openingAmount": "Açılış Tutarı",
+      "notes": "Notlar",
+      "openSubmit": "Vardiyayı Aç",
+      "openAmountInvalid": "Açılış tutarı sıfır veya daha fazla olmalıdır",
+      "closingAmountInvalid": "Sayılan tutar sıfır veya daha fazla olmalıdır",
+      "opened": "Vardiya açıldı",
+      "openFailed": "Vardiya açılamadı",
+      "closedToast": "Vardiya kapatıldı · Fark {{sym}}{{diff}}",
+      "closeFailed": "Vardiya kapatılamadı",
+      "closeTitle": "Vardiyayı Kapat",
+      "opening": "Açılış",
+      "cashReceived": "Alınan nakit (bu vardiya)",
+      "expected": "Kasada beklenen",
+      "countedAmount": "Sayılan tutar",
+      "overrideExpected": "Beklenen tutarı geçersiz kıl",
+      "difference": "Fark",
+      "closeSubmit": "Vardiyayı Kapat"
     }
   }
 }

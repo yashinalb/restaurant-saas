@@ -6,6 +6,7 @@ import { Order } from '../../services/orderService';
 import tenantPaymentTypeService, { TenantPaymentType } from '../../services/tenantPaymentTypeService';
 import api from '../../services/api';
 import posPaymentService, { PaymentSplitInput, PayResult } from '../../services/frontend-posPaymentService';
+import posShiftService, { PosShiftStatus } from '../../services/frontend-posShiftService';
 
 interface Currency { id: number; code: string; symbol: string; name: string; }
 
@@ -46,6 +47,7 @@ export default function PosPaymentModal({ order, onClose, onPaid }: Props) {
   const [splits, setSplits] = useState<Split[]>([]);
   const [selectedItemIds, setSelectedItemIds] = useState<Set<number>>(new Set());
   const [result, setResult] = useState<PayResult | null>(null);
+  const [shift, setShift] = useState<PosShiftStatus | null>(null);
 
   const currencySymbol = order.currency_symbol || '';
   const orderCurrencyId = order.currency_id;
@@ -54,12 +56,14 @@ export default function PosPaymentModal({ order, onClose, onPaid }: Props) {
     (async () => {
       try {
         setLoading(true);
-        const [ptData, currencyResp] = await Promise.all([
+        const [ptData, currencyResp, shiftData] = await Promise.all([
           tenantPaymentTypeService.getAll({ is_active: true }).catch(() => []),
           api.get('/api/tenant/currencies').catch(() => ({ data: { data: [] } })),
+          posShiftService.getActive(order.store_id, order.currency_id).catch(() => ({ session: null, reconciliation: null })),
         ]);
         setPaymentTypes(ptData);
         setCurrencies(currencyResp.data?.data || []);
+        setShift(shiftData);
         // Default split: one full-amount cash (or first payment type) in order currency
         if (ptData.length > 0) {
           setSplits([makeSplit(ptData[0].id, orderCurrencyId, num(order.total))]);
@@ -228,6 +232,12 @@ export default function PosPaymentModal({ order, onClose, onPaid }: Props) {
               <div className="flex justify-between text-lg font-bold text-green-700 border-t pt-2 mt-2">
                 <span>{t('pos.payment.change', 'Change')}</span>
                 <span>{currencySymbol}{result.change.toFixed(2)}</span>
+              </div>
+            )}
+            {(result as any).drawer && (
+              <div className={`flex justify-between text-xs border-t pt-2 mt-2 ${(result as any).drawer.pulsed ? 'text-emerald-700' : 'text-red-700'}`}>
+                <span>{t('pos.payment.drawer', 'Cash drawer')}</span>
+                <span>{(result as any).drawer.pulsed ? t('pos.payment.drawerOpened', 'opened') : ((result as any).drawer.reason || t('pos.payment.drawerFailed', 'not opened'))}</span>
               </div>
             )}
           </div>
@@ -456,8 +466,13 @@ export default function PosPaymentModal({ order, onClose, onPaid }: Props) {
               </div>
 
               <div className="flex-1" />
+              {!shift?.session && (
+                <div className="bg-red-50 border border-red-300 text-red-800 text-xs rounded p-2">
+                  {t('pos.payment.shiftClosed', 'No open shift. Tap the shift badge in the header to start one before taking payment.')}
+                </div>
+              )}
               <button onClick={handleConfirm}
-                disabled={saving || splitsTotal < targetAmount - 0.005 || targetAmount <= 0}
+                disabled={saving || splitsTotal < targetAmount - 0.005 || targetAmount <= 0 || !shift?.session}
                 className="w-full py-3 bg-amber-600 hover:bg-amber-700 text-white rounded-lg font-bold text-lg disabled:opacity-50 flex items-center justify-center gap-2">
                 {saving ? <Loader2 className="w-5 h-5 animate-spin" /> : <>
                   <CheckCircle2 className="w-5 h-5" />

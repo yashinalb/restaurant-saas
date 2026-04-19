@@ -560,7 +560,7 @@ Status machine `pending → preparing → ready → served → cancelled` enforc
 
 Select the `tenant_order_type` at order creation. Dine-in requires a table (uses 44.2). Takeaway / delivery capture customer + address instead of a table, skip the floor plan, and print a customer-copy receipt at order-fire time (not just at payment). Kiosk is a customer-self-service variant of 44.4. Controls which fields are required, which printers fire, and which POS screens are shown.
 
-### [ ] 44.13 Cash Register Session Integration
+### [x] 44.13 Cash Register Session Integration
 
 Require an open `cash_register_session` (#42) at the POS device before accepting any payment. Cash payments trigger an ESC/POS drawer-open pulse on the receipt printer. "Close shift" reconciles expected vs counted cash and closes the session. POS blocks new payments (not new orders) if no session is open.
 

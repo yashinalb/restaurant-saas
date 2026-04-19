@@ -1,5 +1,6 @@
 import pool from '../config/database.js';
 import { RowDataPacket, ResultSetHeader } from 'mysql2';
+import { PosShiftService } from './posShiftService.js';
 
 type PaymentMode = 'full' | 'partial' | 'per_item' | 'mixed';
 const VALID_MODES: PaymentMode[] = ['full', 'partial', 'per_item', 'mixed'];
@@ -37,13 +38,22 @@ async function resolvePaymentStatusId(conn: any, tenantId: number, code: 'paid' 
 }
 
 export class PosPaymentService {
-  static async pay(tenantId: number, data: PayInput): Promise<{ transaction_id: number; order_status: string; total_paid: number; change: number; }> {
+  static async pay(tenantId: number, data: PayInput): Promise<{
+    transaction_id: number;
+    order_status: string;
+    total_paid: number;
+    change: number;
+    store_id: number;
+    has_cash_payment: boolean;
+    drawer: { pulsed: boolean; printer_ip: string | null; reason?: string } | null;
+  }> {
     if (!data.order_id) throw { status: 400, message: 'order_id is required' };
     if (!Array.isArray(data.payments) || data.payments.length === 0) {
       throw { status: 400, message: 'At least one payment split is required' };
     }
 
     const conn = await pool.getConnection();
+    let releasedConn = false;
     try {
       await conn.beginTransaction();
 
@@ -59,6 +69,12 @@ export class PosPaymentService {
         throw { status: 400, message: 'Order is not open' };
       }
 
+      // Require an open cash register session (shift) for this store + currency.
+      await PosShiftService.requireActive(conn, tenantId, {
+        store_id: Number(order.store_id),
+        currency_id: Number(order.currency_id),
+      });
+
       const tipAmount = data.tip_amount != null ? round2(Number(data.tip_amount)) : 0;
       if (tipAmount < 0) throw { status: 400, message: 'tip_amount cannot be negative' };
 
@@ -66,6 +82,7 @@ export class PosPaymentService {
 
       // Validate payment splits; convert to order currency for totalling
       let totalPaidInOrderCurrency = 0;
+      let hasCashPayment = false;
       for (const p of data.payments) {
         if (!p.tenant_payment_type_id || !p.currency_id || p.amount == null) {
           throw { status: 400, message: 'Each payment requires tenant_payment_type_id, currency_id, amount' };
@@ -74,12 +91,13 @@ export class PosPaymentService {
         const mode = p.payment_mode ?? 'full';
         if (!VALID_MODES.includes(mode)) throw { status: 400, message: `Invalid payment_mode: ${mode}` };
 
-        // Verify payment type belongs to tenant
+        // Verify payment type belongs to tenant and detect cash
         const [ptCheck] = await conn.query<RowDataPacket[]>(
-          'SELECT id FROM tenant_payment_types WHERE id = ? AND tenant_id = ?',
+          'SELECT id, code FROM tenant_payment_types WHERE id = ? AND tenant_id = ?',
           [p.tenant_payment_type_id, tenantId]
         );
         if (ptCheck.length === 0) throw { status: 400, message: `Invalid payment type: ${p.tenant_payment_type_id}` };
+        if (String(ptCheck[0].code) === 'cash' && Number(p.amount) > 0) hasCashPayment = true;
 
         const rate = p.currency_id === Number(order.currency_id) ? 1 : (Number(p.exchange_rate) || 1);
         totalPaidInOrderCurrency += Number(p.amount) * rate;
@@ -178,17 +196,35 @@ export class PosPaymentService {
       }
 
       await conn.commit();
-      return {
+
+      // Build the result shape and release the connection before the drawer pulse
+      // so a slow/unreachable printer doesn't tie up a DB connection.
+      const base = {
         transaction_id: transactionId,
         order_status: nextOrderStatus,
         total_paid: capturedTowardBill,
         change,
+        store_id: Number(order.store_id),
+        has_cash_payment: hasCashPayment,
       };
+      conn.release();
+      releasedConn = true;
+
+      let drawer: { pulsed: boolean; printer_ip: string | null; reason?: string } | null = null;
+      if (hasCashPayment) {
+        try {
+          drawer = await PosShiftService.pulseDrawer(tenantId, Number(order.store_id));
+        } catch (err: any) {
+          drawer = { pulsed: false, printer_ip: null, reason: err?.message || 'pulse failed' };
+        }
+      }
+
+      return { ...base, drawer };
     } catch (error) {
-      await conn.rollback();
+      try { await conn.rollback(); } catch { /* noop */ }
       throw error;
     } finally {
-      conn.release();
+      if (!releasedConn) conn.release();
     }
   }
 }

@@ -2611,7 +2611,36 @@
         "partial": "Teilweise",
         "per_item": "Pro Artikel",
         "mixed": "Gemischt"
-      }
+      },
+      "shiftClosed": "Keine offene Schicht. Tippen Sie auf das Schicht-Abzeichen in der Kopfzeile, um eine zu starten, bevor Sie eine Zahlung entgegennehmen.",
+      "drawer": "Kassenschublade",
+      "drawerOpened": "geöffnet",
+      "drawerFailed": "nicht geöffnet"
+    },
+    "shift": {
+      "open": "Schicht offen",
+      "closed": "Schicht geschlossen",
+      "openTooltip": "Schicht offen — zum Schließen klicken",
+      "closedTooltip": "Keine Schicht — zum Öffnen klicken",
+      "openTitle": "Schicht öffnen",
+      "openHelp": "Zählen Sie das aktuell in der Kassenschublade befindliche Bargeld für {{store}}.",
+      "openingAmount": "Anfangsbetrag",
+      "notes": "Notizen",
+      "openSubmit": "Schicht öffnen",
+      "openAmountInvalid": "Anfangsbetrag muss null oder höher sein",
+      "closingAmountInvalid": "Gezählter Betrag muss null oder höher sein",
+      "opened": "Schicht geöffnet",
+      "openFailed": "Schicht konnte nicht geöffnet werden",
+      "closedToast": "Schicht geschlossen · Differenz {{sym}}{{diff}}",
+      "closeFailed": "Schicht konnte nicht geschlossen werden",
+      "closeTitle": "Schicht schließen",
+      "opening": "Eröffnung",
+      "cashReceived": "Erhaltenes Bargeld (diese Schicht)",
+      "expected": "Erwartet in Kassenschublade",
+      "countedAmount": "Gezählter Betrag",
+      "overrideExpected": "Erwarteten Betrag überschreiben",
+      "difference": "Differenz",
+      "closeSubmit": "Schicht schließen"
     }
   }
 }

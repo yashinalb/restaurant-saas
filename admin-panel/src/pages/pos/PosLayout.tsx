@@ -6,6 +6,7 @@ import { LogOut, ShoppingCart, UtensilsCrossed, Users, ArrowLeft } from 'lucide-
 import { useAuthStore } from '../../store/authStore';
 import { usePermissions } from '../../hooks/usePermissions';
 import { usePosSessionStore } from '../../store/posSessionStore';
+import PosShiftBadge from './PosShiftBadge';
 
 export default function PosLayout() {
   const { t } = useTranslation();
@@ -75,6 +76,9 @@ export default function PosLayout() {
           )}
 
           <div className="flex items-center gap-3">
+            {session && (
+              <PosShiftBadge storeId={session.store_id} storeName={session.store_name} />
+            )}
             {session ? (
               <>
                 <div className="flex items-center gap-2 bg-slate-800 rounded-full px-3 py-1.5">

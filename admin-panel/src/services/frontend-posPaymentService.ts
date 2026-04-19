@@ -21,6 +21,9 @@ export interface PayResult {
   order_status: string;
   total_paid: number;
   change: number;
+  store_id?: number;
+  has_cash_payment?: boolean;
+  drawer?: { pulsed: boolean; printer_ip: string | null; reason?: string } | null;
 }
 
 const posPaymentService = {

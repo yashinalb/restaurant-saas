@@ -19,6 +19,7 @@ export class PosPaymentController {
     } catch (error: any) {
       if (error.status === 400) { res.status(400).json({ error: error.message }); return; }
       if (error.status === 404) { res.status(404).json({ error: error.message }); return; }
+      if (error.status === 409) { res.status(409).json({ error: error.message, code: error.code }); return; }
       console.error('[PosPaymentController] pay error:', error);
       res.status(500).json({ error: 'Failed to record payment' });
     }
