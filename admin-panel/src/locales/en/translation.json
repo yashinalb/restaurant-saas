@@ -2497,6 +2497,16 @@
       "menuHelp": "Category + item browsing to add items to this order will be wired up in the next POS sub-task (44.4).",
       "ready": "Ready: {{items}}"
     },
+    "qr": {
+      "title": "Customer QR",
+      "hint": "Ask the guest to scan this code to view their bill.",
+      "refresh": "Refresh",
+      "copy": "Copy link",
+      "copied": "Copied",
+      "copyFailed": "Copy failed",
+      "expiresIn": "Expires in {{n}} min",
+      "error": "Failed to generate QR code"
+    },
     "mode": {
       "title": "New Order",
       "pickMode": "Pick a mode",
@@ -2556,6 +2566,7 @@
       "discount": "Discount",
       "total": "Total",
       "charge": "Charge",
+      "qrTitle": "Customer QR (view/pay bill)",
       "gonder": "Gönder",
       "gonderHint": "Fire new items to kitchen / bar (transitions status + prints + KDS)",
       "yeniden": "Yeniden",
@@ -2644,6 +2655,31 @@
         "blocked": "Blocked",
         "merged": "Merged"
       }
+    }
+  },
+  "publicInvoice": {
+    "missingToken": "No invoice token provided",
+    "errorTitle": "Unable to load invoice",
+    "expiredTitle": "Link expired",
+    "expiredHint": "Ask your waiter for a fresh QR code.",
+    "usedTitle": "Link already used",
+    "usedHint": "This invoice has already been settled.",
+    "table": "Table",
+    "paid": "PAID",
+    "subtotal": "Subtotal",
+    "discount": "Discount",
+    "service": "Service",
+    "tax": "Tax",
+    "total": "Total",
+    "alreadyPaid": "Paid",
+    "balance": "Balance",
+    "payComingSoon": "Pay online · coming soon",
+    "settled": "Bill settled — thank you!",
+    "expiresAt": "Link expires",
+    "status": {
+      "paid": "Paid",
+      "partially_paid": "Partial",
+      "unpaid": "Unpaid"
     }
   },
   "auditLog": {

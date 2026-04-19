@@ -2402,10 +2402,21 @@
       "menuHelp": "Das Durchsuchen von Kategorien und Artikeln zum Hinzufügen zu dieser Bestellung wird in der nächsten POS-Unteraufgabe (44.4) angebunden.",
       "ready": "Bereit: {{items}}"
     },
+    "qr": {
+      "title": "Kunden-QR",
+      "hint": "Bitten Sie den Gast, diesen Code zu scannen, um seine Rechnung einzusehen.",
+      "refresh": "Aktualisieren",
+      "copy": "Link kopieren",
+      "copied": "Kopiert",
+      "copyFailed": "Kopieren fehlgeschlagen",
+      "expiresIn": "Läuft in {{n}} Min ab",
+      "error": "QR-Code konnte nicht erstellt werden"
+    },
     "cart": {
       "tapToServe": "Tippen, um als serviert zu markieren",
       "itemServed": "Artikel als serviert markiert",
       "statusError": "Status konnte nicht aktualisiert werden",
+      "qrTitle": "Kunden-QR (Rechnung ansehen/bezahlen)",
       "itemStatus": {
         "pending": "Ausstehend",
         "preparing": "In Zubereitung",
@@ -2644,6 +2655,31 @@
       "overrideExpected": "Erwarteten Betrag überschreiben",
       "difference": "Differenz",
       "closeSubmit": "Schicht schließen"
+    }
+  },
+  "publicInvoice": {
+    "missingToken": "Kein Rechnungstoken angegeben",
+    "errorTitle": "Rechnung kann nicht geladen werden",
+    "expiredTitle": "Link abgelaufen",
+    "expiredHint": "Bitten Sie Ihren Kellner um einen neuen QR-Code.",
+    "usedTitle": "Link wurde bereits verwendet",
+    "usedHint": "Diese Rechnung wurde bereits beglichen.",
+    "table": "Tisch",
+    "paid": "BEZAHLT",
+    "subtotal": "Zwischensumme",
+    "discount": "Rabatt",
+    "service": "Service",
+    "tax": "Steuer",
+    "total": "Gesamt",
+    "alreadyPaid": "Bezahlt",
+    "balance": "Restbetrag",
+    "payComingSoon": "Online bezahlen · bald verfügbar",
+    "settled": "Rechnung beglichen — vielen Dank!",
+    "expiresAt": "Link läuft ab",
+    "status": {
+      "paid": "Bezahlt",
+      "partially_paid": "Teilweise",
+      "unpaid": "Unbezahlt"
     }
   },
   "auditLog": {

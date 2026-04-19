@@ -1,13 +1,14 @@
 import { useMemo, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { toast } from 'sonner';
-import { Loader2, Minus, Plus, Trash2, Gift, Percent, Printer, Split, RotateCcw, Ban, MoveRight, FilePlus, CreditCard, ChefHat } from 'lucide-react';
+import { Loader2, Minus, Plus, Trash2, Gift, Percent, Printer, Split, RotateCcw, Ban, MoveRight, FilePlus, CreditCard, ChefHat, QrCode } from 'lucide-react';
 import { usePermissions } from '../../hooks/usePermissions';
 import orderService, { Order, OrderItem, OrderItemInput } from '../../services/orderService';
 import PosMoveItemsModal from './PosMoveItemsModal';
 import PosPaymentModal from './PosPaymentModal';
 import PosReceiptModal from './PosReceiptModal';
 import PosKitchenTicketsModal from './PosKitchenTicketsModal';
+import PosQrModal from './PosQrModal';
 import posFireService from '../../services/frontend-posFireService';
 import posItemStatusService, { ItemStatusCode } from '../../services/frontend-posItemStatusService';
 
@@ -52,6 +53,7 @@ export default function PosCartPanel({ order, onChanged, onNewOrder }: Props) {
   const [showKitchenModal, setShowKitchenModal] = useState(false);
   const [kitchenRefire, setKitchenRefire] = useState(false);
   const [firing, setFiring] = useState(false);
+  const [showQrModal, setShowQrModal] = useState(false);
   const [showDiscount, setShowDiscount] = useState(false);
   const [discountValue, setDiscountValue] = useState('');
   const [discountMode, setDiscountMode] = useState<'amount' | 'percent'>('amount');
@@ -283,14 +285,23 @@ export default function PosCartPanel({ order, onChanged, onNewOrder }: Props) {
               </div>
             )}
           </div>
-          <span className={`text-xs px-2 py-0.5 rounded-full whitespace-nowrap ${
-            order.order_status === 'open' ? 'bg-green-100 text-green-800' :
-            order.order_status === 'closed' ? 'bg-blue-100 text-blue-800' :
-            order.order_status === 'cancelled' ? 'bg-red-100 text-red-800' :
-            'bg-gray-100 text-gray-800'
-          }`}>
-            {t(`pos.cart.status.${order.order_status}`, order.order_status)}
-          </span>
+          <div className="flex items-center gap-1">
+            {order.table_id && items.length > 0 && (
+              <button onClick={() => setShowQrModal(true)}
+                title={t('pos.cart.qrTitle', 'Customer QR (view/pay bill)')}
+                className="p-1 text-gray-600 hover:text-amber-600 rounded hover:bg-gray-100">
+                <QrCode className="w-4 h-4" />
+              </button>
+            )}
+            <span className={`text-xs px-2 py-0.5 rounded-full whitespace-nowrap ${
+              order.order_status === 'open' ? 'bg-green-100 text-green-800' :
+              order.order_status === 'closed' ? 'bg-blue-100 text-blue-800' :
+              order.order_status === 'cancelled' ? 'bg-red-100 text-red-800' :
+              'bg-gray-100 text-gray-800'
+            }`}>
+              {t(`pos.cart.status.${order.order_status}`, order.order_status)}
+            </span>
+          </div>
         </div>
       </div>
 
@@ -558,6 +569,10 @@ export default function PosCartPanel({ order, onChanged, onNewOrder }: Props) {
           initialRefire={kitchenRefire}
           onClose={() => setShowKitchenModal(false)}
         />
+      )}
+
+      {showQrModal && (
+        <PosQrModal orderId={order.id} onClose={() => setShowQrModal(false)} />
       )}
     </div>
   );

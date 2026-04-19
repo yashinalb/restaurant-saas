@@ -2402,10 +2402,21 @@
       "menuHelp": "La navegación por categorías y artículos para añadir artículos a este pedido se conectará en la próxima subtarea de POS (44.4).",
       "ready": "Listo: {{items}}"
     },
+    "qr": {
+      "title": "QR del cliente",
+      "hint": "Pida al cliente que escanee este código para ver su cuenta.",
+      "refresh": "Actualizar",
+      "copy": "Copiar enlace",
+      "copied": "Copiado",
+      "copyFailed": "Error al copiar",
+      "expiresIn": "Caduca en {{n}} min",
+      "error": "Error al generar el código QR"
+    },
     "cart": {
       "tapToServe": "Toca para marcar como servido",
       "itemServed": "Artículo marcado como servido",
       "statusError": "No se pudo actualizar el estado",
+      "qrTitle": "QR del cliente (ver/pagar cuenta)",
       "itemStatus": {
         "pending": "Pendiente",
         "preparing": "Preparando",

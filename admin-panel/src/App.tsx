@@ -66,6 +66,7 @@ import KdsOrdersPage from './pages/KdsOrdersPage';
 import DailyReportSnapshotsPage from './pages/DailyReportSnapshotsPage';
 import CashRegisterSessionsPage from './pages/CashRegisterSessionsPage';
 import AuditLogPage from './pages/AuditLogPage';
+import InvoiceViewerPage from './pages/InvoiceViewerPage';
 import PosLayout from './pages/pos/PosLayout';
 import PosLoginPage from './pages/pos/PosLoginPage';
 import PosHomePage from './pages/pos/PosHomePage';
@@ -92,6 +93,7 @@ function App() {
         <Route path="/forgot-password" element={<ForgotPasswordPage />} />
         <Route path="/reset-password" element={<ResetPasswordPage />} />
         <Route path="/accept-invitation" element={<AcceptInvitationPage />} />
+        <Route path="/invoice" element={<InvoiceViewerPage />} />
 
         <Route path="/pos" element={
           <ProtectedRoute>

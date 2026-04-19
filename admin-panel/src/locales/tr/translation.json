@@ -2402,10 +2402,21 @@
       "menuHelp": "Kategori + ürün tarama ile bu siparişe ürün ekleme bir sonraki POS alt görevinde (44.4) bağlanacak.",
       "ready": "Hazır: {{items}}"
     },
+    "qr": {
+      "title": "Müşteri QR",
+      "hint": "Misafirden hesabını görüntülemek için bu kodu taramasını isteyin.",
+      "refresh": "Yenile",
+      "copy": "Bağlantıyı kopyala",
+      "copied": "Kopyalandı",
+      "copyFailed": "Kopyalama başarısız",
+      "expiresIn": "{{n}} dakika içinde sona erer",
+      "error": "QR kodu oluşturulamadı"
+    },
     "cart": {
       "tapToServe": "Servis edildi olarak işaretlemek için dokunun",
       "itemServed": "Ürün servis edildi olarak işaretlendi",
       "statusError": "Durum güncellenemedi",
+      "qrTitle": "Müşteri QR (hesabı görüntüle/öde)",
       "itemStatus": {
         "pending": "Bekliyor",
         "preparing": "Hazırlanıyor",
@@ -2644,6 +2655,31 @@
       "overrideExpected": "Beklenen tutarı geçersiz kıl",
       "difference": "Fark",
       "closeSubmit": "Vardiyayı Kapat"
+    }
+  },
+  "publicInvoice": {
+    "missingToken": "Fatura jetonu sağlanmadı",
+    "errorTitle": "Fatura yüklenemedi",
+    "expiredTitle": "Bağlantının süresi doldu",
+    "expiredHint": "Garsonunuzdan yeni bir QR kodu isteyin.",
+    "usedTitle": "Bağlantı zaten kullanıldı",
+    "usedHint": "Bu fatura zaten ödendi.",
+    "table": "Masa",
+    "paid": "ÖDENDİ",
+    "subtotal": "Ara toplam",
+    "discount": "İndirim",
+    "service": "Servis",
+    "tax": "Vergi",
+    "total": "Toplam",
+    "alreadyPaid": "Ödendi",
+    "balance": "Kalan",
+    "payComingSoon": "Çevrimiçi ödeme · yakında",
+    "settled": "Hesap ödendi — teşekkürler!",
+    "expiresAt": "Bağlantının süresi",
+    "status": {
+      "paid": "Ödendi",
+      "partially_paid": "Kısmi",
+      "unpaid": "Ödenmedi"
     }
   },
   "auditLog": {

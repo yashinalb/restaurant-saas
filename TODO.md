@@ -568,7 +568,7 @@ Require an open `cash_register_session` (#42) at the POS device before accepting
 
 Re-print any receipt or kitchen ticket for an order (within the shift). Void a whole order or a single item with a mandatory reason code. Every privileged action (void, ikram, discount, refund, reprint, drawer-open) writes a row to an `audit_log` table with `waiter_id`, `admin_user_id`, action, target_type/id, before/after JSON, and timestamp — queryable from the admin panel.
 
-### [ ] 44.15 QR Invoice Generation
+### [x] 44.15 QR Invoice Generation
 
 Depends on #32. Generate a signed, short-lived token for the table, render a QR the guest can scan to view and pay the bill from their phone.
 

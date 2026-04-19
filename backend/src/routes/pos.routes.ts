@@ -11,6 +11,7 @@ import { PosKitchenTicketController } from '../controllers/posKitchenTicketContr
 import { PosFireController } from '../controllers/posFireController.js';
 import { PosItemStatusController } from '../controllers/posItemStatusController.js';
 import { PosShiftController } from '../controllers/posShiftController.js';
+import { PosQrController } from '../controllers/posQrController.js';
 import { authenticateToken } from '../middleware/auth.js';
 import { loadTenantContext, requireTenantPermission } from '../middleware/tenantAuth.js';
 
@@ -58,6 +59,9 @@ router.post('/pos/orders/:id/fire', requireTenantPermission('pos.take_order'), P
 
 // Per-item status machine (tap-to-serve, manual transitions, cancel → void)
 router.patch('/pos/order-items/:itemId/status', requireTenantPermission('pos.take_order'), PosItemStatusController.patch);
+
+// QR invoice token generation (waiter-side "Show QR")
+router.post('/pos/orders/:id/qr', requireTenantPermission('pos.access'), PosQrController.generate);
 
 // Cash register shift (required before payments)
 router.get('/pos/shift', requireTenantPermission('pos.access'), PosShiftController.getActive);
