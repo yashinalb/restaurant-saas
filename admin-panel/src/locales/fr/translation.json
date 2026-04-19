@@ -2402,10 +2402,21 @@
       "menuHelp": "La navigation par catégories et articles pour ajouter des articles à cette commande sera branchée dans la prochaine sous-tâche POS (44.4).",
       "ready": "Prêt : {{items}}"
     },
+    "qr": {
+      "title": "QR client",
+      "hint": "Demandez au client de scanner ce code pour consulter son addition.",
+      "refresh": "Actualiser",
+      "copy": "Copier le lien",
+      "copied": "Copié",
+      "copyFailed": "Échec de la copie",
+      "expiresIn": "Expire dans {{n}} min",
+      "error": "Échec de la génération du code QR"
+    },
     "cart": {
       "tapToServe": "Appuyez pour marquer comme servi",
       "itemServed": "Article marqué comme servi",
       "statusError": "Échec de la mise à jour du statut",
+      "qrTitle": "QR client (voir/payer l'addition)",
       "itemStatus": {
         "pending": "En attente",
         "preparing": "En préparation",
@@ -2644,6 +2655,31 @@
       "overrideExpected": "Remplacer le montant attendu",
       "difference": "Différence",
       "closeSubmit": "Fermer le service"
+    }
+  },
+  "publicInvoice": {
+    "missingToken": "Aucun jeton de facture fourni",
+    "errorTitle": "Impossible de charger la facture",
+    "expiredTitle": "Lien expiré",
+    "expiredHint": "Demandez un nouveau code QR à votre serveur.",
+    "usedTitle": "Lien déjà utilisé",
+    "usedHint": "Cette facture a déjà été réglée.",
+    "table": "Table",
+    "paid": "PAYÉ",
+    "subtotal": "Sous-total",
+    "discount": "Remise",
+    "service": "Service",
+    "tax": "Taxe",
+    "total": "Total",
+    "alreadyPaid": "Payé",
+    "balance": "Solde",
+    "payComingSoon": "Payer en ligne · bientôt disponible",
+    "settled": "Addition réglée — merci !",
+    "expiresAt": "Le lien expire",
+    "status": {
+      "paid": "Payé",
+      "partially_paid": "Partiel",
+      "unpaid": "Impayé"
     }
   },
   "auditLog": {
