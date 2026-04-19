@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { useNavigate, useParams, useSearchParams } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { toast } from 'sonner';
@@ -18,19 +18,45 @@ export default function PosOrderPage() {
 
   const [order, setOrder] = useState<Order | null>(null);
   const [loading, setLoading] = useState(true);
+  const previousStatusesRef = useRef<Record<number, string>>({});
 
   const isNew = !params.id;
 
-  const loadOrder = async (id: number) => {
+  const detectReadyTransitions = (fresh: Order) => {
+    const previous = previousStatusesRef.current;
+    const freshItems = fresh.items || [];
+    const nextMap: Record<number, string> = {};
+    const newlyReady: string[] = [];
+    for (const it of freshItems) {
+      const code = (it as any).status_code || 'pending';
+      nextMap[it.id] = code;
+      const prev = previous[it.id];
+      if (prev && prev !== 'ready' && code === 'ready') {
+        newlyReady.push((it as any).menu_item_name || `Item #${it.tenant_menu_item_id}`);
+      }
+    }
+    if (Object.keys(previous).length > 0 && newlyReady.length > 0) {
+      toast.success(
+        t('pos.order.ready', 'Ready: {{items}}', { items: newlyReady.join(', ') }),
+        { duration: 6000 }
+      );
+    }
+    previousStatusesRef.current = nextMap;
+  };
+
+  const loadOrder = async (id: number, silent = false) => {
     try {
-      setLoading(true);
+      if (!silent) setLoading(true);
       const data = await orderService.getById(id);
+      detectReadyTransitions(data);
       setOrder(data);
     } catch (error: any) {
-      toast.error(error.response?.data?.error || t('pos.order.loadError', 'Failed to load order'));
-      navigate('/pos/floor');
+      if (!silent) {
+        toast.error(error.response?.data?.error || t('pos.order.loadError', 'Failed to load order'));
+        navigate('/pos/floor');
+      }
     } finally {
-      setLoading(false);
+      if (!silent) setLoading(false);
     }
   };
 
@@ -41,7 +67,13 @@ export default function PosOrderPage() {
     }
     if (!isNew && params.id) {
       loadOrder(Number(params.id));
-      return;
+      // Poll every 8s to surface KDS-driven status changes (e.g. item → ready)
+      const interval = window.setInterval(() => {
+        if (document.visibilityState === 'visible' && params.id) {
+          loadOrder(Number(params.id), true);
+        }
+      }, 8000);
+      return () => window.clearInterval(interval);
     }
 
     // New order: create an empty one from POS session context

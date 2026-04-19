@@ -9,6 +9,7 @@ import { PosPaymentController } from '../controllers/posPaymentController.js';
 import { PosReceiptController } from '../controllers/posReceiptController.js';
 import { PosKitchenTicketController } from '../controllers/posKitchenTicketController.js';
 import { PosFireController } from '../controllers/posFireController.js';
+import { PosItemStatusController } from '../controllers/posItemStatusController.js';
 import { authenticateToken } from '../middleware/auth.js';
 import { loadTenantContext, requireTenantPermission } from '../middleware/tenantAuth.js';
 
@@ -53,5 +54,8 @@ router.post('/pos/orders/:id/print-kitchen-tickets', requireTenantPermission('po
 
 // Fire: status transition + KDS broadcast + ticket print
 router.post('/pos/orders/:id/fire', requireTenantPermission('pos.take_order'), PosFireController.fire);
+
+// Per-item status machine (tap-to-serve, manual transitions, cancel → void)
+router.patch('/pos/order-items/:itemId/status', requireTenantPermission('pos.take_order'), PosItemStatusController.patch);
 
 export default router;

@@ -2374,9 +2374,20 @@
       "loadError": "Bestellung konnte nicht geladen werden",
       "startError": "Bestellung konnte nicht gestartet werden",
       "menuComingSoon": "Menü-Raster",
-      "menuHelp": "Das Durchsuchen von Kategorien und Artikeln zum Hinzufügen zu dieser Bestellung wird in der nächsten POS-Unteraufgabe (44.4) angebunden."
+      "menuHelp": "Das Durchsuchen von Kategorien und Artikeln zum Hinzufügen zu dieser Bestellung wird in der nächsten POS-Unteraufgabe (44.4) angebunden.",
+      "ready": "Bereit: {{items}}"
     },
     "cart": {
+      "tapToServe": "Tippen, um als serviert zu markieren",
+      "itemServed": "Artikel als serviert markiert",
+      "statusError": "Status konnte nicht aktualisiert werden",
+      "itemStatus": {
+        "pending": "Ausstehend",
+        "preparing": "In Zubereitung",
+        "ready": "Bereit",
+        "served": "Serviert",
+        "cancelled": "Storniert"
+      },
       "table": "Tisch",
       "walkIn": "Laufkundschaft",
       "empty": "Tippen Sie auf Artikel im Menü, um sie hinzuzufügen",

@@ -2374,9 +2374,20 @@
       "loadError": "Échec du chargement de la commande",
       "startError": "Échec du démarrage de la commande",
       "menuComingSoon": "Grille du menu",
-      "menuHelp": "La navigation par catégories et articles pour ajouter des articles à cette commande sera branchée dans la prochaine sous-tâche POS (44.4)."
+      "menuHelp": "La navigation par catégories et articles pour ajouter des articles à cette commande sera branchée dans la prochaine sous-tâche POS (44.4).",
+      "ready": "Prêt : {{items}}"
     },
     "cart": {
+      "tapToServe": "Appuyez pour marquer comme servi",
+      "itemServed": "Article marqué comme servi",
+      "statusError": "Échec de la mise à jour du statut",
+      "itemStatus": {
+        "pending": "En attente",
+        "preparing": "En préparation",
+        "ready": "Prêt",
+        "served": "Servi",
+        "cancelled": "Annulé"
+      },
       "table": "Table",
       "walkIn": "Client de passage",
       "empty": "Touchez les articles du menu pour les ajouter",

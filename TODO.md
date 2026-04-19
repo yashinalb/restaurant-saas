@@ -552,7 +552,7 @@ One ticket per `tenant_order_destination` in the order — no prices, shows qty,
 
 When the waiter taps "Fire" on the cart, split the new/un-fired items by `menu_items.tenant_order_destination_id`, transition each item `pending → preparing`, then dispatch two parallel outputs per destination: (1) print the kitchen/bar ticket via 44.9, (2) broadcast to the KDS display (Priority 11) via 44.16. Handles partial fire (send appetizers now, hold mains), re-fire (resend the same slice), and void-after-fire (notify KDS + print a void ticket).
 
-### [ ] 44.11 Item Status Lifecycle
+### [x] 44.11 Item Status Lifecycle
 
 Status machine `pending → preparing → ready → served → cancelled` enforced at the service layer (no skipping except `cancelled`). POS cart shows a colored status badge per line; a toast fires when any item transitions to `ready` (coming from the KDS via 44.16). Tap the ready badge to mark the item `served`. Cancel while `preparing` triggers the void-after-fire branch in 44.10.
 

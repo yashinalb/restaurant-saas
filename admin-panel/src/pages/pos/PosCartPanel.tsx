@@ -9,6 +9,7 @@ import PosPaymentModal from './PosPaymentModal';
 import PosReceiptModal from './PosReceiptModal';
 import PosKitchenTicketsModal from './PosKitchenTicketsModal';
 import posFireService from '../../services/frontend-posFireService';
+import posItemStatusService, { ItemStatusCode } from '../../services/frontend-posItemStatusService';
 
 interface Props {
   order: Order;
@@ -225,6 +226,30 @@ export default function PosCartPanel({ order, onChanged, onNewOrder }: Props) {
 
   const isLocked = order.order_status !== 'open';
 
+  const statusBadgeClass = (code: string | undefined | null) => {
+    switch (code) {
+      case 'pending': return 'bg-gray-200 text-gray-700';
+      case 'preparing': return 'bg-amber-100 text-amber-800';
+      case 'ready': return 'bg-emerald-600 text-white ring-2 ring-emerald-300 animate-pulse';
+      case 'served': return 'bg-blue-100 text-blue-800';
+      case 'cancelled': return 'bg-red-100 text-red-700';
+      default: return 'bg-gray-100 text-gray-600';
+    }
+  };
+
+  const transitionItem = async (itemId: number, to: ItemStatusCode) => {
+    try {
+      setSaving(true);
+      await posItemStatusService.patch(itemId, to);
+      onChanged();
+      if (to === 'served') toast.success(t('pos.cart.itemServed', 'Item marked served'));
+    } catch (error: any) {
+      toast.error(error.response?.data?.error || t('pos.cart.statusError', 'Failed to update status'));
+    } finally {
+      setSaving(false);
+    }
+  };
+
   return (
     <div className="bg-white border border-gray-200 rounded-lg shadow-sm h-full flex flex-col">
       {/* Header */}
@@ -276,6 +301,21 @@ export default function PosCartPanel({ order, onChanged, onNewOrder }: Props) {
                           <span className="text-[10px] px-1.5 py-0.5 rounded bg-pink-600 text-white font-semibold">
                             {t('pos.cart.ikram', 'İkram')}
                           </span>
+                        )}
+                        {(item as any).status_code && (item as any).status_code !== 'pending' && (
+                          (item as any).status_code === 'ready' ? (
+                            <button
+                              onClick={() => transitionItem(item.id, 'served')}
+                              disabled={saving}
+                              title={t('pos.cart.tapToServe', 'Tap to mark as served')}
+                              className={`text-[10px] px-1.5 py-0.5 rounded font-semibold uppercase cursor-pointer hover:brightness-110 ${statusBadgeClass((item as any).status_code)}`}>
+                              {String(t(`pos.cart.itemStatus.${(item as any).status_code}` as any, (item as any).status_code))}
+                            </button>
+                          ) : (
+                            <span className={`text-[10px] px-1.5 py-0.5 rounded font-semibold uppercase ${statusBadgeClass((item as any).status_code)}`}>
+                              {String(t(`pos.cart.itemStatus.${(item as any).status_code}` as any, (item as any).status_code))}
+                            </span>
+                          )
                         )}
                       </div>
                       {addons.length > 0 && (

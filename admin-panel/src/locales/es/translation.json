@@ -2374,9 +2374,20 @@
       "loadError": "No se pudo cargar el pedido",
       "startError": "No se pudo iniciar el pedido",
       "menuComingSoon": "Cuadrícula del menú",
-      "menuHelp": "La navegación por categorías y artículos para añadir artículos a este pedido se conectará en la próxima subtarea de POS (44.4)."
+      "menuHelp": "La navegación por categorías y artículos para añadir artículos a este pedido se conectará en la próxima subtarea de POS (44.4).",
+      "ready": "Listo: {{items}}"
     },
     "cart": {
+      "tapToServe": "Toca para marcar como servido",
+      "itemServed": "Artículo marcado como servido",
+      "statusError": "No se pudo actualizar el estado",
+      "itemStatus": {
+        "pending": "Pendiente",
+        "preparing": "Preparando",
+        "ready": "Listo",
+        "served": "Servido",
+        "cancelled": "Cancelado"
+      },
       "table": "Mesa",
       "walkIn": "Cliente sin reserva",
       "empty": "Toque los artículos del menú para añadirlos",

@@ -2374,9 +2374,20 @@
       "loadError": "Sipariş yüklenemedi",
       "startError": "Sipariş başlatılamadı",
       "menuComingSoon": "Menü ızgarası",
-      "menuHelp": "Kategori + ürün tarama ile bu siparişe ürün ekleme bir sonraki POS alt görevinde (44.4) bağlanacak."
+      "menuHelp": "Kategori + ürün tarama ile bu siparişe ürün ekleme bir sonraki POS alt görevinde (44.4) bağlanacak.",
+      "ready": "Hazır: {{items}}"
     },
     "cart": {
+      "tapToServe": "Servis edildi olarak işaretlemek için dokunun",
+      "itemServed": "Ürün servis edildi olarak işaretlendi",
+      "statusError": "Durum güncellenemedi",
+      "itemStatus": {
+        "pending": "Bekliyor",
+        "preparing": "Hazırlanıyor",
+        "ready": "Hazır",
+        "served": "Servis edildi",
+        "cancelled": "İptal edildi"
+      },
       "table": "Masa",
       "walkIn": "Gelen müşteri",
       "empty": "Eklemek için menüden ürünlere dokunun",

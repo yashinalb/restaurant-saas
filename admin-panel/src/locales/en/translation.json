@@ -2489,7 +2489,8 @@
       "loadError": "Failed to load order",
       "startError": "Failed to start order",
       "menuComingSoon": "Menu grid",
-      "menuHelp": "Category + item browsing to add items to this order will be wired up in the next POS sub-task (44.4)."
+      "menuHelp": "Category + item browsing to add items to this order will be wired up in the next POS sub-task (44.4).",
+      "ready": "Ready: {{items}}"
     },
     "cart": {
       "table": "Table",
@@ -2505,6 +2506,16 @@
       "gonderHint": "Fire new items to kitchen / bar (transitions status + prints + KDS)",
       "yeniden": "Yeniden",
       "yenidenHint": "Preview + reprint already-fired items (no status change)",
+      "tapToServe": "Tap to mark as served",
+      "itemServed": "Item marked served",
+      "statusError": "Failed to update status",
+      "itemStatus": {
+        "pending": "Pending",
+        "preparing": "Preparing",
+        "ready": "Ready",
+        "served": "Served",
+        "cancelled": "Cancelled"
+      },
       "fired": "Fired {{n}} item(s) · {{p}} ticket(s) printed",
       "firedSkipped": "{{n}} item(s) skipped",
       "nothingToFire": "Nothing new to fire",
