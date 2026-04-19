@@ -1,12 +1,13 @@
 import { useMemo, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { toast } from 'sonner';
-import { Loader2, Minus, Plus, Trash2, Gift, Percent, Printer, Split, RotateCcw, Ban, MoveRight, FilePlus, CreditCard } from 'lucide-react';
+import { Loader2, Minus, Plus, Trash2, Gift, Percent, Printer, Split, RotateCcw, Ban, MoveRight, FilePlus, CreditCard, ChefHat } from 'lucide-react';
 import { usePermissions } from '../../hooks/usePermissions';
 import orderService, { Order, OrderItem, OrderItemInput } from '../../services/orderService';
 import PosMoveItemsModal from './PosMoveItemsModal';
 import PosPaymentModal from './PosPaymentModal';
 import PosReceiptModal from './PosReceiptModal';
+import PosKitchenTicketsModal from './PosKitchenTicketsModal';
 
 interface Props {
   order: Order;
@@ -46,6 +47,8 @@ export default function PosCartPanel({ order, onChanged, onNewOrder }: Props) {
   const [moveModalItems, setMoveModalItems] = useState<OrderItem[] | null>(null);
   const [showPaymentModal, setShowPaymentModal] = useState(false);
   const [showReceiptModal, setShowReceiptModal] = useState(false);
+  const [showKitchenModal, setShowKitchenModal] = useState(false);
+  const [kitchenRefire, setKitchenRefire] = useState(false);
   const [showDiscount, setShowDiscount] = useState(false);
   const [discountValue, setDiscountValue] = useState('');
   const [discountMode, setDiscountMode] = useState<'amount' | 'percent'>('amount');
@@ -360,6 +363,18 @@ export default function PosCartPanel({ order, onChanged, onNewOrder }: Props) {
           <Ban className="w-4 h-4" />
           {t('pos.cart.iptal', 'İptal')}
         </button>
+        <button onClick={() => { setKitchenRefire(false); setShowKitchenModal(true); }}
+          disabled={items.length === 0 || !canTakeOrder}
+          className="flex flex-col items-center justify-center gap-0.5 py-2 rounded bg-emerald-700 hover:bg-emerald-800 text-white text-[11px] font-semibold disabled:opacity-40">
+          <ChefHat className="w-4 h-4" />
+          {t('pos.cart.gonder', 'Gönder')}
+        </button>
+        <button onClick={() => { setKitchenRefire(true); setShowKitchenModal(true); }}
+          disabled={items.length === 0 || !canTakeOrder}
+          className="flex flex-col items-center justify-center gap-0.5 py-2 rounded bg-amber-700 hover:bg-amber-800 text-white text-[11px] font-semibold disabled:opacity-40">
+          <RotateCcw className="w-4 h-4" />
+          {t('pos.cart.yeniden', 'Yeniden')}
+        </button>
       </div>
 
       {/* Discount modal */}
@@ -423,6 +438,14 @@ export default function PosCartPanel({ order, onChanged, onNewOrder }: Props) {
 
       {showReceiptModal && (
         <PosReceiptModal orderId={order.id} onClose={() => setShowReceiptModal(false)} />
+      )}
+
+      {showKitchenModal && (
+        <PosKitchenTicketsModal
+          orderId={order.id}
+          initialRefire={kitchenRefire}
+          onClose={() => setShowKitchenModal(false)}
+        />
       )}
     </div>
   );

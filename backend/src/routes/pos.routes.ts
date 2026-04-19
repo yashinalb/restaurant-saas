@@ -7,6 +7,7 @@ import { PosItemOptionsController } from '../controllers/posItemOptionsControlle
 import { PosMoveItemsController } from '../controllers/posMoveItemsController.js';
 import { PosPaymentController } from '../controllers/posPaymentController.js';
 import { PosReceiptController } from '../controllers/posReceiptController.js';
+import { PosKitchenTicketController } from '../controllers/posKitchenTicketController.js';
 import { authenticateToken } from '../middleware/auth.js';
 import { loadTenantContext, requireTenantPermission } from '../middleware/tenantAuth.js';
 
@@ -44,5 +45,9 @@ router.post('/pos/orders/:id/pay', requireTenantPermission('pos.take_order'), Po
 // Receipt (re-print anytime)
 router.get('/pos/orders/:id/receipt', requireTenantPermission('pos.access'), PosReceiptController.getReceipt);
 router.post('/pos/orders/:id/print-receipt', requireTenantPermission('pos.access'), PosReceiptController.printThermal);
+
+// Kitchen / bar tickets
+router.get('/pos/orders/:id/kitchen-tickets', requireTenantPermission('pos.take_order'), PosKitchenTicketController.getTickets);
+router.post('/pos/orders/:id/print-kitchen-tickets', requireTenantPermission('pos.take_order'), PosKitchenTicketController.printTickets);
 
 export default router;

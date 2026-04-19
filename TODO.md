@@ -544,7 +544,7 @@ Full / partial / per-item / mixed payment modes. Supports multiple `tenant_payme
 
 Per-order customer receipt with store header, line items, modifiers, subtotal, discounts/ikram, tip, per-rate VAT breakdown, total, payment split, and QR payment link. Supports re-print (pre-payment or post-payment) and the order's language/currency. Routes to `stores.receipt_printer_ip` via ESC/POS (browser print as fallback for non-thermal).
 
-### [ ] 44.9 Kitchen / Bar Ticket Printing
+### [x] 44.9 Kitchen / Bar Ticket Printing
 
 One ticket per `tenant_order_destination` in the order — no prices, shows qty, modifiers, per-item note, seat number, and course. Routes each ticket to the destination's printer (`stores.kitchen_printer_ip` / `bar_printer_ip`, or a per-destination override if present). Supports re-fire (reprints only the un-served items) and void ticket (strikethrough + notice to the cook).
 
