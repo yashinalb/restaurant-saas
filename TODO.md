@@ -548,7 +548,7 @@ Per-order customer receipt with store header, line items, modifiers, subtotal, d
 
 One ticket per `tenant_order_destination` in the order — no prices, shows qty, modifiers, per-item note, seat number, and course. Routes each ticket to the destination's printer (`stores.kitchen_printer_ip` / `bar_printer_ip`, or a per-destination override if present). Supports re-fire (reprints only the un-served items) and void ticket (strikethrough + notice to the cook).
 
-### [ ] 44.10 Order Destination Routing & Fire Flow
+### [x] 44.10 Order Destination Routing & Fire Flow
 
 When the waiter taps "Fire" on the cart, split the new/un-fired items by `menu_items.tenant_order_destination_id`, transition each item `pending → preparing`, then dispatch two parallel outputs per destination: (1) print the kitchen/bar ticket via 44.9, (2) broadcast to the KDS display (Priority 11) via 44.16. Handles partial fire (send appetizers now, hold mains), re-fire (resend the same slice), and void-after-fire (notify KDS + print a void ticket).
 

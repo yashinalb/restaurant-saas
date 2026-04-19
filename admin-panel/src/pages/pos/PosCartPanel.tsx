@@ -8,6 +8,7 @@ import PosMoveItemsModal from './PosMoveItemsModal';
 import PosPaymentModal from './PosPaymentModal';
 import PosReceiptModal from './PosReceiptModal';
 import PosKitchenTicketsModal from './PosKitchenTicketsModal';
+import posFireService from '../../services/frontend-posFireService';
 
 interface Props {
   order: Order;
@@ -49,6 +50,7 @@ export default function PosCartPanel({ order, onChanged, onNewOrder }: Props) {
   const [showReceiptModal, setShowReceiptModal] = useState(false);
   const [showKitchenModal, setShowKitchenModal] = useState(false);
   const [kitchenRefire, setKitchenRefire] = useState(false);
+  const [firing, setFiring] = useState(false);
   const [showDiscount, setShowDiscount] = useState(false);
   const [discountValue, setDiscountValue] = useState('');
   const [discountMode, setDiscountMode] = useState<'amount' | 'percent'>('amount');
@@ -89,10 +91,57 @@ export default function PosCartPanel({ order, onChanged, onNewOrder }: Props) {
 
   const handleDeleteLine = async (index: number) => {
     if (!canTakeOrder) return;
+    const item = items[index];
+    const alreadyFired = (item as any).status_code && (item as any).status_code !== 'pending';
+
+    if (alreadyFired) {
+      // Void-after-fire: update status to cancelled + cancel KDS + print void ticket
+      if (!confirm(t('pos.cart.confirmVoidLine', 'This item has already been sent to the kitchen. Void it (notifies kitchen + cancels KDS)?'))) return;
+      try {
+        setSaving(true);
+        const res = await posFireService.fire(order.id, { void_item_ids: [item.id] });
+        if (res.fired_count > 0) {
+          toast.success(t('pos.cart.voidedLine', 'Item voided · {{n}} ticket(s)', { n: res.tickets.length }));
+        } else if (res.skipped.length > 0) {
+          toast.error(res.skipped[0].reason || t('pos.cart.voidFailed', 'Could not void item'));
+        }
+        onChanged();
+      } catch (error: any) {
+        toast.error(error.response?.data?.error || t('pos.cart.voidFailed', 'Could not void item'));
+      } finally {
+        setSaving(false);
+      }
+      return;
+    }
+
     if (!confirm(t('pos.cart.confirmDeleteLine', 'Remove this item?'))) return;
     const next = orderItemsToInput(items);
     next.splice(index, 1);
     await saveItems(next);
+  };
+
+  const handleFire = async () => {
+    if (!canTakeOrder) return;
+    try {
+      setFiring(true);
+      const res = await posFireService.fire(order.id, {});
+      const sentCount = res.tickets.filter(tk => tk.printed).length;
+      if (res.fired_count === 0 && res.skipped.length === 0) {
+        toast.message(t('pos.cart.nothingToFire', 'Nothing new to fire'));
+      } else if (res.fired_count > 0) {
+        toast.success(t('pos.cart.fired', 'Fired {{n}} item(s) · {{p}} ticket(s) printed', { n: res.fired_count, p: sentCount }));
+      }
+      if (res.skipped.length > 0) {
+        toast.message(t('pos.cart.firedSkipped', '{{n}} item(s) skipped', { n: res.skipped.length }), {
+          description: res.skipped.map(s => s.reason).join(', '),
+        });
+      }
+      onChanged();
+    } catch (error: any) {
+      toast.error(error.response?.data?.error || t('pos.cart.fireFailed', 'Fire failed'));
+    } finally {
+      setFiring(false);
+    }
   };
 
   const handleIkram = async (index: number) => {
@@ -363,14 +412,16 @@ export default function PosCartPanel({ order, onChanged, onNewOrder }: Props) {
           <Ban className="w-4 h-4" />
           {t('pos.cart.iptal', 'İptal')}
         </button>
-        <button onClick={() => { setKitchenRefire(false); setShowKitchenModal(true); }}
-          disabled={items.length === 0 || !canTakeOrder}
+        <button onClick={handleFire}
+          disabled={firing || items.length === 0 || !canTakeOrder || isLocked}
+          title={t('pos.cart.gonderHint', 'Fire new items to kitchen / bar (transitions status + prints + KDS)')}
           className="flex flex-col items-center justify-center gap-0.5 py-2 rounded bg-emerald-700 hover:bg-emerald-800 text-white text-[11px] font-semibold disabled:opacity-40">
-          <ChefHat className="w-4 h-4" />
+          {firing ? <Loader2 className="w-4 h-4 animate-spin" /> : <ChefHat className="w-4 h-4" />}
           {t('pos.cart.gonder', 'Gönder')}
         </button>
         <button onClick={() => { setKitchenRefire(true); setShowKitchenModal(true); }}
           disabled={items.length === 0 || !canTakeOrder}
+          title={t('pos.cart.yenidenHint', 'Preview + reprint already-fired items (no status change)')}
           className="flex flex-col items-center justify-center gap-0.5 py-2 rounded bg-amber-700 hover:bg-amber-800 text-white text-[11px] font-semibold disabled:opacity-40">
           <RotateCcw className="w-4 h-4" />
           {t('pos.cart.yeniden', 'Yeniden')}

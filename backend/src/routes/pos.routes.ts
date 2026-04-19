@@ -8,6 +8,7 @@ import { PosMoveItemsController } from '../controllers/posMoveItemsController.js
 import { PosPaymentController } from '../controllers/posPaymentController.js';
 import { PosReceiptController } from '../controllers/posReceiptController.js';
 import { PosKitchenTicketController } from '../controllers/posKitchenTicketController.js';
+import { PosFireController } from '../controllers/posFireController.js';
 import { authenticateToken } from '../middleware/auth.js';
 import { loadTenantContext, requireTenantPermission } from '../middleware/tenantAuth.js';
 
@@ -49,5 +50,8 @@ router.post('/pos/orders/:id/print-receipt', requireTenantPermission('pos.access
 // Kitchen / bar tickets
 router.get('/pos/orders/:id/kitchen-tickets', requireTenantPermission('pos.take_order'), PosKitchenTicketController.getTickets);
 router.post('/pos/orders/:id/print-kitchen-tickets', requireTenantPermission('pos.take_order'), PosKitchenTicketController.printTickets);
+
+// Fire: status transition + KDS broadcast + ticket print
+router.post('/pos/orders/:id/fire', requireTenantPermission('pos.take_order'), PosFireController.fire);
 
 export default router;
