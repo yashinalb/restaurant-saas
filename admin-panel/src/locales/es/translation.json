@@ -2657,6 +2657,31 @@
       "closeSubmit": "Cerrar turno"
     }
   },
+  "publicInvoice": {
+    "missingToken": "No se proporcionó ningún token de factura",
+    "errorTitle": "No se puede cargar la factura",
+    "expiredTitle": "Enlace caducado",
+    "expiredHint": "Pida al camarero un nuevo código QR.",
+    "usedTitle": "El enlace ya se ha utilizado",
+    "usedHint": "Esta factura ya ha sido liquidada.",
+    "table": "Mesa",
+    "paid": "PAGADO",
+    "subtotal": "Subtotal",
+    "discount": "Descuento",
+    "service": "Servicio",
+    "tax": "Impuesto",
+    "total": "Total",
+    "alreadyPaid": "Pagado",
+    "balance": "Saldo",
+    "payComingSoon": "Pagar en línea · próximamente",
+    "settled": "Cuenta liquidada — ¡gracias!",
+    "expiresAt": "El enlace caduca",
+    "status": {
+      "paid": "Pagado",
+      "partially_paid": "Parcial",
+      "unpaid": "Sin pagar"
+    }
+  },
   "auditLog": {
     "title": "Registro de Auditoría",
     "noAccess": "No tiene permiso para ver el registro de auditoría.",
