@@ -602,7 +602,8 @@ async function seedRestaurantLookups() {
       ('pos.ikram', 'Apply Ikram (On-the-house)', 'Can comp items at POS', 'pos', 1),
       ('pos.split_bill', 'Split Bill', 'Can split bills at POS', 'pos', 1),
       ('pos.refund', 'Process Refunds', 'Can process refunds at POS', 'pos', 1),
-      ('pos.void', 'Void Transactions', 'Can void transactions at POS', 'pos', 1)
+      ('pos.void', 'Void Transactions', 'Can void transactions at POS', 'pos', 1),
+      ('audit_logs.view', 'View Audit Logs', 'Can view the audit log of privileged POS actions', 'audit_logs', 1)
     `);
     console.log('✅ Restaurant permissions seeded\n');
 

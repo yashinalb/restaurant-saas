@@ -80,7 +80,8 @@
     "kdsOrders": "Écran Cuisine",
     "dailyReports": "Rapports Quotidiens",
     "cashSessions": "Sessions de Caisse",
-    "posTerminal": "Terminal POS"
+    "posTerminal": "Terminal POS",
+    "auditLog": "Journal d'Audit"
   },
   "common": {
     "adminSaas": "Admin SaaS",
@@ -2466,7 +2467,9 @@
         "closed": "Fermée",
         "cancelled": "Annulée",
         "void": "Nulle"
-      }
+      },
+      "voidReasonPrompt": "Motif de l'annulation (obligatoire — sera enregistré) :",
+      "voidReasonRequired": "Un motif est requis pour annuler un article"
     },
     "floor": {
       "title": "Plan de Salle",
@@ -2641,6 +2644,41 @@
       "overrideExpected": "Remplacer le montant attendu",
       "difference": "Différence",
       "closeSubmit": "Fermer le service"
+    }
+  },
+  "auditLog": {
+    "title": "Journal d'Audit",
+    "noAccess": "Vous n'avez pas la permission de voir le journal d'audit.",
+    "fetchError": "Échec du chargement du journal d'audit",
+    "empty": "Aucune entrée d'audit ne correspond à ces filtres",
+    "time": "Heure",
+    "action": "Action",
+    "target": "Cible",
+    "reason": "Motif",
+    "actor": "Utilisateur",
+    "store": "Magasin",
+    "waiter": "Serveur",
+    "ip": "IP",
+    "before": "Avant",
+    "after": "Après",
+    "entryTitle": "Entrée d'audit",
+    "allStores": "Tous les magasins",
+    "allActions": "Toutes les actions",
+    "targetType": "Type de cible",
+    "targetId": "ID de cible",
+    "actions": {
+      "void_order": "Annuler la Commande",
+      "void_item": "Annuler l'Article",
+      "ikram": "İkram (Offert)",
+      "discount_apply": "Appliquer la Remise",
+      "discount_clear": "Effacer la Remise",
+      "refund": "Remboursement",
+      "reprint_receipt": "Réimprimer le Reçu",
+      "reprint_kitchen_ticket": "Réimprimer le Ticket Cuisine",
+      "drawer_open": "Ouvrir le Tiroir",
+      "shift_open": "Ouvrir le Service",
+      "shift_close": "Fermer le Service",
+      "payment": "Paiement"
     }
   }
 }

@@ -80,7 +80,8 @@
     "kdsOrders": "Kitchen Display",
     "dailyReports": "Daily Reports",
     "cashSessions": "Cash Sessions",
-    "posTerminal": "POS Terminal"
+    "posTerminal": "POS Terminal",
+    "auditLog": "Audit Log"
   },
   "common": {
     "adminSaas": "Admin SaaS",
@@ -2574,6 +2575,8 @@
       "nothingToFire": "Nothing new to fire",
       "fireFailed": "Fire failed",
       "confirmVoidLine": "This item has already been sent to the kitchen. Void it (notifies kitchen + cancels KDS)?",
+      "voidReasonPrompt": "Reason for voiding (required — will be audited):",
+      "voidReasonRequired": "A reason is required to void an item",
       "voidedLine": "Item voided · {{n}} ticket(s)",
       "voidFailed": "Could not void item",
       "ikram": "İkram",
@@ -2641,6 +2644,41 @@
         "blocked": "Blocked",
         "merged": "Merged"
       }
+    }
+  },
+  "auditLog": {
+    "title": "Audit Log",
+    "noAccess": "You do not have permission to view the audit log.",
+    "fetchError": "Failed to load audit log",
+    "empty": "No audit log entries match these filters",
+    "time": "Time",
+    "action": "Action",
+    "target": "Target",
+    "reason": "Reason",
+    "actor": "Actor",
+    "store": "Store",
+    "waiter": "Waiter",
+    "ip": "IP",
+    "before": "Before",
+    "after": "After",
+    "entryTitle": "Audit entry",
+    "allStores": "All Stores",
+    "allActions": "All Actions",
+    "targetType": "Target type",
+    "targetId": "Target ID",
+    "actions": {
+      "void_order": "Void Order",
+      "void_item": "Void Item",
+      "ikram": "İkram (Comp)",
+      "discount_apply": "Apply Discount",
+      "discount_clear": "Clear Discount",
+      "refund": "Refund",
+      "reprint_receipt": "Reprint Receipt",
+      "reprint_kitchen_ticket": "Reprint Kitchen Ticket",
+      "drawer_open": "Open Drawer",
+      "shift_open": "Open Shift",
+      "shift_close": "Close Shift",
+      "payment": "Payment"
     }
   }
 }

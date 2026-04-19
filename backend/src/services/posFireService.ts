@@ -1,6 +1,7 @@
 import pool from '../config/database.js';
 import { RowDataPacket, ResultSetHeader, PoolConnection } from 'mysql2/promise';
 import { PosKitchenTicketService } from './posKitchenTicketService.js';
+import { AuditLogService } from './auditLogService.js';
 
 interface FireInput {
   order_id: number;
@@ -10,6 +11,8 @@ interface FireInput {
   print?: boolean;                   // default true
   broadcast_kds?: boolean;           // default true
   language?: string;
+  reason?: string | null;            // required when voiding
+  admin_user_id?: number | null;
 }
 
 interface FireResult {
@@ -41,8 +44,13 @@ export class PosFireService {
 
     // --- VOID branch ---
     if (Array.isArray(input.void_item_ids) && input.void_item_ids.length > 0) {
+      if (!input.reason || !input.reason.trim()) {
+        throw { status: 400, code: 'reason_required', message: 'A reason is required when voiding items' };
+      }
       return this.fireVoid(tenantId, input.order_id, input.void_item_ids.map(n => Number(n)).filter(Boolean), {
         print: shouldPrint, broadcast_kds: shouldBroadcast, language: input.language,
+        reason: input.reason.trim(),
+        admin_user_id: input.admin_user_id ?? null,
       });
     }
 
@@ -195,6 +203,18 @@ export class PosFireService {
       }
     }
 
+    // Audit refire (reprint of kitchen ticket)
+    if (refire && firedCount > 0) {
+      AuditLogService.log({
+        tenant_id: tenantId,
+        admin_user_id: input.admin_user_id ?? null,
+        action: 'reprint_kitchen_ticket',
+        target_type: 'order',
+        target_id: input.order_id,
+        after: { fired_count: firedCount, tickets: tickets.length },
+      });
+    }
+
     // Non-dine-in orders: also print a customer copy at fire time so takeaway/delivery
     // customers get their receipt without waiting for payment.
     let customer_receipt: { printed: boolean; printer_ip: string | null; reason?: string } | null = null;
@@ -226,7 +246,7 @@ export class PosFireService {
     tenantId: number,
     orderId: number,
     voidItemIds: number[],
-    opts: { print: boolean; broadcast_kds: boolean; language?: string }
+    opts: { print: boolean; broadcast_kds: boolean; language?: string; reason?: string | null; admin_user_id?: number | null }
   ): Promise<FireResult> {
     if (voidItemIds.length === 0) {
       return { mode: 'void', fired_count: 0, skipped: [], kds_created: 0, kds_updated: 0, tickets: [] };
@@ -236,6 +256,7 @@ export class PosFireService {
     const skipped: Array<{ item_id: number; reason: string }> = [];
     let firedCount = 0;
     let kdsUpdated = 0;
+    let storeId: number | null = null;
 
     try {
       await conn.beginTransaction();
@@ -245,6 +266,7 @@ export class PosFireService {
         [orderId, tenantId]
       );
       if (orderRows.length === 0) throw { status: 404, message: 'Order not found' };
+      storeId = Number(orderRows[0].store_id);
 
       const cancelledId = await pickStatusId(conn, tenantId, 'cancelled');
       if (!cancelledId) throw { status: 400, message: 'No tenant_order_item_statuses row for "cancelled"' };
@@ -304,6 +326,23 @@ export class PosFireService {
         tickets = result.tickets;
       } catch (err: any) {
         console.error('[PosFireService] void ticket print failed:', err);
+      }
+    }
+
+    // Audit each voided item
+    if (firedCount > 0) {
+      const voidedIds = voidItemIds.filter(id => !skipped.some(s => s.item_id === id));
+      for (const itemId of voidedIds) {
+        AuditLogService.log({
+          tenant_id: tenantId,
+          store_id: storeId,
+          admin_user_id: opts.admin_user_id ?? null,
+          action: 'void_item',
+          target_type: 'order_item',
+          target_id: itemId,
+          reason: opts.reason ?? null,
+          after: { order_id: orderId, kds_cancelled: opts.broadcast_kds },
+        });
       }
     }
 

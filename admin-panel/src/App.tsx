@@ -65,6 +65,7 @@ import ExpensesPage from './pages/ExpensesPage';
 import KdsOrdersPage from './pages/KdsOrdersPage';
 import DailyReportSnapshotsPage from './pages/DailyReportSnapshotsPage';
 import CashRegisterSessionsPage from './pages/CashRegisterSessionsPage';
+import AuditLogPage from './pages/AuditLogPage';
 import PosLayout from './pages/pos/PosLayout';
 import PosLoginPage from './pages/pos/PosLoginPage';
 import PosHomePage from './pages/pos/PosHomePage';
@@ -167,6 +168,7 @@ function App() {
           <Route path="tenant/kds-orders" element={<KdsOrdersPage />} />
           <Route path="tenant/daily-reports" element={<DailyReportSnapshotsPage />} />
           <Route path="tenant/cash-sessions" element={<CashRegisterSessionsPage />} />
+          <Route path="tenant/audit-log" element={<AuditLogPage />} />
           <Route path="tenant/stores" element={<StoresPage />} />
           <Route path="tenant/settings" element={<TenantSettingsPage />} />
           <Route path="tenant/users" element={<TenantUsersPage />} />

@@ -1,6 +1,7 @@
 import { Response } from 'express';
 import { TenantAuthRequest } from '../middleware/tenantAuth.js';
 import { PosReceiptService } from '../services/posReceiptService.js';
+import { AuditLogService } from '../services/auditLogService.js';
 
 function pickBaseUrl(req: TenantAuthRequest): string {
   const fromHeader = req.headers['x-public-base-url'];
@@ -43,6 +44,14 @@ export class PosReceiptController {
         res.status(502).json({ error: 'Thermal print failed', ...result });
         return;
       }
+      AuditLogService.log({
+        tenant_id: Number(req.tenant.id),
+        admin_user_id: req.admin ? Number(req.admin.id) : null,
+        action: 'reprint_receipt',
+        target_type: 'order',
+        target_id: orderId,
+        after: { printer_ip: result.printer_ip },
+      });
       res.json({ data: result, message: 'Receipt printed' });
     } catch (error: any) {
       if (error.status === 404) { res.status(404).json({ error: error.message }); return; }

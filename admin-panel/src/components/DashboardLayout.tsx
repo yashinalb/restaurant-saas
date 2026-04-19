@@ -223,6 +223,7 @@ export default function DashboardLayout() {
         { name: t('navigation.dailyReports', 'Daily Reports'), to: '/tenant/daily-reports', icon: BarChart3, show: hasPermission('daily_reports.view') },
         { name: t('navigation.cashSessions', 'Cash Sessions'), to: '/tenant/cash-sessions', icon: Wallet, show: hasPermission('cash_sessions.view') },
         { name: t('navigation.posTerminal', 'POS Terminal'), to: '/pos/login', icon: MonitorSmartphone, show: hasPermission('pos.access') },
+        { name: t('navigation.auditLog', 'Audit Log'), to: '/tenant/audit-log', icon: Shield, show: hasPermission('audit_logs.view') },
       ].filter(item => item.show)
     }
   ].filter(group => group.items.length > 0) : [];

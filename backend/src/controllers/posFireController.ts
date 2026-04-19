@@ -17,10 +17,12 @@ export class PosFireController {
         print: body.print !== false,
         broadcast_kds: body.broadcast_kds !== false,
         language: body.language ? String(body.language) : undefined,
+        reason: body.reason ? String(body.reason) : null,
+        admin_user_id: req.admin ? Number(req.admin.id) : null,
       });
       res.status(200).json({ data: result, message: 'Fire processed' });
     } catch (error: any) {
-      if (error.status === 400) { res.status(400).json({ error: error.message }); return; }
+      if (error.status === 400) { res.status(400).json({ error: error.message, code: error.code }); return; }
       if (error.status === 404) { res.status(404).json({ error: error.message }); return; }
       console.error('[PosFireController] fire error:', error);
       res.status(500).json({ error: 'Failed to process fire' });

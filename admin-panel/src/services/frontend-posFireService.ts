@@ -4,6 +4,7 @@ export interface FireInput {
   item_ids?: number[] | null;
   refire?: boolean;
   void_item_ids?: number[] | null;
+  reason?: string | null;
   print?: boolean;
   broadcast_kds?: boolean;
   language?: string;

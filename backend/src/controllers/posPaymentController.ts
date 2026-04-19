@@ -14,6 +14,7 @@ export class PosPaymentController {
         payments: Array.isArray(payments) ? payments : [],
         tip_amount: tip_amount != null ? Number(tip_amount) : 0,
         item_ids: Array.isArray(item_ids) ? item_ids.map((n: any) => Number(n)) : [],
+        admin_user_id: req.admin ? Number(req.admin.id) : null,
       });
       res.status(201).json({ data: result, message: 'Payment recorded' });
     } catch (error: any) {

@@ -80,7 +80,8 @@
     "kdsOrders": "Mutfak Ekranı",
     "dailyReports": "Günlük Raporlar",
     "cashSessions": "Kasa Oturumları",
-    "posTerminal": "POS Terminali"
+    "posTerminal": "POS Terminali",
+    "auditLog": "Denetim Günlüğü"
   },
   "common": {
     "adminSaas": "Admin SaaS",
@@ -2466,7 +2467,9 @@
         "closed": "Kapalı",
         "cancelled": "İptal edildi",
         "void": "İptal"
-      }
+      },
+      "voidReasonPrompt": "İptal nedeni (zorunlu — kayıt altına alınacak):",
+      "voidReasonRequired": "Bir ürünü iptal etmek için neden gereklidir"
     },
     "floor": {
       "title": "Masa Planı",
@@ -2641,6 +2644,41 @@
       "overrideExpected": "Beklenen tutarı geçersiz kıl",
       "difference": "Fark",
       "closeSubmit": "Vardiyayı Kapat"
+    }
+  },
+  "auditLog": {
+    "title": "Denetim Günlüğü",
+    "noAccess": "Denetim günlüğünü görüntüleme yetkiniz yok.",
+    "fetchError": "Denetim günlüğü yüklenemedi",
+    "empty": "Bu filtrelerle eşleşen denetim günlüğü kaydı yok",
+    "time": "Zaman",
+    "action": "İşlem",
+    "target": "Hedef",
+    "reason": "Neden",
+    "actor": "Kullanıcı",
+    "store": "Mağaza",
+    "waiter": "Garson",
+    "ip": "IP",
+    "before": "Önce",
+    "after": "Sonra",
+    "entryTitle": "Denetim kaydı",
+    "allStores": "Tüm Mağazalar",
+    "allActions": "Tüm İşlemler",
+    "targetType": "Hedef türü",
+    "targetId": "Hedef ID",
+    "actions": {
+      "void_order": "Siparişi İptal Et",
+      "void_item": "Ürünü İptal Et",
+      "ikram": "İkram",
+      "discount_apply": "İndirim Uygula",
+      "discount_clear": "İndirimi Kaldır",
+      "refund": "İade",
+      "reprint_receipt": "Fişi Yeniden Yazdır",
+      "reprint_kitchen_ticket": "Mutfak Fişini Yeniden Yazdır",
+      "drawer_open": "Çekmeceyi Aç",
+      "shift_open": "Vardiyayı Aç",
+      "shift_close": "Vardiyayı Kapat",
+      "payment": "Ödeme"
     }
   }
 }

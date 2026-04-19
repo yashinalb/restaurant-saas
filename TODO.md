@@ -564,7 +564,7 @@ Select the `tenant_order_type` at order creation. Dine-in requires a table (uses
 
 Require an open `cash_register_session` (#42) at the POS device before accepting any payment. Cash payments trigger an ESC/POS drawer-open pulse on the receipt printer. "Close shift" reconciles expected vs counted cash and closes the session. POS blocks new payments (not new orders) if no session is open.
 
-### [ ] 44.14 Void / Re-print / Audit Trail
+### [x] 44.14 Void / Re-print / Audit Trail
 
 Re-print any receipt or kitchen ticket for an order (within the shift). Void a whole order or a single item with a mandatory reason code. Every privileged action (void, ikram, discount, refund, reprint, drawer-open) writes a row to an `audit_log` table with `waiter_id`, `admin_user_id`, action, target_type/id, before/after JSON, and timestamp — queryable from the admin panel.
 

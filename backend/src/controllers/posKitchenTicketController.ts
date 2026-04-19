@@ -1,6 +1,7 @@
 import { Response } from 'express';
 import { TenantAuthRequest } from '../middleware/tenantAuth.js';
 import { PosKitchenTicketService } from '../services/posKitchenTicketService.js';
+import { AuditLogService } from '../services/auditLogService.js';
 
 function parseOpts(req: TenantAuthRequest) {
   const body = req.body || {};
@@ -39,9 +40,26 @@ export class PosKitchenTicketController {
       if (!req.tenant) { res.status(400).json({ error: 'Tenant context required' }); return; }
       const orderId = parseInt(req.params.id);
       if (isNaN(orderId)) { res.status(400).json({ error: 'Invalid order ID' }); return; }
-      const result = await PosKitchenTicketService.printTickets(Number(req.tenant.id), orderId, parseOpts(req));
+      const opts = parseOpts(req);
+      const result = await PosKitchenTicketService.printTickets(Number(req.tenant.id), orderId, opts);
       const allPrinted = result.tickets.length > 0 && result.tickets.every(tk => tk.printed);
       const status = result.tickets.length === 0 ? 200 : (allPrinted ? 200 : 207); // 207 Multi-status
+      // Any direct kitchen-ticket print from this endpoint is by definition a reprint.
+      if (result.tickets.length > 0) {
+        AuditLogService.log({
+          tenant_id: Number(req.tenant.id),
+          admin_user_id: req.admin ? Number(req.admin.id) : null,
+          action: 'reprint_kitchen_ticket',
+          target_type: 'order',
+          target_id: orderId,
+          after: {
+            destinations: result.tickets.map((tk: any) => tk.destination_code),
+            printed: result.tickets.filter((tk: any) => tk.printed).length,
+            refire: opts.refire,
+            void: Array.isArray(opts.void_item_ids) && opts.void_item_ids.length > 0,
+          },
+        });
+      }
       res.status(status).json({ data: result, message: allPrinted ? 'Tickets printed' : 'Some tickets failed to print' });
     } catch (error: any) {
       if (error.status === 404) { res.status(404).json({ error: error.message }); return; }

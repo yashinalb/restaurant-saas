@@ -1,6 +1,7 @@
 import pool from '../config/database.js';
 import { RowDataPacket, ResultSetHeader } from 'mysql2';
 import { PosShiftService } from './posShiftService.js';
+import { AuditLogService } from './auditLogService.js';
 
 type PaymentMode = 'full' | 'partial' | 'per_item' | 'mixed';
 const VALID_MODES: PaymentMode[] = ['full', 'partial', 'per_item', 'mixed'];
@@ -21,6 +22,7 @@ interface PayInput {
   tip_amount?: number;         // optional tip added on top of order total
   item_ids?: number[];         // per-item mode: mark these order_items paid
   session_id?: number | null;  // optional POS session context
+  admin_user_id?: number | null;
 }
 
 function round2(n: number): number {
@@ -217,7 +219,33 @@ export class PosPaymentService {
         } catch (err: any) {
           drawer = { pulsed: false, printer_ip: null, reason: err?.message || 'pulse failed' };
         }
+        AuditLogService.log({
+          tenant_id: tenantId,
+          store_id: Number(order.store_id),
+          admin_user_id: data.admin_user_id ?? null,
+          action: 'drawer_open',
+          target_type: 'transaction',
+          target_id: transactionId,
+          after: drawer,
+        });
       }
+
+      // Audit: payment
+      AuditLogService.log({
+        tenant_id: tenantId,
+        store_id: Number(order.store_id),
+        admin_user_id: data.admin_user_id ?? null,
+        action: 'payment',
+        target_type: 'order',
+        target_id: data.order_id,
+        after: {
+          transaction_id: transactionId,
+          total_paid: capturedTowardBill,
+          change,
+          has_cash_payment: hasCashPayment,
+          payment_count: data.payments.length,
+        },
+      });
 
       return { ...base, drawer };
     } catch (error) {

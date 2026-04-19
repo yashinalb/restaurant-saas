@@ -80,7 +80,8 @@
     "kdsOrders": "Кухонный экран",
     "dailyReports": "Ежедневные отчёты",
     "cashSessions": "Кассовые смены",
-    "posTerminal": "POS-терминал"
+    "posTerminal": "POS-терминал",
+    "auditLog": "Журнал аудита"
   },
   "common": {
     "adminSaas": "Admin SaaS",
@@ -2466,7 +2467,9 @@
         "closed": "Закрыт",
         "cancelled": "Отменён",
         "void": "Аннулирован"
-      }
+      },
+      "voidReasonPrompt": "Причина отмены (обязательно — будет записана в аудит):",
+      "voidReasonRequired": "Для отмены позиции требуется указать причину"
     },
     "floor": {
       "title": "План зала",
@@ -2641,6 +2644,41 @@
       "overrideExpected": "Переопределить ожидаемую сумму",
       "difference": "Разница",
       "closeSubmit": "Закрыть смену"
+    }
+  },
+  "auditLog": {
+    "title": "Журнал аудита",
+    "noAccess": "У вас нет прав для просмотра журнала аудита.",
+    "fetchError": "Не удалось загрузить журнал аудита",
+    "empty": "Нет записей аудита, соответствующих этим фильтрам",
+    "time": "Время",
+    "action": "Действие",
+    "target": "Цель",
+    "reason": "Причина",
+    "actor": "Пользователь",
+    "store": "Магазин",
+    "waiter": "Официант",
+    "ip": "IP",
+    "before": "До",
+    "after": "После",
+    "entryTitle": "Запись аудита",
+    "allStores": "Все магазины",
+    "allActions": "Все действия",
+    "targetType": "Тип цели",
+    "targetId": "ID цели",
+    "actions": {
+      "void_order": "Отмена заказа",
+      "void_item": "Отмена позиции",
+      "ikram": "İkram (угощение)",
+      "discount_apply": "Применить скидку",
+      "discount_clear": "Убрать скидку",
+      "refund": "Возврат",
+      "reprint_receipt": "Перепечатать чек",
+      "reprint_kitchen_ticket": "Перепечатать кухонный тикет",
+      "drawer_open": "Открыть ящик",
+      "shift_open": "Открыть смену",
+      "shift_close": "Закрыть смену",
+      "payment": "Оплата"
     }
   }
 }

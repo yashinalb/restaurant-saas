@@ -80,7 +80,8 @@
     "kdsOrders": "Pantalla de Cocina",
     "dailyReports": "Informes Diarios",
     "cashSessions": "Sesiones de Caja",
-    "posTerminal": "Terminal POS"
+    "posTerminal": "Terminal POS",
+    "auditLog": "Registro de Auditoría"
   },
   "common": {
     "adminSaas": "Admin SaaS",
@@ -2466,7 +2467,9 @@
         "closed": "Cerrado",
         "cancelled": "Cancelado",
         "void": "Anulado"
-      }
+      },
+      "voidReasonPrompt": "Motivo de la anulación (obligatorio — se auditará):",
+      "voidReasonRequired": "Se requiere un motivo para anular un artículo"
     },
     "floor": {
       "title": "Plano del Salón",
@@ -2641,6 +2644,41 @@
       "overrideExpected": "Anular monto esperado",
       "difference": "Diferencia",
       "closeSubmit": "Cerrar turno"
+    }
+  },
+  "auditLog": {
+    "title": "Registro de Auditoría",
+    "noAccess": "No tiene permiso para ver el registro de auditoría.",
+    "fetchError": "Error al cargar el registro de auditoría",
+    "empty": "No hay entradas de auditoría que coincidan con estos filtros",
+    "time": "Hora",
+    "action": "Acción",
+    "target": "Objetivo",
+    "reason": "Motivo",
+    "actor": "Usuario",
+    "store": "Tienda",
+    "waiter": "Camarero",
+    "ip": "IP",
+    "before": "Antes",
+    "after": "Después",
+    "entryTitle": "Entrada de auditoría",
+    "allStores": "Todas las tiendas",
+    "allActions": "Todas las acciones",
+    "targetType": "Tipo de objetivo",
+    "targetId": "ID de objetivo",
+    "actions": {
+      "void_order": "Anular Pedido",
+      "void_item": "Anular Artículo",
+      "ikram": "İkram (Cortesía)",
+      "discount_apply": "Aplicar Descuento",
+      "discount_clear": "Quitar Descuento",
+      "refund": "Reembolso",
+      "reprint_receipt": "Reimprimir Recibo",
+      "reprint_kitchen_ticket": "Reimprimir Ticket de Cocina",
+      "drawer_open": "Abrir Cajón",
+      "shift_open": "Abrir Turno",
+      "shift_close": "Cerrar Turno",
+      "payment": "Pago"
     }
   }
 }

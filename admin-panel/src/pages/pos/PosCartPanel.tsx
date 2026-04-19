@@ -97,10 +97,14 @@ export default function PosCartPanel({ order, onChanged, onNewOrder }: Props) {
 
     if (alreadyFired) {
       // Void-after-fire: update status to cancelled + cancel KDS + print void ticket
-      if (!confirm(t('pos.cart.confirmVoidLine', 'This item has already been sent to the kitchen. Void it (notifies kitchen + cancels KDS)?'))) return;
+      const reason = prompt(t('pos.cart.voidReasonPrompt', 'Reason for voiding (required — will be audited):'));
+      if (!reason || !reason.trim()) {
+        if (reason !== null) toast.error(t('pos.cart.voidReasonRequired', 'A reason is required to void an item'));
+        return;
+      }
       try {
         setSaving(true);
-        const res = await posFireService.fire(order.id, { void_item_ids: [item.id] });
+        const res = await posFireService.fire(order.id, { void_item_ids: [item.id], reason: reason.trim() });
         if (res.fired_count > 0) {
           toast.success(t('pos.cart.voidedLine', 'Item voided · {{n}} ticket(s)', { n: res.tickets.length }));
         } else if (res.skipped.length > 0) {

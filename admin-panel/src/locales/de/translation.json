@@ -80,7 +80,8 @@
     "kdsOrders": "Küchendisplay",
     "dailyReports": "Tagesberichte",
     "cashSessions": "Kassensitzungen",
-    "posTerminal": "POS-Terminal"
+    "posTerminal": "POS-Terminal",
+    "auditLog": "Prüfprotokoll"
   },
   "common": {
     "adminSaas": "Admin SaaS",
@@ -2466,7 +2467,9 @@
         "closed": "Geschlossen",
         "cancelled": "Storniert",
         "void": "Ungültig"
-      }
+      },
+      "voidReasonPrompt": "Grund für die Stornierung (erforderlich — wird protokolliert):",
+      "voidReasonRequired": "Für die Stornierung eines Artikels ist ein Grund erforderlich"
     },
     "floor": {
       "title": "Tischplan",
@@ -2641,6 +2644,41 @@
       "overrideExpected": "Erwarteten Betrag überschreiben",
       "difference": "Differenz",
       "closeSubmit": "Schicht schließen"
+    }
+  },
+  "auditLog": {
+    "title": "Prüfprotokoll",
+    "noAccess": "Sie haben keine Berechtigung, das Prüfprotokoll anzuzeigen.",
+    "fetchError": "Prüfprotokoll konnte nicht geladen werden",
+    "empty": "Keine Prüfprotokolleinträge entsprechen diesen Filtern",
+    "time": "Zeit",
+    "action": "Aktion",
+    "target": "Ziel",
+    "reason": "Grund",
+    "actor": "Benutzer",
+    "store": "Filiale",
+    "waiter": "Kellner",
+    "ip": "IP",
+    "before": "Vorher",
+    "after": "Nachher",
+    "entryTitle": "Prüfeintrag",
+    "allStores": "Alle Filialen",
+    "allActions": "Alle Aktionen",
+    "targetType": "Zieltyp",
+    "targetId": "Ziel-ID",
+    "actions": {
+      "void_order": "Bestellung stornieren",
+      "void_item": "Artikel stornieren",
+      "ikram": "İkram (Gratis)",
+      "discount_apply": "Rabatt anwenden",
+      "discount_clear": "Rabatt entfernen",
+      "refund": "Rückerstattung",
+      "reprint_receipt": "Beleg erneut drucken",
+      "reprint_kitchen_ticket": "Küchenbon erneut drucken",
+      "drawer_open": "Kassenlade öffnen",
+      "shift_open": "Schicht öffnen",
+      "shift_close": "Schicht schließen",
+      "payment": "Zahlung"
     }
   }
 }

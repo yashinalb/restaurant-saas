@@ -36,7 +36,7 @@ export class PosItemStatusService {
     tenantId: number,
     orderItemId: number,
     to: ItemStatusCode,
-    opts: { language?: string } = {}
+    opts: { language?: string; reason?: string | null; admin_user_id?: number | null } = {}
   ): Promise<{ from: ItemStatusCode; to: ItemStatusCode; order_id: number; skipped?: string }> {
     if (!['pending', 'preparing', 'ready', 'served', 'cancelled'].includes(to)) {
       throw { status: 400, message: `Invalid target status: ${to}` };
@@ -79,6 +79,8 @@ export class PosItemStatusService {
           order_id: orderId,
           void_item_ids: [orderItemId],
           language: opts.language,
+          reason: opts.reason ?? null,
+          admin_user_id: opts.admin_user_id ?? null,
         });
         return { from, to, order_id: orderId };
       }

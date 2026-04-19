@@ -80,7 +80,8 @@
     "kdsOrders": "Οθόνη Κουζίνας",
     "dailyReports": "Ημερήσιες Αναφορές",
     "cashSessions": "Συνεδρίες Ταμείου",
-    "posTerminal": "Τερματικό POS"
+    "posTerminal": "Τερματικό POS",
+    "auditLog": "Αρχείο Ελέγχου"
   },
   "common": {
     "adminSaas": "Admin SaaS",
@@ -2466,7 +2467,9 @@
         "closed": "Κλειστή",
         "cancelled": "Ακυρωμένη",
         "void": "Άκυρη"
-      }
+      },
+      "voidReasonPrompt": "Λόγος ακύρωσης (υποχρεωτικό — θα καταγραφεί):",
+      "voidReasonRequired": "Απαιτείται λόγος για την ακύρωση ενός προϊόντος"
     },
     "floor": {
       "title": "Κάτοψη",
@@ -2641,6 +2644,41 @@
       "overrideExpected": "Παράκαμψη αναμενόμενου ποσού",
       "difference": "Διαφορά",
       "closeSubmit": "Κλείσιμο Βάρδιας"
+    }
+  },
+  "auditLog": {
+    "title": "Αρχείο Ελέγχου",
+    "noAccess": "Δεν έχετε δικαίωμα προβολής του αρχείου ελέγχου.",
+    "fetchError": "Αποτυχία φόρτωσης αρχείου ελέγχου",
+    "empty": "Δεν υπάρχουν καταχωρίσεις που να ταιριάζουν με αυτά τα φίλτρα",
+    "time": "Ώρα",
+    "action": "Ενέργεια",
+    "target": "Στόχος",
+    "reason": "Λόγος",
+    "actor": "Χρήστης",
+    "store": "Κατάστημα",
+    "waiter": "Σερβιτόρος",
+    "ip": "IP",
+    "before": "Πριν",
+    "after": "Μετά",
+    "entryTitle": "Καταχώριση ελέγχου",
+    "allStores": "Όλα τα Καταστήματα",
+    "allActions": "Όλες οι Ενέργειες",
+    "targetType": "Τύπος στόχου",
+    "targetId": "ID στόχου",
+    "actions": {
+      "void_order": "Ακύρωση Παραγγελίας",
+      "void_item": "Ακύρωση Προϊόντος",
+      "ikram": "İkram (Κερασμα)",
+      "discount_apply": "Εφαρμογή Έκπτωσης",
+      "discount_clear": "Καθαρισμός Έκπτωσης",
+      "refund": "Επιστροφή",
+      "reprint_receipt": "Επανεκτύπωση Απόδειξης",
+      "reprint_kitchen_ticket": "Επανεκτύπωση Δελτίου Κουζίνας",
+      "drawer_open": "Άνοιγμα Συρταριού",
+      "shift_open": "Άνοιγμα Βάρδιας",
+      "shift_close": "Κλείσιμο Βάρδιας",
+      "payment": "Πληρωμή"
     }
   }
 }
