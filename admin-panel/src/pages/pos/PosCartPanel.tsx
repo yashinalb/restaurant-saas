@@ -254,15 +254,32 @@ export default function PosCartPanel({ order, onChanged, onNewOrder }: Props) {
     <div className="bg-white border border-gray-200 rounded-lg shadow-sm h-full flex flex-col">
       {/* Header */}
       <div className="px-4 py-3 border-b bg-slate-50">
-        <div className="flex items-center justify-between">
-          <div>
-            <div className="font-bold text-gray-900">{order.order_number}</div>
+        <div className="flex items-center justify-between gap-2">
+          <div className="flex-1 min-w-0">
+            <div className="flex items-center gap-2">
+              <div className="font-bold text-gray-900">{order.order_number}</div>
+              {(order as any).order_type_code && (
+                <span className="text-[10px] px-1.5 py-0.5 rounded font-semibold uppercase bg-slate-200 text-slate-700">
+                  {String(t(`pos.mode.${(order as any).order_type_code}` as any, (order as any).order_type_code))}
+                </span>
+              )}
+            </div>
             <div className="text-xs text-gray-500">
               {order.table_name ? `${t('pos.cart.table', 'Table')}: ${order.table_name}` : t('pos.cart.walkIn', 'Walk-in')}
               {order.waiter_name && ` · ${order.waiter_name}`}
             </div>
+            {(order.guest_name || order.guest_phone) && (
+              <div className="text-xs text-gray-500 truncate">
+                {[order.guest_name, order.guest_phone].filter(Boolean).join(' · ')}
+              </div>
+            )}
+            {order.delivery_address && (
+              <div className="text-xs text-gray-500 truncate" title={order.delivery_address}>
+                📍 {order.delivery_address}
+              </div>
+            )}
           </div>
-          <span className={`text-xs px-2 py-0.5 rounded-full ${
+          <span className={`text-xs px-2 py-0.5 rounded-full whitespace-nowrap ${
             order.order_status === 'open' ? 'bg-green-100 text-green-800' :
             order.order_status === 'closed' ? 'bg-blue-100 text-blue-800' :
             order.order_status === 'cancelled' ? 'bg-red-100 text-red-800' :

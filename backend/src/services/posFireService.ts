@@ -19,6 +19,8 @@ interface FireResult {
   kds_created: number;
   kds_updated: number;
   tickets: any[];
+  customer_receipt?: { printed: boolean; printer_ip: string | null; reason?: string } | null;
+  order_type_code?: string | null;
 }
 
 async function pickStatusId(conn: PoolConnection, tenantId: number, code: string): Promise<number | null> {
@@ -52,18 +54,23 @@ export class PosFireService {
     let firedCount = 0;
     let kdsCreated = 0;
     let kdsUpdated = 0;
+    let orderTypeCode: string | null = null;
 
     try {
       await conn.beginTransaction();
 
       // Verify order belongs to tenant + is open
       const [orderRows] = await conn.query<RowDataPacket[]>(
-        'SELECT id, store_id, order_status FROM orders WHERE id = ? AND tenant_id = ?',
+        `SELECT o.id, o.store_id, o.order_status, ot.code as order_type_code
+         FROM orders o
+         LEFT JOIN tenant_order_types ot ON ot.id = o.tenant_order_type_id
+         WHERE o.id = ? AND o.tenant_id = ?`,
         [input.order_id, tenantId]
       );
       if (orderRows.length === 0) throw { status: 404, message: 'Order not found' };
       if (orderRows[0].order_status !== 'open') throw { status: 400, message: 'Order is not open' };
       const storeId = Number(orderRows[0].store_id);
+      orderTypeCode = orderRows[0].order_type_code || null;
 
       // Resolve target status ids
       const pendingId = await pickStatusId(conn, tenantId, 'pending');
@@ -188,6 +195,21 @@ export class PosFireService {
       }
     }
 
+    // Non-dine-in orders: also print a customer copy at fire time so takeaway/delivery
+    // customers get their receipt without waiting for payment.
+    let customer_receipt: { printed: boolean; printer_ip: string | null; reason?: string } | null = null;
+    if (shouldPrint && firedCount > 0 && !refire && orderTypeCode && orderTypeCode !== 'dine_in') {
+      try {
+        const { PosReceiptService } = await import('./posReceiptService.js');
+        customer_receipt = await PosReceiptService.printToThermal(tenantId, input.order_id, {
+          language: input.language,
+        });
+      } catch (err: any) {
+        console.error('[PosFireService] customer receipt print failed:', err);
+        customer_receipt = { printed: false, printer_ip: null, reason: err?.message || 'print failed' };
+      }
+    }
+
     return {
       mode: refire ? 'refire' : 'new',
       fired_count: firedCount,
@@ -195,6 +217,8 @@ export class PosFireService {
       kds_created: kdsCreated,
       kds_updated: kdsUpdated,
       tickets,
+      customer_receipt,
+      order_type_code: orderTypeCode,
     };
   }
 

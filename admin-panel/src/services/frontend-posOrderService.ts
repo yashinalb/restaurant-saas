@@ -1,13 +1,17 @@
 import api from './api';
 import { Order } from './orderService';
 
+export type PosOrderMode = 'dine_in' | 'takeaway' | 'delivery' | 'kiosk';
+
 interface StartOrderInput {
   session_id: number;
   table_id?: number | null;
-  order_type_code?: 'dine_in' | 'takeaway' | 'delivery' | null;
+  order_type_code?: PosOrderMode | null;
   tenant_customer_id?: number | null;
   guest_name?: string | null;
   guest_phone?: string | null;
+  delivery_address?: string | null;
+  notes?: string | null;
 }
 
 const posOrderService = {

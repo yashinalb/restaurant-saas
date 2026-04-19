@@ -5,10 +5,12 @@ import { OrderService } from './orderService.js';
 interface StartOrderInput {
   session_id: number;
   table_id?: number | null;
-  order_type_code?: 'dine_in' | 'takeaway' | 'delivery' | null;
+  order_type_code?: 'dine_in' | 'takeaway' | 'delivery' | 'kiosk' | null;
   tenant_customer_id?: number | null;
   guest_name?: string | null;
   guest_phone?: string | null;
+  delivery_address?: string | null;
+  notes?: string | null;
 }
 
 /**
@@ -65,6 +67,14 @@ export class PosOrderService {
     // Guess order type from context: table → dine_in, else takeaway
     const typeCode = data.order_type_code || (data.table_id ? 'dine_in' : 'takeaway');
 
+    // Enforce mode-required fields
+    if (typeCode === 'dine_in' && !data.table_id) {
+      throw { status: 400, message: 'Dine-in orders require a table_id' };
+    }
+    if (typeCode === 'delivery' && !(data.delivery_address && data.delivery_address.trim())) {
+      throw { status: 400, message: 'Delivery orders require a delivery_address' };
+    }
+
     const [orderSourceId, orderTypeId, paymentStatusId, currencyId] = await Promise.all([
       this.pickLookupId('tenant_order_sources', tenantId, ['in_store', 'pos']),
       this.pickLookupId('tenant_order_types', tenantId, [typeCode, 'dine_in']),
@@ -87,6 +97,8 @@ export class PosOrderService {
       table_id: data.table_id ?? null,
       guest_name: data.guest_name ?? null,
       guest_phone: data.guest_phone ?? null,
+      delivery_address: data.delivery_address ?? null,
+      notes: data.notes ?? null,
       order_status: 'open',
     });
   }

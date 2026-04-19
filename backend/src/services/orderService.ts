@@ -150,13 +150,17 @@ export class OrderService {
          c.name as customer_name, c.email as customer_email, c.phone as customer_phone,
          w.name as waiter_name,
          t.name as table_name,
-         cur.code as currency_code, cur.symbol as currency_symbol
+         cur.code as currency_code, cur.symbol as currency_symbol,
+         ot.code as order_type_code,
+         osrc.code as order_source_code
        FROM orders o
        LEFT JOIN stores s ON s.id = o.store_id
        LEFT JOIN tenant_customers c ON c.id = o.tenant_customer_id
        LEFT JOIN tenant_waiters w ON w.id = o.tenant_waiter_id
        LEFT JOIN tenant_table_structures t ON t.id = o.table_id
        LEFT JOIN currencies cur ON cur.id = o.currency_id
+       LEFT JOIN tenant_order_types ot ON ot.id = o.tenant_order_type_id
+       LEFT JOIN tenant_order_sources osrc ON osrc.id = o.tenant_order_source_id
        WHERE o.id = ? AND o.tenant_id = ?`, [id, tenantId]
     );
     if (rows.length === 0) return null;

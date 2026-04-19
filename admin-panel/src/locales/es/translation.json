@@ -2323,6 +2323,30 @@
     "noAccess": "No tiene permiso para acceder al POS",
     "loginFailed": "PIN no válido",
     "fetchStoresError": "Error al cargar las tiendas",
+    "mode": {
+      "title": "Nuevo Pedido",
+      "pickMode": "Elige un modo",
+      "dine_in": "En el local",
+      "takeaway": "Para llevar",
+      "delivery": "Entrega",
+      "kiosk": "Quiosco",
+      "hint": {
+        "dine_in": "En su lugar, toca una mesa en el plano del salón",
+        "takeaway": "El cliente viene o llama para recoger",
+        "delivery": "El repartidor entrega en la dirección del cliente",
+        "kiosk": "Pedido desde terminal de autoservicio"
+      },
+      "guestName": "Nombre del cliente",
+      "guestPhone": "Teléfono",
+      "address": "Dirección de entrega",
+      "notes": "Notas",
+      "notesPlaceholder": "Instrucciones especiales, horario de entrega, etc.",
+      "pickTable": "Los pedidos en el local comienzan tocando una mesa en el plano del salón.",
+      "addressRequired": "Se requiere la dirección de entrega",
+      "guestRequired": "Ingresa nombre o teléfono del cliente para la entrega",
+      "start": "Iniciar pedido",
+      "startError": "No se pudo iniciar el pedido"
+    },
     "nav": {
       "floor": "Salón",
       "orders": "Pedidos"

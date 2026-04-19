@@ -8,6 +8,7 @@ import orderService, { Order } from '../../services/orderService';
 import posOrderService from '../../services/frontend-posOrderService';
 import PosCartPanel from './PosCartPanel';
 import PosMenuBrowser from './PosMenuBrowser';
+import PosOrderModeModal from './PosOrderModeModal';
 
 export default function PosOrderPage() {
   const { t } = useTranslation();
@@ -18,6 +19,8 @@ export default function PosOrderPage() {
 
   const [order, setOrder] = useState<Order | null>(null);
   const [loading, setLoading] = useState(true);
+  const [showModeModal, setShowModeModal] = useState(false);
+  const [startingOrder, setStartingOrder] = useState(false);
   const previousStatusesRef = useRef<Record<number, string>>({});
 
   const isNew = !params.id;
@@ -76,32 +79,76 @@ export default function PosOrderPage() {
       return () => window.clearInterval(interval);
     }
 
-    // New order: create an empty one from POS session context
+    // New order: create dine-in immediately if a table_id is in the URL (floor-plan tap);
+    // otherwise open the mode picker so the waiter can pick takeaway/delivery/kiosk.
     const tableIdParam = search.get('table_id');
     const walkin = search.get('walkin') === '1';
     const tableId = tableIdParam && !walkin ? Number(tableIdParam) : null;
 
-    (async () => {
-      try {
-        setLoading(true);
-        const created = await posOrderService.start({
-          session_id: session.id,
-          table_id: tableId,
-          order_type_code: tableId ? 'dine_in' : 'takeaway',
-        });
-        navigate(`/pos/orders/${created.id}`, { replace: true });
-      } catch (error: any) {
-        toast.error(error.response?.data?.error || t('pos.order.startError', 'Failed to start order'));
-        navigate('/pos/floor');
-      }
-    })();
+    if (tableId) {
+      (async () => {
+        try {
+          setLoading(true);
+          const created = await posOrderService.start({
+            session_id: session.id,
+            table_id: tableId,
+            order_type_code: 'dine_in',
+          });
+          navigate(`/pos/orders/${created.id}`, { replace: true });
+        } catch (error: any) {
+          toast.error(error.response?.data?.error || t('pos.order.startError', 'Failed to start order'));
+          navigate('/pos/floor');
+        }
+      })();
+    } else {
+      setLoading(false);
+      setShowModeModal(true);
+    }
   }, [params.id, session?.id]);
+
+  const handleModeConfirm = async (payload: {
+    order_type_code: 'takeaway' | 'delivery' | 'kiosk' | 'dine_in';
+    guest_name: string | null;
+    guest_phone: string | null;
+    delivery_address: string | null;
+    notes: string | null;
+  }) => {
+    if (!session) return;
+    try {
+      setStartingOrder(true);
+      const created = await posOrderService.start({
+        session_id: session.id,
+        order_type_code: payload.order_type_code,
+        guest_name: payload.guest_name,
+        guest_phone: payload.guest_phone,
+        delivery_address: payload.delivery_address,
+        notes: payload.notes,
+      });
+      setShowModeModal(false);
+      navigate(`/pos/orders/${created.id}`, { replace: true });
+    } catch (error: any) {
+      toast.error(error.response?.data?.error || t('pos.order.startError', 'Failed to start order'));
+    } finally {
+      setStartingOrder(false);
+    }
+  };
 
   const handleNewOrder = () => {
     navigate('/pos/orders/new?walkin=1');
   };
 
   if (!session) return null;
+
+  // Mode picker for fresh /pos/orders/new visits
+  if (showModeModal && !order) {
+    return (
+      <PosOrderModeModal
+        onCancel={() => { setShowModeModal(false); navigate('/pos/floor'); }}
+        onConfirm={handleModeConfirm}
+        saving={startingOrder}
+      />
+    );
+  }
 
   if (loading || !order) {
     return (

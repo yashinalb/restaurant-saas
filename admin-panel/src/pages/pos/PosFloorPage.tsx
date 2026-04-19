@@ -6,6 +6,8 @@ import { Loader2, Plus, Link2, Unlink, RefreshCw, Users, Clock, X } from 'lucide
 import { usePosSessionStore } from '../../store/posSessionStore';
 import { usePermissions } from '../../hooks/usePermissions';
 import posFloorService, { PosFloorTable, PosSeatingArea, TableDisplayStatus } from '../../services/frontend-posFloorService';
+import posOrderService from '../../services/frontend-posOrderService';
+import PosOrderModeModal from './PosOrderModeModal';
 
 const STATUS_COLORS: Record<TableDisplayStatus, string> = {
   available: 'bg-green-100 border-green-400 hover:bg-green-200',
@@ -47,6 +49,8 @@ export default function PosFloorPage() {
   const [mergeSaving, setMergeSaving] = useState(false);
 
   const [fabOpen, setFabOpen] = useState(false);
+  const [showModeModal, setShowModeModal] = useState(false);
+  const [startingOrder, setStartingOrder] = useState(false);
 
   const translatedAreaName = (a: PosSeatingArea) => {
     const trans = a.translations || [];
@@ -160,7 +164,35 @@ export default function PosFloorPage() {
   };
 
   const handleWalkIn = () => {
-    navigate('/pos/orders/new?walkin=1');
+    setFabOpen(false);
+    setShowModeModal(true);
+  };
+
+  const handleModeConfirm = async (payload: {
+    order_type_code: 'takeaway' | 'delivery' | 'kiosk' | 'dine_in';
+    guest_name: string | null;
+    guest_phone: string | null;
+    delivery_address: string | null;
+    notes: string | null;
+  }) => {
+    if (!session) return;
+    try {
+      setStartingOrder(true);
+      const created = await posOrderService.start({
+        session_id: session.id,
+        order_type_code: payload.order_type_code,
+        guest_name: payload.guest_name,
+        guest_phone: payload.guest_phone,
+        delivery_address: payload.delivery_address,
+        notes: payload.notes,
+      });
+      setShowModeModal(false);
+      navigate(`/pos/orders/${created.id}`);
+    } catch (error: any) {
+      toast.error(error.response?.data?.error || t('pos.mode.startError', 'Failed to start order'));
+    } finally {
+      setStartingOrder(false);
+    }
   };
 
   const handleCheckInReservation = () => {
@@ -324,6 +356,14 @@ export default function PosFloorPage() {
             <Plus className="w-6 h-6" />
           </button>
         </div>
+      )}
+
+      {showModeModal && (
+        <PosOrderModeModal
+          onCancel={() => setShowModeModal(false)}
+          onConfirm={handleModeConfirm}
+          saving={startingOrder}
+        />
       )}
     </div>
   );

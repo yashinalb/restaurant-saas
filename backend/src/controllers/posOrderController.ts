@@ -8,7 +8,7 @@ export class PosOrderController {
     try {
       if (!req.tenant) { res.status(400).json({ error: 'Tenant context required' }); return; }
       const tenantId = Number(req.tenant.id);
-      const { session_id, table_id, order_type_code, tenant_customer_id, guest_name, guest_phone } = req.body;
+      const { session_id, table_id, order_type_code, tenant_customer_id, guest_name, guest_phone, delivery_address, notes } = req.body;
       if (!session_id) { res.status(400).json({ error: 'session_id is required' }); return; }
       const id = await PosOrderService.start(tenantId, {
         session_id: Number(session_id),
@@ -17,6 +17,8 @@ export class PosOrderController {
         tenant_customer_id: tenant_customer_id ? Number(tenant_customer_id) : null,
         guest_name: guest_name ?? null,
         guest_phone: guest_phone ?? null,
+        delivery_address: delivery_address ?? null,
+        notes: notes ?? null,
       });
       const order = await OrderService.getById(tenantId, id);
       res.status(201).json({ data: order, message: 'Order started' });

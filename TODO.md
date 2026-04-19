@@ -556,7 +556,7 @@ When the waiter taps "Fire" on the cart, split the new/un-fired items by `menu_i
 
 Status machine `pending → preparing → ready → served → cancelled` enforced at the service layer (no skipping except `cancelled`). POS cart shows a colored status badge per line; a toast fires when any item transitions to `ready` (coming from the KDS via 44.16). Tap the ready badge to mark the item `served`. Cancel while `preparing` triggers the void-after-fire branch in 44.10.
 
-### [ ] 44.12 Order Mode (Dine-in / Takeaway / Delivery / Kiosk)
+### [x] 44.12 Order Mode (Dine-in / Takeaway / Delivery / Kiosk)
 
 Select the `tenant_order_type` at order creation. Dine-in requires a table (uses 44.2). Takeaway / delivery capture customer + address instead of a table, skip the floor plan, and print a customer-copy receipt at order-fire time (not just at payment). Kiosk is a customer-self-service variant of 44.4. Controls which fields are required, which printers fire, and which POS screens are shown.
 

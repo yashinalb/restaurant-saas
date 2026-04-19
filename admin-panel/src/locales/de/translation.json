@@ -2323,6 +2323,30 @@
     "noAccess": "Sie haben keine Berechtigung für den POS-Zugriff",
     "loginFailed": "Ungültige PIN",
     "fetchStoresError": "Filialen konnten nicht geladen werden",
+    "mode": {
+      "title": "Neue Bestellung",
+      "pickMode": "Modus auswählen",
+      "dine_in": "Vor Ort",
+      "takeaway": "Zum Mitnehmen",
+      "delivery": "Lieferung",
+      "kiosk": "Kiosk",
+      "hint": {
+        "dine_in": "Tippen Sie stattdessen auf einen Tisch im Raumplan",
+        "takeaway": "Gast kommt vorbei oder ruft zur Abholung an",
+        "delivery": "Fahrer liefert an die Kundenadresse",
+        "kiosk": "Bestellung am Selbstbedienungsterminal"
+      },
+      "guestName": "Gastname",
+      "guestPhone": "Telefon",
+      "address": "Lieferadresse",
+      "notes": "Notizen",
+      "notesPlaceholder": "Besondere Hinweise, Lieferzeit usw.",
+      "pickTable": "Vor-Ort-Bestellungen beginnen mit einem Tippen auf einen Tisch im Raumplan.",
+      "addressRequired": "Lieferadresse ist erforderlich",
+      "guestRequired": "Gastname oder Telefon für Lieferung eingeben",
+      "start": "Bestellung starten",
+      "startError": "Bestellung konnte nicht gestartet werden"
+    },
     "nav": {
       "floor": "Grundriss",
       "orders": "Bestellungen"

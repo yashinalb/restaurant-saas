@@ -2492,6 +2492,30 @@
       "menuHelp": "Category + item browsing to add items to this order will be wired up in the next POS sub-task (44.4).",
       "ready": "Ready: {{items}}"
     },
+    "mode": {
+      "title": "New Order",
+      "pickMode": "Pick a mode",
+      "dine_in": "Dine-in",
+      "takeaway": "Takeaway",
+      "delivery": "Delivery",
+      "kiosk": "Kiosk",
+      "hint": {
+        "dine_in": "Tap a table on the floor plan instead",
+        "takeaway": "Guest walks in or calls for pickup",
+        "delivery": "Driver delivers to a customer address",
+        "kiosk": "Self-service terminal order"
+      },
+      "guestName": "Guest name",
+      "guestPhone": "Phone",
+      "address": "Delivery address",
+      "notes": "Notes",
+      "notesPlaceholder": "Special instructions, delivery window, etc.",
+      "pickTable": "Dine-in orders start by tapping a table on the floor plan.",
+      "addressRequired": "Delivery address is required",
+      "guestRequired": "Enter guest name or phone for delivery",
+      "start": "Start Order",
+      "startError": "Failed to start order"
+    },
     "cart": {
       "table": "Table",
       "walkIn": "Walk-in",

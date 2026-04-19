@@ -2323,6 +2323,30 @@
     "noAccess": "POS'a erişim izniniz yok",
     "loginFailed": "Geçersiz PIN",
     "fetchStoresError": "Mağazalar yüklenemedi",
+    "mode": {
+      "title": "Yeni Sipariş",
+      "pickMode": "Bir mod seçin",
+      "dine_in": "Restoranda",
+      "takeaway": "Paket Servis",
+      "delivery": "Teslimat",
+      "kiosk": "Kiosk",
+      "hint": {
+        "dine_in": "Bunun yerine salon planında bir masaya dokunun",
+        "takeaway": "Misafir gelir veya teslim almak için arar",
+        "delivery": "Sürücü müşterinin adresine teslim eder",
+        "kiosk": "Self servis terminal siparişi"
+      },
+      "guestName": "Misafir adı",
+      "guestPhone": "Telefon",
+      "address": "Teslimat adresi",
+      "notes": "Notlar",
+      "notesPlaceholder": "Özel talimatlar, teslimat saati vb.",
+      "pickTable": "Restoranda siparişler, salon planında bir masaya dokunarak başlar.",
+      "addressRequired": "Teslimat adresi gereklidir",
+      "guestRequired": "Teslimat için misafir adı veya telefon girin",
+      "start": "Siparişi Başlat",
+      "startError": "Sipariş başlatılamadı"
+    },
     "nav": {
       "floor": "Salon",
       "orders": "Siparişler"

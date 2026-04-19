@@ -2323,6 +2323,30 @@
     "noAccess": "Vous n'avez pas l'autorisation d'accéder au POS",
     "loginFailed": "PIN invalide",
     "fetchStoresError": "Échec du chargement des magasins",
+    "mode": {
+      "title": "Nouvelle commande",
+      "pickMode": "Choisissez un mode",
+      "dine_in": "Sur place",
+      "takeaway": "À emporter",
+      "delivery": "Livraison",
+      "kiosk": "Borne",
+      "hint": {
+        "dine_in": "Appuyez plutôt sur une table dans le plan de salle",
+        "takeaway": "Le client vient ou appelle pour récupérer",
+        "delivery": "Le livreur livre à l'adresse du client",
+        "kiosk": "Commande depuis une borne en libre-service"
+      },
+      "guestName": "Nom du client",
+      "guestPhone": "Téléphone",
+      "address": "Adresse de livraison",
+      "notes": "Notes",
+      "notesPlaceholder": "Instructions spéciales, créneau de livraison, etc.",
+      "pickTable": "Les commandes sur place commencent en appuyant sur une table dans le plan de salle.",
+      "addressRequired": "L'adresse de livraison est requise",
+      "guestRequired": "Saisissez le nom ou le téléphone du client pour la livraison",
+      "start": "Démarrer la commande",
+      "startError": "Échec du démarrage de la commande"
+    },
     "nav": {
       "floor": "Salle",
       "orders": "Commandes"
