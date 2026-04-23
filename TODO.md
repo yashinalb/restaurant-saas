@@ -576,7 +576,7 @@ Depends on #32. Generate a signed, short-lived token for the table, render a QR 
 
 Item-status broadcast so KDS (Priority 11) and other POS devices mirror changes live. Order-level broadcast so a manager's view updates when a waiter adds or removes an item. Also carries the "ready" signal that 44.11 surfaces as a toast in the POS cart.
 
-### [ ] 44.17 POS Reservations Quick View
+### [x] 44.17 POS Reservations Quick View
 
 Today's reservations drawer on the tables page (reuses #24). "Check in" button flips reservation status `confirmed` → `checked_in` AND opens a new order on the primary table with the reservation's customer pre-filled.
 

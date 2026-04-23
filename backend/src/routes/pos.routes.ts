@@ -12,6 +12,7 @@ import { PosFireController } from '../controllers/posFireController.js';
 import { PosItemStatusController } from '../controllers/posItemStatusController.js';
 import { PosShiftController } from '../controllers/posShiftController.js';
 import { PosQrController } from '../controllers/posQrController.js';
+import { PosReservationController } from '../controllers/posReservationController.js';
 import { authenticateToken } from '../middleware/auth.js';
 import { loadTenantContext, requireTenantPermission } from '../middleware/tenantAuth.js';
 
@@ -62,6 +63,10 @@ router.patch('/pos/order-items/:itemId/status', requireTenantPermission('pos.tak
 
 // QR invoice token generation (waiter-side "Show QR")
 router.post('/pos/orders/:id/qr', requireTenantPermission('pos.access'), PosQrController.generate);
+
+// Reservations Quick View (44.17) — today's reservations drawer on the tables page
+router.get('/pos/reservations/today', requireTenantPermission('pos.access'), PosReservationController.today);
+router.post('/pos/reservations/:id/check-in', requireTenantPermission('pos.take_order'), PosReservationController.checkIn);
 
 // Cash register shift (required before payments)
 router.get('/pos/shift', requireTenantPermission('pos.access'), PosShiftController.getActive);

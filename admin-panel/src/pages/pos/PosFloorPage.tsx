@@ -8,6 +8,7 @@ import { usePermissions } from '../../hooks/usePermissions';
 import posFloorService, { PosFloorTable, PosSeatingArea, TableDisplayStatus } from '../../services/frontend-posFloorService';
 import posOrderService from '../../services/frontend-posOrderService';
 import PosOrderModeModal from './PosOrderModeModal';
+import PosReservationsDrawer from './PosReservationsDrawer';
 
 const STATUS_COLORS: Record<TableDisplayStatus, string> = {
   available: 'bg-green-100 border-green-400 hover:bg-green-200',
@@ -51,6 +52,7 @@ export default function PosFloorPage() {
   const [fabOpen, setFabOpen] = useState(false);
   const [showModeModal, setShowModeModal] = useState(false);
   const [startingOrder, setStartingOrder] = useState(false);
+  const [showReservationsDrawer, setShowReservationsDrawer] = useState(false);
 
   const translatedAreaName = (a: PosSeatingArea) => {
     const trans = a.translations || [];
@@ -196,7 +198,7 @@ export default function PosFloorPage() {
   };
 
   const handleCheckInReservation = () => {
-    toast.message(t('pos.floor.checkInComingSoon', 'Reservation check-in will be available in a later step'));
+    setShowReservationsDrawer(true);
     setFabOpen(false);
   };
 
@@ -363,6 +365,18 @@ export default function PosFloorPage() {
           onCancel={() => setShowModeModal(false)}
           onConfirm={handleModeConfirm}
           saving={startingOrder}
+        />
+      )}
+
+      {showReservationsDrawer && session && (
+        <PosReservationsDrawer
+          storeId={session.store_id}
+          sessionId={session.id}
+          onClose={() => { setShowReservationsDrawer(false); fetchData(); }}
+          onCheckedIn={(orderId) => {
+            setShowReservationsDrawer(false);
+            navigate(`/pos/orders/${orderId}`);
+          }}
         />
       )}
     </div>
