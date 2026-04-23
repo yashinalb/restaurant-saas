@@ -63,6 +63,33 @@ function deviceAuthHeaders(token: string): Record<string, string> {
   return { 'X-KDS-Device-Token': token };
 }
 
+export interface KdsDisplayItem {
+  kds_id: number;
+  order_item_id: number;
+  menu_item_id: number | null;
+  menu_item_name: string | null;
+  quantity: number;
+  status: 'pending' | 'preparing' | 'ready';
+  priority: number;
+  seat: number | null;
+  notes: string | null;
+  selected_addons: Array<{ name?: string; quantity?: number; price?: number }> | null;
+  selected_ingredients: Array<{ name?: string; removed?: boolean }> | null;
+  created_at: string;
+  started_at: string | null;
+}
+
+export interface KdsDisplayTicket {
+  order_id: number;
+  order_number: string;
+  order_type_code: string | null;
+  table_name: string | null;
+  guest_name: string | null;
+  created_at: string;
+  oldest_item_at: string;
+  items: KdsDisplayItem[];
+}
+
 export const kdsRuntime = {
   getToken(): string | null {
     return localStorage.getItem(KDS_TOKEN_KEY);
@@ -83,5 +110,12 @@ export const kdsRuntime = {
   },
   async unpair(token: string): Promise<void> {
     await api.post('/api/kds/unpair', {}, { headers: deviceAuthHeaders(token) });
+  },
+  async tickets(token: string, language?: string): Promise<KdsDisplayTicket[]> {
+    const response = await api.get('/api/kds/tickets', {
+      headers: deviceAuthHeaders(token),
+      params: language ? { language } : {},
+    });
+    return response.data.data || [];
   },
 };

@@ -4,6 +4,7 @@ import { toast } from 'sonner';
 import { Loader2, Wifi, WifiOff, LogOut } from 'lucide-react';
 import { kdsRuntime, KdsDeviceContext } from '../../services/frontend-kdsDeviceService';
 import { realtimeClient } from '../../services/realtimeClient';
+import KdsTicketsView from './KdsTicketsView';
 
 /**
  * KDS Shell (45.1).
@@ -174,8 +175,8 @@ export default function KdsShell() {
         </div>
       </header>
 
-      <main className="flex-1 flex items-center justify-center text-slate-500 text-sm">
-        {t('kds.shell.waitingForTickets', 'Waiting for kitchen tickets…')}
+      <main className="flex-1 flex flex-col">
+        <KdsTicketsView />
       </main>
     </div>
   );

@@ -1,6 +1,7 @@
 import { Request, Response } from 'express';
 import { TenantAuthRequest } from '../middleware/tenantAuth.js';
 import { KdsDeviceService, KdsDeviceContext } from '../services/kdsDeviceService.js';
+import { KdsDisplayService } from '../services/kdsDisplayService.js';
 
 export interface KdsDeviceRequest extends Request {
   kdsDevice?: KdsDeviceContext;
@@ -72,6 +73,23 @@ export class KdsDeviceController {
   static async me(req: KdsDeviceRequest, res: Response): Promise<void> {
     if (!req.kdsDevice) { res.status(401).json({ error: 'Not paired' }); return; }
     res.json({ data: req.kdsDevice });
+  }
+
+  static async tickets(req: KdsDeviceRequest, res: Response): Promise<void> {
+    if (!req.kdsDevice) { res.status(401).json({ error: 'Not paired' }); return; }
+    try {
+      const language = typeof req.query.language === 'string' ? req.query.language : undefined;
+      const tickets = await KdsDisplayService.activeTicketsForDestination(
+        req.kdsDevice.tenant_id,
+        req.kdsDevice.store_id,
+        req.kdsDevice.destination_id,
+        { language }
+      );
+      res.json({ data: tickets });
+    } catch (error: any) {
+      console.error('[KdsDeviceController] tickets error:', error);
+      res.status(500).json({ error: 'Failed to fetch tickets' });
+    }
   }
 
   static async unpairSelf(req: KdsDeviceRequest, res: Response): Promise<void> {

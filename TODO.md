@@ -600,7 +600,7 @@ Shared conventions:
 
 Route group `/kds/*`, first-run pairing flow (enter a one-time code generated from the tenant admin; binds the device to a `store_id` + `tenant_order_destination_id`). Persistent session; auto-reconnect on network drop. Status bar with destination name, network indicator, and "un-pair device" action.
 
-### [ ] 45.2 KDS Display View
+### [x] 45.2 KDS Display View
 
 Card grid of active tickets for the paired destination. Each ticket shows table (or takeaway label), order time, seat number per item, item name, qty, modifiers, and per-item note. Layout: up to 4 columns, oldest first, overflow paginates. Pulls from `kds_orders` (#40) filtered by the device's destination.
 

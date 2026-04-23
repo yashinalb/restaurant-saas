@@ -28,6 +28,7 @@ export default router;
 // ----- Device-authenticated endpoints (separate router for a different mount path) -----
 export const kdsDeviceRuntimeRouter = Router();
 kdsDeviceRuntimeRouter.get('/me', authenticateKdsDevice, KdsDeviceController.me);
+kdsDeviceRuntimeRouter.get('/tickets', authenticateKdsDevice, KdsDeviceController.tickets);
 kdsDeviceRuntimeRouter.post('/unpair', authenticateKdsDevice, KdsDeviceController.unpairSelf);
 
 // ----- Public pairing endpoint -----
