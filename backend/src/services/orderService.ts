@@ -1,5 +1,6 @@
 import pool from '../config/database.js';
 import { RowDataPacket, ResultSetHeader, PoolConnection } from 'mysql2/promise';
+import { RealtimeEvents } from './realtimeService.js';
 
 type OrderStatus = 'open' | 'closed' | 'cancelled' | 'void';
 const VALID_STATUSES: OrderStatus[] = ['open', 'closed', 'cancelled', 'void'];
@@ -222,6 +223,7 @@ export class OrderService {
       await this.syncItemsAndTotals(conn, orderId, data.items, { tax_amount: tax, service_charge: service, discount_amount: discount });
 
       await conn.commit();
+      RealtimeEvents.orderUpdated(tenantId, orderId, data.store_id, { change: 'created' });
       return orderId;
     } catch (error) {
       await conn.rollback();
@@ -241,9 +243,10 @@ export class OrderService {
       await conn.beginTransaction();
 
       const [existing] = await conn.query<RowDataPacket[]>(
-        'SELECT id FROM orders WHERE id = ? AND tenant_id = ?', [id, tenantId]
+        'SELECT id, store_id FROM orders WHERE id = ? AND tenant_id = ?', [id, tenantId]
       );
       if (existing.length === 0) throw { status: 404, message: 'Order not found' };
+      const existingStoreId = Number(existing[0].store_id);
 
       const fields: string[] = []; const values: any[] = [];
       const setField = (col: string, val: any) => { fields.push(`${col} = ?`); values.push(val); };
@@ -273,6 +276,11 @@ export class OrderService {
       });
 
       await conn.commit();
+      RealtimeEvents.orderUpdated(tenantId, id, data.store_id ?? existingStoreId, {
+        change: 'updated',
+        items_changed: data.items !== undefined,
+        status: data.order_status ?? null,
+      });
       return true;
     } catch (error) {
       await conn.rollback();

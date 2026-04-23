@@ -2,6 +2,7 @@ import pool from '../config/database.js';
 import { RowDataPacket, ResultSetHeader, PoolConnection } from 'mysql2/promise';
 import { PosKitchenTicketService } from './posKitchenTicketService.js';
 import { AuditLogService } from './auditLogService.js';
+import { RealtimeEvents } from './realtimeService.js';
 
 interface FireInput {
   order_id: number;
@@ -63,6 +64,8 @@ export class PosFireService {
     let kdsCreated = 0;
     let kdsUpdated = 0;
     let orderTypeCode: string | null = null;
+    let storeIdOuter = 0;
+    const broadcastPerItem: Array<{ item_id: number; destination_id: number }> = [];
 
     try {
       await conn.beginTransaction();
@@ -78,6 +81,7 @@ export class PosFireService {
       if (orderRows.length === 0) throw { status: 404, message: 'Order not found' };
       if (orderRows[0].order_status !== 'open') throw { status: 400, message: 'Order is not open' };
       const storeId = Number(orderRows[0].store_id);
+      storeIdOuter = storeId;
       orderTypeCode = orderRows[0].order_type_code || null;
 
       // Resolve target status ids
@@ -174,6 +178,7 @@ export class PosFireService {
         }
 
         firedCount += 1;
+        broadcastPerItem.push({ item_id: itemId, destination_id: destId });
       }
 
       await conn.commit();
@@ -230,6 +235,26 @@ export class PosFireService {
       }
     }
 
+    // Realtime broadcast (after commit) — one per item so only the relevant KDS
+    // destination + the order's listeners react. Also a per-order summary.
+    if (firedCount > 0) {
+      for (const b of broadcastPerItem) {
+        RealtimeEvents.kdsUpserted(tenantId, storeIdOuter, b.destination_id, {
+          order_id: input.order_id,
+          order_item_id: b.item_id,
+          mode: refire ? 'refire' : 'new',
+        });
+        if (!refire) {
+          RealtimeEvents.itemStatus(tenantId, input.order_id, storeIdOuter, b.item_id, 'pending', 'preparing', b.destination_id);
+        }
+      }
+      RealtimeEvents.itemsFired(tenantId, input.order_id, storeIdOuter, {
+        mode: refire ? 'refire' : 'new',
+        fired_count: firedCount,
+        item_ids: broadcastPerItem.map(b => b.item_id),
+      });
+    }
+
     return {
       mode: refire ? 'refire' : 'new',
       fired_count: firedCount,
@@ -257,6 +282,7 @@ export class PosFireService {
     let firedCount = 0;
     let kdsUpdated = 0;
     let storeId: number | null = null;
+    const voidedBroadcast: Array<{ item_id: number; destination_id: number | null; from: string }> = [];
 
     try {
       await conn.beginTransaction();
@@ -273,16 +299,18 @@ export class PosFireService {
 
       const placeholders = voidItemIds.map(() => '?').join(',');
       const [itemRows] = await conn.query<RowDataPacket[]>(
-        `SELECT oi.id, ois.code as status_code
+        `SELECT oi.id, ois.code as status_code, mi.tenant_order_destination_id
          FROM order_items oi
          LEFT JOIN tenant_order_item_statuses ois ON ois.id = oi.tenant_order_item_status_id
+         LEFT JOIN tenant_menu_items mi ON mi.id = oi.tenant_menu_item_id
          WHERE oi.id IN (${placeholders}) AND oi.order_id = ?`,
         [...voidItemIds, orderId]
       );
 
       for (const r of itemRows) {
         const id = Number(r.id);
-        if (String(r.status_code) === 'served') {
+        const fromStatus = String(r.status_code || 'pending');
+        if (fromStatus === 'served') {
           skipped.push({ item_id: id, reason: 'Already served — cannot void' });
           continue;
         }
@@ -306,6 +334,11 @@ export class PosFireService {
           }
         }
         firedCount += 1;
+        voidedBroadcast.push({
+          item_id: id,
+          destination_id: r.tenant_order_destination_id ? Number(r.tenant_order_destination_id) : null,
+          from: fromStatus,
+        });
       }
 
       await conn.commit();
@@ -344,6 +377,24 @@ export class PosFireService {
           after: { order_id: orderId, kds_cancelled: opts.broadcast_kds },
         });
       }
+    }
+
+    // Realtime broadcast (after commit)
+    if (firedCount > 0 && storeId) {
+      for (const v of voidedBroadcast) {
+        RealtimeEvents.itemStatus(tenantId, orderId, storeId, v.item_id, v.from, 'cancelled', v.destination_id);
+        if (v.destination_id) {
+          RealtimeEvents.kdsUpserted(tenantId, storeId, v.destination_id, {
+            order_id: orderId,
+            order_item_id: v.item_id,
+            status: 'cancelled',
+          });
+        }
+      }
+      RealtimeEvents.itemsVoided(tenantId, orderId, storeId, {
+        voided_count: firedCount,
+        item_ids: voidedBroadcast.map(v => v.item_id),
+      });
     }
 
     return { mode: 'void', fired_count: firedCount, skipped, kds_created: 0, kds_updated: kdsUpdated, tickets };

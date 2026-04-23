@@ -70,6 +70,9 @@ import ingredientRoutes from './routes/ingredient.routes';
 import expenseCategoryRoutes from './routes/expenseCategory.routes';
 import menuCategoryRoutes from './routes/menuCategory.routes';
 
+// Realtime (44.16 — WebSocket order sync)
+import { attachRealtime } from './services/realtimeService.js';
+
 // Get __dirname equivalent in ES modules
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -264,6 +267,10 @@ const server = app.listen(PORT, () => {
   console.log(`🏥 Health: http://localhost:${PORT}/health`);
   console.log(`📁 Uploads: http://localhost:${PORT}/uploads`);
   
+  // Attach WebSocket server for realtime order sync (44.16)
+  attachRealtime(server);
+  console.log(`🔌 WebSocket: ws://localhost:${PORT}/ws/realtime`);
+
   if (NODE_ENV === 'production') {
     console.log('🔒 Running in PRODUCTION mode with enhanced security');
   } else {

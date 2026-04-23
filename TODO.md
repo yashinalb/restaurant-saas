@@ -572,7 +572,7 @@ Re-print any receipt or kitchen ticket for an order (within the shift). Void a w
 
 Depends on #32. Generate a signed, short-lived token for the table, render a QR the guest can scan to view and pay the bill from their phone.
 
-### [ ] 44.16 Real-time Order Sync (WebSocket)
+### [x] 44.16 Real-time Order Sync (WebSocket)
 
 Item-status broadcast so KDS (Priority 11) and other POS devices mirror changes live. Order-level broadcast so a manager's view updates when a waiter adds or removes an item. Also carries the "ready" signal that 44.11 surfaces as a toast in the POS cart.
 

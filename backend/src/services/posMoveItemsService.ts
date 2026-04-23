@@ -1,5 +1,6 @@
 import pool from '../config/database.js';
 import { RowDataPacket, ResultSetHeader } from 'mysql2';
+import { RealtimeEvents } from './realtimeService.js';
 
 async function recomputeOrderTotals(conn: any, orderId: number): Promise<void> {
   const [sumRows] = await conn.query(
@@ -73,7 +74,7 @@ export class PosMoveItemsService {
 
       // Verify both orders belong to the tenant and are open
       const [orderRows] = await conn.query<RowDataPacket[]>(
-        `SELECT id, order_status FROM orders WHERE id IN (?, ?) AND tenant_id = ?`,
+        `SELECT id, order_status, store_id FROM orders WHERE id IN (?, ?) AND tenant_id = ?`,
         [sourceOrderId, targetOrderId, tenantId]
       );
       if (orderRows.length !== 2) throw { status: 404, message: 'One or both orders not found' };
@@ -113,6 +114,11 @@ export class PosMoveItemsService {
       await recomputeOrderTotals(conn, targetOrderId);
 
       await conn.commit();
+
+      const storeId = Number(orderRows.find(r => Number(r.id) === sourceOrderId)?.store_id) || null;
+      RealtimeEvents.orderUpdated(tenantId, sourceOrderId, storeId, { change: 'items_moved_out', moved_item_ids: movedIds, target_order_id: targetOrderId });
+      RealtimeEvents.orderUpdated(tenantId, targetOrderId, storeId, { change: 'items_moved_in', moved_item_ids: movedIds, source_order_id: sourceOrderId });
+
       return { moved_count: movedIds.length, moved_item_ids: movedIds };
     } catch (error) {
       await conn.rollback();

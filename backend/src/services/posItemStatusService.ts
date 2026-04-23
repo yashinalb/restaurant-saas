@@ -1,6 +1,7 @@
 import pool from '../config/database.js';
 import { RowDataPacket, PoolConnection } from 'mysql2/promise';
 import { PosFireService } from './posFireService.js';
+import { RealtimeEvents } from './realtimeService.js';
 
 export type ItemStatusCode = 'pending' | 'preparing' | 'ready' | 'served' | 'cancelled';
 
@@ -48,10 +49,12 @@ export class PosItemStatusService {
 
       // Look up the item, its current status, and its order context (tenant-scoped)
       const [rows] = await conn.query<RowDataPacket[]>(
-        `SELECT oi.id, oi.order_id, ois.code as status_code, o.order_status
+        `SELECT oi.id, oi.order_id, ois.code as status_code, o.order_status,
+                o.store_id, mi.tenant_order_destination_id
          FROM order_items oi
          JOIN orders o ON o.id = oi.order_id
          LEFT JOIN tenant_order_item_statuses ois ON ois.id = oi.tenant_order_item_status_id
+         LEFT JOIN tenant_menu_items mi ON mi.id = oi.tenant_menu_item_id
          WHERE oi.id = ? AND o.tenant_id = ?`,
         [orderItemId, tenantId]
       );
@@ -59,6 +62,8 @@ export class PosItemStatusService {
       const row = rows[0];
       const from = String(row.status_code || 'pending') as ItemStatusCode;
       const orderId = Number(row.order_id);
+      const storeId = row.store_id ? Number(row.store_id) : null;
+      const destinationId = row.tenant_order_destination_id ? Number(row.tenant_order_destination_id) : null;
 
       if (from === to) {
         await conn.commit();
@@ -114,6 +119,17 @@ export class PosItemStatusService {
       }
 
       await conn.commit();
+
+      // Realtime — carries the "ready" signal the POS cart uses for its toast (44.11).
+      RealtimeEvents.itemStatus(tenantId, orderId, storeId, orderItemId, from, to, destinationId);
+      if (destinationId && storeId) {
+        RealtimeEvents.kdsUpserted(tenantId, storeId, destinationId, {
+          order_id: orderId,
+          order_item_id: orderItemId,
+          status: to,
+        });
+      }
+
       return { from, to, order_id: orderId };
     } catch (error) {
       await conn.rollback();
