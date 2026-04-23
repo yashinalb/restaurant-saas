@@ -608,7 +608,7 @@ Card grid of active tickets for the paired destination. Each ticket shows table 
 
 "Bump" per item marks it `ready` (writes the transition defined in 44.11; POS hears it via 44.16). "Bump all" per ticket. "Recall" reverses a just-bumped item back to `preparing` within a short window. Per-ticket elapsed-time badge with color thresholds — green under target, yellow approaching, red over target — thresholds configurable per destination.
 
-### [ ] 45.4 Course & Seat Management
+### [x] 45.4 Course & Seat Management
 
 Group items on a ticket by seat number (so the cook sees "Seat 1: burger, Seat 2: steak"). Support courses (appetizer / main / dessert) with a "hold" flag that keeps the main course hidden until the appetizer is bumped. Course separator between groups on the card.
 

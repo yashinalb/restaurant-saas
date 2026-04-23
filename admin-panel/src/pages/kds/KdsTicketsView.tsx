@@ -208,6 +208,7 @@ function KdsTicketCard({ ticket, now, context, pendingAction, onBump, onRecall, 
           : t('kds.tickets.takeaway', 'TAKEAWAY'))
     : (ticket.table_name || t('kds.tickets.noTable', '—'));
 
+  // Group by seat; within each seat, split by course (separator between groups).
   const bySeat = new Map<string, KdsDisplayItem[]>();
   for (const item of ticket.items) {
     const key = item.seat != null ? `seat:${item.seat}` : '__';
@@ -219,6 +220,18 @@ function KdsTicketCard({ ticket, now, context, pendingAction, onBump, onRecall, 
     if (b[0] === '__') return -1;
     return a[0].localeCompare(b[0]);
   });
+
+  const splitByCourse = (items: KdsDisplayItem[]): Array<{ courseLabel: string | null; items: KdsDisplayItem[] }> => {
+    const sorted = [...items].sort((a, b) => a.course_order - b.course_order);
+    const out: Array<{ courseLabel: string | null; items: KdsDisplayItem[] }> = [];
+    for (const it of sorted) {
+      const label = it.course_code ? it.course_code : null;
+      const last = out[out.length - 1];
+      if (last && (last.courseLabel ?? null) === label) last.items.push(it);
+      else out.push({ courseLabel: label, items: [it] });
+    }
+    return out;
+  };
 
   const anyRush = ticket.items.some(i => i.priority > 0);
   const hasActionable = ticket.items.some(i => i.status !== 'ready');
@@ -257,19 +270,28 @@ function KdsTicketCard({ ticket, now, context, pendingAction, onBump, onRecall, 
                 {t('kds.tickets.seat', 'Seat')} {key.replace('seat:', '')}
               </div>
             )}
-            <ul className="space-y-2">
-              {items.map(item => (
-                <KdsItemRow
-                  key={item.kds_id}
-                  item={item}
-                  now={now}
-                  context={context}
-                  pendingAction={pendingAction}
-                  onBump={onBump}
-                  onRecall={onRecall}
-                />
-              ))}
-            </ul>
+            {splitByCourse(items).map((grp, gi) => (
+              <div key={gi} className={gi > 0 ? 'mt-2 pt-2 border-t border-dashed border-slate-700' : ''}>
+                {grp.courseLabel && (
+                  <div className="text-[10px] uppercase tracking-wide text-sky-300 mb-1 font-semibold">
+                    {t(`kds.tickets.course.${grp.courseLabel}`, grp.courseLabel)}
+                  </div>
+                )}
+                <ul className="space-y-2">
+                  {grp.items.map(item => (
+                    <KdsItemRow
+                      key={item.kds_id}
+                      item={item}
+                      now={now}
+                      context={context}
+                      pendingAction={pendingAction}
+                      onBump={onBump}
+                      onRecall={onRecall}
+                    />
+                  ))}
+                </ul>
+              </div>
+            ))}
           </div>
         ))}
       </div>

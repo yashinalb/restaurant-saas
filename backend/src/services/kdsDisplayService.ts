@@ -19,12 +19,34 @@ export interface KdsDisplayItem {
   status: 'pending' | 'preparing' | 'ready';
   priority: number;
   seat: number | null;
+  course_code: string | null;
+  course_order: number;
   notes: string | null;
   selected_addons: Array<{ name?: string; quantity?: number; price?: number }> | null;
   selected_ingredients: Array<{ name?: string; removed?: boolean }> | null;
   created_at: string;
   started_at: string | null;
   completed_at: string | null;
+}
+
+// Lower = earlier in the meal. Unknown/null courses sort as 999 (i.e. shown with
+// items that have no course — typically single-course orders).
+const COURSE_ORDER: Record<string, number> = {
+  amuse: 0,
+  appetizer: 1,
+  starter: 1,
+  soup: 2,
+  salad: 2,
+  main: 3,
+  entree: 3,
+  side: 3,
+  dessert: 4,
+  beverage: 5,
+};
+
+function courseOrder(code: string | null | undefined): number {
+  if (!code) return 999;
+  return COURSE_ORDER[String(code).toLowerCase()] ?? 500;
 }
 
 export interface KdsDisplayTicket {
@@ -64,6 +86,7 @@ export class KdsDisplayService {
               o.guest_name,
               oi.quantity, oi.notes AS item_notes,
               oi.selected_addons, oi.selected_ingredients,
+              oi.seat_number, oi.course_code, oi.course_hold,
               oi.tenant_menu_item_id AS menu_item_id
        FROM kds_orders k
        JOIN orders o ON o.id = k.order_id
@@ -107,9 +130,42 @@ export class KdsDisplayService {
       }
     }
 
+    // Resolve the "hold" rule per order: a held item is hidden while any item
+    // from an earlier course on the same order is still pending/preparing.
+    // We look at the whole order (every destination) — holding a main until
+    // appetizers clear only makes sense globally.
+    const orderIds = Array.from(new Set(rows.map(r => Number(r.order_id))));
+    const earliestActiveCourseByOrder = new Map<number, number>();
+    if (orderIds.length > 0) {
+      const placeholders = orderIds.map(() => '?').join(',');
+      const [activeRows] = await pool.query<RowDataPacket[]>(
+        `SELECT oi.order_id, oi.course_code
+         FROM order_items oi
+         LEFT JOIN tenant_order_item_statuses ois ON ois.id = oi.tenant_order_item_status_id
+         WHERE oi.order_id IN (${placeholders})
+           AND ois.code IN ('pending','preparing')`,
+        orderIds
+      );
+      for (const r of activeRows) {
+        const oid = Number(r.order_id);
+        const ord = courseOrder(r.course_code);
+        const prev = earliestActiveCourseByOrder.get(oid);
+        if (prev === undefined || ord < prev) earliestActiveCourseByOrder.set(oid, ord);
+      }
+    }
+
     const ticketsByOrder = new Map<number, KdsDisplayTicket>();
     for (const r of rows) {
       const orderId = Number(r.order_id);
+
+      const itemCourseOrder = courseOrder(r.course_code);
+      const isHeld = Number(r.course_hold) === 1;
+      if (isHeld) {
+        const earliest = earliestActiveCourseByOrder.get(orderId);
+        // Held rows appear only when no earlier course has active items left.
+        if (earliest !== undefined && earliest < itemCourseOrder) continue;
+      }
+
       const selectedAddons = r.selected_addons
         ? (typeof r.selected_addons === 'string' ? safeParseJson(r.selected_addons) : r.selected_addons)
         : null;
@@ -117,12 +173,7 @@ export class KdsDisplayService {
         ? (typeof r.selected_ingredients === 'string' ? safeParseJson(r.selected_ingredients) : r.selected_ingredients)
         : null;
 
-      // Seat: optional field stored alongside addons (e.g. {seat: 2}); fall back to null.
-      let seat: number | null = null;
-      if (selectedAddons && typeof selectedAddons === 'object' && !Array.isArray(selectedAddons)) {
-        const anyAddons = selectedAddons as any;
-        if (Number.isFinite(Number(anyAddons.seat))) seat = Number(anyAddons.seat);
-      }
+      const seat = r.seat_number != null ? Number(r.seat_number) : null;
 
       const item: KdsDisplayItem = {
         kds_id: Number(r.kds_id),
@@ -133,6 +184,8 @@ export class KdsDisplayService {
         status: r.status as KdsDisplayItem['status'],
         priority: Number(r.priority) || 0,
         seat,
+        course_code: r.course_code ?? null,
+        course_order: itemCourseOrder,
         notes: r.item_notes || null,
         selected_addons: Array.isArray(selectedAddons) ? selectedAddons : null,
         selected_ingredients: Array.isArray(selectedIngredients) ? selectedIngredients : null,
@@ -161,10 +214,23 @@ export class KdsDisplayService {
       }
     }
 
-    // Oldest ticket first so the cook works FIFO.
-    return Array.from(ticketsByOrder.values()).sort((a, b) => {
-      return new Date(a.oldest_item_at).getTime() - new Date(b.oldest_item_at).getTime();
-    });
+    // Sort items inside each ticket: by seat (nulls last), then by course, then FIFO.
+    for (const ticket of ticketsByOrder.values()) {
+      ticket.items.sort((a, b) => {
+        const aSeat = a.seat ?? Number.MAX_SAFE_INTEGER;
+        const bSeat = b.seat ?? Number.MAX_SAFE_INTEGER;
+        if (aSeat !== bSeat) return aSeat - bSeat;
+        if (a.course_order !== b.course_order) return a.course_order - b.course_order;
+        return new Date(a.created_at).getTime() - new Date(b.created_at).getTime();
+      });
+    }
+
+    // Oldest ticket first so the cook works FIFO. Drop empty ones (all held).
+    return Array.from(ticketsByOrder.values())
+      .filter(t => t.items.length > 0)
+      .sort((a, b) => {
+        return new Date(a.oldest_item_at).getTime() - new Date(b.oldest_item_at).getTime();
+      });
   }
 }
 

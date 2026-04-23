@@ -15,6 +15,9 @@ interface OrderItemInput {
   selected_addons?: any | null;
   selected_ingredients?: any | null;
   notes?: string | null;
+  seat_number?: number | null;
+  course_code?: string | null;
+  course_hold?: boolean;
 }
 
 interface OrderInput {
@@ -71,13 +74,17 @@ export class OrderService {
         await conn.query(
           `INSERT INTO order_items
            (order_id, tenant_menu_item_id, tenant_order_item_status_id, quantity, unit_price, total_price,
-            weighted_portion, selected_addons, selected_ingredients, notes)
-           VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`,
+            weighted_portion, selected_addons, selected_ingredients, notes,
+            seat_number, course_code, course_hold)
+           VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`,
           [orderId, it.tenant_menu_item_id, it.tenant_order_item_status_id, qty, unit, total,
            it.weighted_portion ?? null,
            it.selected_addons ? JSON.stringify(it.selected_addons) : null,
            it.selected_ingredients ? JSON.stringify(it.selected_ingredients) : null,
-           it.notes ?? null]
+           it.notes ?? null,
+           it.seat_number ?? null,
+           it.course_code ?? null,
+           it.course_hold ? 1 : 0]
         );
       }
     }

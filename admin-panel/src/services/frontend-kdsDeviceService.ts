@@ -75,6 +75,8 @@ export interface KdsDisplayItem {
   status: 'pending' | 'preparing' | 'ready';
   priority: number;
   seat: number | null;
+  course_code: string | null;
+  course_order: number;
   notes: string | null;
   selected_addons: Array<{ name?: string; quantity?: number; price?: number }> | null;
   selected_ingredients: Array<{ name?: string; removed?: boolean }> | null;

@@ -14,6 +14,9 @@ interface AddItemInput {
   selected_addons?: SelectedAddon[];
   removed_ingredient_ids?: number[];
   notes?: string | null;
+  seat_number?: number | null;
+  course_code?: string | null;
+  course_hold?: boolean;
 }
 
 export class PosItemOptionsService {
@@ -380,14 +383,18 @@ export class PosItemOptionsService {
       const [insertResult] = await conn.query<ResultSetHeader>(
         `INSERT INTO order_items
          (order_id, tenant_menu_item_id, tenant_order_item_status_id, quantity, unit_price, total_price,
-          weighted_portion, selected_addons, selected_ingredients, notes)
-         VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`,
+          weighted_portion, selected_addons, selected_ingredients, notes,
+          seat_number, course_code, course_hold)
+         VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`,
         [
           data.order_id, data.tenant_menu_item_id, statusId, qty, unitPrice, totalPrice,
           weightedPortion,
           addonSnapshot.length > 0 ? JSON.stringify(addonSnapshot) : null,
           ingredientSnapshot.length > 0 ? JSON.stringify(ingredientSnapshot) : null,
           data.notes ?? null,
+          data.seat_number ?? null,
+          data.course_code ?? null,
+          data.course_hold ? 1 : 0,
         ]
       );
 
