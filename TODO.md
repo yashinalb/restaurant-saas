@@ -620,7 +620,7 @@ Chime on each new ticket; a different chime on overdue (past the red threshold).
 
 ## PRIORITY 12: Storefront (Future)
 
-### [ ] 43. Storefront Foundation
+### [x] 43. Storefront Foundation
 
 ```
 Set up public-facing storefront app (React + TailwindCSS) for online menu browsing, QR ordering, and online reservations. Follow supermarket-saas storefront pattern.
