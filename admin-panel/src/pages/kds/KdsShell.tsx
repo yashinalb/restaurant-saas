@@ -176,7 +176,7 @@ export default function KdsShell() {
       </header>
 
       <main className="flex-1 flex flex-col">
-        <KdsTicketsView />
+        <KdsTicketsView context={context} />
       </main>
     </div>
   );

@@ -1,6 +1,7 @@
 import crypto from 'crypto';
 import pool from '../config/database.js';
 import { RowDataPacket, ResultSetHeader } from 'mysql2/promise';
+import { KdsActionsService } from './kdsActionsService.js';
 
 /**
  * KDS Device pairing + session service (45.1).
@@ -49,6 +50,9 @@ export interface KdsDeviceContext {
   destination_code: string | null;
   destination_name: string | null;
   name: string | null;
+  warn_after_minutes: number;
+  late_after_minutes: number;
+  recall_window_seconds: number;
 }
 
 export class KdsDeviceService {
@@ -152,6 +156,8 @@ export class KdsDeviceService {
               s.name AS store_name,
               td.code AS destination_code,
               td.id AS destination_id,
+              td.warn_after_minutes,
+              td.late_after_minutes,
               (SELECT name FROM tenant_order_destination_translations
                WHERE tenant_order_destination_id = td.id LIMIT 1) AS destination_name
        FROM kds_devices d
@@ -171,6 +177,9 @@ export class KdsDeviceService {
       destination_code: r.destination_code ?? null,
       destination_name: r.destination_name ?? null,
       name: r.name ?? null,
+      warn_after_minutes: Number(r.warn_after_minutes ?? 8),
+      late_after_minutes: Number(r.late_after_minutes ?? 15),
+      recall_window_seconds: KdsActionsService.RECALL_WINDOW_SECONDS,
     };
   }
 

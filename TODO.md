@@ -604,7 +604,7 @@ Route group `/kds/*`, first-run pairing flow (enter a one-time code generated fr
 
 Card grid of active tickets for the paired destination. Each ticket shows table (or takeaway label), order time, seat number per item, item name, qty, modifiers, and per-item note. Layout: up to 4 columns, oldest first, overflow paginates. Pulls from `kds_orders` (#40) filtered by the device's destination.
 
-### [ ] 45.3 Bump / Recall / Timers
+### [x] 45.3 Bump / Recall / Timers
 
 "Bump" per item marks it `ready` (writes the transition defined in 44.11; POS hears it via 44.16). "Bump all" per ticket. "Recall" reverses a just-bumped item back to `preparing` within a short window. Per-ticket elapsed-time badge with color thresholds — green under target, yellow approaching, red over target — thresholds configurable per destination.
 

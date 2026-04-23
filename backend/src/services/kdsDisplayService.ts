@@ -24,6 +24,7 @@ export interface KdsDisplayItem {
   selected_ingredients: Array<{ name?: string; removed?: boolean }> | null;
   created_at: string;
   started_at: string | null;
+  completed_at: string | null;
 }
 
 export interface KdsDisplayTicket {
@@ -56,7 +57,7 @@ export class KdsDisplayService {
     // One row per active kds_order at this destination, with order + item context.
     const [rows] = await pool.query<RowDataPacket[]>(
       `SELECT k.id AS kds_id, k.order_id, k.order_item_id, k.status, k.priority,
-              k.created_at AS kds_created_at, k.started_at,
+              k.created_at AS kds_created_at, k.started_at, k.completed_at,
               o.order_number, o.created_at AS order_created_at,
               ot.code AS order_type_code,
               t.name AS table_name,
@@ -72,7 +73,11 @@ export class KdsDisplayService {
        WHERE k.tenant_id = ?
          AND k.store_id = ?
          AND k.tenant_order_destination_id = ?
-         AND k.status IN ('pending','preparing','ready')
+         AND (
+           k.status IN ('pending','preparing')
+           OR (k.status = 'ready' AND k.completed_at IS NOT NULL
+               AND k.completed_at >= NOW() - INTERVAL 3 MINUTE)
+         )
        ORDER BY k.priority DESC, k.created_at ASC`,
       [tenantId, storeId, destinationId]
     );
@@ -133,6 +138,7 @@ export class KdsDisplayService {
         selected_ingredients: Array.isArray(selectedIngredients) ? selectedIngredients : null,
         created_at: r.kds_created_at,
         started_at: r.started_at ?? null,
+        completed_at: r.completed_at ?? null,
       };
 
       let ticket = ticketsByOrder.get(orderId);

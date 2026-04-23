@@ -29,6 +29,9 @@ export default router;
 export const kdsDeviceRuntimeRouter = Router();
 kdsDeviceRuntimeRouter.get('/me', authenticateKdsDevice, KdsDeviceController.me);
 kdsDeviceRuntimeRouter.get('/tickets', authenticateKdsDevice, KdsDeviceController.tickets);
+kdsDeviceRuntimeRouter.post('/items/:itemId/bump', authenticateKdsDevice, KdsDeviceController.bump);
+kdsDeviceRuntimeRouter.post('/items/:itemId/recall', authenticateKdsDevice, KdsDeviceController.recall);
+kdsDeviceRuntimeRouter.post('/orders/:orderId/bump-all', authenticateKdsDevice, KdsDeviceController.bumpAll);
 kdsDeviceRuntimeRouter.post('/unpair', authenticateKdsDevice, KdsDeviceController.unpairSelf);
 
 // ----- Public pairing endpoint -----

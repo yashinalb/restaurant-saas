@@ -31,6 +31,9 @@ export interface KdsDeviceContext {
   destination_code: string | null;
   destination_name: string | null;
   name: string | null;
+  warn_after_minutes: number;
+  late_after_minutes: number;
+  recall_window_seconds: number;
 }
 
 const kdsDeviceService = {
@@ -77,6 +80,7 @@ export interface KdsDisplayItem {
   selected_ingredients: Array<{ name?: string; removed?: boolean }> | null;
   created_at: string;
   started_at: string | null;
+  completed_at?: string | null;
 }
 
 export interface KdsDisplayTicket {
@@ -117,5 +121,14 @@ export const kdsRuntime = {
       params: language ? { language } : {},
     });
     return response.data.data || [];
+  },
+  async bump(token: string, orderItemId: number): Promise<void> {
+    await api.post(`/api/kds/items/${orderItemId}/bump`, {}, { headers: deviceAuthHeaders(token) });
+  },
+  async recall(token: string, orderItemId: number): Promise<void> {
+    await api.post(`/api/kds/items/${orderItemId}/recall`, {}, { headers: deviceAuthHeaders(token) });
+  },
+  async bumpAll(token: string, orderId: number): Promise<void> {
+    await api.post(`/api/kds/orders/${orderId}/bump-all`, {}, { headers: deviceAuthHeaders(token) });
   },
 };

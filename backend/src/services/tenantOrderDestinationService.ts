@@ -34,6 +34,7 @@ export class TenantOrderDestinationService {
 
   static async create(tenantId: number, data: {
     code: string; printer_ip?: string; kds_screen_id?: number | null; sort_order?: number; is_active?: boolean;
+    warn_after_minutes?: number; late_after_minutes?: number;
     master_order_destination_id?: number | null;
     translations?: Array<{ language_id: number; name: string }>;
   }): Promise<number> {
@@ -45,9 +46,10 @@ export class TenantOrderDestinationService {
       );
       if (existing.length > 0) throw { status: 409, message: 'Order destination with this code already exists' };
       const [result] = await conn.query<ResultSetHeader>(
-        'INSERT INTO tenant_order_destinations (tenant_id, master_order_destination_id, code, printer_ip, kds_screen_id, sort_order, is_active) VALUES (?, ?, ?, ?, ?, ?, ?)',
+        'INSERT INTO tenant_order_destinations (tenant_id, master_order_destination_id, code, printer_ip, kds_screen_id, sort_order, is_active, warn_after_minutes, late_after_minutes) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)',
         [tenantId, data.master_order_destination_id || null, data.code, data.printer_ip || null,
-         data.kds_screen_id ?? null, data.sort_order ?? 0, data.is_active !== undefined ? (data.is_active ? 1 : 0) : 1]
+         data.kds_screen_id ?? null, data.sort_order ?? 0, data.is_active !== undefined ? (data.is_active ? 1 : 0) : 1,
+         data.warn_after_minutes ?? 8, data.late_after_minutes ?? 15]
       );
       const entityId = result.insertId;
       if (data.translations?.length) {
@@ -65,6 +67,7 @@ export class TenantOrderDestinationService {
 
   static async update(tenantId: number, id: number, data: {
     code?: string; printer_ip?: string; kds_screen_id?: number | null; sort_order?: number; is_active?: boolean;
+    warn_after_minutes?: number; late_after_minutes?: number;
     translations?: Array<{ language_id: number; name: string }>;
   }): Promise<boolean> {
     const conn = await pool.getConnection();
@@ -86,6 +89,8 @@ export class TenantOrderDestinationService {
       if (data.kds_screen_id !== undefined) { fields.push('kds_screen_id = ?'); values.push(data.kds_screen_id); }
       if (data.sort_order !== undefined) { fields.push('sort_order = ?'); values.push(data.sort_order); }
       if (data.is_active !== undefined) { fields.push('is_active = ?'); values.push(data.is_active ? 1 : 0); }
+      if (data.warn_after_minutes !== undefined) { fields.push('warn_after_minutes = ?'); values.push(data.warn_after_minutes); }
+      if (data.late_after_minutes !== undefined) { fields.push('late_after_minutes = ?'); values.push(data.late_after_minutes); }
       if (fields.length > 0) {
         values.push(id, tenantId);
         await conn.query(`UPDATE tenant_order_destinations SET ${fields.join(', ')} WHERE id = ? AND tenant_id = ?`, values);

@@ -1,24 +1,36 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import { ChevronLeft, ChevronRight, Clock, Loader2 } from 'lucide-react';
-import { kdsRuntime, KdsDisplayTicket, KdsDisplayItem } from '../../services/frontend-kdsDeviceService';
+import { toast } from 'sonner';
+import { ChevronLeft, ChevronRight, Clock, Loader2, CheckCheck, Check, Undo2 } from 'lucide-react';
+import {
+  kdsRuntime,
+  KdsDisplayTicket,
+  KdsDisplayItem,
+  KdsDeviceContext,
+} from '../../services/frontend-kdsDeviceService';
 import { realtimeClient, RealtimeEvent } from '../../services/realtimeClient';
 
 /**
- * KDS Display View (45.2).
- * Card grid of active tickets for the paired destination.
- * - Up to 4 columns, FIFO (oldest first), paginates on overflow.
- * - Refreshes on realtime events (kds.upserted / order.item.status) + 20s fallback poll.
+ * KDS Display View (45.2 + 45.3).
+ * - FIFO card grid of active tickets; paginates on overflow.
+ * - Bump per item (preparing → ready) and Bump-all per ticket.
+ * - Recall button on ready items while inside the device's recall window.
+ * - Timer badge colored by destination thresholds (green / yellow / red).
  */
 
-const PAGE_SIZE = 8; // 4 cols × 2 rows per page for typical 1080p displays.
+const PAGE_SIZE = 8;
 
-export default function KdsTicketsView() {
+interface Props {
+  context: KdsDeviceContext;
+}
+
+export default function KdsTicketsView({ context }: Props) {
   const { t, i18n } = useTranslation();
   const [tickets, setTickets] = useState<KdsDisplayTicket[]>([]);
   const [loading, setLoading] = useState(true);
   const [page, setPage] = useState(0);
   const [now, setNow] = useState(Date.now());
+  const [pendingAction, setPendingAction] = useState<string | null>(null);
   const refreshTimer = useRef<number | null>(null);
 
   const load = useCallback(async () => {
@@ -28,7 +40,7 @@ export default function KdsTicketsView() {
       const data = await kdsRuntime.tickets(token, i18n.language);
       setTickets(data);
     } catch {
-      /* transient — next realtime event / poll retries */
+      /* transient */
     } finally {
       setLoading(false);
     }
@@ -36,13 +48,10 @@ export default function KdsTicketsView() {
 
   useEffect(() => { load(); }, [load]);
 
-  // Realtime: refetch when anything at our destination changes. The server
-  // pins KDS sockets to our destination, so any inbound event is relevant.
   useEffect(() => {
     const off = realtimeClient.on((ev: RealtimeEvent) => {
       if (ev.event === 'kds.upserted' || ev.event === 'order.item.status'
           || ev.event === 'order.items.fired' || ev.event === 'order.items.voided') {
-        // Debounce bursts (e.g. a multi-item fire triggers N events).
         if (refreshTimer.current) window.clearTimeout(refreshTimer.current);
         refreshTimer.current = window.setTimeout(load, 150);
       }
@@ -53,15 +62,14 @@ export default function KdsTicketsView() {
     };
   }, [load]);
 
-  // Fallback poll every 20s in case a WS event is missed.
   useEffect(() => {
     const id = window.setInterval(load, 20000);
     return () => window.clearInterval(id);
   }, [load]);
 
-  // Clock tick for the "elapsed" badge on each ticket.
+  // Clock tick every 1s so the recall window countdown and timer badges stay fresh.
   useEffect(() => {
-    const id = window.setInterval(() => setNow(Date.now()), 10000);
+    const id = window.setInterval(() => setNow(Date.now()), 1000);
     return () => window.clearInterval(id);
   }, []);
 
@@ -73,6 +81,42 @@ export default function KdsTicketsView() {
   const visible = useMemo(
     () => tickets.slice(page * PAGE_SIZE, (page + 1) * PAGE_SIZE),
     [tickets, page]
+  );
+
+  const runAction = async (
+    key: string,
+    fn: () => Promise<void>,
+    errorKey: string,
+    errorDefault: string
+  ) => {
+    if (pendingAction) return;
+    setPendingAction(key);
+    try {
+      await fn();
+      await load();
+    } catch (error: any) {
+      toast.error(error.response?.data?.error || t(errorKey, errorDefault));
+    } finally {
+      setPendingAction(null);
+    }
+  };
+
+  const handleBump = (item: KdsDisplayItem) => runAction(
+    `bump:${item.order_item_id}`,
+    async () => { const token = kdsRuntime.getToken(); if (!token) return; await kdsRuntime.bump(token, item.order_item_id); },
+    'kds.bump.error', 'Failed to bump item'
+  );
+
+  const handleRecall = (item: KdsDisplayItem) => runAction(
+    `recall:${item.order_item_id}`,
+    async () => { const token = kdsRuntime.getToken(); if (!token) return; await kdsRuntime.recall(token, item.order_item_id); },
+    'kds.recall.error', 'Failed to recall item'
+  );
+
+  const handleBumpAll = (ticket: KdsDisplayTicket) => runAction(
+    `bumpAll:${ticket.order_id}`,
+    async () => { const token = kdsRuntime.getToken(); if (!token) return; await kdsRuntime.bumpAll(token, ticket.order_id); },
+    'kds.bumpAll.error', 'Failed to bump all'
   );
 
   if (loading) {
@@ -91,7 +135,16 @@ export default function KdsTicketsView() {
     <div className="flex-1 flex flex-col">
       <div className="flex-1 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3 p-3 overflow-hidden">
         {visible.map(ticket => (
-          <KdsTicketCard key={ticket.order_id} ticket={ticket} now={now} />
+          <KdsTicketCard
+            key={ticket.order_id}
+            ticket={ticket}
+            now={now}
+            context={context}
+            pendingAction={pendingAction}
+            onBump={handleBump}
+            onRecall={handleRecall}
+            onBumpAll={handleBumpAll}
+          />
         ))}
       </div>
       {pageCount > 1 && (
@@ -117,19 +170,35 @@ export default function KdsTicketsView() {
   );
 }
 
-function formatElapsed(sinceIso: string, now: number, t: (k: string, def: string) => string): { text: string; color: string } {
+function formatElapsed(
+  sinceIso: string,
+  now: number,
+  warnMinutes: number,
+  lateMinutes: number,
+  t: (k: string, def: string) => string
+): { text: string; color: string } {
   const diffMs = Math.max(0, now - new Date(sinceIso).getTime());
   const mins = Math.floor(diffMs / 60000);
   let color = 'text-green-300';
-  if (mins >= 15) color = 'text-red-400';
-  else if (mins >= 8) color = 'text-amber-300';
+  if (mins >= lateMinutes) color = 'text-red-400';
+  else if (mins >= warnMinutes) color = 'text-amber-300';
   if (mins < 1) return { text: t('kds.tickets.justNow', 'just now'), color };
   return { text: `${mins}m`, color };
 }
 
-function KdsTicketCard({ ticket, now }: { ticket: KdsDisplayTicket; now: number }) {
+interface CardProps {
+  ticket: KdsDisplayTicket;
+  now: number;
+  context: KdsDeviceContext;
+  pendingAction: string | null;
+  onBump: (item: KdsDisplayItem) => void;
+  onRecall: (item: KdsDisplayItem) => void;
+  onBumpAll: (ticket: KdsDisplayTicket) => void;
+}
+
+function KdsTicketCard({ ticket, now, context, pendingAction, onBump, onRecall, onBumpAll }: CardProps) {
   const { t } = useTranslation();
-  const elapsed = formatElapsed(ticket.oldest_item_at, now, (k, d) => t(k, d));
+  const elapsed = formatElapsed(ticket.oldest_item_at, now, context.warn_after_minutes, context.late_after_minutes, (k, d) => t(k, d));
   const isTakeaway = ticket.order_type_code === 'takeaway' || ticket.order_type_code === 'delivery' || ticket.order_type_code === 'kiosk';
   const headerLabel = isTakeaway
     ? (ticket.order_type_code === 'delivery'
@@ -152,6 +221,8 @@ function KdsTicketCard({ ticket, now }: { ticket: KdsDisplayTicket; now: number 
   });
 
   const anyRush = ticket.items.some(i => i.priority > 0);
+  const hasActionable = ticket.items.some(i => i.status !== 'ready');
+  const bumpingAll = pendingAction === `bumpAll:${ticket.order_id}`;
 
   return (
     <div className={`rounded-lg overflow-hidden shadow-xl border-2 flex flex-col
@@ -162,8 +233,20 @@ function KdsTicketCard({ ticket, now }: { ticket: KdsDisplayTicket; now: number 
           <div className="text-lg font-bold leading-tight">{headerLabel}</div>
           <div className="text-xs opacity-75">#{ticket.order_number}{ticket.guest_name ? ` · ${ticket.guest_name}` : ''}</div>
         </div>
-        <div className={`flex items-center gap-1 text-sm font-mono ${elapsed.color}`}>
-          <Clock className="w-4 h-4" /> {elapsed.text}
+        <div className="flex items-center gap-2">
+          <div className={`flex items-center gap-1 text-sm font-mono ${elapsed.color}`}>
+            <Clock className="w-4 h-4" /> {elapsed.text}
+          </div>
+          {hasActionable && (
+            <button
+              onClick={() => onBumpAll(ticket)}
+              disabled={!!pendingAction}
+              title={t('kds.bump.all', 'Bump all')}
+              className="flex items-center gap-1 text-xs bg-green-600 hover:bg-green-500 disabled:opacity-40 text-white font-bold px-2 py-1 rounded">
+              {bumpingAll ? <Loader2 className="w-3.5 h-3.5 animate-spin" /> : <CheckCheck className="w-3.5 h-3.5" />}
+              {t('kds.bump.allShort', 'All')}
+            </button>
+          )}
         </div>
       </header>
       <div className="bg-slate-900 text-white flex-1 divide-y divide-slate-800">
@@ -176,37 +259,15 @@ function KdsTicketCard({ ticket, now }: { ticket: KdsDisplayTicket; now: number 
             )}
             <ul className="space-y-2">
               {items.map(item => (
-                <li key={item.kds_id}>
-                  <div className="flex items-start justify-between gap-2">
-                    <div className="flex-1">
-                      <div className="text-base font-semibold leading-tight">
-                        <span className="font-mono text-amber-300">{item.quantity}×</span>{' '}
-                        {item.menu_item_name || t('kds.tickets.unknownItem', 'Unknown item')}
-                      </div>
-                      {item.selected_addons && item.selected_addons.length > 0 && (
-                        <ul className="text-xs text-slate-300 mt-0.5 ml-4 list-disc">
-                          {item.selected_addons.map((a, i) => (
-                            <li key={i}>
-                              {a.name || t('kds.tickets.addon', 'Add-on')}
-                              {a.quantity && a.quantity > 1 ? ` ×${a.quantity}` : ''}
-                            </li>
-                          ))}
-                        </ul>
-                      )}
-                      {item.selected_ingredients && item.selected_ingredients.some(i => i.removed) && (
-                        <ul className="text-xs text-red-300 mt-0.5 ml-4 list-disc">
-                          {item.selected_ingredients.filter(i => i.removed).map((ing, i) => (
-                            <li key={i}>{t('kds.tickets.noIngredient', 'NO')} {ing.name || ''}</li>
-                          ))}
-                        </ul>
-                      )}
-                      {item.notes && (
-                        <div className="text-xs italic text-amber-200 mt-1">"{item.notes}"</div>
-                      )}
-                    </div>
-                    <StatusPill status={item.status} />
-                  </div>
-                </li>
+                <KdsItemRow
+                  key={item.kds_id}
+                  item={item}
+                  now={now}
+                  context={context}
+                  pendingAction={pendingAction}
+                  onBump={onBump}
+                  onRecall={onRecall}
+                />
               ))}
             </ul>
           </div>
@@ -216,16 +277,84 @@ function KdsTicketCard({ ticket, now }: { ticket: KdsDisplayTicket; now: number 
   );
 }
 
-function StatusPill({ status }: { status: KdsDisplayItem['status'] }) {
+function KdsItemRow({
+  item, now, context, pendingAction, onBump, onRecall,
+}: {
+  item: KdsDisplayItem;
+  now: number;
+  context: KdsDeviceContext;
+  pendingAction: string | null;
+  onBump: (item: KdsDisplayItem) => void;
+  onRecall: (item: KdsDisplayItem) => void;
+}) {
   const { t } = useTranslation();
-  const map: Record<KdsDisplayItem['status'], string> = {
-    pending: 'bg-slate-600 text-white',
-    preparing: 'bg-amber-500 text-black',
-    ready: 'bg-green-500 text-black',
-  };
+  const isReady = item.status === 'ready';
+  const bumping = pendingAction === `bump:${item.order_item_id}`;
+  const recalling = pendingAction === `recall:${item.order_item_id}`;
+
+  // Recall window countdown
+  let recallSecondsLeft: number | null = null;
+  if (isReady && item.completed_at) {
+    const elapsedSec = (now - new Date(item.completed_at).getTime()) / 1000;
+    recallSecondsLeft = Math.max(0, Math.ceil(context.recall_window_seconds - elapsedSec));
+  }
+  const canRecall = isReady && (recallSecondsLeft ?? 0) > 0;
+
   return (
-    <span className={`text-[10px] uppercase font-bold px-2 py-0.5 rounded ${map[status]}`}>
-      {t(`kds.tickets.status.${status}`, status)}
-    </span>
+    <li>
+      <div className={`flex items-start justify-between gap-2 ${isReady ? 'opacity-70' : ''}`}>
+        <div className="flex-1">
+          <div className={`text-base font-semibold leading-tight ${isReady ? 'line-through' : ''}`}>
+            <span className="font-mono text-amber-300">{item.quantity}×</span>{' '}
+            {item.menu_item_name || t('kds.tickets.unknownItem', 'Unknown item')}
+          </div>
+          {item.selected_addons && item.selected_addons.length > 0 && (
+            <ul className="text-xs text-slate-300 mt-0.5 ml-4 list-disc">
+              {item.selected_addons.map((a, i) => (
+                <li key={i}>
+                  {a.name || t('kds.tickets.addon', 'Add-on')}
+                  {a.quantity && a.quantity > 1 ? ` ×${a.quantity}` : ''}
+                </li>
+              ))}
+            </ul>
+          )}
+          {item.selected_ingredients && item.selected_ingredients.some(i => i.removed) && (
+            <ul className="text-xs text-red-300 mt-0.5 ml-4 list-disc">
+              {item.selected_ingredients.filter(i => i.removed).map((ing, i) => (
+                <li key={i}>{t('kds.tickets.noIngredient', 'NO')} {ing.name || ''}</li>
+              ))}
+            </ul>
+          )}
+          {item.notes && (
+            <div className="text-xs italic text-amber-200 mt-1">"{item.notes}"</div>
+          )}
+        </div>
+        <div className="flex flex-col items-end gap-1">
+          {isReady ? (
+            canRecall ? (
+              <button
+                onClick={() => onRecall(item)}
+                disabled={!!pendingAction}
+                className="flex items-center gap-1 text-[11px] bg-slate-600 hover:bg-slate-500 disabled:opacity-40 text-white px-2 py-1 rounded">
+                {recalling ? <Loader2 className="w-3 h-3 animate-spin" /> : <Undo2 className="w-3 h-3" />}
+                {t('kds.recall.button', 'Recall')} · {recallSecondsLeft}s
+              </button>
+            ) : (
+              <span className="text-[10px] uppercase font-bold px-2 py-0.5 rounded bg-green-500 text-black">
+                {t('kds.tickets.status.ready', 'ready')}
+              </span>
+            )
+          ) : (
+            <button
+              onClick={() => onBump(item)}
+              disabled={!!pendingAction}
+              className="flex items-center gap-1 text-xs bg-green-600 hover:bg-green-500 disabled:opacity-40 text-white font-bold px-3 py-1.5 rounded">
+              {bumping ? <Loader2 className="w-3.5 h-3.5 animate-spin" /> : <Check className="w-3.5 h-3.5" />}
+              {t('kds.bump.button', 'Bump')}
+            </button>
+          )}
+        </div>
+      </div>
+    </li>
   );
 }

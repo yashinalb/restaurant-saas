@@ -2,6 +2,7 @@ import { Request, Response } from 'express';
 import { TenantAuthRequest } from '../middleware/tenantAuth.js';
 import { KdsDeviceService, KdsDeviceContext } from '../services/kdsDeviceService.js';
 import { KdsDisplayService } from '../services/kdsDisplayService.js';
+import { KdsActionsService } from '../services/kdsActionsService.js';
 
 export interface KdsDeviceRequest extends Request {
   kdsDevice?: KdsDeviceContext;
@@ -89,6 +90,51 @@ export class KdsDeviceController {
     } catch (error: any) {
       console.error('[KdsDeviceController] tickets error:', error);
       res.status(500).json({ error: 'Failed to fetch tickets' });
+    }
+  }
+
+  static async bump(req: KdsDeviceRequest, res: Response): Promise<void> {
+    if (!req.kdsDevice) { res.status(401).json({ error: 'Not paired' }); return; }
+    try {
+      const itemId = parseInt(req.params.itemId);
+      if (isNaN(itemId)) { res.status(400).json({ error: 'Invalid item id' }); return; }
+      const d = req.kdsDevice;
+      const result = await KdsActionsService.bump(d.tenant_id, d.store_id, d.destination_id, itemId);
+      res.json({ data: result });
+    } catch (error: any) {
+      if (error.status) { res.status(error.status).json({ error: error.message }); return; }
+      console.error('[KdsDeviceController] bump error:', error);
+      res.status(500).json({ error: 'Failed to bump item' });
+    }
+  }
+
+  static async recall(req: KdsDeviceRequest, res: Response): Promise<void> {
+    if (!req.kdsDevice) { res.status(401).json({ error: 'Not paired' }); return; }
+    try {
+      const itemId = parseInt(req.params.itemId);
+      if (isNaN(itemId)) { res.status(400).json({ error: 'Invalid item id' }); return; }
+      const d = req.kdsDevice;
+      const result = await KdsActionsService.recall(d.tenant_id, d.store_id, d.destination_id, itemId);
+      res.json({ data: result });
+    } catch (error: any) {
+      if (error.status) { res.status(error.status).json({ error: error.message }); return; }
+      console.error('[KdsDeviceController] recall error:', error);
+      res.status(500).json({ error: 'Failed to recall item' });
+    }
+  }
+
+  static async bumpAll(req: KdsDeviceRequest, res: Response): Promise<void> {
+    if (!req.kdsDevice) { res.status(401).json({ error: 'Not paired' }); return; }
+    try {
+      const orderId = parseInt(req.params.orderId);
+      if (isNaN(orderId)) { res.status(400).json({ error: 'Invalid order id' }); return; }
+      const d = req.kdsDevice;
+      const result = await KdsActionsService.bumpAll(d.tenant_id, d.store_id, d.destination_id, orderId);
+      res.json({ data: result });
+    } catch (error: any) {
+      if (error.status) { res.status(error.status).json({ error: error.message }); return; }
+      console.error('[KdsDeviceController] bumpAll error:', error);
+      res.status(500).json({ error: 'Failed to bump all' });
     }
   }
 
