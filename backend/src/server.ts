@@ -69,6 +69,7 @@ import paymentStatusRoutes from './routes/paymentStatus.routes';
 import ingredientRoutes from './routes/ingredient.routes';
 import expenseCategoryRoutes from './routes/expenseCategory.routes';
 import menuCategoryRoutes from './routes/menuCategory.routes';
+import kdsDeviceRoutes, { kdsDeviceRuntimeRouter, kdsDevicePublicRouter } from './routes/kdsDevice.routes';
 
 // Realtime (44.16 — WebSocket order sync)
 import { attachRealtime } from './services/realtimeService.js';
@@ -234,6 +235,11 @@ app.use('/api/tenant', cashRegisterSessionRoutes);
 app.use('/api/tenant', posRoutes);
 app.use('/api/tenant', auditLogRoutes);
 app.use('/api/public', publicRoutes);
+app.use('/api/public', kdsDevicePublicRouter);
+
+// KDS device management (admin) + runtime (device-authed)
+app.use('/api/tenant', kdsDeviceRoutes);
+app.use('/api/kds', kdsDeviceRuntimeRouter);
 
 // ============================================
 // ERROR HANDLING

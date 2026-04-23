@@ -72,6 +72,8 @@ import PosLoginPage from './pages/pos/PosLoginPage';
 import PosHomePage from './pages/pos/PosHomePage';
 import PosFloorPage from './pages/pos/PosFloorPage';
 import PosOrderPage from './pages/pos/PosOrderPage';
+import KdsShell from './pages/kds/KdsShell';
+import TenantKdsDevicesPage from './pages/TenantKdsDevicesPage';
 
 
 function ProtectedRoute({ children }: { children: React.ReactNode }) {
@@ -94,6 +96,9 @@ function App() {
         <Route path="/reset-password" element={<ResetPasswordPage />} />
         <Route path="/accept-invitation" element={<AcceptInvitationPage />} />
         <Route path="/invoice" element={<InvoiceViewerPage />} />
+
+        {/* KDS app (45.1) — no admin auth; uses its own device pairing token. */}
+        <Route path="/kds" element={<KdsShell />} />
 
         <Route path="/pos" element={
           <ProtectedRoute>
@@ -168,6 +173,7 @@ function App() {
           <Route path="tenant/expense-sources" element={<TenantExpenseSourcesPage />} />
           <Route path="tenant/expenses" element={<ExpensesPage />} />
           <Route path="tenant/kds-orders" element={<KdsOrdersPage />} />
+          <Route path="tenant/kds-devices" element={<TenantKdsDevicesPage />} />
           <Route path="tenant/daily-reports" element={<DailyReportSnapshotsPage />} />
           <Route path="tenant/cash-sessions" element={<CashRegisterSessionsPage />} />
           <Route path="tenant/audit-log" element={<AuditLogPage />} />

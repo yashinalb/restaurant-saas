@@ -2,6 +2,7 @@ import { WebSocketServer, WebSocket } from 'ws';
 import { Server as HttpServer, IncomingMessage } from 'http';
 import { URL } from 'url';
 import { verifyAccessToken } from '../utils/jwt.js';
+import { KdsDeviceService } from './kdsDeviceService.js';
 
 /**
  * Realtime Order Sync (TODO 44.16)
@@ -63,14 +64,32 @@ function sendJson(ws: WebSocket, data: any): void {
   }
 }
 
-function authenticate(req: IncomingMessage): { tenantId: number; adminUserId?: number } | null {
+async function authenticate(req: IncomingMessage): Promise<
+  | { tenantId: number; adminUserId?: number; forcedChannels?: string[] }
+  | null
+> {
   try {
     const url = new URL(req.url || '', 'http://localhost');
+
+    // KDS device auth (45.1): device_token binds to a specific tenant + destination.
+    const deviceToken = url.searchParams.get('device_token');
+    if (deviceToken) {
+      const ctx = await KdsDeviceService.authenticateToken(deviceToken);
+      if (!ctx) return null;
+      return {
+        tenantId: ctx.tenant_id,
+        forcedChannels: [
+          `tenant:${ctx.tenant_id}`,
+          `tenant:${ctx.tenant_id}:store:${ctx.store_id}`,
+          `tenant:${ctx.tenant_id}:destination:${ctx.destination_id}`,
+        ],
+      };
+    }
+
     const token = url.searchParams.get('token');
     const tenantId = Number(url.searchParams.get('tenant_id'));
     if (!token || !tenantId) return null;
     const payload = verifyAccessToken(token);
-    // Payload shape comes from authService; admin user id lives on `id`.
     return { tenantId, adminUserId: (payload as any)?.id ?? null };
   } catch {
     return null;
@@ -113,18 +132,21 @@ export function attachRealtime(server: HttpServer): void {
   if (wss) return;
   wss = new WebSocketServer({ server, path: '/ws/realtime' });
 
-  wss.on('connection', (ws: WebSocket, req: IncomingMessage) => {
-    const auth = authenticate(req);
+  wss.on('connection', async (ws: WebSocket, req: IncomingMessage) => {
+    const auth = await authenticate(req);
     if (!auth) {
       sendJson(ws, { event: 'error', message: 'unauthorized' });
       ws.close(1008, 'unauthorized');
       return;
     }
 
+    const initialChannels = auth.forcedChannels && auth.forcedChannels.length > 0
+      ? new Set(auth.forcedChannels)
+      : new Set([tenantChannel(auth.tenantId)]);
     const ctx: ClientContext = {
       tenantId: auth.tenantId,
       adminUserId: auth.adminUserId ?? null,
-      channels: new Set([tenantChannel(auth.tenantId)]),
+      channels: initialChannels,
       alive: true,
     };
     clients.set(ws, ctx);

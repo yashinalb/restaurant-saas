@@ -596,7 +596,7 @@ Shared conventions:
 - Cook-facing UI — large tap targets, high-contrast badges, no waiter / payment concepts.
 - Gated by a new `kds` permission module: `kds.access`, `kds.bump`, `kds.recall`, `kds.manage_device`.
 
-### [ ] 45.1 KDS Shell & Device Pairing
+### [x] 45.1 KDS Shell & Device Pairing
 
 Route group `/kds/*`, first-run pairing flow (enter a one-time code generated from the tenant admin; binds the device to a `store_id` + `tenant_order_destination_id`). Persistent session; auto-reconnect on network drop. Status bar with destination name, network indicator, and "un-pair device" action.
 

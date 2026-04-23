@@ -37,18 +37,43 @@ class RealtimeClient {
   private manualClose = false;
   private reconnectTimer: ReturnType<typeof setTimeout> | null = null;
   private heartbeat: ReturnType<typeof setInterval> | null = null;
+  private mode: 'admin' | 'kds' = 'admin';
+  private kdsDeviceToken: string | null = null;
+
+  isConnected(): boolean {
+    return this.ws?.readyState === WebSocket.OPEN;
+  }
+
+  connectAsKdsDevice(deviceToken: string): void {
+    this.mode = 'kds';
+    this.kdsDeviceToken = deviceToken;
+    this.desiredSubscription = {}; // Channels are forced server-side for KDS.
+    this.manualClose = false;
+    this.openSocket();
+  }
 
   connect(): void {
+    this.mode = 'admin';
+    this.kdsDeviceToken = null;
     this.manualClose = false;
-    const token = localStorage.getItem('accessToken');
-    const tenantId = localStorage.getItem('selectedTenantId');
-    if (!token || !tenantId) return;
+    this.openSocket();
+  }
 
+  private openSocket(): void {
     if (this.ws && (this.ws.readyState === WebSocket.OPEN || this.ws.readyState === WebSocket.CONNECTING)) {
       return;
     }
 
-    const url = `${toWsUrl(API_BASE_URL)}/ws/realtime?token=${encodeURIComponent(token)}&tenant_id=${encodeURIComponent(tenantId)}`;
+    let url: string;
+    if (this.mode === 'kds') {
+      if (!this.kdsDeviceToken) return;
+      url = `${toWsUrl(API_BASE_URL)}/ws/realtime?device_token=${encodeURIComponent(this.kdsDeviceToken)}`;
+    } else {
+      const token = localStorage.getItem('accessToken');
+      const tenantId = localStorage.getItem('selectedTenantId');
+      if (!token || !tenantId) return;
+      url = `${toWsUrl(API_BASE_URL)}/ws/realtime?token=${encodeURIComponent(token)}&tenant_id=${encodeURIComponent(tenantId)}`;
+    }
     const ws = new WebSocket(url);
     this.ws = ws;
 
@@ -86,7 +111,7 @@ class RealtimeClient {
     this.reconnectAttempts += 1;
     this.reconnectTimer = setTimeout(() => {
       this.reconnectTimer = null;
-      this.connect();
+      this.openSocket();
     }, delay);
   }
 
