@@ -763,4 +763,4 @@ Port the HeroBanner from supermarket-saas with:
 | **TOTAL** | **107** | **All migrated** |
 
 
-### [ ] 46. look at C:\laragon\www\supermarket-saas an dthere for products we use enchance image here where ever there is a image I want to use the same system
+### [ ] 46. look at C:\laragon\www\supermarket-saas an dthere for products we use enchance image here where ever there is a image I want to use the same system in this project lets do that ofcourse for drinks and food
