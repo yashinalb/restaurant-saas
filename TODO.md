@@ -761,3 +761,6 @@ Port the HeroBanner from supermarket-saas with:
 | 013 KDS & Reporting | 3 | DONE (migrated) |
 | 014 Master Categories & Addons | 6 | DONE (migrated + seeded) |
 | **TOTAL** | **107** | **All migrated** |
+
+
+### [ ] 46. look at C:\laragon\www\supermarket-saas an dthere for products we use enchance image here where ever there is a image I want to use the same system
