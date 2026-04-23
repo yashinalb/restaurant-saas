@@ -1,10 +1,11 @@
 import { useCallback, useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { toast } from 'sonner';
-import { Loader2, Wifi, WifiOff, LogOut } from 'lucide-react';
+import { Loader2, Wifi, WifiOff, LogOut, Volume2, VolumeX } from 'lucide-react';
 import { kdsRuntime, KdsDeviceContext } from '../../services/frontend-kdsDeviceService';
 import { realtimeClient } from '../../services/realtimeClient';
 import KdsTicketsView from './KdsTicketsView';
+import { kdsAudio } from './kdsAudio';
 
 /**
  * KDS Shell (45.1).
@@ -24,6 +25,10 @@ export default function KdsShell() {
   // Network indicator state
   const [online, setOnline] = useState<boolean>(typeof navigator !== 'undefined' ? navigator.onLine : true);
   const [wsConnected, setWsConnected] = useState(false);
+
+  // Audio controls (45.5) — persisted in localStorage.
+  const [muted, setMuted] = useState<boolean>(kdsAudio.isMuted());
+  const [volume, setVolume] = useState<number>(kdsAudio.getVolume());
 
   const bootstrap = useCallback(async () => {
     setLoading(true);
@@ -161,6 +166,30 @@ export default function KdsShell() {
           </div>
         </div>
         <div className="flex items-center gap-3">
+          <div className="flex items-center gap-2 text-xs">
+            <button
+              onClick={() => {
+                kdsAudio.unlock();
+                const next = !muted;
+                kdsAudio.setMuted(next);
+                setMuted(next);
+              }}
+              className="p-1.5 bg-slate-700 hover:bg-slate-600 rounded"
+              title={muted ? t('kds.audio.unmute', 'Unmute') : t('kds.audio.mute', 'Mute')}>
+              {muted ? <VolumeX className="w-4 h-4" /> : <Volume2 className="w-4 h-4" />}
+            </button>
+            <input
+              type="range" min={0} max={1} step={0.05} value={volume}
+              onChange={e => {
+                const v = Number(e.target.value);
+                kdsAudio.setVolume(v);
+                setVolume(v);
+                if (muted && v > 0) { kdsAudio.setMuted(false); setMuted(false); }
+              }}
+              className="w-20 accent-amber-500"
+              title={t('kds.audio.volume', 'Volume')}
+            />
+          </div>
           <div className={`flex items-center gap-1.5 text-xs px-2 py-1 rounded
             ${connected ? 'bg-green-900/50 text-green-300' : 'bg-red-900/50 text-red-300'}`}>
             {connected ? <Wifi className="w-4 h-4" /> : <WifiOff className="w-4 h-4" />}

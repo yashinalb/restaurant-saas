@@ -2,6 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
+/* KDS 45.5 — pulsing red border on the single most-overdue ticket. */
+@keyframes kdsFlashBorder {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.9); border-color: rgb(239, 68, 68); }
+  50%      { box-shadow: 0 0 0 6px rgba(239, 68, 68, 0.0); border-color: rgb(185, 28, 28); }
+}
+.kds-flash-border {
+  animation: kdsFlashBorder 1.2s ease-in-out infinite;
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',

@@ -9,6 +9,7 @@ import {
   KdsDeviceContext,
 } from '../../services/frontend-kdsDeviceService';
 import { realtimeClient, RealtimeEvent } from '../../services/realtimeClient';
+import { kdsAudio } from './kdsAudio';
 
 /**
  * KDS Display View (45.2 + 45.3).
@@ -32,6 +33,13 @@ export default function KdsTicketsView({ context }: Props) {
   const [now, setNow] = useState(Date.now());
   const [pendingAction, setPendingAction] = useState<string | null>(null);
   const refreshTimer = useRef<number | null>(null);
+
+  // Audio-alert bookkeeping (45.5): remember which tickets we've already
+  // chimed on, and which have crossed the overdue threshold, so we fire
+  // each sound exactly once per ticket state transition.
+  const knownOrderIds = useRef<Set<number>>(new Set());
+  const seeded = useRef<boolean>(false);
+  const overdueFiredAt = useRef<Map<number, number>>(new Map());
 
   const load = useCallback(async () => {
     const token = kdsRuntime.getToken();
@@ -72,6 +80,58 @@ export default function KdsTicketsView({ context }: Props) {
     const id = window.setInterval(() => setNow(Date.now()), 1000);
     return () => window.clearInterval(id);
   }, []);
+
+  // Detect new tickets + overdue transitions whenever the list changes.
+  useEffect(() => {
+    const lateMs = context.late_after_minutes * 60000;
+    const currentIds = new Set(tickets.map(t => t.order_id));
+
+    if (seeded.current) {
+      for (const tk of tickets) {
+        if (!knownOrderIds.current.has(tk.order_id)) {
+          kdsAudio.newTicket();
+          break; // one chime per refresh is enough; multiple-at-once shouldn't spam.
+        }
+      }
+    } else {
+      seeded.current = true; // Initial load — don't chime for existing tickets.
+    }
+
+    // Overdue detection — re-arm at most every 20s per ticket.
+    const nowMs = Date.now();
+    for (const tk of tickets) {
+      const elapsed = nowMs - new Date(tk.oldest_item_at).getTime();
+      if (elapsed >= lateMs) {
+        const firedAt = overdueFiredAt.current.get(tk.order_id) ?? 0;
+        if (nowMs - firedAt >= 20000) {
+          kdsAudio.overdue();
+          overdueFiredAt.current.set(tk.order_id, nowMs);
+          break; // one overdue chime per tick
+        }
+      } else {
+        overdueFiredAt.current.delete(tk.order_id);
+      }
+    }
+
+    knownOrderIds.current = currentIds;
+    // Garbage-collect fired-at entries for tickets that have cleared
+    for (const id of Array.from(overdueFiredAt.current.keys())) {
+      if (!currentIds.has(id)) overdueFiredAt.current.delete(id);
+    }
+  }, [tickets, context.late_after_minutes]);
+
+  // The single most-overdue ticket gets a flashing border (45.5).
+  const mostOverdueOrderId = useMemo<number | null>(() => {
+    const lateMs = context.late_after_minutes * 60000;
+    let worstAt = Infinity;
+    let worstId: number | null = null;
+    for (const tk of tickets) {
+      const t0 = new Date(tk.oldest_item_at).getTime();
+      const elapsed = now - t0;
+      if (elapsed >= lateMs && t0 < worstAt) { worstAt = t0; worstId = tk.order_id; }
+    }
+    return worstId;
+  }, [tickets, now, context.late_after_minutes]);
 
   const pageCount = Math.max(1, Math.ceil(tickets.length / PAGE_SIZE));
   useEffect(() => {
@@ -141,6 +201,7 @@ export default function KdsTicketsView({ context }: Props) {
             now={now}
             context={context}
             pendingAction={pendingAction}
+            isMostOverdue={ticket.order_id === mostOverdueOrderId}
             onBump={handleBump}
             onRecall={handleRecall}
             onBumpAll={handleBumpAll}
@@ -191,12 +252,13 @@ interface CardProps {
   now: number;
   context: KdsDeviceContext;
   pendingAction: string | null;
+  isMostOverdue: boolean;
   onBump: (item: KdsDisplayItem) => void;
   onRecall: (item: KdsDisplayItem) => void;
   onBumpAll: (ticket: KdsDisplayTicket) => void;
 }
 
-function KdsTicketCard({ ticket, now, context, pendingAction, onBump, onRecall, onBumpAll }: CardProps) {
+function KdsTicketCard({ ticket, now, context, pendingAction, isMostOverdue, onBump, onRecall, onBumpAll }: CardProps) {
   const { t } = useTranslation();
   const elapsed = formatElapsed(ticket.oldest_item_at, now, context.warn_after_minutes, context.late_after_minutes, (k, d) => t(k, d));
   const isTakeaway = ticket.order_type_code === 'takeaway' || ticket.order_type_code === 'delivery' || ticket.order_type_code === 'kiosk';
@@ -239,7 +301,7 @@ function KdsTicketCard({ ticket, now, context, pendingAction, onBump, onRecall, 
 
   return (
     <div className={`rounded-lg overflow-hidden shadow-xl border-2 flex flex-col
-      ${anyRush ? 'border-red-500' : 'border-slate-600'}`}>
+      ${isMostOverdue ? 'border-red-500 kds-flash-border' : anyRush ? 'border-red-500' : 'border-slate-600'}`}>
       <header className={`flex items-center justify-between px-3 py-2
         ${anyRush ? 'bg-red-700' : 'bg-slate-700'} text-white`}>
         <div>

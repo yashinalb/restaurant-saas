@@ -612,7 +612,7 @@ Card grid of active tickets for the paired destination. Each ticket shows table 
 
 Group items on a ticket by seat number (so the cook sees "Seat 1: burger, Seat 2: steak"). Support courses (appetizer / main / dessert) with a "hold" flag that keeps the main course hidden until the appetizer is bumped. Course separator between groups on the card.
 
-### [ ] 45.5 Audio Alerts & Overdue Escalation
+### [x] 45.5 Audio Alerts & Overdue Escalation
 
 Chime on each new ticket; a different chime on overdue (past the red threshold). Volume + mute. Flashing border on the single most-overdue ticket. Optional notification-webhook hook on tickets overdue more than X minutes (config stub for now — wire later).
 
