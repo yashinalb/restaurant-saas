@@ -354,6 +354,30 @@ export class TenantBannerService {
   }
 
   /**
+   * Record a banner impression or click from the storefront.
+   * Verifies the banner belongs to the given tenant before inserting.
+   */
+  static async recordInteraction(
+    tenantId: number,
+    bannerId: number,
+    interactionType: 'impression' | 'click',
+    ipAddress: string | null,
+    userAgent: string | null,
+  ): Promise<void> {
+    const [rows] = await pool.query<RowDataPacket[]>(
+      'SELECT id FROM tenant_banners WHERE id = ? AND tenant_id = ? LIMIT 1',
+      [bannerId, tenantId]
+    );
+    if (rows.length === 0) throw new Error('Banner not found');
+
+    await pool.query(
+      `INSERT INTO banner_interactions (tenant_id, banner_id, interaction_type, ip_address, user_agent)
+       VALUES (?, ?, ?, ?, ?)`,
+      [tenantId, bannerId, interactionType, ipAddress, userAgent]
+    );
+  }
+
+  /**
    * Storefront: get active banners of a given type for a tenant.
    * No auth — caller must supply a verified tenantId (resolved from subdomain/slug).
    */

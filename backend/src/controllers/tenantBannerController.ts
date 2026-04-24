@@ -158,6 +158,37 @@ export class TenantBannerController {
   }
 
   /**
+   * Storefront banner interaction tracker — no auth.
+   * URL: POST /api/public/:tenantSlug/banners/:id/track  body: { interaction_type: 'impression' | 'click' }
+   */
+  static async trackPublicInteraction(req: Request, res: Response): Promise<void> {
+    try {
+      const tenantSlug = req.params.tenantSlug;
+      const bannerId = parseInt(req.params.id);
+      const type = req.body?.interaction_type;
+      if (!tenantSlug || isNaN(bannerId) || (type !== 'impression' && type !== 'click')) {
+        res.status(400).json({ error: 'Invalid tracking payload' }); return;
+      }
+
+      const [rows] = await pool.query<RowDataPacket[]>(
+        'SELECT id FROM tenants WHERE slug = ? AND is_active = 1 LIMIT 1',
+        [tenantSlug]
+      );
+      if (rows.length === 0) { res.status(404).json({ error: 'Tenant not found' }); return; }
+
+      const ip = (req.headers['x-forwarded-for'] as string)?.split(',')[0].trim() || req.ip || null;
+      const ua = (req.headers['user-agent'] as string) || null;
+
+      await TenantBannerService.recordInteraction(Number(rows[0].id), bannerId, type, ip, ua);
+      res.status(204).end();
+    } catch (error: any) {
+      if (error.message === 'Banner not found') { res.status(404).json({ error: error.message }); return; }
+      console.error('[TenantBannerController] trackPublicInteraction error:', error);
+      res.status(500).json({ error: 'Failed to record interaction' });
+    }
+  }
+
+  /**
    * Public storefront endpoint — no auth.
    * Resolves tenant by slug/subdomain and returns active banners of given type.
    * URL: GET /api/public/:tenantSlug/banners/type/:type

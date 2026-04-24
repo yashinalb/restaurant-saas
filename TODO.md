@@ -736,15 +736,12 @@ Key pages:
 - **ContactPage** (`/contact`) — store info, hours, map
 - **CustomPage** (`/page/:slug`) — block-builder CMS pages
 
-### [ ] 43.3 Storefront Banner Component (HeroBanner)
+### [x] 43.3 Storefront Banner Component (HeroBanner)
 
-Port the HeroBanner from supermarket-saas with:
-- Dynamic text positioning (9 positions + mobile override)
-- Responsive font sizes from `text_style` JSON
-- Desktop/mobile separate images (`object-contain`)
-- Auto-advance carousel with arrows + dots
-- Banner impression/click analytics tracking
-- Boolean conversion for MySQL tinyint fields (prevent "0" rendering)
+- [storefront/src/components/home/HeroBanner.tsx](storefront/src/components/home/HeroBanner.tsx) — dynamic 9-position text grid with `max-sm:` mobile overrides, `text_style` JSON font sizing (title/subtitle/description × desktop/mobile), separate desktop + mobile images with `object-contain`, 6s auto-advance, ChevronLeft/Right arrows + dot pager, description renders via `dangerouslySetInnerHTML`.
+- [storefront/src/utils/analytics.ts](storefront/src/utils/analytics.ts) — `trackBannerImpression` (deduped per device via localStorage) + `trackBannerClick` (never deduped). Fire-and-forget.
+- Backend: [migration 020_create_banner_interactions](backend/src/migrations/020_create_banner_interactions.ts), `TenantBannerService.recordInteraction`, `POST /api/public/:tenantSlug/banners/:id/track` (no auth).
+- Boolean fields (`show_cta`, `show_on_mobile`, `show_on_desktop`, `is_dismissible`, `is_active`) are already cast server-side in `getPublicBannersByType`, so tinyint `0`/`1` never reach the renderer as strings/numbers.
 
 ---
 
