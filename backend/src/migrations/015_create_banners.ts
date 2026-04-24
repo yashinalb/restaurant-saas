@@ -58,11 +58,19 @@ export async function up(connection: mysql.Connection): Promise<void> {
     ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci
   `);
 
+  await connection.query(`
+    INSERT IGNORE INTO permissions (name, display_name, description, module, is_active) VALUES
+      ('banners.view', 'View Banners', 'Can view storefront banners', 'banners', 1),
+      ('banners.manage', 'Manage Banners', 'Can create, edit, delete, and upload banner images', 'banners', 1)
+  `);
+
   console.log('  ✓ tenant_banners');
   console.log('  ✓ tenant_banner_translations');
+  console.log('  ✓ banners.view / banners.manage permissions');
 }
 
 export async function down(connection: mysql.Connection): Promise<void> {
+  await connection.query(`DELETE FROM permissions WHERE name IN ('banners.view','banners.manage')`);
   await connection.query('DROP TABLE IF EXISTS tenant_banner_translations');
   await connection.query('DROP TABLE IF EXISTS tenant_banners');
 }

@@ -274,4 +274,120 @@ export class TenantBannerService {
     await pool.query('UPDATE tenant_banners SET is_active = ? WHERE id = ?', [newValue, bannerId]);
     return { message: newValue ? 'Banner activated' : 'Banner deactivated', data: { id: bannerId, is_active: !!newValue } };
   }
+
+  static async updateSortOrder(tenantId: number, items: Array<{ id: number; sort_order: number }>) {
+    const connection = await pool.getConnection();
+    try {
+      await connection.beginTransaction();
+      for (const item of items) {
+        await connection.query(
+          'UPDATE tenant_banners SET sort_order = ? WHERE id = ? AND tenant_id = ?',
+          [item.sort_order, item.id, tenantId]
+        );
+      }
+      await connection.commit();
+      return { message: 'Sort order updated successfully' };
+    } catch (err) {
+      await connection.rollback();
+      throw err;
+    } finally {
+      connection.release();
+    }
+  }
+
+  static async getStats(tenantId: number) {
+    const [stats] = await pool.query<RowDataPacket[]>(
+      `SELECT
+        COUNT(*) AS total,
+        SUM(CASE WHEN is_active = 1 AND (valid_from IS NULL OR valid_from <= NOW()) AND (valid_to IS NULL OR valid_to >= NOW()) THEN 1 ELSE 0 END) AS active,
+        SUM(CASE WHEN is_active = 1 AND valid_from > NOW() THEN 1 ELSE 0 END) AS scheduled,
+        SUM(CASE WHEN valid_to IS NOT NULL AND valid_to < NOW() THEN 1 ELSE 0 END) AS expired,
+        SUM(CASE WHEN banner_type = 'hero' THEN 1 ELSE 0 END) AS hero_count,
+        SUM(CASE WHEN banner_type = 'promotional' THEN 1 ELSE 0 END) AS promotional_count
+       FROM tenant_banners
+       WHERE tenant_id = ?`,
+      [tenantId]
+    );
+    return stats[0];
+  }
+
+  static async duplicate(tenantId: number, bannerId: number) {
+    const original = await this.getById(tenantId, bannerId);
+    const translations = (original.translations || []).map((t: any) => ({
+      language_id: t.language_id,
+      title: t.title ? `${t.title} (Copy)` : null,
+      subtitle: t.subtitle,
+      description: t.description,
+      cta_text: t.cta_text,
+      alt_text: t.alt_text,
+    }));
+
+    const newId = await this.create(tenantId, {
+      banner_type: original.banner_type,
+      image_url: original.image_url,
+      mobile_image_url: original.mobile_image_url,
+      background_color: original.background_color,
+      text_color: original.text_color,
+      text_position: original.text_position,
+      text_alignment: original.text_alignment,
+      text_position_mobile: original.text_position_mobile,
+      text_alignment_mobile: original.text_alignment_mobile,
+      text_style: original.text_style,
+      link_type: original.link_type,
+      link_menu_item_id: original.link_menu_item_id,
+      link_menu_category_id: original.link_menu_category_id,
+      link_page_code: original.link_page_code,
+      link_url: original.link_url,
+      link_target: original.link_target,
+      show_cta: !!original.show_cta,
+      cta_style: original.cta_style,
+      valid_from: null,
+      valid_to: null,
+      show_on_mobile: !!original.show_on_mobile,
+      show_on_desktop: !!original.show_on_desktop,
+      is_dismissible: !!original.is_dismissible,
+      is_active: false,
+      translations,
+    });
+
+    return await this.getById(tenantId, newId);
+  }
+
+  /**
+   * Storefront: get active banners of a given type for a tenant.
+   * No auth — caller must supply a verified tenantId (resolved from subdomain/slug).
+   */
+  static async getPublicBannersByType(tenantId: number, bannerType: string) {
+    const [banners] = await pool.query<RowDataPacket[]>(
+      `SELECT * FROM tenant_banners
+       WHERE tenant_id = ?
+         AND banner_type = ?
+         AND is_active = 1
+         AND (valid_from IS NULL OR valid_from <= NOW())
+         AND (valid_to IS NULL OR valid_to >= NOW())
+       ORDER BY sort_order ASC, id DESC`,
+      [tenantId, bannerType]
+    );
+
+    for (const banner of banners) {
+      const [translations] = await pool.query<RowDataPacket[]>(
+        `SELECT tbt.*, l.code AS language_code, l.name AS language_name
+         FROM tenant_banner_translations tbt
+         JOIN languages l ON tbt.language_id = l.id
+         WHERE tbt.banner_id = ?`,
+        [banner.id]
+      );
+      banner.translations = translations;
+      banner.show_cta = !!banner.show_cta;
+      banner.show_on_mobile = !!banner.show_on_mobile;
+      banner.show_on_desktop = !!banner.show_on_desktop;
+      banner.is_dismissible = !!banner.is_dismissible;
+      banner.is_active = !!banner.is_active;
+      if (typeof banner.text_style === 'string') {
+        try { banner.text_style = JSON.parse(banner.text_style); } catch { banner.text_style = null; }
+      }
+    }
+
+    return banners;
+  }
 }

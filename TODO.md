@@ -626,7 +626,9 @@ Chime on each new ticket; a different chime on overdue (past the red threshold).
 Set up public-facing storefront app (React + TailwindCSS) for online menu browsing, QR ordering, and online reservations. Follow supermarket-saas storefront pattern.
 ```
 
-### [ ] 43.1 Banner System (Backend — before storefront)
+### [~] 43.1 Banner System (Backend — before storefront)
+
+Backend done; admin-panel UI still pending.
 
 When building the storefront, include the full banner system from supermarket-saas. This requires:
 
@@ -680,11 +682,13 @@ CREATE TABLE tenant_banner_translations (
 );
 ```
 
-**Backend files to create (copy from supermarket-saas and adapt):**
-- `backend/src/services/bannerService.ts` — CRUD + getBannersByType
-- `backend/src/controllers/bannerController.ts` — REST handlers
-- `backend/src/routes/banner.routes.ts` — tenant routes with permissions
-- Add to `backend/src/routes/tenant.routes.ts`
+**Backend — ✅ done:**
+- ✅ `backend/src/migrations/015_create_banners.ts` — tables + `banners.view` / `banners.manage` permissions
+- ✅ `backend/src/services/tenantBannerService.ts` — CRUD + translations, stats, sort-order, duplicate, `getPublicBannersByType`
+- ✅ `backend/src/controllers/tenantBannerController.ts` — REST + upload/delete/stats/sort/duplicate handlers + public storefront handler
+- ✅ `backend/src/routes/tenantBanner.routes.ts` — mounted at `/api/tenant` in `server.ts`
+- ✅ `backend/src/middleware/upload.ts` — multer storage for `{tenantId}_banners/`; `uploadBannerImage` (`image` field, 10MB) + `uploadBannerMobileImage` (`mobile_image` field)
+- ✅ Public route `GET /api/public/:tenantSlug/banners/type/:type` in `public.routes.ts` (no auth, active-only, date-gated)
 
 **Admin panel files to create:**
 - `admin-panel/src/services/bannerService.ts` — API wrapper + types
