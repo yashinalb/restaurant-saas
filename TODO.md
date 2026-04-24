@@ -708,7 +708,9 @@ CREATE TABLE tenant_banner_translations (
 
 **Note:** `link_type` for restaurant uses `menu_item` and `menu_category` instead of `campaign` and `product` (adapted to restaurant domain).
 
-### [ ] 43.2 Storefront App Setup
+### [x] 43.2 Storefront App Setup
+
+Scaffold in place: `storefront/src/api/{storefrontApi.ts,types.ts}`, `components/{home,layout,common,pages}/`, `hooks/{useBanners,useTenantStore}.ts`, `store/{cartStore,tenantStore}.ts`, `locales/{en,tr,el,ru}.json` + `i18n.ts`, pages (`HomePage`, `MenuPage`, `MenuItemPage`, `ReservationsPage`, `ContactPage`, `CustomPage`, `CartPage`, `NotFoundPage`), routes wired in `App.tsx`. HeroBanner consumes `GET /api/public/:slug/banners/type/hero` via the public endpoint from 43.1. Tenant slug resolved from `?tenant=`, `VITE_TENANT_SLUG`, or subdomain.
 
 ```
 storefront/

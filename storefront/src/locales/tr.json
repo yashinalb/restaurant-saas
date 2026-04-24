@@ -1,0 +1,18 @@
+{
+  "nav": {
+    "home": "Ana Sayfa",
+    "menu": "Menü",
+    "reservations": "Rezervasyon",
+    "contact": "İletişim",
+    "cart": "Sepet"
+  },
+  "home": {
+    "welcome": "Masamıza hoş geldiniz",
+    "tagline": "Menüye göz atın, masa ayırtın ya da yerinizden sipariş verin.",
+    "viewMenu": "Menüyü Gör",
+    "bookTable": "Masa Ayırt"
+  },
+  "footer": {
+    "poweredBy": "Restaurant SaaS tarafından sağlanır"
+  }
+}

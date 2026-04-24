@@ -1,5 +1,6 @@
 import { Link, NavLink } from 'react-router-dom';
 import { ShoppingCart, UtensilsCrossed } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 import { useCartStore } from '../../store/cartStore';
 
 const navClass = ({ isActive }: { isActive: boolean }) =>
@@ -7,6 +8,7 @@ const navClass = ({ isActive }: { isActive: boolean }) =>
    ${isActive ? 'text-brand-primary' : 'text-brand-text hover:text-brand-primary'}`;
 
 export default function Header() {
+  const { t } = useTranslation();
   const itemCount = useCartStore(s => s.items.reduce((n, i) => n + i.quantity, 0));
 
   return (
@@ -17,9 +19,10 @@ export default function Header() {
           <span>Restaurant</span>
         </Link>
         <nav className="flex items-center gap-1">
-          <NavLink to="/" end className={navClass}>Home</NavLink>
-          <NavLink to="/menu" className={navClass}>Menu</NavLink>
-          <NavLink to="/reservations" className={navClass}>Reservations</NavLink>
+          <NavLink to="/" end className={navClass}>{t('nav.home')}</NavLink>
+          <NavLink to="/menu" className={navClass}>{t('nav.menu')}</NavLink>
+          <NavLink to="/reservations" className={navClass}>{t('nav.reservations')}</NavLink>
+          <NavLink to="/contact" className={navClass}>{t('nav.contact')}</NavLink>
         </nav>
         <Link to="/cart" className="relative p-2 text-brand-text hover:text-brand-primary">
           <ShoppingCart className="w-6 h-6" />
